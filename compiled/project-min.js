@@ -1,0 +1,1 @@
+$(document).on("ready",function(){$(".regular").slick({dots:!0,infinite:!0,slidesToShow:4,slidesToScroll:3}),$(".catalog-list").slick({infinite:!0,slidesToShow:5,slidesToScroll:1,variableWidth:!0}),$(".slider-list").slick({infinite:!0,slidesToShow:1,slidesToScroll:1}),$(".brand-list").slick({infinite:!0,slidesToShow:4,slidesToScroll:1,variableWidth:!0})});
