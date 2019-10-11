@@ -22,7 +22,71 @@
         <div class="container">
             <nav class="main-navigation">
                 <ul class="site-navigation">
-                    <li><a href="info.html">Магазин</a></li>
+                    <li>
+                        <a href="info.html">Магазин</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div>
+                                    <h4 class="header">Категории</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Гель-лаки</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Гель-краска</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Топы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пигменты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кисти</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Хлопья и втирка</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Стразы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Гели</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кисти</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Инструменты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пилки</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сопуствующие товары</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="header">Бренды</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Bagheera nails</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Golden Trace</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lianail</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Artex</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="news.html">Студии</a></li>
                     <li><a href="price.html">Обучение</a></li>
                     <li class="site-navigation-current">
@@ -35,10 +99,25 @@
             </a> 
             <div class="search">
                 <form action="" method="get" class="search-form">
-                    <input class="button search-button" type="search" name="search" id="search" placeholder="Поиск:">
+                    <input class="search-string" type="search" name="search" id="search" placeholder="Поиск:">
                     <label class="search-label" for="search"></label>
                 </form>
-                <div class="search_content" style="display: none;">Резуьтат поиска</div>
+                <div class="search_content" style="display: none;">    
+                    <ul>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <ul class="user-navigation">
                 <li>
@@ -77,116 +156,156 @@
             </section>
 
             <section class="sales-hits">
-                <h2>Хиты продаж</h2>
-                <div class="catalog-list slider">
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            <b>450 ₽</b>
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                <h2>Хиты продаж</h2>                
+                <div class="catalog-list"> 
+                    <div>
+                        <div class="catalog-container">                  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">1Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    <b>450 ₽</b>
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            <b>750 ₽</b>
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                    </div>
+                    <div>
+                        <div class="catalog-container">  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    <b>1750 ₽</b>
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                    <p>
+                                        В корзине 100 шт. 
+                                        <a href="">Перейти</a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            <b>250 ₽</b>
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                    </div>
+                    <div>
+                        <div class="catalog-container">  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    <b>250 ₽</b>
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            <b>350 ₽</b>
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                    </div>
+                    <div>
+                        <div class="catalog-container">  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    <b>350 ₽</b>
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            452 ₽
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                    </div>
+                    <div>
+                        <div class="catalog-container">  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    452 ₽
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
-                    <li class="catalog-item">
-                        <a href="">
-                            <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
-                            <h4>
-                                <span class="catalog-category">Bagheera nails</span>
-                                <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
-                            </h4>
-                        </a>
-                        <p class="catalog-price">
-                            454 ₽
-                        </p>
-                        <div class="quantity">
-                            <button class="btn minus" type="button">-</button>
-                            <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
-                            <button class="btn plus" type="button">+</button>
+                    </div>
+                    <div>
+                        <div class="catalog-container">  
+                            <div class="catalog-item">
+                                <a href="">
+                                    <img src="img/item_2.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером">
+                                    <h4>
+                                        <span class="catalog-category">Bagheera nails</span>
+                                        <span class="catalog-item-title">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</span>
+                                    </h4>
+                                </a>
+                                <p class="catalog-price">
+                                    454 ₽
+                                </p>
+                                <div class="hide-block">
+                                    <div class="quantity">
+                                        <button class="btn minus" type="button">-</button>
+                                        <input name="amount" type="text" class="form-controls" value="1" min="1" max="999">
+                                        <button class="btn plus" type="button">+</button>
+                                    </div>
+                                    <a href="" class="button">В корзину</a>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="button">В корзину</a>
-                    </li>
+                    </div>
                 </div>
             </section>
         </div>
@@ -292,7 +411,7 @@
                             <a href=""><img src="img/icon-insta.svg" alt="" width="32" height="32"></a>
                         </li>
                     </ul>
-                    <a href="">Подписаться на новости</a>
+                    <a class="subscribe-link" href="">Подписаться на новости</a>
                 </div>
                 <div class="footer-payments">
                     <h4 class="header">Оплата</h4>
@@ -317,5 +436,27 @@
             </div>
         </div>
     </footer>
+    <section class="modal modal-subscribe">
+        <div>
+            <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
+            <form class="subscribe-form" action="" method="post">
+                <p>
+                  <label class="visually-hidden" for="email-field">email</label>
+                  <input class="email-subscribe" id="email-field" type="email" name="email" placeholder="E-mail" required="">
+                </p>
+                <p class="subscribe-policy">
+                  <label class="policy-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden" checked="" required="">
+                    <span class="checkbox-indicator"></span>
+                    Даю согласие с обработкой персональных данных
+                  </label>
+                </p>
+                <button class="button" type="submit">Подписаться</button>
+            </form>       
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>       
+        </div>
+    </section>
 </body>
 </html>
