@@ -1,0 +1,147 @@
+@import "variables";
+@import "mixin";
+
+
+@font-face {
+    font-family: 'Gilory';  
+    src: url('../fonts/Gilroy-Light.woff') format('woff'),
+         url('../fonts/Gilroy-Light.otf') format('otf'); 
+    font-style: normal; 
+    font-weight: 300; 
+} 
+
+@font-face {
+    font-family: 'Gilory'; 
+    src: url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../fonts/Gilroy-ExtraBold.otf') format('otf'); 
+    font-style: normal; 
+    font-weight: 800; 
+} 
+
+@keyframes bounce {
+    0% { transform: translateY(-2000px)}
+    70% { transform: translateY(30px)}
+    90% { transform: translateY(-10px)}
+    100% { transform: translateY(0)}
+} 
+
+html { 
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: @baseFont;
+    font-size: @baseFontSize;
+    font-weight: 300;
+    color: @color-base + 2;
+    letter-spacing: 0.04em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: @color-base;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: @baseFontSize;
+    font-weight: 800;
+    line-height: 17px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid @gray13;
+}
+
+.button:hover {
+    background-color: @white;
+    border: 1px solid @gray50;
+}
+
+.button:active {
+    background-color: @gray01;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+}
+
+.modal.modal-show {
+    display: block;
+}
+
+.modal.modal-show > div {
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 33px;
+    right: 40px;
+    width: 16px;
+    height: 16px;    
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;    
+        width: 16px;
+        height: 2px;
+        background-color: #5A5758;
+        transform: rotate(45deg);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;    
+        width: 16px;
+        height: 2px;
+        background-color: #5A5758;        
+        transform: rotate(-45deg);
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
