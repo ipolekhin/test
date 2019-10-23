@@ -216,7 +216,7 @@ a {
   overflow: hidden;
 }
 header {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #F4F4F4;
   padding-top: 2px;
   height: 80px;
 }
@@ -507,7 +507,7 @@ main .nav-block .nav-block-list .nav-block-item:nth-child(2) {
   order: 2;
   width: 449px;
   height: 297px;
-  background: #FFFFFF url('../img/banner_1_2.png') bottom center no-repeat;
+  background: #FFF url('../img/banner_1_2.png') bottom center no-repeat;
   border: 1px solid #E4E5E0;
 }
 main .nav-block .nav-block-list .nav-block-item:nth-child(2) a {
@@ -623,7 +623,7 @@ main .sales-hits .catalog-list .slick-list .catalog-item .hide-block {
   left: -26px;
   top: -26px;
   width: 262px;
-  background-color: #fff;
+  background-color: #FFF;
   outline: 1px solid #dedede;
   box-shadow: 0 5px 5px 0 #DEDDDE;
 }
@@ -666,7 +666,7 @@ main .sales-hits .catalog-list .slick-list .catalog-item .hide-block .quantity b
   font-size: 24px;
   line-height: 19px;
   color: #5A5758;
-  background-color: #fff;
+  background-color: #FFF;
   border: none;
   cursor: pointer;
 }
@@ -912,7 +912,7 @@ footer .footer-inner .footer-contacts p span {
 .modal-subscribe > div h2 {
   margin: 0;
   margin-bottom: 37px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 29px;
   text-align: center;
