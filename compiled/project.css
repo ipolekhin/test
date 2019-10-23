@@ -806,6 +806,60 @@ main .brands-hits .brand-list .slick-next:before {
   width: 6px;
   height: 23px;
 }
+/* ----------------------------------------- Studio -------------------------------------- */
+.studio-header .block {
+  position: relative;
+  margin-top: 60px;
+  padding: 45px 16px 16px 97px;
+  height: 479px;
+  background: rgba(255, 84, 201, 0.01) url('../img/studio-header-bg.png') center right no-repeat;
+  border: 1px solid #DEDDDE;
+}
+.studio-header .block h2 {
+  position: relative;
+  margin-bottom: 22px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+  z-index: 100;
+}
+.studio-header .block p {
+  position: relative;
+  margin-top: 22px;
+  width: 330px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.95px;
+  z-index: 100;
+}
+.studio-header .block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32.9%;
+  width: 50px;
+  height: 0;
+  border-top: 479px solid #fffdfe;
+  border-right: 328px solid transparent;
+  z-index: 99;
+}
+.studio-header .block::after {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: 47%;
+  width: 2px;
+  height: 579px;
+  background-color: transparent;
+  z-index: 101;
+  box-shadow: -5px 0 15px #000;
+  -webkit-transform: rotate(34.4deg);
+  -moz-transform: rotate(34.4deg);
+  -ms-transform: rotate(34.4deg);
+  transform: rotate(34.4deg);
+}
+/* ----------------------------------------- Studio -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */

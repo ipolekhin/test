@@ -15,11 +15,13 @@ $(document).on('ready', function() {
     
     submenutarget.addEventListener('click', function(e) {
         e.preventDefault;
-        this.nextElementSibling.classList.add('collapsed');
-        navbartoggler.classList.add('right');
+        if(window.innerWidth < 992) {
+            this.nextElementSibling.classList.add('collapsed');
+            navbartoggler.classList.add('right');
+        }
     });
     
-    backtoggler.addEventListener('click', function(e){
+    backtoggler.addEventListener('click', function(e) {
         e.preventDefault();
         backtoggler.parentElement.classList.remove('collapsed');
         navbartoggler.classList.remove('right');
