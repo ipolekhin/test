@@ -145,3 +145,23 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
+.slick-prev {
+    &::before {
+        content: '';
+        background: url(../img/icon-prev.svg) no-repeat;
+        position: absolute;
+        width: 6px;
+        height: 23px;
+    }
+}
+.slick-next {
+    &::before {
+        content: '';
+        background: url(../img/icon-next.svg) no-repeat;
+        position: absolute;
+        width: 6px;
+        height: 23px;
+    }
+}

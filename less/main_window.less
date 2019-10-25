@@ -39,7 +39,7 @@ header {
                         }
                     }
                     &.active {
-                        a {
+                        & > a {
                             font-weight: 800;
                             line-height: 21px;
                         }
@@ -68,7 +68,7 @@ header {
                     width: 100%;
                     border-top: 1px solid @gray03;
                     border-bottom: 1px solid @gray03;
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);    
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
                     background-color: @white;
                     z-index: 100;
                     .container {
@@ -129,8 +129,8 @@ header {
                 }
                 .search-label {
                     position: absolute;
-                    top: 0px;
-                    right: 0px;
+                    top: 0;
+                    right: 0;
                     z-index: 20;
                     width: 24px;
                     height: 24px;
@@ -138,7 +138,7 @@ header {
                     cursor: pointer;
                 } 
             }
-            .search_content {                
+            .search_content {
                 position: absolute;
                 top: 27px;
                 right: 0;
@@ -529,6 +529,377 @@ main {
         }
     }
 }
+
+/* ----------------------------------------- main -------------------------------------- */
+main {
+    /* ----------------------------------------- Studio-Page ------------------------------- */
+        /* ----------------------------------------- Studio-header ------------------------- */
+    .studio-header {
+        margin-top: 60px;
+        p {
+            position: relative;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            letter-spacing: 0.95px;
+        }
+
+        .block {
+            position: relative;
+            margin-bottom: 102px;
+            padding: 45px 16px 16px 97px;
+            height: 479px;
+            background: rgba(255, 84, 201, 0.01) url('../img/studio-header-bg.png') center right no-repeat;
+            border: 1px solid @gray13;
+
+            h2 {
+                position: relative;
+                margin-bottom: 22px;
+                font-size: @poster_large;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: 1.6px;
+            }
+
+            p {
+                margin-top: 22px;
+                width: 330px;
+            }
+        }
+
+        & > p {
+            margin: 102px auto;
+            width: 568px;
+        }
+    }
+        /* ----------------------------------------- Studio-header END -------------------------- */
+        /* ----------------------------------------- service-carusel ---------------------------- */
+    .service-carusel {
+        margin-top: 102px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 57px;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        .service-carusel-list {
+            margin-top: 33px;
+            .slick-list {
+                .slick-slide {
+                    margin-right: 72px;
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                        font-size: @baseFontSize;
+                        font-weight: 300;
+                    }
+                }
+            }
+            .slick-prev {
+                top: 33%;
+                left: -35px;
+            }
+            .slick-next {
+                top: 33%;
+            }
+        }
+    }
+        /* ------------------------------------- service-carusel END --------------------- */
+        /* ------------------------------------- studio ---------------------------------- */
+    .studio-info {
+        margin-top: 102px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 69px;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        .tab-studio-info {
+            display: flex;
+            align-items: center;
+            .tabs-studio-info {
+                margin: 92px 0 0;
+                padding: 0;
+                min-width: 235px;
+                text-align: left;
+                list-style: none;
+                li {
+                    margin-bottom: 28px;
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: @gray50;
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 17px;
+                            width: 16px;
+                            height: 1px;
+                            background-color: @gray50;
+                        }
+                        &.current {
+                            color: @textGray;
+                            &::before {
+                                width: 32px;
+                                height: 2px;
+                                background-color: @color-base;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-studio-content {
+                margin-top: 64px;
+                & > div {
+                    display: none;
+                }
+                .tab-info {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 55px 94px 16px 61px;
+                    width: 429px;
+                    text-align: left;
+                    h3 {
+                        margin-top: 16px;
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 28px;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        line-height: 20px;
+                    }
+                    a {
+                        margin-top: 59px;
+                        padding: 16px 10px;
+                        letter-spacing: 1.2px;
+                    }
+                }
+                .studio-carusel {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 432px;
+                    height: 432px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- studio-end ------------------------------ */
+        /* ------------------------------------- comments-block -------------------------- */
+    .comments-block {
+        margin-top: 121px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 69px;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        .comments-carusel {
+            display: flex;
+            align-items: center;
+            margin-top: 11px;
+            .comments-info-list {
+                padding: 16px;
+                width: 549px;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                p {
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 390px;
+                    text-align: left;
+                }
+                span {
+                    font-size: @baseFontSize;
+                    line-height: 20px;
+                    color: @gray50;
+                }
+            }
+            .comments-photo-list {
+                width: 590px;
+                .slick-list {
+                    width: 590px;
+                    padding-top: 23px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- comments-block-end ---------------------- */
+        /* --------------------------------- sign-up-to-master-link ---------------------- */
+    .to-master-link {
+        margin-top: 88px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 69px;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        .to-master-block {
+            width: 574px;
+            margin: 0 auto;
+            p {
+                margin-top: 15px;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                text-align: left;
+                letter-spacing: 1px;
+            }
+            a {
+                margin: 79px 127px 32px;
+                padding: 16px 10px;
+                letter-spacing: 1.4px;
+            }
+
+        }
+        .application {
+            margin-top: 159px;
+            margin-bottom: 160px;
+            padding: 76px 16px 16px 97px;
+            min-height: 480px;
+            text-align: left;
+            background: rgba(255, 221, 235, 0.1) url(../img/application-bg.png) bottom right no-repeat;
+            border: 1px solid #FFD3E5;
+            p {
+                margin-bottom: 39px;
+                width: 410px;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                letter-spacing: 1px;
+            }
+            a {
+                margin-right: 17px;
+                display: inline-block;
+            }
+        }
+    }
+        /* ----------------------------------- sign-up-to-master-link-end -------------------- */
+    /* ----------------------------------------- Studio-Page-END ----------------------------- */
+
+    /* ----------------------------------------- Agency-Page --------------------------------- */
+        /* ------------------------------------- Agency-header ------------------------------- */
+    .agency-header {
+        margin-top: 60px;
+        p {
+            position: relative;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            letter-spacing: 0.95px;
+        }
+
+        .block {
+            position: relative;
+            margin-bottom: 102px;
+            padding: 172px 16px 16px 97px;
+            min-height: 479px;
+            background: rgba(255, 84, 201, 0.01) url('../img/agency-map-bg.png') top right no-repeat;
+            border: 1px solid #FFC7C7;
+
+            h2 {
+                position: relative;
+                margin-bottom: 22px;
+                font-size: @poster_large;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: 1.6px;
+            }
+
+            p {
+                margin-top: 22px;
+                width: 415px;
+            }
+        }
+
+        .advantages {
+            text-align: center;
+            h3 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 2px;
+                padding-bottom: 12px;
+                font-size: 32px;
+                font-weight: 300;
+                line-height: 37px;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #EAEAEA;
+            }
+
+            p {
+                margin: 10px auto;
+                padding-left: 58px;
+                width: 630px;
+                text-align: left;
+            }
+        }
+    }
+        /* ------------------------------------- Agency-header-END ----------------------- */
+        /* ------------------------------------- Search-agency --------------------------- */
+    .search-agency {
+        margin-top: 118px;
+        text-align: center;
+        .block {
+            margin-top: 28px;
+            margin-bottom: 160px;
+            padding: 16px 16px 16px 97px;
+            min-height: 520px;
+            text-align: left;
+            background: rgba(255, 84, 201, 0.01) url(../img/agency-search-bg.png) bottom right no-repeat;
+            border: 1px solid #E2DDD7;
+            h2 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 64px;
+                margin-bottom: 16px;
+                width: 415px;
+                font-size: @poster_large;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: 1.6px;
+            }
+            .select {
+                select {
+                    width: 374px;
+                    height: 40px;
+                }
+                .agency-info-list {
+                    div {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Search-agency-END ----------------------- */
+    /* ----------------------------------------- Agency-Page-END ------------------------- */
+}
+/* ----------------------------------------- main end ------------------------------------ */
+
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */

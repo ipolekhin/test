@@ -215,6 +215,20 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.slick-prev::before {
+  content: '';
+  background: url(../img/icon-prev.svg) no-repeat;
+  position: absolute;
+  width: 6px;
+  height: 23px;
+}
+.slick-next::before {
+  content: '';
+  background: url(../img/icon-next.svg) no-repeat;
+  position: absolute;
+  width: 6px;
+  height: 23px;
+}
 header {
   border-bottom: 1px solid #F4F4F4;
   padding-top: 2px;
@@ -283,7 +297,7 @@ header .container .main-navigation .site-navigation li:hover > a {
 header .container .main-navigation .site-navigation li:hover .submenu {
   display: block;
 }
-header .container .main-navigation .site-navigation li.active a {
+header .container .main-navigation .site-navigation li.active > a {
   font-weight: 800;
   line-height: 21px;
 }
@@ -307,7 +321,7 @@ header .container .main-navigation .site-navigation .submenu {
   width: 100%;
   border-top: 1px solid #EFEFEF;
   border-bottom: 1px solid #EFEFEF;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   background-color: #FFF;
   z-index: 100;
 }
@@ -381,8 +395,8 @@ header .container .search .search-form input[type='search']:focus {
 }
 header .container .search .search-form .search-label {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   z-index: 20;
   width: 24px;
   height: 24px;
@@ -806,60 +820,371 @@ main .brands-hits .brand-list .slick-next:before {
   width: 6px;
   height: 23px;
 }
-/* ----------------------------------------- Studio -------------------------------------- */
-.studio-header .block {
-  position: relative;
+/* ----------------------------------------- main -------------------------------------- */
+main {
+  /* ----------------------------------------- Studio-Page ------------------------------- */
+  /* ----------------------------------------- Studio-header ------------------------- */
+  /* ----------------------------------------- Studio-header END -------------------------- */
+  /* ----------------------------------------- service-carusel ---------------------------- */
+  /* ------------------------------------- service-carusel END --------------------- */
+  /* ------------------------------------- studio ---------------------------------- */
+  /* ------------------------------------- studio-end ------------------------------ */
+  /* ------------------------------------- comments-block -------------------------- */
+  /* ------------------------------------- comments-block-end ---------------------- */
+  /* --------------------------------- sign-up-to-master-link ---------------------- */
+  /* ----------------------------------- sign-up-to-master-link-end -------------------- */
+  /* ----------------------------------------- Studio-Page-END ----------------------------- */
+  /* ----------------------------------------- Agency-Page --------------------------------- */
+  /* ------------------------------------- Agency-header ------------------------------- */
+  /* ------------------------------------- Agency-header-END ----------------------- */
+  /* ------------------------------------- Search-agency --------------------------- */
+  /* ------------------------------------- Search-agency-END ----------------------- */
+  /* ----------------------------------------- Agency-Page-END ------------------------- */
+}
+main .studio-header {
   margin-top: 60px;
+}
+main .studio-header p {
+  position: relative;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.95px;
+}
+main .studio-header .block {
+  position: relative;
+  margin-bottom: 102px;
   padding: 45px 16px 16px 97px;
   height: 479px;
   background: rgba(255, 84, 201, 0.01) url('../img/studio-header-bg.png') center right no-repeat;
   border: 1px solid #DEDDDE;
 }
-.studio-header .block h2 {
+main .studio-header .block h2 {
   position: relative;
   margin-bottom: 22px;
   font-size: 40px;
   font-weight: 300;
   line-height: 46px;
   letter-spacing: 1.6px;
-  z-index: 100;
 }
-.studio-header .block p {
-  position: relative;
+main .studio-header .block p {
   margin-top: 22px;
   width: 330px;
+}
+main .studio-header > p {
+  margin: 102px auto;
+  width: 568px;
+}
+main .service-carusel {
+  margin-top: 102px;
+  text-align: center;
+}
+main .service-carusel h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 57px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .service-carusel .service-carusel-list {
+  margin-top: 33px;
+}
+main .service-carusel .service-carusel-list .slick-list .slick-slide {
+  margin-right: 72px;
+}
+main .service-carusel .service-carusel-list .slick-list .slick-slide span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
+main .service-carusel .service-carusel-list .slick-prev {
+  top: 33%;
+  left: -35px;
+}
+main .service-carusel .service-carusel-list .slick-next {
+  top: 33%;
+}
+main .studio-info {
+  margin-top: 102px;
+  text-align: center;
+}
+main .studio-info h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .studio-info .tab-studio-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+main .studio-info .tab-studio-info .tabs-studio-info {
+  margin: 92px 0 0;
+  padding: 0;
+  min-width: 235px;
+  text-align: left;
+  list-style: none;
+}
+main .studio-info .tab-studio-info .tabs-studio-info li {
+  margin-bottom: 28px;
+}
+main .studio-info .tab-studio-info .tabs-studio-info li a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ADABAC;
+}
+main .studio-info .tab-studio-info .tabs-studio-info li a::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 17px;
+  width: 16px;
+  height: 1px;
+  background-color: #ADABAC;
+}
+main .studio-info .tab-studio-info .tabs-studio-info li a.current {
+  color: #5A5758;
+}
+main .studio-info .tab-studio-info .tabs-studio-info li a.current::before {
+  width: 32px;
+  height: 2px;
+  background-color: #5A5758;
+}
+main .studio-info .tab-studio-info .tab-studio-content {
+  margin-top: 64px;
+}
+main .studio-info .tab-studio-info .tab-studio-content > div {
+  display: none;
+}
+main .studio-info .tab-studio-info .tab-studio-content .tab-info {
+  display: inline-block;
+  vertical-align: top;
+  padding: 55px 94px 16px 61px;
+  width: 429px;
+  text-align: left;
+}
+main .studio-info .tab-studio-info .tab-studio-content .tab-info h3 {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+main .studio-info .tab-studio-info .tab-studio-content .tab-info p {
+  line-height: 20px;
+}
+main .studio-info .tab-studio-info .tab-studio-content .tab-info a {
+  margin-top: 59px;
+  padding: 16px 10px;
+  letter-spacing: 1.2px;
+}
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel {
+  display: inline-block;
+  vertical-align: top;
+  width: 432px;
+  height: 432px;
+}
+main .comments-block {
+  margin-top: 121px;
+  text-align: center;
+}
+main .comments-block h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .comments-block .comments-carusel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 11px;
+}
+main .comments-block .comments-carusel .comments-info-list {
+  padding: 16px;
+  width: 549px;
+  font-size: 24px;
+  line-height: 29px;
+}
+main .comments-block .comments-carusel .comments-info-list p {
+  margin: 0 auto;
+  padding: 0;
+  width: 390px;
+  text-align: left;
+}
+main .comments-block .comments-carusel .comments-info-list span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ADABAC;
+}
+main .comments-block .comments-carusel .comments-photo-list {
+  width: 590px;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list {
+  width: 590px;
+  padding-top: 23px;
+}
+main .to-master-link {
+  margin-top: 88px;
+  text-align: center;
+}
+main .to-master-link h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .to-master-link .to-master-block {
+  width: 574px;
+  margin: 0 auto;
+}
+main .to-master-link .to-master-block p {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+main .to-master-link .to-master-block a {
+  margin: 79px 127px 32px;
+  padding: 16px 10px;
+  letter-spacing: 1.4px;
+}
+main .to-master-link .application {
+  margin-top: 159px;
+  margin-bottom: 160px;
+  padding: 76px 16px 16px 97px;
+  min-height: 480px;
+  text-align: left;
+  background: rgba(255, 221, 235, 0.1) url(../img/application-bg.png) bottom right no-repeat;
+  border: 1px solid #FFD3E5;
+}
+main .to-master-link .application p {
+  margin-bottom: 39px;
+  width: 410px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+main .to-master-link .application a {
+  margin-right: 17px;
+  display: inline-block;
+}
+main .agency-header {
+  margin-top: 60px;
+}
+main .agency-header p {
+  position: relative;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.95px;
-  z-index: 100;
 }
-.studio-header .block::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 32.9%;
-  width: 50px;
-  height: 0;
-  border-top: 479px solid #fffdfe;
-  border-right: 328px solid transparent;
-  z-index: 99;
+main .agency-header .block {
+  position: relative;
+  margin-bottom: 102px;
+  padding: 172px 16px 16px 97px;
+  min-height: 479px;
+  background: rgba(255, 84, 201, 0.01) url('../img/agency-map-bg.png') top right no-repeat;
+  border: 1px solid #FFC7C7;
 }
-.studio-header .block::after {
-  content: "";
-  position: absolute;
-  top: -48px;
-  left: 47%;
-  width: 2px;
-  height: 579px;
-  background-color: transparent;
-  z-index: 101;
-  box-shadow: -5px 0 15px #000;
-  -webkit-transform: rotate(34.4deg);
-  -moz-transform: rotate(34.4deg);
-  -ms-transform: rotate(34.4deg);
-  transform: rotate(34.4deg);
+main .agency-header .block h2 {
+  position: relative;
+  margin-bottom: 22px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
 }
-/* ----------------------------------------- Studio -------------------------------------- */
+main .agency-header .block p {
+  margin-top: 22px;
+  width: 415px;
+}
+main .agency-header .advantages {
+  text-align: center;
+}
+main .agency-header .advantages h3 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .agency-header .advantages p {
+  margin: 10px auto;
+  padding-left: 58px;
+  width: 630px;
+  text-align: left;
+}
+main .search-agency {
+  margin-top: 118px;
+  text-align: center;
+}
+main .search-agency .block {
+  margin-top: 28px;
+  margin-bottom: 160px;
+  padding: 16px 16px 16px 97px;
+  min-height: 520px;
+  text-align: left;
+  background: rgba(255, 84, 201, 0.01) url(../img/agency-search-bg.png) bottom right no-repeat;
+  border: 1px solid #E2DDD7;
+}
+main .search-agency .block h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  width: 415px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+}
+main .search-agency .block .select select {
+  width: 374px;
+  height: 40px;
+}
+/* ----------------------------------------- main end ------------------------------------ */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */

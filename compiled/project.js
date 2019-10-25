@@ -147,6 +147,54 @@ $(document).on('ready', function() {
             }
         ]
     });
+
+    $('.service-carusel-list').slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+
+    $('.number1').slick({
+        fade: true,
+    });
+
+    $('.number2').slick({
+    });
+
+    $('.number3').slick({
+    });
+
+    $('.comments-info-list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        draggable: false,
+        fade: true,
+        asNavFor: '.comments-photo-list'
+    });
+
+    $('.comments-photo-list').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.comments-info-list',
+    });
     
     subscribelink.addEventListener('click', function(e) {
         e.preventDefault();
@@ -195,6 +243,23 @@ $(document).on('ready', function() {
                 navbartoggler.classList.remove('right');                 
             }
         }
+    });
+
+    $('.tab-studio-info .tabs-studio-info > li a').click( function () {
+        $('.tab-studio-info .tabs-studio-info > li a').removeClass('current');
+        $(this).addClass('current');
+
+        $('.tab-studio-content > div').hide();
+        t_content=$(this).attr('href');
+        $(t_content).show();
+
+        return false
+    });
+    $('.tab-studio-info .tabs-studio-info > li a:first').trigger('click');
+
+    $('#select-towns').change(function() {
+        $('.agency-info-list div').hide();
+        console.log($(this).val());
     });
     
 });
