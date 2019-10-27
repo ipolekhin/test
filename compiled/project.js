@@ -195,6 +195,67 @@ $(document).on('ready', function() {
         slidesToScroll: 1,
         asNavFor: '.comments-info-list',
     });
+
+    $('.partner-comments-info-list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        draggable: false,
+        fade: true,
+        asNavFor: '.partner-comments-photo-list'
+    });
+
+    $('.partner-comments-photo-list').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.partner-comments-info-list',
+    });
+
+    $('.stuff-carusel-list').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+
+    $('.students-work-list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
+    });
     
     subscribelink.addEventListener('click', function(e) {
         e.preventDefault();
@@ -258,8 +319,16 @@ $(document).on('ready', function() {
     $('.tab-studio-info .tabs-studio-info > li a:first').trigger('click');
 
     $('#select-towns').change(function() {
-        $('.agency-info-list div').hide();
-        console.log($(this).val());
+        var agencyselect = this.value;
+        var agencylist = document.querySelectorAll('.agency-info-list div');
+        for (i = 0; i < agencylist.length; i++) {
+            if (agencylist[i].classList.contains(agencyselect)) {
+                agencylist[i].classList.add('show');
+            }
+            else {
+                agencylist[i].classList.remove('show');
+            }
+        }
     });
     
 });

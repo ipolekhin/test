@@ -829,8 +829,8 @@ main {
   /* ------------------------------------- service-carusel END --------------------- */
   /* ------------------------------------- studio ---------------------------------- */
   /* ------------------------------------- studio-end ------------------------------ */
-  /* ------------------------------------- comments-block -------------------------- */
-  /* ------------------------------------- comments-block-end ---------------------- */
+  /* ------------------------------ studio-comments-block -------------------------- */
+  /* ------------------------------ studio-comments-block-end ---------------------- */
   /* --------------------------------- sign-up-to-master-link ---------------------- */
   /* ----------------------------------- sign-up-to-master-link-end -------------------- */
   /* ----------------------------------------- Studio-Page-END ----------------------------- */
@@ -839,7 +839,29 @@ main {
   /* ------------------------------------- Agency-header-END ----------------------- */
   /* ------------------------------------- Search-agency --------------------------- */
   /* ------------------------------------- Search-agency-END ----------------------- */
-  /* ----------------------------------------- Agency-Page-END ------------------------- */
+  /* ------------------------------------- Agency-Page-END ----------------------------- */
+  /* ------------------------------------- Partner-Page ------------------------------- */
+  /* ------------------------------------- Partner-header -------------------------- */
+  /* ------------------------------------- Partner-header-END ----------------------- */
+  /* ------------------------------------- Partner-advantages ----------------------- */
+  /* ------------------------------------- Partner-advantages-END ------------------- */
+  /* ------------------------------------- Partner-comment- ------------------------- */
+  /* ------------------------------------- Partner-comment-END ---------------------- */
+  /* ------------------------------------- Partner-form ----------------------------- */
+  /* ------------------------------------- Partner-form-END ------------------------- */
+  /* ------------------------------------- Partner-Page-END ----------------------------- */
+  /* ------------------------------------- Training-Page -------------------------------- */
+  /* ------------------------------------- Training-header -------------------------- */
+  /* ------------------------------------- Training-header-END ---------------------- */
+  /* ------------------------------------- Stuff-carusel ---------------------------- */
+  /* ------------------------------------- Stuff-carusel-END ------------------------ */
+  /* ------------------------------------- Courses-info ----------------------------- */
+  /* ------------------------------------- Courses-info-END ------------------------- */
+  /* ------------------------------------- Students-work ---------------------------- */
+  /* ------------------------------------- Students-work-END ------------------------ */
+  /* ------------------------------------- Slogan-courses --------------------------- */
+  /* ------------------------------------- Slogan-courses-END ----------------------- */
+  /* ------------------------------------- Training-Page-END ---------------------------- */
 }
 main .studio-header {
   margin-top: 60px;
@@ -1135,10 +1157,10 @@ main .agency-header .block p {
   margin-top: 22px;
   width: 415px;
 }
-main .agency-header .advantages {
+main .agency-header .slogan {
   text-align: center;
 }
-main .agency-header .advantages h3 {
+main .agency-header .slogan h2 {
   display: inline-block;
   vertical-align: top;
   margin-top: 2px;
@@ -1150,7 +1172,7 @@ main .agency-header .advantages h3 {
   text-transform: uppercase;
   border-bottom: 1px solid #EAEAEA;
 }
-main .agency-header .advantages p {
+main .agency-header .slogan p {
   margin: 10px auto;
   padding-left: 58px;
   width: 630px;
@@ -1180,9 +1202,550 @@ main .search-agency .block h2 {
   line-height: 46px;
   letter-spacing: 1.6px;
 }
-main .search-agency .block .select select {
+main .search-agency .block .select {
   width: 374px;
+}
+main .search-agency .block .select select {
+  width: 100%;
   height: 40px;
+}
+main .search-agency .block .select .agency-info-list div {
+  display: none;
+  margin-top: 24px;
+  line-height: 20px;
+}
+main .search-agency .block .select .agency-info-list div p {
+  position: relative;
+  margin: 12px 0;
+}
+main .search-agency .block .select .agency-info-list div p a {
+  color: #E83094;
+}
+main .search-agency .block .select .agency-info-list div p a:hover {
+  text-decoration: underline;
+}
+main .search-agency .block .select .agency-info-list div p span {
+  opacity: 0.5;
+}
+main .search-agency .block .select .agency-info-list div p img {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+main .search-agency .block .select .agency-info-list div p:last-child {
+  margin-top: 8px;
+}
+main .search-agency .block .select .agency-info-list div.show {
+  display: block;
+}
+main .partner-header {
+  margin-top: 60px;
+}
+main .partner-header p {
+  position: relative;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.95px;
+}
+main .partner-header .block {
+  position: relative;
+  margin-bottom: 102px;
+  padding: 137px 16px 16px 95px;
+  min-height: 479px;
+  background: rgba(255, 84, 201, 0.01) url('../img/agency-map-bg.png') top right no-repeat;
+  border: 1px solid #FFC7C7;
+}
+main .partner-header .block h2 {
+  position: relative;
+  margin-bottom: 22px;
+  width: 415px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+}
+main .partner-header .block p {
+  margin-top: 22px;
+  width: 415px;
+}
+main .partner-header .block-start {
+  text-align: center;
+}
+main .partner-header .block-start h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .partner-header .block-start p {
+  margin: 14px auto;
+  padding-left: 30px;
+  width: 630px;
+  text-align: left;
+}
+main .partner-advantages {
+  margin-top: 158px;
+  background-color: rgba(62, 62, 62, 0.02);
+}
+main .partner-advantages .block {
+  padding: 32px 0;
+  min-height: 607px;
+  text-align: center;
+}
+main .partner-advantages .block h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 68px;
+  margin-right: 18px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .partner-advantages .block .advantages-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-top: 35px;
+  padding: 0;
+  list-style: none;
+}
+main .partner-advantages .block .advantages-list .advantages-item p {
+  margin-top: 18px;
+  width: 250px;
+  font-size: 24px;
+  line-height: 29px;
+}
+main .partner-comments-block {
+  margin-top: 120px;
+  text-align: center;
+}
+main .partner-comments-block h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .partner-comments-block .partner-comments-carusel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 72px;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
+  padding: 16px;
+  width: 549px;
+  font-size: 24px;
+  line-height: 29px;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-info-list p {
+  margin: 0 auto;
+  padding: 0;
+  width: 390px;
+  text-align: left;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-info-list span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ADABAC;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list {
+  width: 590px;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list {
+  width: 590px;
+  padding-top: 23px;
+}
+main .partner-form {
+  margin-top: 88px;
+  margin-bottom: 160px;
+}
+main .partner-form .block {
+  margin: 0 auto;
+  width: 564px;
+  text-align: center;
+}
+main .partner-form .block h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .partner-form .block p {
+  margin: 14px auto;
+  width: 564px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+main .partner-form .block form {
+  margin-top: 70px;
+}
+main .partner-form .block form .form-group {
+  margin-top: 56px;
+}
+main .partner-form .block form .form-group input {
+  width: 100%;
+  height: 44px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #E2DDD7;
+}
+main .partner-form .block form .personal {
+  position: relative;
+  margin: 26px 0;
+  text-align: left;
+}
+main .partner-form .block form .personal label {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+main .partner-form .block form .personal label span {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+main .partner-form .block form .personal label span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #DEDDDE;
+}
+main .partner-form .block form .personal label input[type='checkbox']:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 13px;
+  height: 8px;
+  border-left: 3px solid #5A5758;
+  border-bottom: 3px solid #5A5758;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+main .partner-form .block form .form-button {
+  margin: 66px 0 66px 52px;
+}
+main .partner-form .block form .form-button input[type='submit'] {
+  margin: 0 auto;
+  padding: 16px;
+  width: 270px;
+  color: #5A5758;
+  cursor: pointer;
+}
+main .training-header {
+  margin-top: 60px;
+}
+main .training-header p {
+  position: relative;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.95px;
+}
+main .training-header .block {
+  position: relative;
+  margin-bottom: 102px;
+  padding: 66px 16px 16px 97px;
+  min-height: 480px;
+  background: rgba(255, 84, 201, 0.01) url('../img/training-bg.png') bottom right no-repeat;
+  border: 1px solid #F7EBFF;
+}
+main .training-header .block h2 {
+  position: relative;
+  margin-bottom: 22px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+}
+main .training-header .block p {
+  margin-top: 22px;
+  width: 373px;
+}
+main .training-header .philosophy {
+  text-align: center;
+}
+main .training-header .philosophy h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .training-header .philosophy p {
+  margin: 14px auto;
+  width: 570px;
+  text-align: left;
+}
+main .stuff-carusel {
+  margin-top: 107px;
+}
+main .stuff-carusel .stuff-carusel-list {
+  margin-top: 33px;
+}
+main .stuff-carusel .stuff-carusel-list .slick-list {
+  margin: 0 36px;
+}
+main .stuff-carusel .stuff-carusel-list .slick-list .slick-slide {
+  margin-right: 22px;
+}
+main .stuff-carusel .stuff-carusel-list .slick-prev {
+  top: 46%;
+  left: 0;
+}
+main .stuff-carusel .stuff-carusel-list .slick-next {
+  top: 46%;
+  right: 5px;
+}
+main .courses-info {
+  margin-top: 110px;
+  text-align: center;
+}
+main .courses-info h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-bottom: 60px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .courses-info .courses-list {
+  text-align: left;
+}
+main .courses-info .courses-list .courses-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  padding: 36px;
+  border: 1px solid #DEDDDE;
+}
+main .courses-info .courses-list .courses-item .courses-description {
+  position: relative;
+  margin-left: 44px;
+}
+main .courses-info .courses-list .courses-item .courses-description h3 {
+  margin-top: 22px;
+  margin-bottom: 12px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.4px;
+}
+main .courses-info .courses-list .courses-item .courses-description p {
+  margin-top: 12px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+}
+main .courses-info .courses-list .courses-item .courses-description .price {
+  margin-top: 46px;
+  margin-right: 44px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #F4F4F4;
+}
+main .courses-info .courses-list .courses-item .courses-description .price span {
+  position: relative;
+  margin-right: 90px;
+  padding-left: 40px;
+}
+main .courses-info .courses-list .courses-item .courses-description .price span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/icon/time.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+main .courses-info .courses-list .courses-item .courses-description .price span:last-child::before {
+  background-image: url(../img/icon/price.svg);
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item img {
+  height: 100%;
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item div {
+  margin-left: 15px;
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item div h4 {
+  margin: 0;
+}
+main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item div p {
+  margin: 0;
+  margin-top: 4px;
+}
+main .courses-info .courses-list .courses-item .courses-description .details {
+  display: none;
+}
+main .courses-info .courses-list .courses-item .courses-description .details-btn {
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+main .students-work {
+  margin-top: 110px;
+  text-align: center;
+}
+main .students-work h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .students-work .students-work-list {
+  margin: 0 36px;
+}
+main .students-work .students-work-list .students-work-item {
+  margin-right: 20px;
+}
+main .students-work .slick-prev {
+  top: 46%;
+  left: -37px;
+}
+main .students-work .slick-next {
+  top: 46%;
+  right: -31px;
+}
+main .slogan-courses {
+  margin-top: 88px;
+  margin-bottom: 160px;
+  text-align: center;
+}
+main .slogan-courses > h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .slogan-courses > p {
+  margin: 0 auto;
+  margin-top: 1px;
+  width: 564px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+main .slogan-courses .note {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 139px;
+  margin-bottom: 118px;
+  padding: 30px;
+  min-height: 380px;
+  text-align: left;
+  background: rgba(255, 221, 235, 0.1);
+  border: 1px solid #F4F4F4;
+}
+main .slogan-courses .note .note-to-courses {
+  margin-left: 44px;
+}
+main .slogan-courses .note .note-to-courses h2 {
+  margin: 34px 0 8px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+}
+main .slogan-courses .note .note-to-courses p {
+  margin: 12px 0 40px;
+  width: 490px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+main .slogan-courses .note .note-to-courses a {
+  margin-right: 68px;
+  display: inline-block;
+  vertical-align: middle;
+}
+main .slogan-courses .note .note-to-courses a img {
+  vertical-align: middle;
+  margin-right: 10px;
 }
 /* ----------------------------------------- main end ------------------------------------ */
 /* ----------------------------------------- Footer -------------------------------------- */

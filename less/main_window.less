@@ -697,7 +697,7 @@ main {
         }
     }
         /* ------------------------------------- studio-end ------------------------------ */
-        /* ------------------------------------- comments-block -------------------------- */
+        /* ------------------------------ studio-comments-block -------------------------- */
     .comments-block {
         margin-top: 121px;
         text-align: center;
@@ -743,7 +743,7 @@ main {
             }
         }
     }
-        /* ------------------------------------- comments-block-end ---------------------- */
+        /* ------------------------------ studio-comments-block-end ---------------------- */
         /* --------------------------------- sign-up-to-master-link ---------------------- */
     .to-master-link {
         margin-top: 88px;
@@ -835,9 +835,9 @@ main {
             }
         }
 
-        .advantages {
+        .slogan {
             text-align: center;
-            h3 {
+            h2 {
                 display: inline-block;
                 vertical-align: top;
                 margin-top: 2px;
@@ -883,20 +883,567 @@ main {
                 letter-spacing: 1.6px;
             }
             .select {
+                width: 374px;
                 select {
-                    width: 374px;
+                    width: 100%;
                     height: 40px;
                 }
                 .agency-info-list {
                     div {
                         display: none;
+                        margin-top: 24px;
+                        line-height: 20px;
+                        p {
+                            position: relative;
+                            margin: 12px 0;
+                            a {
+                                color: @magenta;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            span {
+                                opacity: 0.5;
+                            }
+                            img {
+                                position: absolute;
+                                top: 8px;
+                                right: 0;
+                            }
+                            &:last-child {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                    div.show {
+                        display: block;
                     }
                 }
             }
         }
     }
         /* ------------------------------------- Search-agency-END ----------------------- */
-    /* ----------------------------------------- Agency-Page-END ------------------------- */
+    /* ------------------------------------- Agency-Page-END ----------------------------- */
+
+    /* ------------------------------------- Partner-Page ------------------------------- */
+        /* ------------------------------------- Partner-header -------------------------- */
+    .partner-header {
+        margin-top: 60px;
+        p {
+            position: relative;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            letter-spacing: 0.95px;
+        }
+
+        .block {
+            position: relative;
+            margin-bottom: 102px;
+            padding: 137px 16px 16px 95px;
+            min-height: 479px;
+            background: rgba(255, 84, 201, 0.01) url('../img/agency-map-bg.png') top right no-repeat;
+            border: 1px solid #FFC7C7;
+
+            h2 {
+                position: relative;
+                margin-bottom: 22px;
+                width: 415px;
+                font-size: @poster_large;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: 1.6px;
+            }
+
+            p {
+                margin-top: 22px;
+                width: 415px;
+            }
+        }
+
+        .block-start {
+            text-align: center;
+            h2 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 2px;
+                padding-bottom: 12px;
+                font-size: @large;
+                font-weight: 300;
+                line-height: 37px;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #EAEAEA;
+            }
+
+            p {
+                margin: 14px auto;
+                padding-left: 30px;
+                width: 630px;
+                text-align: left;
+            }
+        }
+    }
+        /* ------------------------------------- Partner-header-END ----------------------- */
+        /* ------------------------------------- Partner-advantages ----------------------- */
+    .partner-advantages{
+        margin-top: 158px;
+        background-color: rgba(62, 62, 62, 0.02);
+        .block {
+            padding: 32px 0;
+            min-height: 607px;
+            text-align: center;
+            h2 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 68px;
+                margin-right: 18px;
+                padding-bottom: 12px;
+                font-size: @large;
+                font-weight: 300;
+                line-height: 37px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #EAEAEA;
+            }
+            .advantages-list {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 35px;
+                padding: 0;
+                list-style: none;
+                .advantages-item {
+                    p {
+                        margin-top: 18px;
+                        width: 250px;
+                        font-size: @x-large + 4;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-advantages-END ------------------- */
+        /* ------------------------------------- Partner-comment- ------------------------- */
+    .partner-comments-block {
+        margin-top: 120px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        .partner-comments-carusel {
+            display: flex;
+            align-items: center;
+            margin-top: 72px;
+            .partner-comments-info-list {
+                padding: 16px;
+                width: 549px;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                p {
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 390px;
+                    text-align: left;
+                }
+                span {
+                    font-size: @baseFontSize;
+                    line-height: 20px;
+                    color: @gray50;
+                }
+            }
+            .partner-comments-photo-list {
+                width: 590px;
+                .slick-list {
+                    width: 590px;
+                    padding-top: 23px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-comment-END ---------------------- */
+        /* ------------------------------------- Partner-form ----------------------------- */
+    .partner-form {
+        margin-top: 88px;
+        margin-bottom: 160px;
+        .block {
+            margin: 0 auto;
+            width: 564px;
+            text-align: center;
+            h2 {
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 69px;
+              padding-bottom: 12px;
+              font-size: @h2_large;
+              font-weight: 300;
+              line-height: 37px;
+              letter-spacing: 1.4px;
+              text-transform: uppercase;
+              border-bottom: 1px solid @gray04;
+            }
+
+            p {
+                margin: 14px auto;
+                width: 564px;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                text-align: left;
+                letter-spacing: 1px;
+            }
+
+            form {
+                margin-top: 70px;
+                .form-group {
+                    margin-top: 56px;
+                    input {
+                        width: 100%;
+                        height: 44px;
+                        font-size: @x-large;
+                        border: none;
+                        border-bottom: 1px solid #E2DDD7;
+                    }
+                }
+                .personal {
+                    position: relative;
+                    margin: 26px 0;
+                    text-align: left;
+                    label {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-left: 28px;
+                        height: 20px;
+                        cursor: pointer;
+                        span {
+                            font-size: @baseFontSize - 2;
+                            letter-spacing: 0.1em;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                width: 20px;
+                                height: 20px;
+                                border: 1px solid @gray13;
+                            }
+                        }
+                        input[type = 'checkbox']:checked + span::after {
+                            content: '';
+                            position: absolute;
+                            left: 4px;
+                            top: 4px;
+                            width: 13px;
+                            height: 8px;
+                            border-left: 3px solid @color-base;
+                            border-bottom: 3px solid @color-base;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                .form-button {
+                    margin: 66px 0 66px 52px;
+                    input[type = 'submit'] {
+                        margin: 0 auto;
+                        padding: 16px;
+                        width: 270px;
+                        color:@textGray;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-form-END ------------------------- */
+    /* ------------------------------------- Partner-Page-END ----------------------------- */
+
+    /* ------------------------------------- Training-Page -------------------------------- */
+        /* ------------------------------------- Training-header -------------------------- */
+    .training-header {
+        margin-top: 60px;
+        p {
+            position: relative;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            letter-spacing: 0.95px;
+        }
+
+        .block {
+            position: relative;
+            margin-bottom: 102px;
+            padding: 66px 16px 16px 97px;
+            min-height: 480px;
+            background: rgba(255, 84, 201, 0.01) url('../img/training-bg.png') bottom right no-repeat;
+            border: 1px solid #F7EBFF;
+
+            h2 {
+                position: relative;
+                margin-bottom: 22px;
+                font-size: @poster_large;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: 1.6px;
+            }
+
+            p {
+                margin-top: 22px;
+                width: 373px;
+            }
+        }
+
+        .philosophy {
+            text-align: center;
+            h2 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 2px;
+                padding-bottom: 12px;
+                font-size: 32px;
+                font-weight: 300;
+                line-height: 37px;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #EAEAEA;
+            }
+
+            p {
+                margin: 14px auto;
+                width: 570px;
+                text-align: left;
+            }
+        }
+    }
+        /* ------------------------------------- Training-header-END ---------------------- */
+        /* ------------------------------------- Stuff-carusel ---------------------------- */
+    .stuff-carusel {
+        margin-top: 107px;
+        .stuff-carusel-list {
+            margin-top: 33px;
+            .slick-list {
+                margin: 0 36px;
+                .slick-slide {
+                    margin-right: 22px;
+                }
+            }
+            .slick-prev {
+                top: 46%;
+                left: 0;
+            }
+            .slick-next {
+                top: 46%;
+                right: 5px;
+            }
+        }
+    }
+        /* ------------------------------------- Stuff-carusel-END ------------------------ */
+        /* ------------------------------------- Courses-info ----------------------------- */
+    .courses-info {
+        margin-top: 110px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2px;
+            margin-bottom: 60px;
+            padding-bottom: 12px;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .courses-list {
+            text-align: left;
+            .courses-item {
+                display: flex;
+                margin-bottom: 40px;
+                padding: 36px;
+                border: 1px solid @gray13;
+                .courses-description {
+                    position: relative;
+                    margin-left: 44px;
+                    h3 {
+                        margin-top: 22px;
+                        margin-bottom: 12px;
+                        font-size: @extra;
+                        font-weight: 300;
+                        line-height: 46px;
+                        letter-spacing: 1.4px;
+                    }
+                    p {
+                        margin-top: 12px;
+                        line-height: 19px;
+                        letter-spacing: 0.5px;
+                    }
+                    .price {
+                        margin-top: 46px;
+                        margin-right: 44px;
+                        padding-bottom: 23px;
+                        border-bottom: 1px solid @gray02;
+                        span {
+                            position: relative;
+                            margin-right: 90px;
+                            padding-left: 40px;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: -4px;
+                                width: 24px;
+                                height: 24px;
+                                background-image: url(../img/icon/time.svg);
+                                background-repeat: no-repeat;
+                                background-position: 0 0;
+                            }
+                            &:last-child {
+                                &::before {
+                                    background-image: url(../img/icon/price.svg);
+                                }
+                            }
+                        }
+                    }
+                    .instructors {
+                        margin-top: 32px;
+                        margin-bottom: 64px;
+                        .instructors-list {
+                            .instructors-item {
+                                display: flex;
+                                margin-top: 24px;
+                                img {
+                                    height: 100%;
+                                }
+                                div {
+                                    margin-left: 15px;
+                                    h4 {
+                                        margin: 0;
+                                    }
+                                    p {
+                                        margin: 0;
+                                        margin-top: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .details {
+                        display: none;
+                    }
+                    .details-btn {
+                        position: absolute;
+                        bottom: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Courses-info-END ------------------------- */
+        /* ------------------------------------- Students-work ---------------------------- */
+    .students-work {
+        margin-top: 110px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2px;
+            margin-bottom: 40px;
+            padding-bottom: 12px;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .students-work-list {
+            margin: 0 36px;
+            .students-work-item {
+                margin-right: 20px;
+            }
+        }
+        .slick-prev {
+            top: 46%;
+            left: -37px;
+        }
+        .slick-next {
+            top: 46%;
+            right: -31px;
+        }
+    }
+        /* ------------------------------------- Students-work-END ------------------------ */
+        /* ------------------------------------- Slogan-courses --------------------------- */
+    .slogan-courses {
+        margin-top: 88px;
+        margin-bottom: 160px;
+        text-align: center;
+        & > h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 69px;
+            padding-bottom: 12px;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid @gray04;
+        }
+        & > p {
+            margin: 0 auto;
+            margin-top: 1px;
+            width: 564px;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            text-align: left;
+            letter-spacing: 1px;
+        }
+        .note {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 139px;
+            margin-bottom: 118px;
+            padding: 30px;
+            min-height: 380px;
+            text-align: left;
+            background: rgba(255, 221, 235, 0.1);
+            border: 1px solid @gray02;
+            .note-to-courses {
+                margin-left: 44px;
+                h2 {
+                    margin: 34px 0 8px;
+                    font-size: @poster_large;
+                    font-weight: 300;
+                    line-height: 46px;
+                    letter-spacing: 1.6px;
+                }
+                p {
+                    margin: 12px 0 40px;
+                    width: 490px;
+                    font-size: @baseFontSize;
+                    line-height: 20px;
+                    letter-spacing: 0.5px;
+                }
+                a {
+                    margin-right: 68px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    img {
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Slogan-courses-END ----------------------- */
+    /* ------------------------------------- Training-Page-END ---------------------------- */
 }
 /* ----------------------------------------- main end ------------------------------------ */
 
