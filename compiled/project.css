@@ -185,7 +185,7 @@ a {
   top: 7px;
   left: 0;
   width: 16px;
-  height: 2px;
+  height: 1px;
   background-color: #5A5758;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -198,7 +198,7 @@ a {
   top: 7px;
   left: 0;
   width: 16px;
-  height: 2px;
+  height: 1px;
   background-color: #5A5758;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -228,6 +228,36 @@ a {
   position: absolute;
   width: 6px;
   height: 23px;
+}
+@-webkit-keyframes commenteffect {
+  0% {
+    top: 30px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes commenteffect {
+  0% {
+    top: 30px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes commenteffect {
+  0% {
+    top: 30px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 header {
   border-bottom: 1px solid #F4F4F4;
@@ -859,6 +889,8 @@ main {
   /* ------------------------------------- Courses-info-END ------------------------- */
   /* ------------------------------------- Students-work ---------------------------- */
   /* ------------------------------------- Students-work-END ------------------------ */
+  /* ------------------------------------- Comments-block.studio -------------------- */
+  /* ------------------------------------- Comments-block.studio-END ---------------- */
   /* ------------------------------------- Slogan-courses --------------------------- */
   /* ------------------------------------- Slogan-courses-END ----------------------- */
   /* ------------------------------------- Training-Page-END ---------------------------- */
@@ -925,10 +957,11 @@ main .service-carusel .service-carusel-list .slick-list .slick-slide span {
 }
 main .service-carusel .service-carusel-list .slick-prev {
   top: 33%;
-  left: -35px;
+  left: -26px;
 }
 main .service-carusel .service-carusel-list .slick-next {
   top: 33%;
+  right: -16px;
 }
 main .studio-info {
   margin-top: 102px;
@@ -1023,6 +1056,14 @@ main .studio-info .tab-studio-info .tab-studio-content .studio-carusel {
   width: 432px;
   height: 432px;
 }
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel .slick-prev {
+  top: 50%;
+  left: -40px;
+}
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel .slick-next {
+  top: 50%;
+  right: -34px;
+}
 main .comments-block {
   margin-top: 121px;
   text-align: center;
@@ -1050,7 +1091,7 @@ main .comments-block .comments-carusel {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 11px;
+  margin-top: 4px;
 }
 main .comments-block .comments-carusel .comments-info-list {
   padding: 16px;
@@ -1074,10 +1115,47 @@ main .comments-block .comments-carusel .comments-photo-list {
 }
 main .comments-block .comments-carusel .comments-photo-list .slick-list {
   width: 590px;
-  padding-top: 23px;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item {
+  position: relative;
+  cursor: pointer;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item img {
+  position: relative;
+  top: 30px;
+  opacity: 0.3;
+  z-index: 100;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item p {
+  position: relative;
+  opacity: 0;
+  z-index: 99;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item:hover img {
+  -webkit-animation-name: commenteffect;
+  -moz-animation-name: commenteffect;
+  animation-name: commenteffect;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item:hover p {
+  opacity: 1;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-prev {
+  left: -38px;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-next {
+  right: -12px;
 }
 main .to-master-link {
-  margin-top: 88px;
+  margin-top: 77px;
   text-align: center;
 }
 main .to-master-link h2 {
@@ -1173,7 +1251,7 @@ main .agency-header .slogan h2 {
   border-bottom: 1px solid #EAEAEA;
 }
 main .agency-header .slogan p {
-  margin: 10px auto;
+  margin: 15px auto;
   padding-left: 58px;
   width: 630px;
   text-align: left;
@@ -1357,7 +1435,7 @@ main .partner-comments-block .partner-comments-carusel {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 72px;
+  margin-top: 65px;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
   padding: 16px;
@@ -1381,10 +1459,46 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list {
   width: 590px;
-  padding-top: 23px;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item {
+  cursor: pointer;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item img {
+  position: relative;
+  top: 30px;
+  opacity: 0.3;
+  z-index: 100;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item p {
+  position: relative;
+  opacity: 0;
+  z-index: 99;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item:hover img {
+  -webkit-animation-name: commenteffect;
+  -moz-animation-name: commenteffect;
+  animation-name: commenteffect;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item:hover p {
+  opacity: 1;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-prev {
+  left: -38px;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-next {
+  right: -12px;
 }
 main .partner-form {
-  margin-top: 88px;
+  margin-top: 78px;
   margin-bottom: 160px;
 }
 main .partner-form .block {
@@ -1546,7 +1660,7 @@ main .courses-info {
   margin-top: 110px;
   text-align: center;
 }
-main .courses-info h2 {
+main .courses-info > h2 {
   display: inline-block;
   vertical-align: top;
   margin-top: 2px;
@@ -1586,6 +1700,7 @@ main .courses-info .courses-list .courses-item .courses-description h3 {
 }
 main .courses-info .courses-list .courses-item .courses-description p {
   margin-top: 12px;
+  margin-right: 58px;
   line-height: 19px;
   letter-spacing: 0.5px;
 }
@@ -1627,7 +1742,7 @@ main .courses-info .courses-list .courses-item .courses-description .instructors
   margin-top: 24px;
 }
 main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item img {
-  height: 100%;
+  height: 79px;
 }
 main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item div {
   margin-left: 15px;
@@ -1638,17 +1753,31 @@ main .courses-info .courses-list .courses-item .courses-description .instructors
 main .courses-info .courses-list .courses-item .courses-description .instructors .instructors-list .instructors-item div p {
   margin: 0;
   margin-top: 4px;
+  max-width: 265px;
 }
 main .courses-info .courses-list .courses-item .courses-description .details {
   display: none;
 }
-main .courses-info .courses-list .courses-item .courses-description .details-btn {
+main .courses-info .courses-list .courses-item .courses-description .course-details-btn {
   position: absolute;
   bottom: 0;
+  padding: 17px 16px;
+  width: 100%;
+  color: #5A5758;
+  background-color: #F4F4F4;
+  border: none;
   cursor: pointer;
 }
+main .courses-info .courses-list .courses-item .courses-description .course-details-btn:hover {
+  background-color: #FAFAFA;
+}
+main .courses-info .courses-list .link-all-courses {
+  margin: 58px auto 0;
+  padding: 16px 8px;
+  width: 334px;
+}
 main .students-work {
-  margin-top: 110px;
+  margin-top: 116px;
   text-align: center;
 }
 main .students-work h2 {
@@ -1677,6 +1806,9 @@ main .students-work .slick-prev {
 main .students-work .slick-next {
   top: 46%;
   right: -31px;
+}
+main .comments-block.studio {
+  margin-top: 88px;
 }
 main .slogan-courses {
   margin-top: 88px;
@@ -1925,6 +2057,103 @@ footer .footer-inner .footer-contacts p span {
   padding: 15px 0;
   width: 270px;
   cursor: pointer;
+}
+.modal-course-details .details {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: -383px;
+  max-width: 766px;
+  background-color: #FFF;
+  z-index: 100;
+}
+.modal-course-details .details .block {
+  padding: 60px 100px;
+}
+.modal-course-details .details .block > h2 {
+  display: block;
+  vertical-align: top;
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 1.4px;
+  text-align: center;
+}
+.modal-course-details .details .block .details-text p {
+  margin: 0;
+}
+.modal-course-details .details .block .details-text .details-text-list {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+.modal-course-details .details .block .instructors {
+  margin-top: 32px;
+  margin-bottom: 0px;
+}
+.modal-course-details .details .block .instructors > p {
+  font-size: 24px;
+  line-height: 29px;
+}
+.modal-course-details .details .block .instructors .instructors-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.modal-course-details .details .block .instructors .instructors-list .instructors-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+}
+.modal-course-details .details .block .instructors .instructors-list .instructors-item div {
+  margin-left: 15px;
+}
+.modal-course-details .details .block .instructors .instructors-list .instructors-item div h4 {
+  margin: 0;
+}
+.modal-course-details .details .block .instructors .instructors-list .instructors-item div p {
+  margin: 0;
+  margin-top: 4px;
+  width: 175px;
+}
+.modal-course-details .details .price {
+  margin: 0;
+  padding: 26px 0;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  background-color: #F4F4F4;
+  border: none;
+}
+.modal-course-details .details .price span {
+  position: relative;
+  margin-right: 90px;
+  padding-left: 40px;
+}
+.modal-course-details .details .price span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/icon/time.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.modal-course-details .details .price span:last-child {
+  margin-right: 0;
 }
 /* ----------------------------------------- Media 991 ------------------------------------ */
 /* ----------------------------------------- Media 991 ------------------------------------ */
