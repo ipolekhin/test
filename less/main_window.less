@@ -744,7 +744,7 @@ main {
                 p {
                     margin: 0 auto;
                     padding: 0;
-                    width: 390px;
+                    width: 374px;
                     text-align: left;
                 }
                 span {
@@ -780,6 +780,7 @@ main {
                         }
                         p {
                             position: relative;
+                            margin-right: 20px;
                             opacity: 0;
                             z-index: 99;
                         }
@@ -947,8 +948,21 @@ main {
             .select {
                 width: 374px;
                 select {
+                    padding-left: 15px;
                     width: 100%;
                     height: 40px;
+                    font-family: @baseFont;
+                    font-size: @baseFontSize;
+                    letter-spacing: 0.4px;
+                    color: @textGray;
+                    option {
+                        font-family: inherit;
+                        font-size: inherit;
+                        color: inherit;
+                        margin-top: 10px;
+                        padding-top: 10px;
+                        height: 40px;
+                    }
                 }
                 .agency-info-list {
                     div {
@@ -1104,7 +1118,7 @@ main {
         .partner-comments-carusel {
             display: flex;
             align-items: center;
-            margin-top: 65px;
+            margin-top: 4px;
             .partner-comments-info-list {
                 padding: 16px;
                 width: 549px;
@@ -1113,7 +1127,7 @@ main {
                 p {
                     margin: 0 auto;
                     padding: 0;
-                    width: 390px;
+                    width: 374px;
                     text-align: left;
                 }
                 span {
@@ -1136,6 +1150,7 @@ main {
                         }
                         p {
                             position: relative;
+                            margin-right: 20px;
                             opacity: 0;
                             z-index: 99;
                         }
@@ -1199,9 +1214,15 @@ main {
                     input {
                         width: 100%;
                         height: 44px;
+                        font-family: inherit;
                         font-size: @x-large;
+                        letter-spacing: 1.6px;
+                        color: #5A5758;
                         border: none;
                         border-bottom: 1px solid #E2DDD7;
+                        &::placeholder{
+                            color: #e2ddd7;
+                        }
                     }
                 }
                 .personal {
@@ -1434,6 +1455,7 @@ main {
                         bottom: 0;
                         padding: 17px 16px;
                         width: 100%;
+                        font-family: @baseFont;
                         color: #5A5758;
                         background-color: @gray02;
                         border: none;
@@ -1448,6 +1470,7 @@ main {
                 margin: 58px auto 0;
                 padding: 16px 8px;
                 width: 334px;
+                letter-spacing: 1.6px;
             }
         }
     }
@@ -1472,7 +1495,35 @@ main {
         .students-work-list {
             margin: 0 36px;
             .students-work-item {
-                margin-right: 20px;
+                position: relative;
+                img {
+                    margin-right: 20px;
+                }
+                .info {
+                    display: table;
+                    position: absolute;
+                    top: 0;
+                    padding-right: 20px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255, 255 , 255, 0.9);
+                    opacity: 0;
+                    div {
+                        display: table-cell;
+                        vertical-align: middle;
+                        p {
+                            span {
+                                font-size: @x-large + 4;
+                                font-weight: 700;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+                .info:hover {
+                    opacity: 1;
+                    z-index: 100;
+                }
             }
         }
         .slick-prev {
@@ -1524,7 +1575,6 @@ main {
             padding: 30px;
             min-height: 380px;
             text-align: left;
-            background: rgba(255, 221, 235, 0.1);
             border: 1px solid @gray02;
             .note-to-courses {
                 margin-left: 44px;

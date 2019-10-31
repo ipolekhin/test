@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixin";
 
-
 @font-face {
     font-family: 'Gilory';  
     src: url('../fonts/Gilroy-Light.woff') format('woff'),
@@ -57,9 +56,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: @baseFont;
     font-size: @baseFontSize;
     font-weight: 800;
     line-height: 17px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
     background-color: transparent;
     border: 1px solid @gray13;
@@ -95,8 +96,14 @@ a {
     z-index: 50;
 }
 
+.modal-open {
+    overflow: hidden;
+}
+
 .modal.modal-show {
     display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .modal.modal-show > div {
@@ -146,7 +153,6 @@ a {
     overflow: hidden;
 }
 
-
 .slick-prev {
     &::before {
         content: '';
@@ -156,6 +162,7 @@ a {
         height: 23px;
     }
 }
+
 .slick-next {
     &::before {
         content: '';

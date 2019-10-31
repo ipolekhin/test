@@ -125,9 +125,11 @@ a {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: 'Gilory', Arial, sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 17px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid #DEDDDE;
@@ -158,8 +160,13 @@ a {
   height: 100vh;
   z-index: 50;
 }
+.modal-open {
+  overflow: hidden;
+}
 .modal.modal-show {
   display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .modal.modal-show > div {
   -webkit-animation-name: bounce;
@@ -1102,7 +1109,7 @@ main .comments-block .comments-carusel .comments-info-list {
 main .comments-block .comments-carusel .comments-info-list p {
   margin: 0 auto;
   padding: 0;
-  width: 390px;
+  width: 374px;
   text-align: left;
 }
 main .comments-block .comments-carusel .comments-info-list span {
@@ -1128,6 +1135,7 @@ main .comments-block .comments-carusel .comments-photo-list .slick-list .comment
 }
 main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item p {
   position: relative;
+  margin-right: 20px;
   opacity: 0;
   z-index: 99;
 }
@@ -1284,7 +1292,20 @@ main .search-agency .block .select {
   width: 374px;
 }
 main .search-agency .block .select select {
+  padding-left: 15px;
   width: 100%;
+  height: 40px;
+  font-family: 'Gilory', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: #5A5758;
+}
+main .search-agency .block .select select option {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin-top: 10px;
+  padding-top: 10px;
   height: 40px;
 }
 main .search-agency .block .select .agency-info-list div {
@@ -1435,7 +1456,7 @@ main .partner-comments-block .partner-comments-carusel {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 65px;
+  margin-top: 4px;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
   padding: 16px;
@@ -1446,7 +1467,7 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-info-li
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list p {
   margin: 0 auto;
   padding: 0;
-  width: 390px;
+  width: 374px;
   text-align: left;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list span {
@@ -1471,6 +1492,7 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item p {
   position: relative;
+  margin-right: 20px;
   opacity: 0;
   z-index: 99;
 }
@@ -1535,9 +1557,27 @@ main .partner-form .block form .form-group {
 main .partner-form .block form .form-group input {
   width: 100%;
   height: 44px;
+  font-family: inherit;
   font-size: 20px;
+  letter-spacing: 1.6px;
+  color: #5A5758;
   border: none;
   border-bottom: 1px solid #E2DDD7;
+}
+main .partner-form .block form .form-group input::-webkit-input-placeholder {
+  color: #e2ddd7;
+}
+main .partner-form .block form .form-group input:-moz-placeholder {
+  color: #e2ddd7;
+}
+main .partner-form .block form .form-group input::-moz-placeholder {
+  color: #e2ddd7;
+}
+main .partner-form .block form .form-group input:-ms-input-placeholder {
+  color: #e2ddd7;
+}
+main .partner-form .block form .form-group input::placeholder {
+  color: #e2ddd7;
 }
 main .partner-form .block form .personal {
   position: relative;
@@ -1763,6 +1803,7 @@ main .courses-info .courses-list .courses-item .courses-description .course-deta
   bottom: 0;
   padding: 17px 16px;
   width: 100%;
+  font-family: 'Gilory', Arial, sans-serif;
   color: #5A5758;
   background-color: #F4F4F4;
   border: none;
@@ -1775,6 +1816,7 @@ main .courses-info .courses-list .link-all-courses {
   margin: 58px auto 0;
   padding: 16px 8px;
   width: 334px;
+  letter-spacing: 1.6px;
 }
 main .students-work {
   margin-top: 116px;
@@ -1797,7 +1839,33 @@ main .students-work .students-work-list {
   margin: 0 36px;
 }
 main .students-work .students-work-list .students-work-item {
+  position: relative;
+}
+main .students-work .students-work-list .students-work-item img {
   margin-right: 20px;
+}
+main .students-work .students-work-list .students-work-item .info {
+  display: table;
+  position: absolute;
+  top: 0;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+}
+main .students-work .students-work-list .students-work-item .info div {
+  display: table-cell;
+  vertical-align: middle;
+}
+main .students-work .students-work-list .students-work-item .info div p span {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+main .students-work .students-work-list .students-work-item .info:hover {
+  opacity: 1;
+  z-index: 100;
 }
 main .students-work .slick-prev {
   top: 46%;
@@ -1850,7 +1918,6 @@ main .slogan-courses .note {
   padding: 30px;
   min-height: 380px;
   text-align: left;
-  background: rgba(255, 221, 235, 0.1);
   border: 1px solid #F4F4F4;
 }
 main .slogan-courses .note .note-to-courses {

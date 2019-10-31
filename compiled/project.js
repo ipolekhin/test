@@ -193,6 +193,7 @@ $(document).on('ready', function() {
     $('.comments-photo-list').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        focusOnSelect: true,
         asNavFor: '.comments-info-list',
     });
 
@@ -296,6 +297,7 @@ $(document).on('ready', function() {
     window.addEventListener(('keydown'), function(e) {
         if (e.keyCode === 27) {
             let blur = document.querySelectorAll('.blur');
+            let modalopen = document.querySelector('.modal-open');
             let collapsed = document.querySelectorAll('.collapsed');
             for (i = 0; i < blur.length; i++) {
                 blur[i].classList.remove('blur');
@@ -312,6 +314,10 @@ $(document).on('ready', function() {
                 }
             }
 
+            if (modalopen) {
+                modalopen.classList.remove('modal-open')
+            }
+
             if (navbartoggler.classList.contains('collapsed')) {
                 navbartoggler.classList.remove('collapsed');
             }
@@ -325,13 +331,22 @@ $(document).on('ready', function() {
     $('.course-details-btn').click( function () {
         var descr = $(this).next('.details').html();
         var modalcoursedetails = $('body').find('.modal-course-details');
+        $('body').addClass('modal-open');
         modalcoursedetails.addClass('modal-show');
         modalcoursedetails.children('div').html(descr);
         stylesBlur();
-        $('.modal-close').click( function () {
-            modalcoursedetails.removeClass('modal-show');
-            $('.blur').removeClass();
-        });
+    });
+
+    $('.modal-close').click( function () {
+        modalcoursedetails.removeClass('modal-show');
+        $('.blur, body').removeClass();
+    });
+
+    $('.modal').click(function(e) {
+        if ($(e.target).hasClass('modal-show')) {
+            $(e.target).removeClass('modal-show');
+            $('.blur, .modal-open').removeClass();
+        }
     });
 
     $('.tab-studio-info .tabs-studio-info > li a').click( function () {
