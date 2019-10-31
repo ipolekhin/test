@@ -1123,23 +1123,23 @@ main .comments-block .comments-carusel .comments-photo-list {
 main .comments-block .comments-carusel .comments-photo-list .slick-list {
   width: 590px;
 }
-main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item {
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide:not(.slick-current) .comments-photo-item {
   position: relative;
   cursor: pointer;
 }
-main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item img {
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide:not(.slick-current) .comments-photo-item img {
   position: relative;
   top: 30px;
   opacity: 0.3;
   z-index: 100;
 }
-main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item p {
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide:not(.slick-current) .comments-photo-item p {
   position: relative;
   margin-right: 20px;
   opacity: 0;
   z-index: 99;
 }
-main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item:hover img {
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide:not(.slick-current) .comments-photo-item:hover img {
   -webkit-animation-name: commenteffect;
   -moz-animation-name: commenteffect;
   animation-name: commenteffect;
@@ -1153,8 +1153,19 @@ main .comments-block .comments-carusel .comments-photo-list .slick-list .comment
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-main .comments-block .comments-carusel .comments-photo-list .slick-list .comments-photo-item:hover p {
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide:not(.slick-current) .comments-photo-item:hover p {
   opacity: 1;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-current .comments-photo-item img {
+  position: relative;
+  top: 30px;
+  opacity: 1;
+  z-index: 100;
+}
+main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-current .comments-photo-item p {
+  position: relative;
+  opacity: 0;
+  z-index: 99;
 }
 main .comments-block .comments-carusel .comments-photo-list .slick-prev {
   left: -38px;
