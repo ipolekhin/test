@@ -335,11 +335,10 @@ $(document).on('ready', function() {
         modalcoursedetails.addClass('modal-show');
         modalcoursedetails.children('div').html(descr);
         stylesBlur();
-    });
-
-    $('.modal-close').click( function () {
-        modalcoursedetails.removeClass('modal-show');
-        $('.blur, body').removeClass();
+        $('.modal-close').click( function () {
+            modalcoursedetails.removeClass('modal-show');
+            $('.blur, body').removeClass();
+        });
     });
 
     $('.modal').click(function(e) {
