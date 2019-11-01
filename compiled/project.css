@@ -358,7 +358,7 @@ header .container .main-navigation .site-navigation .submenu {
   width: 100%;
   border-top: 1px solid #EFEFEF;
   border-bottom: 1px solid #EFEFEF;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
   background-color: #FFF;
   z-index: 100;
 }
@@ -451,7 +451,7 @@ header .container .search .search_content {
   overflow-x: hidden;
   background: #FFF;
   border: 1px solid #F4F4F4;
-  box-shadow: 0 3px 11px 2px #e2e2e2;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
   z-index: 100;
 }
 header .container .search .search_content ul {
@@ -624,6 +624,9 @@ main .sales-hits .catalog-list .slick-list .catalog-item {
   position: relative;
   margin-right: 27px;
 }
+main .sales-hits .catalog-list .slick-list .catalog-item:hover {
+  z-index: 1001;
+}
 main .sales-hits .catalog-list .slick-list .catalog-item > a {
   display: block;
   width: 210px;
@@ -676,7 +679,7 @@ main .sales-hits .catalog-list .slick-list .catalog-item .hide-block {
   width: 262px;
   background-color: #FFF;
   outline: 1px solid #dedede;
-  box-shadow: 0 5px 5px 0 #DEDDDE;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
 }
 main .sales-hits .catalog-list .slick-list .catalog-item .hide-block .quantity,
 main .sales-hits .catalog-list .slick-list .catalog-item .hide-block a {
@@ -771,20 +774,6 @@ main .sales-hits .catalog-list .slick-next {
   height: 60px;
   z-index: 999;
 }
-main .sales-hits .catalog-list .slick-prev::before {
-  content: '';
-  background: url('../img/icon-prev.svg') no-repeat;
-  position: absolute;
-  width: 6px;
-  height: 23px;
-}
-main .sales-hits .catalog-list .slick-next::before {
-  content: '';
-  background: url('../img/icon-next.svg') no-repeat;
-  position: absolute;
-  width: 6px;
-  height: 23px;
-}
 /* ----------------------------------------- Блок 3 ---------------------------------------- */
 /* ----------------------------------------- Блок 3 ---------------------------------------- */
 /* ----------------------------------------- Блок 3 ---------------------------------------- */
@@ -811,11 +800,12 @@ main .sliders .slider-list.slider .slick-next::before {
 /* ----------------------------------------- Блок 4 ---------------------------------------- */
 /* ----------------------------------------- Блок 4 ---------------------------------------- */
 main .brands-hits {
+  margin-top: 36px;
   text-align: center;
 }
 main .brands-hits h2 {
   display: inline-block;
-  margin-top: 98px;
+  margin-top: 62px;
   padding-bottom: 12px;
   font-family: 'Gilory', sans-serif;
   font-size: 32px;
@@ -901,6 +891,14 @@ main {
   /* ------------------------------------- Slogan-courses --------------------------- */
   /* ------------------------------------- Slogan-courses-END ----------------------- */
   /* ------------------------------------- Training-Page-END ---------------------------- */
+  /* ------------------------------------- Shop-Page ------------------------------------ */
+  /* ------------------------------------- shop-category ---------------------------- */
+  /* ------------------------------------- shop-category-END ------------------------ */
+  /* ------------------------------------- shop-sort-item --------------------------- */
+  /* ------------------------------------- shop-sort-item-END ----------------------- */
+  /* ------------------------------------- shop-item -------------------------------- */
+  /* ------------------------------------- shop-item-END ---------------------------- */
+  /* ------------------------------------- Shop-Page-END -------------------------------- */
 }
 main .studio-header {
   margin-top: 60px;
@@ -1492,22 +1490,22 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list {
   width: 590px;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item {
   cursor: pointer;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item img {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item img {
   position: relative;
   top: 30px;
   opacity: 0.3;
   z-index: 100;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item p {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item p {
   position: relative;
   margin-right: 20px;
   opacity: 0;
   z-index: 99;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item:hover img {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item:hover img {
   -webkit-animation-name: commenteffect;
   -moz-animation-name: commenteffect;
   animation-name: commenteffect;
@@ -1521,8 +1519,19 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .partner-comments-photo-item:hover p {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item:hover p {
   opacity: 1;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .comments-photo-item img {
+  position: relative;
+  top: 30px;
+  opacity: 1;
+  z-index: 100;
+}
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .comments-photo-item p {
+  position: relative;
+  opacity: 0;
+  z-index: 99;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-prev {
   left: -38px;
@@ -1956,6 +1965,308 @@ main .slogan-courses .note .note-to-courses a {
 main .slogan-courses .note .note-to-courses a img {
   vertical-align: middle;
   margin-right: 10px;
+}
+main .shop-category {
+  margin-top: 62px;
+  margin-bottom: 16px;
+  padding-bottom: 92px;
+  text-align: center;
+  background: rgba(62, 62, 62, 0.02);
+}
+main .shop-category h2 {
+  display: inline-block;
+  margin-top: 62px;
+  padding-bottom: 12px;
+  font-family: 'Gilory', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EAEAEA;
+}
+main .shop-category .shop-category-list {
+  margin-top: 33px;
+  margin-right: 10px;
+  margin-left: 48px;
+}
+main .shop-category .shop-category-list .shop-category-item h3 {
+  margin-top: 9px;
+  margin-right: 40px;
+  font-family: 'Gilory', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+main .shop-category .shop-category-list .slick-prev {
+  top: 33%;
+  left: -50px;
+}
+main .shop-category .shop-category-list .slick-next {
+  top: 33%;
+  right: -6px;
+}
+main .sorts {
+  margin-top: 100px;
+  margin-bottom: 42px;
+}
+main .sorts ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main .shop .catalog-list {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+main .shop .catalog-list .catalog-item {
+  position: relative;
+  margin-right: 27px;
+  margin-bottom: 60px;
+}
+main .shop .catalog-list .catalog-item:hover {
+  z-index: 101;
+}
+main .shop .catalog-list .catalog-item:nth-child(5n) {
+  margin-right: 0;
+}
+main .shop .catalog-list .catalog-item .catalog-item-link {
+  display: block;
+  width: 210px;
+  text-align: left;
+  margin-bottom: 9px;
+}
+main .shop .catalog-list .catalog-item .catalog-item-link img {
+  position: relative;
+}
+main .shop .catalog-list .catalog-item .catalog-item-link h4 {
+  position: relative;
+  margin: 0;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #F4F4F4;
+}
+main .shop .catalog-list .catalog-item .catalog-item-link h4 .catalog-category {
+  display: block;
+  margin-top: 11px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ADABAC;
+  letter-spacing: 0.04em;
+}
+main .shop .catalog-list .catalog-item .catalog-item-link h4 .catalog-item-title {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #5A5758;
+  letter-spacing: 0.04em;
+}
+main .shop .catalog-list .catalog-item .favorite {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  z-index: 100;
+}
+main .shop .catalog-list .catalog-item .color {
+  position: absolute;
+  top: 188px;
+  right: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: #FFF;
+  border-radius: 2px;
+  z-index: 100;
+}
+main .shop .catalog-list .catalog-item .color.red {
+  background-color: #F54545;
+}
+main .shop .catalog-list .catalog-item .color.orange {
+  background-color: #FFBC3A;
+}
+main .shop .catalog-list .catalog-item .color.yellow {
+  background-color: #EFF30E;
+}
+main .shop .catalog-list .catalog-item .color.green {
+  background-color: #16EA16;
+}
+main .shop .catalog-list .catalog-item .color.aqua {
+  background-color: #1FDAE0;
+}
+main .shop .catalog-list .catalog-item .color.blue {
+  background-color: #1436FF;
+}
+main .shop .catalog-list .catalog-item .color.purple {
+  background-color: #A90DF1;
+}
+main .shop .catalog-list .catalog-item .color.magenta {
+  background-color: #E83094;
+}
+main .shop .catalog-list .catalog-item .color.brown {
+  background-color: #A7600E;
+}
+main .shop .catalog-list .catalog-item .color.white {
+  background-color: #FFF;
+}
+main .shop .catalog-list .catalog-item .color.gray50 {
+  background-color: #ADABAC;
+}
+main .shop .catalog-list .catalog-item .color.ultrablack {
+  background-color: #232323;
+}
+main .shop .catalog-list .catalog-item .catalog-price {
+  position: relative;
+  margin: 0;
+  margin-top: 9px;
+  padding: 0;
+  font-family: 'Gilory', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+}
+main .shop .catalog-list .catalog-item .hide-block {
+  display: none;
+  position: absolute;
+  padding: 370px 26px 0;
+  left: -26px;
+  top: -26px;
+  width: 262px;
+  background-color: #FFF;
+  outline: 1px solid #dedede;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+main .shop .catalog-list .catalog-item .hide-block a {
+  margin: 12px auto 0;
+  margin-bottom: 27px;
+  padding: 17px 0 16px;
+  text-align: center;
+}
+main .shop .catalog-list .catalog-item .hide-block .quantity {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 12px auto 0;
+  text-align: center;
+}
+main .shop .catalog-list .catalog-item .hide-block .quantity input {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  font-family: 'Gilory', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5A5758;
+  text-align: center;
+  border: none;
+}
+main .shop .catalog-list .catalog-item .hide-block .quantity button {
+  font-family: 'Gilory', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 19px;
+  color: #5A5758;
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+main .shop .catalog-list .catalog-item .hide-block .quantity button:focus {
+  outline: none;
+}
+main .shop .catalog-list .catalog-item .hide-block p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 30px auto 20px;
+  color: #ADABAC;
+}
+main .shop .catalog-list .catalog-item .hide-block p a {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  box-shadow: 0 1px 0 0 #5A5758;
+}
+main .shop .catalog-list .catalog-item .hide-block p a:hover {
+  box-shadow: none;
+}
+main .shop .catalog-list .catalog-item:hover img,
+main .shop .catalog-list .catalog-item:hover h4,
+main .shop .catalog-list .catalog-item:hover p {
+  z-index: 99;
+}
+main .shop .catalog-list .catalog-item:hover .hide-block {
+  display: block;
+}
+main .shop .pagination {
+  display: block;
+  text-align: center;
+}
+main .shop .pagination ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #F4F4F4;
+  list-style: none;
+}
+main .shop .pagination ul li {
+  display: inline-block;
+}
+main .shop .pagination ul li a {
+  display: block;
+  margin: 10px 0;
+  padding: 2px 15px;
+  color: #ADABAC;
+  border-right: 1px solid #F4F4F4;
+}
+main .shop .pagination ul li a.current {
+  color: #5A5758;
+  font-weight: 700;
+}
+main .shop .pagination ul li a:hover {
+  color: #5A5758;
+  font-weight: 700;
+}
+main .shop .pagination ul li a.pagination-next {
+  position: relative;
+  top: 6px;
+  right: 4px;
+  margin: 0 10px;
+  padding: 0;
+  border-right: none;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+main .shop .pagination ul li a.pagination-next:hover {
+  font-weight: 300;
 }
 /* ----------------------------------------- main end ------------------------------------ */
 /* ----------------------------------------- Footer -------------------------------------- */
