@@ -148,155 +148,82 @@
 
     <main>
         <div class="container">
-            <h1 class="page-title visually-hidden">Bagira Nails - Магазин</h1>
-            <section class="brands-hits">               
-                <h2 class="visually-hidden">Популярные бренды</h2>
-                <div class="brand-list slider">
-                    <div class="brand-item">
-                        <a href="#">
-                            <img src="img/brand_1.png" alt="">
-                            <h3>Bagheera nails</h3>
-                        </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="#">
-                            <img src="img/brand_2.png" alt="">
-                            <h3>Golden Trace</h3>
-                        </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="#">
-                            <img src="img/brand_3.png" alt="">
-                            <h3>Lianail</h3>
-                        </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="#">
-                            <img src="img/brand_4.png" alt="">
-                            <h3>Artex</h3>
-                        </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="#">
-                            <img src="img/brand_3.png" alt="">
-                            <h3>Lianail</h3>
-                        </a>
-                    </div>
+            <h1 class="page-title visually-hidden">Bagira Nails - Категории</h1>
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="#">
+                        Магазин
+                    </a>
+                </li>
+                <li>
+                    <a>Bagira nails</a>
+                </li>
+            </ul>
+
+            <section class="category-header">
+                <div class="block">
+                    <img src="img/logo.svg" alt="Bagheera nails" width="215" height="120">
+                    <h2>Bagheera nails</h2>
+                    <p>Гель-лаки премиум класса на любой вкус</p>
                 </div>
             </section>
-        </div>
 
-        <section class="shop-category">
-            <div class="container">
-                <h2>Категории</h2>
-                <div class="shop-category-list">
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-1.png" alt="">
-                            <h3>Гель лаки</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-2.png" alt="">
-                            <h3>Топы</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-3.png" alt="">
-                            <h3>Гель краски</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-4.png" alt="">
-                            <h3>Кисти</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-5.png" alt="">
-                            <h3>Хлопья и втирка</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-6.png" alt="">
-                            <h3>Инструменты</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-2.png" alt="">
-                            <h3>Топы2</h3>
-                        </a>
-                    </div>
-                    <div class="shop-category-item">
-                        <a href="#">
-                            <img src="img/shop-category-3.png" alt="">
-                            <h3>Гель краски2</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
             <section class="sorts">
                 <h2 class="visually-hidden">Сортировка</h2>
-                <ul>
-                    <li>
-                        <label for="select-brand" class="visually-hidden">Бренды</label>
-                        <select name='brands' id="select-brand">
-                            <option>Бренды</option>
-                            <option value='brand1'>Bagheera nails</option>
-                            <option value='brand2'>Golden Trace</option>
-                            <option value='brand3'>Lianail</option>
-                            <option value='brand4'>Artex</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="select-category" class="visually-hidden">Категория</label>
-                        <select name='categories' id="select-category">
-                            <option>Категория</option>
-                            <option value='category1'>Гель-лаки</option>
-                            <option value='category2'>Гель-краска</option>
-                            <option value='category3'>Топы</option>
-                            <option value='category4'>Пигменты</option>
-                            <option value='category5'>Кисти</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="select-collection" class="visually-hidden">Коллекция</label>
-                        <select name='collections' id="select-collection">
-                            <option>Коллекция</option>
-                            <option value='collection1'>Коллекция1</option>
-                            <option value='collection2'>Коллекция2</option>
-                            <option value='collection3'>Коллекция3</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="select-color" class="visually-hidden">Цвет</label>
-                        <select name='collections' id="select-color">
-                            <option>Цвет</option>
-                            <option value='color1'>Цвет1</option>
-                            <option value='color2'>Цвет2</option>
-                            <option value='color3'>Цвет3</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="select-collection" class="visually-hidden">Цена</label>
-                        <div class="price-value">
-                            <label class="min-price">
-                                <input type="text" id="price-min" name="price-min" placeholder="От">
-                            </label>
-                            <label class="max-price">
-                                <input type="text" id="price-max" name="price-max" placeholder="До">
-                            </label>
+                <form action="">
+                    <div class="filter-list">
+                        <div class="item category-filter">
+                            <label for="select-category" class="visually-hidden">Категория</label>
+                            <select name='categories' id="select-category">
+                                <option>Категория</option>
+                                <option value='category1'>Гель-лаки</option>
+                                <option value='category2'>Гель-краска</option>
+                                <option value='category3'>Топы</option>
+                                <option value='category4'>Пигменты</option>
+                                <option value='category5'>Кисти</option>
+                            </select>
+                            <span class="current">Категория</span>
+                            <ul class="list">
+                                <li class="option" data-value="1">Гель-лаки</li>
+                                <li class="option" data-value="2">Гель-лаки</li>
+                                <li class="option" data-value="3">Гель-лаки</li>
+                                <li class="option" data-value="4">Гель-лаки</li>
+                                <li class="option" data-value="5">Гель-лаки</li>
+                            </ul>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <ul>
+                        <li>
+                            <label for="select-collection" class="visually-hidden">Коллекция</label>
+                            <select name='collections' id="select-collection">
+                                <option>Коллекция</option>
+                                <option value='collection1'>Коллекция1</option>
+                                <option value='collection2'>Коллекция2</option>
+                                <option value='collection3'>Коллекция3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="select-color" class="visually-hidden">Цвет</label>
+                            <select name='collections' id="select-color">
+                                <option>Цвет</option>
+                                <option value='color1'>Цвет1</option>
+                                <option value='color2'>Цвет2</option>
+                                <option value='color3'>Цвет3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="select-collection" class="visually-hidden">Цена</label>
+                            <div class="price-value">
+                                <label class="min-price">
+                                    <input type="text" id="price-min" name="price-min" placeholder="От">
+                                </label>
+                                <label class="max-price">
+                                    <input type="text" id="price-max" name="price-max" placeholder="До">
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
             </section>
 
             <section class="shop">

@@ -370,6 +370,18 @@ $(document).on('ready', function() {
         }
     });
 
+    $('.category-filter').click(function (e) {
+        var $dropdown = $(this);
+        $('.nice-select').not($dropdown).removeClass('open');
+        $dropdown.toggleClass('open');
+    });
+
+    $('.category-filter').click(function(e) {
+        if ($(e.target).closest('.category-filter').length === 0) {
+            $('.category-filter').removeClass('open').find('.option');
+        }
+    });
+
     $('.tab-studio-info .tabs-studio-info > li a').click( function () {
         $('.tab-studio-info .tabs-studio-info > li a').removeClass('current');
         $(this).addClass('current');
@@ -393,6 +405,32 @@ $(document).on('ready', function() {
                 agencylist[i].classList.remove('show');
             }
         }
+    });
+
+    // Количество товаров quantity
+    $('.quantity button').click(function () {
+        var $this = $(this).parent().find('input'), btn = $(this), qty = parseFloat($this.val()), min = 1, max = 99, new_qty;
+        if(btn.hasClass('plus')) {
+            new_qty = (qty < max) ? qty + 1 : qty;
+        } else {
+            new_qty = (qty > min) ? qty - 1 : qty;
+        }
+        $this.val(new_qty).change();
+    });
+
+    // Фото товара
+    $('.product-thumb-list .product-thumb-item').click(function () {
+        var thumb = $(this);
+        $('.product-thumb-item.current').removeClass('current');
+        thumb.addClass('current');
+        var productphoto = $('.product-photo-item');
+        var imgselect = thumb.find('img').data('number');
+        productphoto.removeClass('current');
+        $('.product-photo-item').each(function(index){
+            if (imgselect == index) {
+                $(this).addClass('current');
+            }
+        });
     });
 
 });
