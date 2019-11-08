@@ -20,6 +20,12 @@
 }
 @font-face {
   font-family: 'Gilory';
+  src: url('../fonts/Gilroy-SemiBold.woff') format('woff'), url('../fonts/Gilroy-SemiBold.eot') format('eot'), url('../fonts/Gilroy-SemiBold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gilory';
   src: url('../fonts/Gilroy-ExtraBold.woff') format('woff'), url('../fonts/Gilroy-ExtraBold.otf') format('otf');
   font-style: normal;
   font-weight: 800;
@@ -237,50 +243,11 @@ a {
   z-index: 100;
 }
 .catalog-list .catalog-item .color {
-  position: absolute;
   top: 188px;
   right: 6px;
   width: 16px;
   height: 16px;
-  background-color: #FFF;
-  border-radius: 2px;
   z-index: 100;
-}
-.catalog-list .catalog-item .color.red {
-  background-color: #F54545;
-}
-.catalog-list .catalog-item .color.orange {
-  background-color: #FFBC3A;
-}
-.catalog-list .catalog-item .color.yellow {
-  background-color: #EFF30E;
-}
-.catalog-list .catalog-item .color.green {
-  background-color: #16EA16;
-}
-.catalog-list .catalog-item .color.aqua {
-  background-color: #1FDAE0;
-}
-.catalog-list .catalog-item .color.blue {
-  background-color: #1436FF;
-}
-.catalog-list .catalog-item .color.purple {
-  background-color: #A90DF1;
-}
-.catalog-list .catalog-item .color.magenta {
-  background-color: #E83094;
-}
-.catalog-list .catalog-item .color.brown {
-  background-color: #A7600E;
-}
-.catalog-list .catalog-item .color.white {
-  background-color: #FFF;
-}
-.catalog-list .catalog-item .color.gray50 {
-  background-color: #ADABAC;
-}
-.catalog-list .catalog-item .color.ultrablack {
-  background-color: #232323;
 }
 .catalog-list .catalog-item .catalog-price {
   position: relative;
@@ -344,6 +311,47 @@ a {
 .catalog-list .catalog-item:hover .hide-block {
   display: block;
 }
+.color {
+  position: absolute;
+  background-color: #FFF;
+  border-radius: 2px;
+}
+.color.red {
+  background-color: #F54545;
+}
+.color.orange {
+  background-color: #FFBC3A;
+}
+.color.yellow {
+  background-color: #EFF30E;
+}
+.color.green {
+  background-color: #16EA16;
+}
+.color.aqua {
+  background-color: #1FDAE0;
+}
+.color.blue {
+  background-color: #1436FF;
+}
+.color.purple {
+  background-color: #A90DF1;
+}
+.color.magenta {
+  background-color: #E83094;
+}
+.color.brown {
+  background-color: #A7600E;
+}
+.color.white {
+  background-color: #FFF;
+}
+.color.gray50 {
+  background-color: #ADABAC;
+}
+.color.ultrablack {
+  background-color: #232323;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -385,13 +393,13 @@ a {
 .quantity .count input {
   margin: 0;
   padding: 0;
-  width: 28px;
+  width: 24px;
   font-family: 'Gilory', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 15px;
   color: #5A5758;
-  text-align: right;
+  text-align: center;
   border: none;
 }
 .modal {
@@ -2314,8 +2322,14 @@ main .catalog-columns {
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 main .catalog-columns .product-photos {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2375,6 +2389,13 @@ main .catalog-columns .product-photos .product-thumb-list .product-thumb-item.cu
 main .catalog-columns .product-photos .product-thumb-list .product-thumb-item:hover {
   opacity: 1;
 }
+main .catalog-columns .product-photos .color {
+  right: 40px;
+  bottom: 20px;
+  width: 32px;
+  height: 32px;
+  z-index: 100;
+}
 main .catalog-columns .product-info {
   width: 420px;
 }
@@ -2391,7 +2412,8 @@ main .catalog-columns .product-info .product-description .catalog-category {
 main .catalog-columns .product-info .product-description h3 {
   margin: 7px 0;
   font-size: 24px;
-  letter-spacing: 0.9px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 main .catalog-columns .product-info .product-description .product-property {
   margin-top: 4px;
@@ -2427,6 +2449,20 @@ main .catalog-columns .product-info .product-buy {
 }
 main .catalog-columns .product-info .product-buy .button {
   width: 240px;
+}
+main .catalog-columns .product-info .product-buy .favorite {
+  display: block;
+  min-width: 64px;
+  text-align: center;
+}
+main .catalog-columns .product-info .product-buy.absence .quantity {
+  display: none;
+}
+main .catalog-columns .product-info .product-buy.absence .button {
+  width: 100%;
+  color: #ADABAC;
+  background-color: #F4F4F4;
+  border: none;
 }
 main .catalog-columns .product-info .product-certified {
   margin: 68px 0 0;
