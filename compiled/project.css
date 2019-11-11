@@ -104,7 +104,7 @@ body {
   font-family: 'Gilory', Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #5c595a;
+  color: #5A5758;
   letter-spacing: 0.04em;
 }
 img {
@@ -2248,68 +2248,82 @@ main .sorts {
   position: relative;
   z-index: 102;
 }
-main .sorts .category-filter {
+main .sorts .filter-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+main .sorts .filter-list .filter-item {
+  margin-right: 20px;
+}
+main .sorts .filter-list .filter-item .custom-select {
+  display: inline-block;
   position: relative;
-  width: 176px;
+  padding: 11px 0;
+  width: 177px;
+  text-align: left;
+  border: 1px solid #DEDDDE;
+  list-style-type: none;
   cursor: pointer;
 }
-main .sorts .category-filter .list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 4px;
+main .sorts .filter-list .filter-item .custom-select li {
   padding: 0;
-  pointer-events: none;
-  background-color: #fff;
-  overflow: hidden;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform: scale(0.75) translateY(-21px);
-  -moz-transform: scale(0.75) translateY(-21px);
-  -ms-transform: scale(0.75) translateY(-21px);
-  transform: scale(0.75) translateY(-21px);
-  -moz-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  opacity: 0;
-  z-index: 9;
+  text-indent: 20px;
+  position: relative;
 }
-main .sorts .category-filter::after {
-  content: '';
+main .sorts .filter-list .filter-item .custom-select li .options {
   display: block;
   position: absolute;
-  top: 50%;
-  right: 12px;
-  margin-top: -4px;
+  top: 40px;
+  left: -36px;
+  margin: 0;
+  padding: 10px;
+  width: 248px;
+  max-height: 0px;
+  background: transparent;
+  border: 3px solid transparent;
+  -moz-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+  list-style-type: none;
+  overflow: hidden;
+}
+main .sorts .filter-list .filter-item .custom-select li .options.open {
+  max-height: 1000%;
+  background: #fff;
+  border: 1px solid #DEDDDE;
+}
+main .sorts .filter-list .filter-item .custom-select li .options li {
+  padding: 10px 0;
+}
+main .sorts .filter-list .filter-item .custom-select li .options li:hover {
+  background: #F4F4F4;
+}
+main .sorts .filter-list .filter-item .custom-select:before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 16px;
   width: 5px;
   height: 5px;
-  border-bottom: 2px solid #90a1b5;
-  border-right: 2px solid #90a1b5;
-  -webkit-transform-origin: 66% 66%;
-  -moz-transform-origin: 66% 66%;
-  -ms-transform-origin: 66% 66%;
-  transform-origin: 66% 66%;
+  border-bottom: 1px solid #5A5758;
+  border-right: 1px solid #5A5758;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -moz-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-main .sorts .category-filter.open::after {
+main .sorts .filter-list .filter-item .custom-select.open:before {
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
-}
-main .sorts .category-filter.open .list {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: scale(1) translateY(0);
-  -moz-transform: scale(1) translateY(0);
-  -ms-transform: scale(1) translateY(0);
-  transform: scale(1) translateY(0);
 }
 main .catalog-columns {
   display: -webkit-box;

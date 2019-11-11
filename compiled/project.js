@@ -370,18 +370,6 @@ $(document).on('ready', function() {
         }
     });
 
-    $('.category-filter').click(function (e) {
-        var $dropdown = $(this);
-        $('.nice-select').not($dropdown).removeClass('open');
-        $dropdown.toggleClass('open');
-    });
-
-    $('.category-filter').click(function(e) {
-        if ($(e.target).closest('.category-filter').length === 0) {
-            $('.category-filter').removeClass('open').find('.option');
-        }
-    });
-
     $('.tab-studio-info .tabs-studio-info > li a').click( function () {
         $('.tab-studio-info .tabs-studio-info > li a').removeClass('current');
         $(this).addClass('current');
@@ -432,5 +420,49 @@ $(document).on('ready', function() {
             }
         });
     });
+
+    function customSelect(el){
+        var options = [],
+            option = $(el).children('option'),
+            customSelect;
+
+        $(el).hide();
+
+        $(option).each(function(){
+            options.push($(this).html());
+        });
+
+        $(el).after('<ul class="custom-select" data-selected-value="' + options[0] + '">');
+        customSelect = $(el).siblings('.custom-select');
+        $(customSelect).append('<li class="selected-option"><span>' + options[0] + '</span>');
+        $(customSelect).children('.selected-option').append('<ul class="options">');
+
+        for(var i = 1; i < options.length; i++) {
+            $(customSelect).find('.options').append('<li data-value=' + options[i] + '>' + options[i] + '</li>');
+        }
+
+        $(customSelect).click(function(){
+            $(this).toggleClass('open');
+            $('.options',this).toggleClass('open');
+        });
+
+        $(customSelect).find('.options li').click(function(){
+            var selection = $(this).text();
+            var dataValue = $(this).attr('data-value');
+            var selected = $(customSelect).find('.selected-option span').text(selection);
+            for(var i = 1; i < option.length; i++) {
+                if($(option[i]).text() === selected.text()) {
+                    $(option[i]).attr('selected', 'true');
+                    $(option[i]).siblings().removeAttr('selected');
+                }
+            };
+
+            $(customSelect).attr('data-selected-value',dataValue);
+        });
+    };
+
+    customSelect('#select-category');
+    customSelect('#select-collection');
+    customSelect('#select-color');
 
 });

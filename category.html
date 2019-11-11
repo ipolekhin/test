@@ -170,60 +170,35 @@
 
             <section class="sorts">
                 <h2 class="visually-hidden">Сортировка</h2>
-                <form action="">
-                    <div class="filter-list">
-                        <div class="item category-filter">
-                            <label for="select-category" class="visually-hidden">Категория</label>
-                            <select name='categories' id="select-category">
-                                <option>Категория</option>
-                                <option value='category1'>Гель-лаки</option>
-                                <option value='category2'>Гель-краска</option>
-                                <option value='category3'>Топы</option>
-                                <option value='category4'>Пигменты</option>
-                                <option value='category5'>Кисти</option>
-                            </select>
-                            <span class="current">Категория</span>
-                            <ul class="list">
-                                <li class="option" data-value="1">Гель-лаки</li>
-                                <li class="option" data-value="2">Гель-лаки</li>
-                                <li class="option" data-value="3">Гель-лаки</li>
-                                <li class="option" data-value="4">Гель-лаки</li>
-                                <li class="option" data-value="5">Гель-лаки</li>
-                            </ul>
-                        </div>
+                <div class="filter-list">
+                    <div class="filter-item">
+                        <label for="select-category" class="visually-hidden">Категория</label>
+                        <select name="category" id="select-category">
+                            <option>Категория</option>
+                            <option value="Value 1">Гель-лаки</option>
+                            <option value="Value 2">Гель-краска</option>
+                            <option value="Value 3">Топы</option>
+                        </select>
                     </div>
-                    <ul>
-                        <li>
-                            <label for="select-collection" class="visually-hidden">Коллекция</label>
-                            <select name='collections' id="select-collection">
-                                <option>Коллекция</option>
-                                <option value='collection1'>Коллекция1</option>
-                                <option value='collection2'>Коллекция2</option>
-                                <option value='collection3'>Коллекция3</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label for="select-color" class="visually-hidden">Цвет</label>
-                            <select name='collections' id="select-color">
-                                <option>Цвет</option>
-                                <option value='color1'>Цвет1</option>
-                                <option value='color2'>Цвет2</option>
-                                <option value='color3'>Цвет3</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label for="select-collection" class="visually-hidden">Цена</label>
-                            <div class="price-value">
-                                <label class="min-price">
-                                    <input type="text" id="price-min" name="price-min" placeholder="От">
-                                </label>
-                                <label class="max-price">
-                                    <input type="text" id="price-max" name="price-max" placeholder="До">
-                                </label>
-                            </div>
-                        </li>
-                    </ul>
-                </form>
+                    <div class="filter-item">
+                        <label for="select-collection" class="visually-hidden">Коллекция</label>
+                        <select name="collection" id="select-collection">
+                            <option>Коллекция</option>
+                            <option value="Value 1">Коллекция 1</option>
+                            <option value="Value 2">Коллекция 2</option>
+                            <option value="Value 3">Коллекция 3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="select-color" class="visually-hidden">Цвет</label>
+                        <select name="color" id="select-color">
+                            <option>Коллекция</option>
+                            <option value="Value 1">Цвет 1</option>
+                            <option value="Value 2">Цвет 2</option>
+                            <option value="Value 3">Цвет 3</option>
+                        </select>
+                    </div>
+                </div>
             </section>
 
             <section class="shop">
