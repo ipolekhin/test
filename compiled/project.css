@@ -2288,8 +2288,6 @@ main .sorts .filter-list .filter-item .custom-select li .options {
   max-height: 0px;
   background: transparent;
   border: 3px solid transparent;
-  -moz-transition: all ease 0.25s;
-  transition: all ease 0.25s;
   list-style-type: none;
   overflow: hidden;
 }
@@ -2317,8 +2315,6 @@ main .sorts .filter-list .filter-item .custom-select:before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 main .sorts .filter-list .filter-item .custom-select.open:before {
   -webkit-transform: rotate(-135deg);
@@ -2349,8 +2345,6 @@ main .sorts .filter-list .filter-item .custom-select + .options {
   max-height: 0px;
   background: transparent;
   border: 3px solid transparent;
-  -moz-transition: all ease 0.25s;
-  transition: all ease 0.25s;
   list-style-type: none;
   overflow: hidden;
 }
