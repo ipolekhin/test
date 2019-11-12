@@ -1,5 +1,4 @@
-$(document).on('ready', function() {
-
+$(function() {
     var navblock = document.querySelector('.main-navigation');
     var backtoggler = document.querySelector('.back-toggler');
     var submenutarget = document.querySelector('.submenu-target');
@@ -302,7 +301,6 @@ $(document).on('ready', function() {
                 blur[i].classList.remove('blur');
             }
         }
-        console.log('закрыть');
     };
 
     for (i = 0; i < close.length; i++) {
@@ -463,6 +461,70 @@ $(document).on('ready', function() {
 
     customSelect('#select-category');
     customSelect('#select-collection');
-    customSelect('#select-color');
+
+    //Multiselect
+    function custommultiSelect(el){
+        var options = [],
+            option = $(el).children('option'),
+            custommultiSelect;
+
+        $(el).hide();
+
+        $(option).each(function(){
+            options.push($(this).html());
+        });
+
+        $(el).after('<ul class="custom-select" data-selected-value="' + options[0] + '">');
+        custommultiSelect = $(el).siblings('.custom-select');
+        $(custommultiSelect).append('<li class="selected-option"><span>' + options[0] + '</span>');
+        $(custommultiSelect).after('<ul class="options">');
+
+        for (var i = 1; i < options.length; i++) {
+            $(custommultiSelect).next('.options').append('<li data-value="'+ options[i] +'">' +
+                '<i  class="' + $(option[i]).prop('class') + '"' + ' ></i></li>');
+        }
+
+        $(custommultiSelect).click(function(){
+            $(this).toggleClass('open');
+            $(this).next('.options').toggleClass('open');
+            $(this).next('.options.open').find('li').each(function(index){
+                index++
+                if($(option[index]).prop('selected')) {
+                    $(option[index]).prop('selected', true);
+                    $(this).addClass('focus');
+                }
+            });
+        });
+
+        $(custommultiSelect).next('.options').find('li').click(function(){
+            var dataValue = $(this).attr('data-value');
+            for(var i = 1; i < option.length; i++) {
+                if($(option[i]).text() === dataValue) {
+                    if($(option[i]).prop('selected')) {
+                        $(option[i]).prop('selected', false);
+                        $(this).removeClass('focus');
+                    } else {
+                        $(option[i]).prop('selected', true);
+                        $(this).addClass('focus');
+                    }
+                }
+            };
+        });
+    };
+    custommultiSelect('#select-color');
+
+    //price select
+    function customPriceSelect(el){
+        console.log('поехали');
+
+        customPriceSelect = $(el).siblings('.custom-select');
+
+        $(customPriceSelect).click(function(){
+            $(this).toggleClass('open');
+            $(this).next('.select-price').toggleClass('open');
+        });
+
+    };
+    customPriceSelect('#select-price');
 
 });

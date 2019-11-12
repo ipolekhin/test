@@ -2259,6 +2259,7 @@ main .sorts .filter-list {
   flex-wrap: wrap;
 }
 main .sorts .filter-list .filter-item {
+  position: relative;
   margin-right: 20px;
 }
 main .sorts .filter-list .filter-item .custom-select {
@@ -2324,6 +2325,164 @@ main .sorts .filter-list .filter-item .custom-select.open:before {
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+main .sorts .filter-list .filter-item .custom-select + .options {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50px;
+  left: -36px;
+  margin: 0;
+  padding: 0;
+  width: 252px;
+  max-height: 0px;
+  background: transparent;
+  border: 3px solid transparent;
+  -moz-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+  list-style-type: none;
+  overflow: hidden;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li {
+  position: relative;
+  margin: 0 20px 20px 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: 0;
+  cursor: pointer;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color {
+  width: 32px;
+  height: 32px;
+  border: 6px solid #000000;
+  background-color: #000;
+  border-color: rgba(255, 255, 255, 0);
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.red {
+  background-color: #F54545;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.orange {
+  background-color: #FFBC3A;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.yellow {
+  background-color: #EFF30E;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.green {
+  background-color: #16EA16;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.aqua {
+  background-color: #1FDAE0;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.blue {
+  background-color: #1436FF;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.purple {
+  background-color: #A90DF1;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.magenta {
+  background-color: #E83094;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.brown {
+  background-color: #A7600E;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.white {
+  background-color: #FFF;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.gray50 {
+  background-color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li .color.ultrablack {
+  background-color: #232323;
+}
+main .sorts .filter-list .filter-item .custom-select + .options li.focus .color {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+main .sorts .filter-list .filter-item .custom-select + .options li:nth-child(4n) {
+  margin-right: 0;
+}
+main .sorts .filter-list .filter-item .custom-select + .options.open {
+  padding: 28px 30px;
+  max-height: 1000%;
+  background: #fff;
+  border: 1px solid #DEDDDE;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: -36px;
+  padding: 0;
+  max-height: 0px;
+  background: transparent;
+  background: #fff;
+  border: 0;
+  overflow: hidden;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price.open {
+  padding: 50px 50px 26px;
+  max-height: 1000%;
+  border: 1px solid #DEDDDE;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label {
+  width: 210px;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label:first-child {
+  margin-right: 60px;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input {
+  padding: 5px;
+  width: 100%;
+  height: 44px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5A5758;
+  border: none;
+  border-bottom: 1px solid #DEDDDE;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input::-webkit-input-placeholder {
+  color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input:-moz-placeholder {
+  color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input::-moz-placeholder {
+  color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input:-ms-input-placeholder {
+  color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .price-value label input::placeholder {
+  color: #ADABAC;
+}
+main .sorts .filter-list .filter-item .custom-select + .select-price .filter-button {
+  margin: 56px auto 0;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: none;
+  border: none;
+  cursor: pointer;
 }
 main .catalog-columns {
   display: -webkit-box;
