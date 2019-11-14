@@ -368,11 +368,11 @@ a {
   -moz-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -moz-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .quantity button {
   font-family: 'Gilory', sans-serif;
@@ -393,7 +393,7 @@ a {
 .quantity .count input {
   margin: 0;
   padding: 0;
-  width: 24px;
+  width: 26px;
   font-family: 'Gilory', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -734,11 +734,124 @@ header .container .user-navigation {
   display: flex;
   list-style: none;
 }
-header .container .user-navigation li:last-child {
+header .container .user-navigation > li {
+  position: relative;
+}
+header .container .user-navigation > li:last-child {
   margin-left: 40px;
 }
-header .container .user-navigation li a {
+header .container .user-navigation > li a {
+  position: relative;
   display: block;
+}
+header .container .user-navigation > li .basket_count span {
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  bottom: 4px;
+  right: 2px;
+  background: #F54545;
+  color: #FFF;
+  padding: 1.5px 4px;
+  font-size: 8px;
+  text-align: center;
+  border-radius: 50%;
+}
+header .container .user-navigation > li .basket_tooltip {
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: -10px;
+  width: 700px;
+  padding: 30px;
+  border: 1px solid #DEDDDE;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  z-index: 150;
+}
+header .container .user-navigation > li .basket_tooltip.show {
+  display: block;
+}
+header .container .user-navigation > li .basket_tooltip .tooltip_price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  border-bottom: 1px solid #F2F2F2;
+}
+header .container .user-navigation > li .basket_tooltip .tooltip_price h3 {
+  margin: 0;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list {
+  margin: 28px 0 28px;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table {
+  width: 100%;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table tr:nth-child(n + 4) {
+  display: none;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table td {
+  padding-bottom: 12px;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table .tooltip_item .item_descr {
+  width: 180px;
+  font-size: 12px;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table .tooltip_item .item_quantity .btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #DEDDDE;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table .tooltip_item .item_quantity .count {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  width: 94px;
+  height: 50px;
+  border-top: 1px solid #DEDDDE;
+  border-bottom: 1px solid #DEDDDE;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table .tooltip_item .item_quantity .remove-item {
+  margin-left: 28px;
+}
+header .container .user-navigation > li .basket_tooltip .basket_tooltip-list table .tooltip_item .item_price {
+  width: 70px;
+  text-align: right;
+}
+header .container .user-navigation > li .basket_tooltip .tooltip_count {
+  margin: 28px 0 20px;
+  text-align: center;
+}
+header .container .user-navigation > li .basket_tooltip .button {
+  margin: 0 auto;
+  padding: 16px 0 15px;
+  max-width: 300px;
+  text-align: center;
 }
 header .container .contact-mobile {
   display: none;
@@ -1997,7 +2110,7 @@ main .students-work .students-work-list .students-work-item .info div {
 }
 main .students-work .students-work-list .students-work-item .info div p span {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 main .students-work .students-work-list .students-work-item .info:hover {
@@ -2191,11 +2304,11 @@ main .shop .pagination ul li a {
 }
 main .shop .pagination ul li a.current {
   color: #5A5758;
-  font-weight: 700;
+  font-weight: 800;
 }
 main .shop .pagination ul li a:hover {
   color: #5A5758;
-  font-weight: 700;
+  font-weight: 800;
 }
 main .shop .pagination ul li a.pagination-next {
   position: relative;
@@ -2474,6 +2587,7 @@ main .sorts .filter-list .filter-item .custom-select + .select-price .filter-but
   margin: 56px auto 0;
   font-size: 14px;
   font-weight: 300;
+  color: #5A5758;
   text-transform: none;
   border: none;
   cursor: pointer;
@@ -2586,7 +2700,7 @@ main .catalog-columns .product-info .product-description .product-property {
   margin-top: 4px;
 }
 main .catalog-columns .product-info .product-description .product-property span {
-  font-weight: 700;
+  font-weight: 800;
 }
 main .catalog-columns .product-info .product-description .product-manual {
   margin-top: 31px;

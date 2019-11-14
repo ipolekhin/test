@@ -4,18 +4,9 @@
     <meta charset="UTF-8">
     <title>Bagira Nails</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    
-<!--    <script src="js/lib/slick.js" type="text/javascript" charset="utf-8"></script>-->
-<!--    <link rel="stylesheet" type="text/css" href="css/lib/slick.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/lib/slick-theme.css">-->
-<!--    <link href="css_work/style.css" rel="stylesheet">-->
-   
-    <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>
+
     <link rel="stylesheet" type="text/css" href="compiled/project.lib.min.css">
-<!--    <link rel="stylesheet" href="compiled/project.min.css">-->
+    <!--    <link rel="stylesheet" href="compiled/project.min.css">-->
     <link rel="stylesheet" href="compiled/project.css">
 </head>
 <body>
@@ -134,9 +125,207 @@
                   </a>
                 </li>
                 <li>
-                    <a class="login-link" href="#">
+                    <a class="basket_count basket_info" href="#">
+<!--                        Класс not_show выводится когда нет товаров в корзине, закоментирован в стилях-->
+                        <span class="order_item_count not_show">8</span>
                         <img src="img/icon/cart_inactive.svg" alt="Корзина" width="24" height="24" />
                     </a>
+                    <div class="basket_tooltip">
+                        <div class="tooltip_price">
+                            <h3>Корзина</h3>
+                            <span> 1866 ₽</span>
+                        </div>
+                        <div class="basket_tooltip-list">
+                            <table>
+                                <tbody>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="450">450 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="650">650 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="119">119 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="247">247 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr  class="tooltip_item">
+                                        <td class="item_img">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="item_descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="item_quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="count">
+                                                    <input name="amount" type="text" class="form-controls" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="remove-item" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="item_price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tooltip_count">
+                            <span data-count="5">В корзине еще 5 товаров</span>
+                        </div>
+
+                        <a class="button" href="cart.html">
+                            Перейти в корзину
+                        </a>
+                    </div>
                 </li>
             </ul>
             <div class="contact-mobile">
@@ -514,5 +703,10 @@
             </button>       
         </div>
     </section>
+
+    <!-- <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>-->
+    <script src="compiled/jquery-3.4.1-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

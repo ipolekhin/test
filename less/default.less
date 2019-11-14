@@ -11,6 +11,15 @@
 
 @font-face {
     font-family: 'Gilory';
+    src: url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+    url('../fonts/Gilroy-SemiBold.eot') format('eot'),
+    url('../fonts/Gilroy-SemiBold.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Gilory';
     src: url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
         url('../fonts/Gilroy-ExtraBold.otf') format('otf');
     font-style: normal;
@@ -38,7 +47,7 @@ body {
     font-family: @baseFont;
     font-size: @baseFontSize;
     font-weight: 300;
-    color: @color-base + 2;
+    color: @color-base;
     letter-spacing: 0.04em;
 }
 
@@ -157,52 +166,12 @@ a {
             width: auto;
             z-index: 100;
         }
-
         .color {
-            position: absolute;
             top: 188px;
             right: 6px;
             width: 16px;
             height: 16px;
-            background-color: @white;
-            border-radius: 2px;
             z-index: 100;
-            &.red {
-                background-color: @red;
-            }
-            &.orange {
-                background-color: @orange;
-            }
-            &.yellow {
-                background-color: @yellow;
-            }
-            &.green {
-                background-color: @green;
-            }
-            &.aqua {
-                background-color: @aqua;
-            }
-            &.blue {
-                background-color: @blue;
-            }
-            &.purple {
-                background-color: @purple;
-            }
-            &.magenta {
-                background-color: @magenta;
-            }
-            &.brown {
-                background-color: @brown;
-            }
-            &.white {
-                background-color: @white;
-            }
-            &.gray50 {
-                background-color: @gray50;
-            }
-            &.ultrablack {
-                background-color: @ultrablack;
-            }
         }
         .catalog-price {
             position: relative;
@@ -225,8 +194,7 @@ a {
             background-color: @white;
             outline: 1px solid #dedede;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
-            .quantity,
-            a {
+            .quantity, a {
                 margin: 12px auto 0;
                 text-align: center;
             }
@@ -263,6 +231,13 @@ a {
     }
 }
 
+.color {
+    position: absolute;
+    background-color: @white;
+    border-radius: 2px;
+    .colors();
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -272,7 +247,7 @@ a {
 .quantity {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     button {
         font-family: 'Gilory', sans-serif;
         font-weight: 300;
@@ -291,13 +266,13 @@ a {
         input {
             margin: 0;
             padding: 0;
-            width: 28px;
+            width: 26px;
             font-family: 'Gilory', sans-serif;
             font-weight: 300;
             font-size: @baseFontSize;
             line-height: 15px;
             color: @textGray;
-            text-align: right;
+            text-align: center;
             border: none;
         }
     }
