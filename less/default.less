@@ -34,11 +34,11 @@
 }
 
 html {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-*, *::before, *::after { 
-    box-sizing: inherit; 
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -244,6 +244,14 @@ a {
     padding: 0 20px;
 }
 
+.page-title {
+    margin-top: 60px;
+    font-size: @large;
+    font-weight: @baseFontWeight;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .quantity {
     display: flex;
     justify-content: center;
@@ -261,14 +269,14 @@ a {
             outline: none;
         }
     }
-    .count {
+    .count,
+    .goods__count {
         margin: 0 2px;
         input {
             margin: 0;
             padding: 0;
             width: 26px;
             font-family: 'Gilory', sans-serif;
-            font-weight: 300;
             font-size: @baseFontSize;
             line-height: 15px;
             color: @textGray;

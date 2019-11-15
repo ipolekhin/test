@@ -197,12 +197,13 @@ $(function() {
     });
 
     // Пересчет суммы и количество товаров quantity basket
-    $('.quantity.basket button, .quantity.basket .remove-item').click(function (e) {
+    $('.quantity.basket button, .quantity.basket .goods__remove').click(function (e) {
         var btn = $(this), price_sum = 0, sum = 0;
-        var count = btn.siblings('.count').find('input').val();
+        var count = btn.siblings('.goods__count').find('input').val();
         var product_price = btn.parents('td').siblings('td.price');
-        if ($(e.target).closest('.quantity.basket .remove-item').length) {
+        if ($(e.target).closest('.quantity.basket .goods__remove').length) {
             e.stopPropagation();
+            e.preventDefault();
             var tooltipcount = $('.tooltip_count span');
             var countitem = tooltipcount.attr('data-count') - 1;
             tooltipcount.attr('data-count', countitem);
@@ -218,11 +219,13 @@ $(function() {
         $('.basket_tooltip-list').find('td.price').each(function() {
             price_sum += parseInt($(this).html());
         });
-        $('.basket_tooltip .tooltip_price span').html(price_sum + ' ₽');
         // количество в корзине
         $('.basket_tooltip-list').find('input').each(function(i, input) {
             sum += parseInt($(input).val());
         });
+        // Итоговая сумма
+        $('.amount-price span').html(price_sum + ' ₽');
+        // Количество в корзине
         $('.order_item_count').html(sum);
     });
 
@@ -255,8 +258,16 @@ $(function() {
         $(customSelect).children('.selected-option').append('<ul class="options">');
 
         for(var i = 1; i < options.length; i++) {
-            $(customSelect).find('.options').append('<li data-value=' + options[i] + '>' + options[i] + '</li>');
+            $(customSelect).find('.options').append('<li class="' +
+                $(option[i]).prop('class') + '">' + options[i] + '</li>');
         }
+
+
+        for (var i = 1; i < options.length; i++) {
+            $(custommultiSelect).next('.options').append('<li data-value="'+ options[i] +'">' +
+                '<i  class="' + $(option[i]).prop('class') + '"' + ' ></i></li>');
+        }
+
         $(customSelect).click(function(){
             $(this).toggleClass('open');
             $('.options',this).toggleClass('open');
@@ -276,6 +287,7 @@ $(function() {
     };
     customSelect('#select-category');
     customSelect('#select-collection');
+    customSelect('#select-post');
 
     //Multiselect
     function custommultiSelect(el){
@@ -334,6 +346,7 @@ $(function() {
     customPriceSelect('#select-price');
 
 });
+
 $(function() {
 
     $('.regular').slick({
