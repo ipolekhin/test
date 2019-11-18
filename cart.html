@@ -133,7 +133,7 @@
                     <div class="basket_tooltip">
                         <div class="amount-price">
                             <h3>Корзина</h3>
-                            <span> 1866 ₽</span>
+                            <span> 1166 ₽</span>
                         </div>
                         <div class="basket_tooltip-list">
                             <table class="goods__list">
@@ -345,6 +345,13 @@
         <div class="container">
             <h1 class="page-title">Оформление заказа</h1>
 
+            <div class="notify-block-top">
+                <p class="price-min-top">
+                    Минимальная сумма заказа 1 500₽.
+                    <a href="#">Перейти в магазин</a>
+                </p>
+            </div>
+
             <section class="form-block">
                 <form class="form-ordering" action="" method="post">
                     <div class="block-post">
@@ -423,7 +430,7 @@
                                     <td class="goods__descr">
                                         BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
                                     </td>
-                                    <td class="goods__absence">
+                                    <td class="goods__absence absence">
                                         Нет в наличии
                                     </td>
                                     <td class="goods__quantity">
@@ -483,10 +490,16 @@
                     </div>
 
                     <div class="comments-submit">
-                        <div class="comments">
-                            <input id="comments" type="text" name="comments" placeholder="Комментарий к заказу">
+                        <div class="comments-submit__block">
+                            <div class="comments">
+                                <input id="comments" type="text" name="comments" placeholder="Комментарий к заказу">
+                            </div>
+                            <button class="button purchase" type="submit">Перейти к оплате</button>
                         </div>
-                        <button class="button" type="submit">Перейти к оплате</button>
+                        <div class="notify-block">
+                            <p class="price-min">Минимальная сумма заказа 1 500₽</p>
+                            <p class="goods-absence">Некоторых товаров нет в наличии</p>
+                        </div>
                     </div>
                 </form>
             </section>
@@ -768,7 +781,6 @@
         </div>
     </section>
 
-    <!-- <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>-->
     <script src="compiled/jquery-3.4.1-min.js" type="text/javascript" charset="utf-8"></script>
     <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
     <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>

@@ -53,6 +53,9 @@ $(function() {
         if (!$(e.target).closest('.basket_tooltip, .basket_info').length) {
             $('.basket_tooltip').removeClass('show');
         }
+        if (!$(e.target).closest('.custom-select').length) {
+            $('.custom-select.open, .options.open, .select-price.open').removeClass('open');
+        }
         e.stopPropagation();
     });
 
@@ -102,7 +105,6 @@ $(function() {
 
     subscribeform.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('отправить форму');
         subscribeform.innerHTML = '<div class="sucess">Спасибо, что Вы с Нами!</div>';
     });
 
@@ -259,7 +261,7 @@ $(function() {
         });
     });
 
-    //customSelect
+    //CustomSelect
     function customSelect(el){
         var options = [],
             option = $(el).children('option'),
@@ -325,7 +327,6 @@ $(function() {
             var optionselected = $(el).children('option:selected');
             optionselected.each(function (i) {
                 custommultiSelect.find('.selected-option span').append('<i class="'+ $(optionselected[i]).prop('class') + '"></i>');
-                console.log($(optionselected[i]));
             });
         }
         selectedColor();
@@ -360,7 +361,7 @@ $(function() {
     };
     custommultiSelect('#select-color');
 
-    //price select
+    //Price select
     function customPriceSelect(el){
         customPriceSelect = $(el).siblings('.custom-select');
         $(customPriceSelect).click(function(){
@@ -369,5 +370,29 @@ $(function() {
         });
     };
     customPriceSelect('#select-price');
+
+    //Козина
+    function amountMinPrice() {
+        var amountprice = parseInt($('.amount-price span').html());
+        var purchase = $('.comments-submit');
+        if (amountprice < 1500) {
+            $('.notify-block, .notify-block-top, .price-min, .price-min-top').addClass('show');
+            purchase.addClass('disabled');
+            purchase.find('button').addClass('disabled');
+        }
+        if ($('.goods__absence').hasClass('absence')) {
+            $('.notify-block, .goods-absence').addClass('show');
+            purchase.addClass('disabled');
+            purchase.find('button').addClass('disabled');
+        }
+    };
+
+    $('.purchase').click(function (e) {
+        e.preventDefault();
+        if (!$(e.target).hasClass('disabled')) {
+            alert('Заказ оформлен. Сумма заказа ' + amountprice);
+        }
+    });
+    amountMinPrice();
 
 });

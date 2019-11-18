@@ -2828,7 +2828,43 @@ main .recently-watched .catalog-list .catalog-item .favorite,
 main .recently-watched .catalog-list .catalog-item .color {
   z-index: 1100;
 }
-main .form-block .form-ordering .custom-select {
+main.page-cart .notify-block,
+main.page-cart .notify-block-top {
+  display: none;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+main.page-cart .notify-block.show,
+main.page-cart .notify-block-top.show {
+  display: block;
+}
+main.page-cart .notify-block p,
+main.page-cart .notify-block-top p {
+  display: none;
+}
+main.page-cart .notify-block p.show,
+main.page-cart .notify-block-top p.show {
+  display: block;
+}
+main.page-cart .notify-block .price-min-top,
+main.page-cart .notify-block-top .price-min-top {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 36px;
+  color: #ADABAC;
+}
+main.page-cart .notify-block .price-min-top a,
+main.page-cart .notify-block-top .price-min-top a {
+  text-decoration: underline;
+}
+main.page-cart .notify-block .price-min-top a:hover,
+main.page-cart .notify-block-top .price-min-top a:hover {
+  text-decoration: none;
+}
+main.page-cart .form-block .form-ordering .custom-select {
   display: inline-block;
   position: relative;
   padding: 11px 0;
@@ -2838,12 +2874,12 @@ main .form-block .form-ordering .custom-select {
   list-style-type: none;
   cursor: pointer;
 }
-main .form-block .form-ordering .custom-select li {
+main.page-cart .form-block .form-ordering .custom-select li {
   padding: 0;
   text-indent: 20px;
   position: relative;
 }
-main .form-block .form-ordering .custom-select li .options {
+main.page-cart .form-block .form-ordering .custom-select li .options {
   display: block;
   position: absolute;
   top: 40px;
@@ -2857,13 +2893,13 @@ main .form-block .form-ordering .custom-select li .options {
   list-style-type: none;
   overflow: hidden;
 }
-main .form-block .form-ordering .custom-select li .options.open {
+main.page-cart .form-block .form-ordering .custom-select li .options.open {
   padding: 10px;
   max-height: 1000%;
   background: #fff;
   border: 1px solid #DEDDDE;
 }
-main .form-block .form-ordering .custom-select:before {
+main.page-cart .form-block .form-ordering .custom-select:before {
   content: '';
   position: absolute;
   top: 14px;
@@ -2877,14 +2913,14 @@ main .form-block .form-ordering .custom-select:before {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-main .form-block .form-ordering .custom-select.open:before {
+main.page-cart .form-block .form-ordering .custom-select.open:before {
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
-main .form-block .form-ordering input:not(.input-quantity),
-main .form-block .form-ordering textarea {
+main.page-cart .form-block .form-ordering input:not(.input-quantity),
+main.page-cart .form-block .form-ordering textarea {
   width: 100%;
   height: 34px;
   font-family: inherit;
@@ -2894,27 +2930,27 @@ main .form-block .form-ordering textarea {
   border: none;
   border-bottom: 1px solid #E2DDD7;
 }
-main .form-block .form-ordering input:not(.input-quantity)::-webkit-input-placeholder,
-main .form-block .form-ordering textarea::-webkit-input-placeholder {
+main.page-cart .form-block .form-ordering input:not(.input-quantity)::-webkit-input-placeholder,
+main.page-cart .form-block .form-ordering textarea::-webkit-input-placeholder {
   color: #e2ddd7;
 }
-main .form-block .form-ordering input:not(.input-quantity):-moz-placeholder,
-main .form-block .form-ordering textarea:-moz-placeholder {
+main.page-cart .form-block .form-ordering input:not(.input-quantity):-moz-placeholder,
+main.page-cart .form-block .form-ordering textarea:-moz-placeholder {
   color: #e2ddd7;
 }
-main .form-block .form-ordering input:not(.input-quantity)::-moz-placeholder,
-main .form-block .form-ordering textarea::-moz-placeholder {
+main.page-cart .form-block .form-ordering input:not(.input-quantity)::-moz-placeholder,
+main.page-cart .form-block .form-ordering textarea::-moz-placeholder {
   color: #e2ddd7;
 }
-main .form-block .form-ordering input:not(.input-quantity):-ms-input-placeholder,
-main .form-block .form-ordering textarea:-ms-input-placeholder {
+main.page-cart .form-block .form-ordering input:not(.input-quantity):-ms-input-placeholder,
+main.page-cart .form-block .form-ordering textarea:-ms-input-placeholder {
   color: #e2ddd7;
 }
-main .form-block .form-ordering input:not(.input-quantity)::placeholder,
-main .form-block .form-ordering textarea::placeholder {
+main.page-cart .form-block .form-ordering input:not(.input-quantity)::placeholder,
+main.page-cart .form-block .form-ordering textarea::placeholder {
   color: #e2ddd7;
 }
-main .form-block .form-ordering .block-post {
+main.page-cart .form-block .form-ordering .block-post {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2929,14 +2965,14 @@ main .form-block .form-ordering .block-post {
   flex-direction: column;
   margin: 60px 0;
 }
-main .form-block .form-ordering .block-post label {
+main.page-cart .form-block .form-ordering .block-post label {
   margin-bottom: 12px;
 }
-main .form-block .form-ordering .block-post .options li {
+main.page-cart .form-block .form-ordering .block-post .options li {
   position: relative;
   padding: 10px 0 10px 40px;
 }
-main .form-block .form-ordering .block-post .options li::before {
+main.page-cart .form-block .form-ordering .block-post .options li::before {
   content: '';
   position: absolute;
   top: 6px;
@@ -2944,32 +2980,32 @@ main .form-block .form-ordering .block-post .options li::before {
   width: 48px;
   height: 23px;
 }
-main .form-block .form-ordering .block-post .options li.post-rus::before {
+main.page-cart .form-block .form-ordering .block-post .options li.post-rus::before {
   background: url(../img/icon/icon-post-rus.png) no-repeat;
 }
-main .form-block .form-ordering .block-post .options li:hover {
+main.page-cart .form-block .form-ordering .block-post .options li:hover {
   background: #F4F4F4;
 }
-main .form-block .form-ordering .block-contacts {
+main.page-cart .form-block .form-ordering .block-contacts {
   margin: 60px 0 80px;
   padding: 64px 100px 80px;
   border: 1px solid #DEDDDE;
 }
-main .form-block .form-ordering .block-contacts ul {
+main.page-cart .form-block .form-ordering .block-contacts ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-main .form-block .form-ordering .block-contacts ul li {
+main.page-cart .form-block .form-ordering .block-contacts ul li {
   margin-bottom: 40px;
   width: 46%;
 }
-main .form-block .form-ordering .block-contacts label {
+main.page-cart .form-block .form-ordering .block-contacts label {
   font-size: 12px;
   color: #ADABAC;
   cursor: pointer;
 }
-main .form-block .form-ordering .block-contacts .adress-list {
+main.page-cart .form-block .form-ordering .block-contacts .adress-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2984,63 +3020,63 @@ main .form-block .form-ordering .block-contacts .adress-list {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-main .form-block .form-ordering .block-contacts .adress-list li:last-of-type {
+main.page-cart .form-block .form-ordering .block-contacts .adress-list li:last-of-type {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -moz-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-main .form-block .form-ordering .block-contacts .adress-list textarea {
+main.page-cart .form-block .form-ordering .block-contacts .adress-list textarea {
   resize: none;
 }
-main .form-block .form-ordering .goods-in-cart {
+main.page-cart .form-block .form-ordering .goods-in-cart {
   margin: 80px 0 50px;
   padding: 64px 100px 80px;
   border: 1px solid #DEDDDE;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list {
   padding-bottom: 20px;
   width: 100%;
   border-bottom: 1px solid #F4F4F4;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list td {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list td {
   padding-bottom: 12px;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .text-left {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .text-left {
   text-align: left;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .text-right {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .text-right {
   text-align: right;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item th {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item th {
   padding-bottom: 30px;
   font-size: 12px;
   font-weight: 300;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__descr {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__descr {
   width: 260px;
   font-size: 12px;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__absence {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__absence {
   opacity: 0;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__absence.show {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__absence.absence {
   opacity: 1;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .quantity {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .quantity {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -moz-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .btn {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .btn {
   width: 50px;
   height: 50px;
   border: 1px solid #DEDDDE;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .goods__count {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .goods__count {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3062,14 +3098,14 @@ main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods_
   border-top: 1px solid #DEDDDE;
   border-bottom: 1px solid #DEDDDE;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .goods__remove {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__quantity .goods__remove {
   margin-left: 28px;
 }
-main .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__price {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__list .goods__item .goods__price {
   width: 100px;
   text-align: right;
 }
-main .form-block .form-ordering .goods-in-cart .goods__amount {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__amount {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3089,15 +3125,18 @@ main .form-block .form-ordering .goods-in-cart .goods__amount {
   padding-top: 17px;
   border-top: 1px solid #F4F4F4;
 }
-main .form-block .form-ordering .goods-in-cart .goods__amount .coupon {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__amount .coupon {
   width: 272px;
 }
-main .form-block .form-ordering .goods-in-cart .goods__amount .amount-price span {
+main.page-cart .form-block .form-ordering .goods-in-cart .goods__amount .amount-price span {
   margin-left: 12px;
   font-size: 20px;
   font-weight: 800;
 }
-main .form-block .form-ordering .comments-submit {
+main.page-cart .form-block .form-ordering .comments-submit {
+  margin: 50px 0 100px;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3113,17 +3152,31 @@ main .form-block .form-ordering .comments-submit {
   -moz-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  margin: 50px 0 100px;
   padding: 34px 65px 36px 100px;
   background-color: rgba(249, 77, 170, 0.07);
 }
-main .form-block .form-ordering .comments-submit .comments {
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments {
   width: 609px;
 }
-main .form-block .form-ordering .comments-submit .comments input {
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input {
   background-color: rgba(255, 255, 255, 0.07);
 }
-main .form-block .form-ordering .comments-submit .button {
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input::-webkit-input-placeholder {
+  color: #5A5758;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input:-moz-placeholder {
+  color: #5A5758;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input::-moz-placeholder {
+  color: #5A5758;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input:-ms-input-placeholder {
+  color: #5A5758;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .comments input::placeholder {
+  color: #5A5758;
+}
+main.page-cart .form-block .form-ordering .comments-submit .comments-submit__block .button {
   width: 300px;
   font-size: 14px;
   font-weight: 600;
@@ -3132,11 +3185,26 @@ main .form-block .form-ordering .comments-submit .button {
   border: none;
   cursor: pointer;
 }
-main .special-offers {
+main.page-cart .form-block .form-ordering .comments-submit.disabled {
+  border: 1px solid #DEDDDE;
+}
+main.page-cart .form-block .form-ordering .comments-submit.disabled .comments-submit__block {
+  background-color: rgba(249, 77, 170, 0);
+}
+main.page-cart .form-block .form-ordering .comments-submit.disabled .comments-submit__block .comments input {
+  background-color: rgba(255, 255, 255, 0);
+}
+main.page-cart .form-block .form-ordering .comments-submit.disabled .comments-submit__block .button {
+  color: #DEDDDE;
+  background-color: #FFF;
+  border: 1px solid #F4F4F4;
+  cursor: not-allowed;
+}
+main.page-cart .special-offers {
   margin-top: 100px;
   text-align: center;
 }
-main .special-offers h2 {
+main.page-cart .special-offers h2 {
   display: inline-block;
   margin-bottom: 34px;
   padding-bottom: 12px;
