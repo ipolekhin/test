@@ -2205,7 +2205,7 @@ main {
                     display: inline-block;
                     position: relative;
                     padding: 11px 0;
-                    width: 472px;
+                    width: 440px;
                     text-align: left;
                     border: 1px solid #DEDDDE;
                     list-style-type: none;
@@ -2299,32 +2299,63 @@ main {
                     margin: 60px 0 80px;
                     padding: 64px 100px 80px;
                     border: 1px solid @gray13;
-                    ul {
-                        margin: 0;
-                        padding: 0;
-                        list-style: none;
-                        li {
-                            margin-bottom: 40px;
-                            width: 46%;
+                    .select-adress {
+                        .change-adress {
+                            margin-left: 80px;
+                            color: @color-base;
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
-                    label {
-                        font-size: @baseFontSize - 2;
-                        color: @gray50;
-                        cursor: pointer;
+                    .fio,
+                    .adress {
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                            li {
+                                margin-bottom: 40px;
+                                width: 46%;
+                            }
+                        }
+                        label {
+                            font-size: @baseFontSize - 2;
+                            color: @gray50;
+                            cursor: pointer;
+                        }
                     }
                     .fio-list {
                     }
                     .adress-list {
                         display: flex;
+                        flex-direction: column;
                         flex-wrap: wrap;
-                        justify-content: space-between;
-                        li:last-of-type {
-                            flex-grow: 1;
+
+                        height: 270px;
+                    }
+                    input {
+                        &:disabled {
+                            color: @gray50;
+                            background-color: transparent;
                         }
+                    }
+                    .add-info {
                         textarea {
                             resize: none;
                         }
+                    }
+                }
+
+                .save-adress {
+                    .change-apply {
+                        margin: 80px auto 0;
+                        width: 300px;
+                        color: @color-base;
+                        cursor: pointer;
                     }
                 }
 

@@ -53,7 +53,7 @@ $(function() {
         if (!$(e.target).closest('.basket_tooltip, .basket_info').length) {
             $('.basket_tooltip').removeClass('show');
         }
-        if (!$(e.target).closest('.custom-select').length) {
+        if (!$(e.target).closest('.custom-select, .options, .select-price').length) {
             $('.custom-select.open, .options.open, .select-price.open').removeClass('open');
         }
         e.stopPropagation();
@@ -265,7 +265,7 @@ $(function() {
     function customSelect(el){
         var options = [],
             option = $(el).children('option'),
-            customSelect;
+            customSelect, currentSelect;
         $(el).hide();
         $(option).each(function(){
             options.push($(this).html());
@@ -274,6 +274,10 @@ $(function() {
         customSelect = $(el).siblings('.custom-select');
         customSelect.append('<li class="selected-option"><span>' + options[0] + '</span>');
         customSelect.children('.selected-option').append('<ul class="options">');
+        currentSelect = $(el).children('option:selected').text();
+        if (currentSelect) {
+            customSelect.find('.selected-option span').text(currentSelect);
+        }
 
         for(var i = 1; i < options.length; i++) {
             customSelect.find('.options').append('<li class="' +
@@ -301,6 +305,7 @@ $(function() {
     customSelect('#select-category');
     customSelect('#select-collection');
     customSelect('#select-post');
+    customSelect('#select-adress');
 
     // Multiselect
     function custommultiSelect(el){
@@ -389,10 +394,31 @@ $(function() {
 
     $('.purchase').click(function (e) {
         e.preventDefault();
+        var amountprice = parseInt($('.amount-price span').html());
         if (!$(e.target).hasClass('disabled')) {
             alert('Заказ оформлен. Сумма заказа ' + amountprice);
         }
     });
     amountMinPrice();
+
+    //изменение адреса
+    $('.change-adress').click(function (e) {
+        e.preventDefault();
+        var fields = $('.block-contacts input');
+        fields.prop('disabled', false);
+        $(e.target).hide();
+        $('.block-contacts').append('<div class="save-adress"><button class="change-apply button" href="#">Сохранить измененеия</button></div>');
+        console.log(fields);
+        //сохранение адреса
+        $('.change-apply').click(function (e) {
+            e.preventDefault();
+            $(e.target).remove();
+            $('.change-adress').show();
+            var fields = $('.block-contacts input');
+            fields.prop('disabled', true);
+            console.log(fields);
+        });
+    });
+
 
 });

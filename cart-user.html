@@ -133,7 +133,7 @@
                     <div class="basket_tooltip">
                         <div class="amount-price">
                             <h3>Корзина</h3>
-                            <span> 1166 ₽</span>
+                            <span> 1866 ₽</span>
                         </div>
                         <div class="basket_tooltip-list">
                             <table class="goods__list">
@@ -363,19 +363,28 @@
                     </div>
 
                     <div class="block-contacts">
+                        <label for="select-adress">Адрес</label>
+                        <div class="select-adress">
+                            <select name="post" id="select-adress">
+                                <option>Выбор адреса</option>
+                                <option value="Мазур, Алина, Александрова, Россия, Калининград, 238500, Зоологическая, 9Д, 12" selected="">Зоологическая, 9Д</option>
+                            </select>
+                            <button class="change-adress" type="button">Изменить адрес</button>
+                        </div>
+
                         <div class="fio">
                             <ul class="fio-list">
                                 <li>
                                     <label for="lname-field">Фамилия</label>
-                                    <input id="lname-field" type="text" name="lname" placeholder="Фамилия">
+                                    <input id="lname-field" type="text" name="lname" placeholder="Фамилия" value="Мазур" disabled="">
                                 </li>
                                 <li>
                                     <label for="fname-field">Имя</label>
-                                    <input id="fname-field" type="text" name="fname" placeholder="Имя">
+                                    <input id="fname-field" type="text" name="fname" placeholder="Имя" value="Алина" disabled="">
                                 </li>
                                 <li>
                                     <label for="father_name-field">Отчество</label>
-                                    <input id="father_name-field" type="text" name="father_name" placeholder="Отчество">
+                                    <input id="father_name-field" type="text" name="father_name" placeholder="Отчество" value="Александрова" disabled="">
                                 </li>
                             </ul>
                         </div>
@@ -431,7 +440,7 @@
                                     <td class="goods__descr">
                                         BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
                                     </td>
-                                    <td class="goods__absence absence">
+                                    <td class="goods__absence">
                                         Нет в наличии
                                     </td>
                                     <td class="goods__quantity">

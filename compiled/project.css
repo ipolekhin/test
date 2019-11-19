@@ -2868,7 +2868,7 @@ main.page-cart .form-block .form-ordering .custom-select {
   display: inline-block;
   position: relative;
   padding: 11px 0;
-  width: 472px;
+  width: 440px;
   text-align: left;
   border: 1px solid #DEDDDE;
   list-style-type: none;
@@ -2991,16 +2991,29 @@ main.page-cart .form-block .form-ordering .block-contacts {
   padding: 64px 100px 80px;
   border: 1px solid #DEDDDE;
 }
-main.page-cart .form-block .form-ordering .block-contacts ul {
+main.page-cart .form-block .form-ordering .block-contacts .select-adress .change-adress {
+  margin-left: 80px;
+  color: #5A5758;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+main.page-cart .form-block .form-ordering .block-contacts .select-adress .change-adress:hover {
+  text-decoration: underline;
+}
+main.page-cart .form-block .form-ordering .block-contacts .fio ul,
+main.page-cart .form-block .form-ordering .block-contacts .adress ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-main.page-cart .form-block .form-ordering .block-contacts ul li {
+main.page-cart .form-block .form-ordering .block-contacts .fio ul li,
+main.page-cart .form-block .form-ordering .block-contacts .adress ul li {
   margin-bottom: 40px;
   width: 46%;
 }
-main.page-cart .form-block .form-ordering .block-contacts label {
+main.page-cart .form-block .form-ordering .block-contacts .fio label,
+main.page-cart .form-block .form-ordering .block-contacts .adress label {
   font-size: 12px;
   color: #ADABAC;
   cursor: pointer;
@@ -3011,24 +3024,30 @@ main.page-cart .form-block .form-ordering .block-contacts .adress-list {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  height: 270px;
 }
-main.page-cart .form-block .form-ordering .block-contacts .adress-list li:last-of-type {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -moz-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+main.page-cart .form-block .form-ordering .block-contacts input:disabled {
+  color: #ADABAC;
+  background-color: transparent;
 }
-main.page-cart .form-block .form-ordering .block-contacts .adress-list textarea {
+main.page-cart .form-block .form-ordering .block-contacts .add-info textarea {
   resize: none;
+}
+main.page-cart .form-block .form-ordering .save-adress .change-apply {
+  margin: 80px auto 0;
+  width: 300px;
+  color: #5A5758;
+  cursor: pointer;
 }
 main.page-cart .form-block .form-ordering .goods-in-cart {
   margin: 80px 0 50px;
