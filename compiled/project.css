@@ -3504,6 +3504,9 @@ main.page-personal .tabs-content .tabs-content__item .personal-ordering__list .o
   padding: 5px 40px 5px 30px;
   background: url(../img/icon/refresh.svg) no-repeat 0 center;
 }
+main.page-personal .form-block {
+  display: none;
+}
 /* ----------------------------------------- main end ------------------------------------ */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
