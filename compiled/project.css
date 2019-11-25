@@ -397,6 +397,11 @@ a {
 .quantity .count,
 .quantity .goods__count {
   margin: 0 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .quantity .count input,
 .quantity .goods__count input {
@@ -2725,7 +2730,18 @@ main .catalog-columns .product-info .product-description h3 {
   margin: 7px 0;
   font-size: 24px;
   font-weight: 600;
+  line-height: normal;
   letter-spacing: 1px;
+}
+main .catalog-columns .product-info .product-description .product-price {
+  border-top: 1px solid #F4F4F4;
+  padding-top: 15px;
+  display: block;
+  font-family: 'Gilory', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5A5758;
 }
 main .catalog-columns .product-info .product-description .product-property {
   margin-top: 4px;

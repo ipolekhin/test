@@ -70,7 +70,8 @@ $(function() {
     });
 
     //Корзина
-    $('.basket_info').click(function(){
+    $('.basket_info').click(function(e){
+        e.preventDefault();
         $(this).next('.basket_tooltip').toggleClass('show');
     });
 
@@ -205,12 +206,13 @@ $(function() {
     // Количество товаров quantity
     $('.quantity button').click(function (e) {
         e.preventDefault();
+        console.log('клик количество');
         var $this = $(this).parent().find('input'),
             btn = $(this), qty = parseFloat($this.val()),
             min = 1, max = 999, new_qty,
             elementid = btn.parents('.goods__item').attr('data-element_id');
 
-        if(btn.hasClass('plus')) {
+        if (btn.hasClass('plus')) {
             new_qty = (qty < max) ? qty + 1 : qty;
         } else {
             new_qty = (qty > min) ? qty - 1 : qty;
@@ -218,9 +220,9 @@ $(function() {
 
         $('.goods__item[data-element_id="'+elementid+'"]').each(function() {
             var product_price = $(this).find('td.price');
-            $(this).find('input').val(new_qty).change();
             product_price.text(product_price.data('price') * new_qty + ' ₽');
         });
+        $this.val(new_qty).change();
         recalculationCountSum();
     });
 
@@ -301,7 +303,6 @@ $(function() {
             };
             customSelect.attr('data-selected-value',dataValue);
         });
-        console.log('123');
     };
     customSelect('#select-category');
     customSelect('#select-collection');
