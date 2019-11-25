@@ -4,43 +4,83 @@
 	border-color: rgba(255, 255, 255, @opacity);
 }
 
-.colors() {
-	&.red {
-		background-color: @red;
-	}
-	&.orange {
-		background-color: @orange;
-	}
-	&.yellow {
-		background-color: @yellow;
-	}
-	&.green {
-		background-color: @green;
-	}
-	&.aqua {
-		background-color: @aqua;
-	}
-	&.blue {
-		background-color: @blue;
-	}
-	&.purple {
-		background-color: @purple;
-	}
-	&.magenta {
-		background-color: @magenta;
-	}
-	&.brown {
-		background-color: @brown;
-	}
-	&.white {
-		background-color: @white;
-	}
-	&.gray50 {
-		background-color: @gray50;
-	}
-	&.ultrablack {
-		background-color: @ultrablack;
-	}
+.bgcolor(@color: @black) {
+    background-color: @color;
+    &.red {
+        background-color: @red;
+    }
+    &.orange {
+        background-color: @orange;
+    }
+    &.yellow {
+        background-color: @yellow;
+    }
+    &.green {
+        background-color: @green;
+    }
+    &.aqua {
+        background-color: @aqua;
+    }
+    &.blue {
+        background-color: @blue;
+    }
+    &.purple {
+        background-color: @purple;
+    }
+    &.magenta {
+        background-color: @magenta;
+    }
+    &.brown {
+        background-color: @brown;
+    }
+    &.white {
+        background-color: @white;
+    }
+    &.gray50 {
+        background-color: @gray50;
+    }
+    &.ultrablack {
+        background-color: @ultrablack;
+    }
+}
+
+.bgscolor() {
+    &.red::before {
+        background-color: @red;
+    }
+    &.orange::before {
+        background-color: @orange;
+    }
+    &.yellow::before {
+        background-color: @yellow;
+    }
+    &.green::before {
+        background-color: @green;
+    }
+    &.aqua::before {
+        background-color: @aqua;
+    }
+    &.blue::before {
+        background-color: @blue;
+    }
+    &.purple::before {
+        background-color: @purple;
+    }
+    &.magenta::before {
+        background-color: @magenta;
+    }
+    &.brown::before {
+        background-color: @brown;
+    }
+    &.white::before {
+        background-color: @white;
+    }
+    &.gray50::before {
+        background-color: @gray50;
+    }
+    &.ultrablack::before {
+        background-color: @ultrablack;
+    }
 }
 
 .align(@align: center) {

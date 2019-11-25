@@ -301,6 +301,7 @@ $(function() {
             };
             customSelect.attr('data-selected-value',dataValue);
         });
+        console.log('123');
     };
     customSelect('#select-category');
     customSelect('#select-collection');
@@ -420,7 +421,29 @@ $(function() {
         });
     });
 
+    //Личный кабинет
+    //Табы
+    $('.tabs .tabs__link').click( function () {
+        $('.tabs .tabs__link').removeClass('current');
+        $(this).addClass('current');
 
+        $('.tabs-content__item').hide();
+        var t_content = $(this).attr('href');
+        $(t_content).show();
+
+        return false
+    })
+    $('.tabs .tabs__link:first').trigger('click');
+
+    //Показать весь заказ
+    $('.show-all-order').click(function(e){
+        e.preventDefault();
+        $(this).siblings('.order-item__goods-list').children('.inorder-good-item').each(function(index) {
+            if (index > 3) {
+                $(this).toggleClass('show');
+            }
+        });
+    });
 });
 
 $(function() {

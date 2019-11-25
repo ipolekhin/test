@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bagira Nails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="compiled/project.lib.min.css">
+    <!--    <link rel="stylesheet" href="compiled/project.min.css">-->
+    <link rel="stylesheet" href="compiled/project.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <button class="navbar-toggler" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <nav class="main-navigation">
+                <ul class="site-navigation">
+                    <li>
+                        <a href="#" class="submenu-target">Магазин</a>
+                        <div class="submenu">
+                            <button class="back-toggler" type="button">
+                            </button>
+                            <div class="container">
+                                <h4 class="header">Категории</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Гель-лаки</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Гель-краска</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Топы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пигменты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Кисти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Хлопья и втирка</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Стразы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Гели</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Кисти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Инструменты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пилки</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Сопуствующие товары</a>
+                                    </li>
+                                </ul>
+                                <h4 class="header">Бренды</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Bagheera nails</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Golden Trace</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lianail</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Artex</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="#">Посмотерть все товары</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="studio.html" class="active">Студии</a></li>
+                    <li><a href="training.html">Обучение</a></li>
+                    <li>
+                      <a href="agency.html">Представительства    </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header-logo" href="/">
+              <img src="img/logo.svg" width="74" height="41" alt="Логотип Bagheera Nails">
+            </a>
+            <div class="search">
+                <img src="img/icon/search.svg" alt="Поиск" width="24" height="24">
+                <form action="" method="get" class="search-form">
+                    <input class="search-string" type="search" name="search" id="search" placeholder="Поиск:">
+                    <label class="search-label" for="search"></label>
+                </form>
+                <div class="search_content" style="display: none;">
+                    <ul>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                        <li>
+                            <a href="#">BN-109 Камуфлирующий цветной гель-лак с мелким шиммером</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="user-navigation">
+                <li>
+                  <a class="login-link" href="#">
+                      <img src="img/icon/profile.svg" alt="Пользователь" width="24" height="24" />
+                  </a>
+                </li>
+                <li>
+                    <a class="basket_count basket_info" href="#">
+<!--                        Класс not_show выводится когда нет товаров в корзине, закоментирован в стилях-->
+                        <span class="order_item_count not_show">11</span>
+                        <img src="img/icon/cart_inactive.svg" alt="Корзина" width="24" height="24" />
+                    </a>
+                    <div class="basket_tooltip">
+                        <div class="amount-price">
+                            <h3>Корзина</h3>
+                            <span> 1166 ₽</span>
+                        </div>
+                        <div class="basket_tooltip-list">
+                            <table class="goods__list">
+                                <tbody>
+                                    <tr class="goods__item" data-element_id="101">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="2" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="450">900 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="102">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="3" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="650">1950 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="103">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="119">119 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="104">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="247">247 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="105">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="106">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="107">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                    <tr class="goods__item" data-element_id="108">
+                                        <td class="goods__image">
+                                            <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </td>
+                                        <td class="goods__descr">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </td>
+                                        <td class="goods__quantity">
+                                            <div class="quantity basket">
+                                                <button class="btn minus" type="button" tabindex="0">-</button>
+                                                <div class="goods__count">
+                                                    <input name="amount" type="text" class="input-quantity" value="1" tabindex="0">
+                                                    <span>шт</span>
+                                                </div>
+                                                <button class="btn plus" type="button" tabindex="0">+</button>
+                                                <a class="goods__remove" href="#">
+                                                    <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="goods__price price" data-price="100">100 ₽</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tooltip_count">
+                            <span data-count="5">В корзине еще 5 товаров</span>
+                        </div>
+
+                        <a class="button" href="cart.html">
+                            Перейти в корзину
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="contact-mobile">
+                <a href="tel:+79114964949">+7 (911) 496-49-49</a>
+                <p>
+                    Магазин розничной торговли:<br>
+                    г. Килининград, ул. Юрия Гагарина 16Б
+                    <span>
+                        Ежедневно 11:00 – 19:00
+                    </span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-cart page-personal">
+        <div class="container">
+            <h1 class="page-title visually-hidden">Личный кабинет</h1>
+
+            <div class="tabs">
+                <div class="tabs__wrapper">
+                    <a class="tabs__link" href="#personal-ordering">Мои заказы</a>
+                    <a class="tabs__link" href="#personal-data">Мои данные</a>
+                    <a class="tabs__link" href="#personal-adress">Мои адреса</a>
+                </div>
+            </div>
+
+            <div class="tabs-content">
+                <div class="tabs-content__item personal-ordering" id="personal-ordering">
+                    <!-- Вариант 1 Когда пользователья еще не совершал покупок -->
+                    <div class="personal-ordering__no-order">
+                        <p class="personal-ordering__text">У вас пока нет заказов</p>
+                        <a class="button" href="/">в магазин</a>
+                    </div>
+
+                    <!-- После выбора Варианта <br> строчку ниже удалить -->
+                    <br>------------------------------------------------<br>
+
+                    <!-- Вариант Когда пользователья совершал покупки -->
+                    <ul class="personal-ordering__list">
+                        <li class="order-item">
+                            <div class="order-item__heading">
+                                <div class="columns-left">
+                                    <p class="order-item__data">09 июня 2019</p>
+                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
+                                </div>
+                                <div class="columns-right">
+                                    <p class="order-item__status order-item__status--pays">Ожидает оплаты</p>
+                                    <p class="order-item__goods-counts">
+                                        Количество товаров
+                                        <span class="order-item__goods-count">21 шт</span>
+                                        <span class="order-item__goods-sum">1550 ₽</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="order-item__middle">
+                                <ul class="order-item__goods-list">
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color green" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color purple" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color purple" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color purple" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color purple" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                </ul>
+                                <a class="show-all-order" href="#">Весь заказ</a>
+                            </div>
+                            <div class="order-item__footer">
+                                <p>Подробности заказа</p>
+                                <div class="order-item__links">
+                                    <a class="order-item__order-cancel-link" href="#">Отменить заказ</a>
+                                    <a class="order-item__order-pay-link button" class="button" href="#">Оплатить заказ</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="order-item">
+                            <div class="order-item__heading">
+                                <div class="columns-left">
+                                    <p class="order-item__data">09 июня 2019</p>
+                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
+                                </div>
+                                <div class="columns-right">
+                                    <p class="order-item__status">Выполненно</p>
+                                    <p class="order-item__goods-counts">
+                                        Количество товаров
+                                        <span class="order-item__goods-count">21 шт</span>
+                                        <span class="order-item__goods-sum">1550 ₽</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="order-item__middle">
+                                <ul class="order-item__goods-list">
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                </ul>
+                                <a class="show-all-order" href="#">Весь заказ</a>
+                            </div>
+                            <div class="order-item__footer">
+                                <p>
+                                    Подробности заказа
+                                    <a class="order-item__receipt-link" href="#">Посмотреть квитанцию</a>
+                                </p>
+                                <div class="order-item__links">
+                                    <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="order-item">
+                            <div class="order-item__heading">
+                                <div class="columns-left">
+                                    <p class="order-item__data">09 июня 2019</p>
+                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
+                                </div>
+                                <div class="columns-right">
+                                    <p class="order-item__status order-item__status--cancle">Отменнено</p>
+                                    <p class="order-item__goods-counts">
+                                        Количество товаров
+                                        <span class="order-item__goods-count">21 шт</span>
+                                        <span class="order-item__goods-sum">1550 ₽</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="order-item__middle">
+                                <ul class="order-item__goods-list">
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                    <li class="inorder-good-item">
+                                        <a class="inorder-good-item__color magenta" href="#">
+                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                        </a>
+                                        <a class="inorder-good-item__title" href="#">
+                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                        </a>
+                                        <span class="inorder-good-item__count">3 шт</span>
+                                        <span>450 ₽ </span>
+                                    </li>
+                                </ul>
+                                <a class="show-all-order" href="#">Весь заказ</a>
+                            </div>
+                            <div class="order-item__footer">
+                                <p>Подробности заказа</p>
+                                <div class="order-item__links">
+                                    <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabs-content__item personal-data" id="personal-data">
+                    Содержимое 2
+                </div>
+
+                <div class="tabs-content__item personal-adress" id="personal-adress">
+                    Содержимое 3
+                </div>
+            </div>
+
+            <section class="form-block">
+                <form class="form-ordering" action="" method="post">
+                    <div class="block-post">
+                        <label for="select-post">Тип доставки</label>
+                        <select name="post" id="select-post">
+                            <option>Выбор способа доставки</option>
+                            <option class="icon post-rus" value="Value 1">Почта России</option>
+                        </select>
+                    </div>
+
+                    <div class="block-contacts">
+                        <div class="fio">
+                            <ul class="fio-list">
+                                <li>
+                                    <label for="lname-field">Фамилия</label>
+                                    <input id="lname-field" type="text" name="lname" placeholder="Фамилия">
+                                </li>
+                                <li>
+                                    <label for="fname-field">Имя</label>
+                                    <input id="fname-field" type="text" name="fname" placeholder="Имя">
+                                </li>
+                                <li>
+                                    <label for="father_name-field">Отчество</label>
+                                    <input id="father_name-field" type="text" name="father_name" placeholder="Отчество">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="adress">
+                            <ul class="adress-list">
+                                <li>
+                                    <label for="country-field">Страна</label>
+                                    <input id="country-field" type="text" name="country" placeholder="Страна " value="Россия" disabled="">
+                                </li>
+                                <li>
+                                    <label for="city-field">Населенный пункт</label>
+                                    <input id="city-field" type="text" name="city" placeholder="Населенный пункт" value="Калининград" disabled="">
+                                </li>
+                                <li>
+                                    <label for="index-field">Почтовый индекс</label>
+                                    <input id="index-field" type="text" name="index" placeholder="Почтовый индекс" value="238500" disabled="">
+                                </li>
+                                <li>
+                                    <label for="street-field">Улица</label>
+                                    <input id="street-field" type="text" name="street" placeholder="Улица" value="Зоологическая" disabled="">
+                                </li>
+                                <li>
+                                    <label for="house-field">Дом</label>
+                                    <input id="house-field" type="text" name="house" placeholder="Дом" value="9Д" disabled="">
+                                </li>
+                                <li>
+                                    <label for="flat-field">Квартира</label>
+                                    <input id="flat-field" type="text" name="flat" placeholder="Квартира" value="12" disabled="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="add-info">
+                            <label class="visually-hidden" for="info-field">Дополнительная информация</label>
+                            <textarea id="info-field" name="info" placeholder="Дополнительная информация" value=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="goods-in-cart">
+                        <table class="goods__list">
+                            <tbody>
+                                <tr class="goods__item">
+                                    <th class="text-left" colspan="3">Товар</th>
+                                    <th class="text-left">Количество</th>
+                                    <th class="text-right">Цена</th>
+                                    <th class="text-right">Сумма</th>
+                                </tr>
+                                <tr class="goods__item" data-element_id="101">
+                                    <td class="goods__image">
+                                        <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                    </td>
+                                    <td class="goods__descr">
+                                        BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                    </td>
+                                    <td class="goods__absence absence">
+                                        Нет в наличии
+                                    </td>
+                                    <td class="goods__quantity">
+                                        <div class="quantity basket">
+                                            <button class="btn minus" type="button" tabindex="0">-</button>
+                                            <div class="goods__count">
+                                                <input name="amount" type="text" class="input-quantity" value="2" tabindex="0">
+                                                <span>шт</span>
+                                            </div>
+                                            <button class="btn plus" type="button" tabindex="0">+</button>
+                                            <a class="goods__remove" href="#">
+                                                <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="goods__price">450 ₽</td>
+                                    <td class="goods__price price" data-price="450">900 ₽</td>
+                                </tr>
+                                <tr class="goods__item" data-element_id="102">
+                                    <td class="goods__image">
+                                        <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                    </td>
+                                    <td class="goods__descr">
+                                        BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                    </td>
+                                    <td class="goods__absence">
+                                        Нет в наличии
+                                    </td>
+                                    <td class="goods__quantity">
+                                        <div class="quantity basket">
+                                            <button class="btn minus" type="button" tabindex="0">-</button>
+                                            <div class="goods__count">
+                                                <input name="amount" type="text" class="input-quantity" value="3" tabindex="0">
+                                                <span>шт</span>
+                                            </div>
+                                            <button class="btn plus" type="button" tabindex="0">+</button>
+                                            <a class="goods__remove" href="#">
+                                                <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="goods__price">650 ₽</td>
+                                    <td class="goods__price price" data-price="650">1950 ₽</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="goods__amount">
+                            <div class="coupon">
+                                <input id="coupon" type="text" name="coupon" placeholder="Промокод">
+                            </div>
+                            <div class="amount-price">
+                                Общая стоимость:
+                                <span>1866 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comments-submit">
+                        <div class="comments-submit__block">
+                            <div class="comments">
+                                <input id="comments" type="text" name="comments" placeholder="Комментарий к заказу">
+                            </div>
+                            <button class="button purchase" type="submit">Перейти к оплате</button>
+                        </div>
+                        <div class="notify-block">
+                            <p class="price-min">Минимальная сумма заказа 1 500₽</p>
+                            <p class="goods-absence">Некоторых товаров нет в наличии</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-navigation">
+                    <h4 class="header">Корпоративная информация</h4>
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="partner.html">Стать партнером</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="">Условия доставки</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="">Возврат товара</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="">Пользовательское соглашение</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="">Политика конфидициальности</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 class="header">Мы в соцсетях</h4>
+                    <ul class="social-list">
+                        <li class="social-item">
+                            <a href=""><img src="img/icon-vk.svg" alt="" width="32" height="32"></a>
+                        </li>
+                        <li class="social-item">
+                            <a href=""><img src="img/icon-facebook.svg" alt="" width="32" height="32"></a>
+                        </li>
+                        <li class="social-item">
+                            <a href=""><img src="img/icon-insta.svg" alt="" width="32" height="32"></a>
+                        </li>
+                    </ul>
+                    <a class="subscribe-link" href="">Подписаться на новости</a>
+                </div>
+                <div class="footer-payments">
+                    <h4 class="header">Оплата</h4>
+                    <ul class="payments-list">
+                        <li>
+                            <a href=""><img src="img/icon-payments.svg" alt="" width="201" height="40"></a>
+                        </li>
+                    </ul>
+                    <a href="">Подробнее об оплате</a>
+                </div>
+                <div class="footer-contacts">
+                    <h4 class="header">Контакты</h4>
+                    <a href="tel:8911496-49-49">+7 (911) 496-49-49</a>
+                    <p>
+                        Магазин розничной торговли:<br>
+                        г. Килининград, ул. Юрия Гагарина 16Б
+                        <span>
+                            Ежедневно 11:00 – 19:00
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="modal modal-subscribe">
+        <div>
+            <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
+            <form class="subscribe-form" action="" method="post">
+                <p>
+                  <label class="visually-hidden" for="email-field">email</label>
+                  <input class="email-subscribe" id="email-field" type="email" name="email" placeholder="E-mail" required="">
+                </p>
+                <p class="subscribe-policy">
+                  <label class="policy-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden" checked="" required="">
+                    <span class="checkbox-indicator"></span>
+                    Даю согласие с обработкой персональных данных
+                  </label>
+                </p>
+                <button class="button" type="submit">Подписаться</button>
+            </form>
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="compiled/jquery-3.4.1-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
