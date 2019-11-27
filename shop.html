@@ -245,9 +245,9 @@
         <div class="container">
             <section class="sorts">
                 <h2 class="visually-hidden">Сортировка</h2>
-                <div class="filter-list">
-                    <div class="filter-item">
-                        <form action="">
+                <form action="">
+                    <div class="filter-list">
+                        <div class="filter-item">
                             <label class="visually-hidden" for="select-category"></label>
                             <select name="category" id="select-category">
                                 <option>Категория</option>
@@ -255,10 +255,8 @@
                                 <option value="Value 2">Гель-краска</option>
                                 <option value="Value 3">Топы</option>
                             </select>
-                        </form>
-                    </div>
-                    <div class="filter-item">
-                        <form action="">
+                        </div>
+                        <div class="filter-item">
                             <label class="visually-hidden" for="select-collection"></label>
                             <select name="collection" id="select-collection">
                                 <option>Коллекция</option>
@@ -266,23 +264,19 @@
                                 <option value="Value 2">Коллекция 2</option>
                                 <option value="Value 3">Коллекция 3</option>
                             </select>
-                        </form>
-                    </div>
-                    <div class="filter-item">
-                        <form action="">
+                        </div>
+                        <div class="filter-item">
                             <label class="visually-hidden" for="select-color"></label>
                             <select name="color" multiple="multiple" id="select-color">
                                 <option>Цвет</option>
-                                <option class="color red" value="Value 1">Цвет 1</option>
-                                <option class="color yellow" value="Value 2">Цвет 2</option>
-                                <option class="color orange" value="Value 3">Цвет 3</option>
-                                <option class="color green" value="Value 4">Цвет 4</option>
-                                <option class="color aqua" value="Value 5">Цвет 5</option>
+                                <option class="color red" value="red">Цвет 1</option>
+                                <option class="color yellow" value="yellow">Цвет 2</option>
+                                <option class="color orange" value="orange">Цвет 3</option>
+                                <option class="color green" value="green">Цвет 4</option>
+                                <option class="color aqua" value="aqua">Цвет 5</option>
                             </select>
-                        </form>
-                    </div>
-                    <div class="filter-item">
-                        <form action="">
+                        </div>
+                        <div class="filter-item">
                             <ul class="custom-select">
                                 <li class="selected-option">
                                     <span>Цена</span>
@@ -299,9 +293,9 @@
                                 </div>
                                 <input class="button filter-button" type="submit" value="Применить">
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </section>
 
             <section class="shop">
@@ -556,7 +550,7 @@
         </div>
     </footer>
     <section class="modal modal-subscribe">
-        <div>
+        <div class="modal__block">
             <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
             <form class="subscribe-form" action="" method="post">
                 <p>

@@ -341,7 +341,7 @@
         </div>
     </header>
 
-    <main class="page-cart page-personal">
+    <main class="page-personal">
         <div class="container">
             <h1 class="page-title visually-hidden">Личный кабинет</h1>
 
@@ -365,6 +365,47 @@
                     <br>------------------------------------------------<br>
 
                     <!-- Вариант Когда пользователья совершал покупки -->
+
+                    <section class="personal-filter">
+                        <form class="filter" action="" method="post">
+                            <div class="filter__list">
+                                <div class="filter__item filter__item--w176">
+                                    <label class="visually-hidden" for="select-status">Статус заказа</label>
+                                    <select name="post" id="select-status">
+                                        <option>Статус</option>
+                                        <option class="order-awaiting-payment" value="Value 1">Ожидает оплаты</option>
+                                        <option class="order-complete" value="Value 2">Выполнено</option>
+                                        <option class="order-cancle" value="Value 3">Отменено</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter__item filter__item--date">
+                                    <label class="visually-hidden" for="order-date">Дата покупок</label>
+                                    <input type="date" id="order-date" name="order-date" value="2019-07-17">
+                                </div>
+
+                                <div class="filter__item">
+                                    <ul class="custom-select">
+                                        <li class="selected-option">
+                                            <span>Цена</span>
+                                        </li>
+                                    </ul>
+                                    <div class="select-value" id="select-price">
+                                        <div class="price-value">
+                                            <label class="min-price">
+                                                <input type="text" id="price-min" name="price-min" placeholder="От">
+                                            </label>
+                                            <label class="max-price">
+                                                <input type="text" id="price-max" name="price-max" placeholder="До">
+                                            </label>
+                                        </div>
+                                        <input class="button filter-button" type="submit" value="Применить">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
                     <ul class="personal-ordering__list">
                         <li class="order-item">
                             <div class="order-item__heading">
@@ -460,7 +501,7 @@
                                 <p>Подробности заказа</p>
                                 <div class="order-item__links">
                                     <a class="order-item__order-cancel-link" href="#">Отменить заказ</a>
-                                    <a class="order-item__order-pay-link button" class="button" href="#">Оплатить заказ</a>
+                                    <a class="order-item__order-pay-link button" href="#">Оплатить заказ</a>
                                 </div>
                             </div>
                         </li>
@@ -628,166 +669,170 @@
                 </div>
 
                 <div class="tabs-content__item personal-data" id="personal-data">
-                    Содержимое 2
+                    <form class="form form-input" action="" method="post">
+                        <div class="personal-group">
+                            <b>Личные данные</b>
+                            <ul class="input-list input-list--column">
+                                <li>
+                                    <input id="lname-field" type="text" name="lname" placeholder="Фамилия">
+                                    <label for="lname-field">Фамилия</label>
+                                </li>
+                                <li>
+                                    <input id="fname-field" type="text" name="fname" placeholder="Имя">
+                                    <label for="fname-field">Имя</label>
+                                </li>
+                                <li>
+                                    <input id="father_name-field" type="text" name="father_name" placeholder="Отчество">
+                                    <label for="father_name-field">Отчество</label>
+                                </li>
+                                <li>
+                                    <input id="phone-field" type="tel" name="phone" placeholder="Телефон">
+                                    <label for="phone-field">Телефон</label>
+                                    <a class="change-field" href="">Сменить</a>
+                                </li>
+                                <li>
+                                    <input id="email-field-personal" type="email" name="email" placeholder="e-mail">
+                                    <label for="email-field-personal">e-mail</label>
+                                </li>
+                                <li>
+                                    <input id="password-field" type="password" name="password" placeholder="Пароль">
+                                    <label for="password-field">Пароль</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="kind-group">
+                            <ul class="radio-list">
+                                <li>
+                                    <input id="male-field" type="radio" name="kind" value="male" checked="">
+                                    <label for="male-field">Муж</label>
+                                </li>
+                                <li>
+                                    <input id="female-field" type="radio" name="kind" value="female">
+                                    <label for="female-field">Жен</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="juristic-group">
+                            <input id="juristic-check" type="checkbox" name="juristic-check">
+                            <label class="juristic-check" for="juristic-check">Юридические данные</label>
+                            <ul class="input-list input-list--flex">
+                                <li class="w100">
+                                    <label for="juristic-field">Организация или наименование ИП</label>
+                                    <input id="juristic-field" type="text" name="juristic" placeholder="Организация или наименование ИП">
+                                </li>
+                                <li>
+                                    <label for="itn-field">ИНН</label>
+                                    <input id="itn-field" type="text" name="itn" placeholder="ИНН">
+                                </li>
+                                <li>
+                                    <label for="bic-field">Бик</label>
+                                    <input id="bic-field" type="text" name="bic" placeholder="Бик">
+                                </li>
+                                <li>
+                                    <label for="psrn-field">ОГРН или ОГРНИП</label>
+                                    <input id="psrn-field" type="text" name="psrn" placeholder="ОГРН или ОГРНИП">
+                                </li>
+                                <li>
+                                    <label for="current-account-field">Р/С</label>
+                                    <input id="current-account-field" type="text" name="current-account" placeholder="Р/С">
+                                </li>
+                                <li>
+                                    <label for="bank-field">Банк</label>
+                                    <input id="bank-field" type="text" name="bank" placeholder="Банк">
+                                </li>
+                                <li>
+                                    <label for="corresponfing-account-field">К/С</label>
+                                    <input id="corresponfing-account-field" type="text" name="corresponfing-account" placeholder="К/С">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="change-apply button" href="#">Сохранить</button>
+                    </form>
                 </div>
 
                 <div class="tabs-content__item personal-adress" id="personal-adress">
-                    Содержимое 3
-                </div>
-            </div>
+                    <form action="">
+                        <div class="select-adress">
+                            <p class="label-title">Адрес доставки</p>
+                            <select name="select-adress" id="select-adress">
+                                <option>Новый адрес</option>
+                                <option value="new">Новый адрес</option>
+                                <option value="Мазур, Алина, Александрова, Россия, Калининград, 238500, Зоологическая, 9Д, 12">Зоологическая, 9Д</option>
+                            </select>
+                            <a class="remove-adress-link" href="#">Удалить адрес</a>
+                        </div>
 
-            <section class="form-block">
-                <form class="form-ordering" action="" method="post">
-                    <div class="block-post">
-                        <label for="select-post">Тип доставки</label>
-                        <select name="post" id="select-post">
-                            <option>Выбор способа доставки</option>
-                            <option class="icon post-rus" value="Value 1">Почта России</option>
-                        </select>
-                    </div>
-
-                    <div class="block-contacts">
-                        <div class="fio">
-                            <ul class="fio-list">
+                        <div class="recipient-group">
+                            <p class="label-title">Получатель</p>
+                            <ul class="radio-list">
                                 <li>
-                                    <label for="lname-field">Фамилия</label>
-                                    <input id="lname-field" type="text" name="lname" placeholder="Фамилия">
+                                    <input id="recipient-me" type="radio" name="recipient" value="recipient-me" checked="">
+                                    <label for="recipient-me">Я сам</label>
                                 </li>
                                 <li>
-                                    <label for="fname-field">Имя</label>
-                                    <input id="fname-field" type="text" name="fname" placeholder="Имя">
+                                    <input id="recipient-other" type="radio" name="recipient" value="recipient-other">
+                                    <label for="recipient-other">Другое лицо</label>
+                                </li>
+                            </ul>
+                            <ul class="input-list recipient-fio">
+                                <li>
+                                    <input id="lname-recipient-field" type="text" name="lname-recipient" placeholder="Фамилия получателя">
+                                    <label for="lname-recipient-field">Фамилия получателя</label>
                                 </li>
                                 <li>
-                                    <label for="father_name-field">Отчество</label>
-                                    <input id="father_name-field" type="text" name="father_name" placeholder="Отчество">
+                                    <input id="fname-recipient-field" type="text" name="fname" placeholder="Имя получателя">
+                                    <label for="fname-recipient-field">Имя получателя</label>
+                                </li>
+                                <li>
+                                    <input id="father_name-recipient-field" type="text" name="father_name-recipient" placeholder="Отчество получателя">
+                                    <label for="father_name-recipient-field">Отчество получателя</label>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="adress">
-                            <ul class="adress-list">
+                        <div class="adress-group">
+                            <ul class="input-list input-list--column input-list--height">
                                 <li>
                                     <label for="country-field">Страна</label>
-                                    <input id="country-field" type="text" name="country" placeholder="Страна " value="Россия" disabled="">
+                                    <input id="country-field" type="text" name="country" placeholder="Страна">
                                 </li>
                                 <li>
                                     <label for="city-field">Населенный пункт</label>
-                                    <input id="city-field" type="text" name="city" placeholder="Населенный пункт" value="Калининград" disabled="">
+                                    <input id="city-field" type="text" name="city" placeholder="Населенный пункт">
                                 </li>
                                 <li>
                                     <label for="index-field">Почтовый индекс</label>
-                                    <input id="index-field" type="text" name="index" placeholder="Почтовый индекс" value="238500" disabled="">
+                                    <input id="index-field" type="text" name="index" placeholder="Почтовый индекс">
                                 </li>
                                 <li>
                                     <label for="street-field">Улица</label>
-                                    <input id="street-field" type="text" name="street" placeholder="Улица" value="Зоологическая" disabled="">
+                                    <input id="street-field" type="text" name="street" placeholder="Улица">
                                 </li>
                                 <li>
                                     <label for="house-field">Дом</label>
-                                    <input id="house-field" type="text" name="house" placeholder="Дом" value="9Д" disabled="">
+                                    <input id="house-field" type="text" name="house" placeholder="Дом">
                                 </li>
                                 <li>
                                     <label for="flat-field">Квартира</label>
-                                    <input id="flat-field" type="text" name="flat" placeholder="Квартира" value="12" disabled="">
+                                    <input id="flat-field" type="text" name="flat" placeholder="Квартира">
+                                </li>
+                            </ul>
+
+                            <ul class="input-list">
+                                <li class="w100">
+                                    <label class="visually-hidden" for="info-field">Дополнительная информация</label>
+                                    <input id="info-field" type="text" name="info" placeholder="Дополнительная информация">
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="add-info">
-                            <label class="visually-hidden" for="info-field">Дополнительная информация</label>
-                            <textarea id="info-field" name="info" placeholder="Дополнительная информация" value=""></textarea>
-                        </div>
-                    </div>
-
-                    <div class="goods-in-cart">
-                        <table class="goods__list">
-                            <tbody>
-                                <tr class="goods__item">
-                                    <th class="text-left" colspan="3">Товар</th>
-                                    <th class="text-left">Количество</th>
-                                    <th class="text-right">Цена</th>
-                                    <th class="text-right">Сумма</th>
-                                </tr>
-                                <tr class="goods__item" data-element_id="101">
-                                    <td class="goods__image">
-                                        <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                    </td>
-                                    <td class="goods__descr">
-                                        BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                    </td>
-                                    <td class="goods__absence absence">
-                                        Нет в наличии
-                                    </td>
-                                    <td class="goods__quantity">
-                                        <div class="quantity basket">
-                                            <button class="btn minus" type="button" tabindex="0">-</button>
-                                            <div class="goods__count">
-                                                <input name="amount" type="text" class="input-quantity" value="2" tabindex="0">
-                                                <span>шт</span>
-                                            </div>
-                                            <button class="btn plus" type="button" tabindex="0">+</button>
-                                            <a class="goods__remove" href="#">
-                                                <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="goods__price">450 ₽</td>
-                                    <td class="goods__price price" data-price="450">900 ₽</td>
-                                </tr>
-                                <tr class="goods__item" data-element_id="102">
-                                    <td class="goods__image">
-                                        <img class="img-responsive" src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                    </td>
-                                    <td class="goods__descr">
-                                        BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                    </td>
-                                    <td class="goods__absence">
-                                        Нет в наличии
-                                    </td>
-                                    <td class="goods__quantity">
-                                        <div class="quantity basket">
-                                            <button class="btn minus" type="button" tabindex="0">-</button>
-                                            <div class="goods__count">
-                                                <input name="amount" type="text" class="input-quantity" value="3" tabindex="0">
-                                                <span>шт</span>
-                                            </div>
-                                            <button class="btn plus" type="button" tabindex="0">+</button>
-                                            <a class="goods__remove" href="#">
-                                                <img src="img/icon/delete.svg" alt="Пользователь" width="24" height="24">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="goods__price">650 ₽</td>
-                                    <td class="goods__price price" data-price="650">1950 ₽</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="goods__amount">
-                            <div class="coupon">
-                                <input id="coupon" type="text" name="coupon" placeholder="Промокод">
-                            </div>
-                            <div class="amount-price">
-                                Общая стоимость:
-                                <span>1866 ₽</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comments-submit">
-                        <div class="comments-submit__block">
-                            <div class="comments">
-                                <input id="comments" type="text" name="comments" placeholder="Комментарий к заказу">
-                            </div>
-                            <button class="button purchase" type="submit">Перейти к оплате</button>
-                        </div>
-                        <div class="notify-block">
-                            <p class="price-min">Минимальная сумма заказа 1 500₽</p>
-                            <p class="goods-absence">Некоторых товаров нет в наличии</p>
-                        </div>
-                    </div>
-                </form>
-            </section>
+                        <button class="change-apply button" href="#">Сохранить</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -856,7 +901,7 @@
         </div>
     </footer>
     <section class="modal modal-subscribe">
-        <div>
+        <div class="modal__block">
             <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
             <form class="subscribe-form" action="" method="post">
                 <p>
@@ -872,6 +917,19 @@
                 </p>
                 <button class="button" type="submit">Подписаться</button>
             </form>
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="modal modal-remove-adress">
+        <div class="modal__block">
+            <h2>Вы уверенны, что хотите удалить адрес? </h2>
+            <div>
+                <a class="button" href="#">Отменить</a>
+                <a class="button" href="#">Удалить</a>
+            </div>
             <button class="modal-close" type="button">
                 <span class="visually-hidden">Закрыть</span>
             </button>

@@ -152,14 +152,14 @@ $(function() {
         stylesBlur();
         $('.modal-close').click( function () {
             modalcoursedetails.removeClass('modal-show');
-            $('.blur, body').removeClass();
+            $('.blur, body').removeClass('blur');
         });
     });
 
     $('.modal').click(function(e) {
         if ($(e.target).hasClass('modal-show')) {
             $(e.target).removeClass('modal-show');
-            $('.blur, .modal-open').removeClass();
+            $('.blur, .modal-open').removeClass('blur');
         }
     });
 
@@ -308,6 +308,7 @@ $(function() {
     customSelect('#select-collection');
     customSelect('#select-post');
     customSelect('#select-adress');
+    customSelect('#select-status');
 
     // Multiselect
     function custommultiSelect(el){
@@ -373,7 +374,7 @@ $(function() {
         customPriceSelect = $(el).siblings('.custom-select');
         $(customPriceSelect).click(function(){
             $(this).toggleClass('open');
-            $(this).next('.select-price').toggleClass('open');
+            $(this).next('.select-value').toggleClass('open');
         });
     };
     customPriceSelect('#select-price');
@@ -433,7 +434,7 @@ $(function() {
         $(t_content).show();
 
         return false
-    })
+    });
     $('.tabs .tabs__link:first').trigger('click');
 
     //Показать весь заказ
@@ -445,6 +446,33 @@ $(function() {
             }
         });
     });
+
+    //ЛК удалит адрес
+    var removeadress = document.querySelector('.remove-adress-link');
+    var popupremoveadress = document.querySelector('.modal-remove-adress');
+    if (removeadress || popupremoveadress) {
+        removeadress.addEventListener('click', function (e) {
+            e.preventDefault();
+            popupremoveadress.classList.add('modal-show');
+            stylesBlur();
+        });
+    }
+
+    //ЛК - тображения блока ФИО получатель
+    if ($('#recipient-other').prop('checked')) {
+        $('.recipient-group .recipient-fio').show();
+    }
+    $('.recipient-group input[name="recipient"]').click(function () {
+        var $this = $(this).val();
+        var recipientfio = $('.recipient-group .recipient-fio');
+        if ($this == 'recipient-other') {
+            recipientfio.show();
+        } else {
+            recipientfio.hide();
+        }
+    });
+
+
 });
 
 $(function() {
