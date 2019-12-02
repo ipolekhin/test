@@ -5,15 +5,6 @@
     <title>Bagira Nails</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-
-<!--    <script src="js/lib/slick.js" type="text/javascript" charset="utf-8"></script>-->
-<!--    <link rel="stylesheet" type="text/css" href="css/lib/slick.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/lib/slick-theme.css">-->
-<!--    <link href="css_work/style.css" rel="stylesheet">-->
-
-    <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="compiled/project.lib.min.css">
 <!--    <link rel="stylesheet" href="compiled/project.min.css">-->
     <link rel="stylesheet" href="compiled/project.css">
@@ -94,8 +85,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="active"><a href="studio.html">Студии</a></li>
-                    <li><a href="training.html">Обучение</a></li>
+                    <li>
+                        <a href="studio.html">Студии</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Обучение</a>
+                    </li>
                     <li>
                       <a href="agency.html">Представительства    </a>
                     </li>
@@ -154,180 +149,30 @@
 
     <main>
         <div class="container">
-            <h1 class="page-title visually-hidden">Bagira Nails - Студии</h1>
+            <div class="page-content">
+                <div class="page-title">
+                    <h1>Условия Доставки</h1>
+                </div>
+                <b>Доставка товара</b>
+                <p>Отправку Товара Интернет-магазин http://www.bnail.pro осуществляет с помощью Почты России в рабочие дни (Мы не производим отправку Товара по субботам, воскресеньям и праздничным дням) в течение 3-х дней после полной оплаты Товара. После оформления и комплектации заказ передается на Почту России.</p>
+                <p>Ответственность за сохранность товара и сроки прохождения по территории РФ с момента передачи отправления в почтовое отделение несет Почта России. Расходы на доставку товаров в большей части определяются тарифами Почты РФ.</p>
+                <p>Расчет стоимости доставки Почтой РФ производится, согласно установленным тарифам почты. На стоимость доставки влияют: расстояние и тип доставки, страховые сборы, которые рассчитываются в зависимости от типа отправления и общего характера грузов конкретного отправителя, стоимость упаковки и накладные расходы отправителя.</p>
+                <p>На сайте Почты России можно отследить прохождение вашей посылки по пути следования (узнать текущее нахождение или последний пункт пребывания). Для этого необходимо знать номер уникального почтового идентификатора.</p>
 
-            <section class="studio-header">
-                <div class="block">
-                    <h2>Студии</h2>
-                    <p>Мы заботимся о красоте и здоровье ваших ногтей с искренней доброжелательностью</p>
-                </div>
-                <p>Наши мастера следуют самым высоким стандартам, используют палитру из сотни оттенков и способны воплотить в жизнь любой, даже самый смелый дизайн.
-                </p>
-            </section>
+                <b>Отслеживание почтовых отправлений</b>
+                <p>Отследить местонахождение почтового отправления Вы можете:</p>
+                <ul>
+                    <li>на сайте Почты России</li>
+                    <li>через Мобильное приложение на базе iOS и Android</li>
+                    <li>через справочную службу Почты России по тел. 8-800-2005-888</li>
+                    <li>задав вопрос «консультант онлайн» на сайте Почты России</li>
+                </ul>
 
-            <section class="service-carusel">
-                <h2>Услуги</h2>
-                <div class="service-carusel-list">
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-manicure.png" alt="">
-                            <span>Маникюр</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-pedicure.png" alt="">
-                            <span>Педикюр</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-eyebrows.png" alt="">
-                            <span>Оформление бровей</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-cilia.png" alt="">
-                            <span>Оформление ресниц</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-makeup.png" alt="">
-                            <span>Макияж</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-eyebrows.png" alt="">
-                            <span>Оформление бровей</span>
-                        </a>
-                    </div>
-                    <div class="service-carusel-item">
-                        <a href="#">
-                            <img src="img/studio-cilia.png" alt="">
-                            <span>Оформление ресниц</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="studio-info">
-                <h2>Студии</h2>
-                <div class="tab-studio-info">
-                    <ul class="tabs-studio-info">
-                        <li>
-                            <a href="#studio1" class="current">Юрия Гагарина  16,Б</a>
-                        </li>
-                        <li>
-                            <a href="#studio2">Дмитрия Донского 12</a>
-                        </li>
-                        <li>
-                            <a href="#studio3">пр. Мира 512</a>
-                        </li>
-                    </ul>
-                    <div class="tab-studio-content">
-                        <div id="studio1">
-                            <div class="tab-info">
-                                <h3>Юрия Гагарина  16,Б</h3>
-                                <p>Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
-                            </div>
-                            <div class="studio-carusel number1">
-                                <img src="img/studio-info-1_1.png" alt="">
-                                <img src="img/studio-info-1_2.png" alt="">
-                                <img src="img/studio-info-1_3.png" alt="">
-                                <img src="img/studio-info-1_4.png" alt="">
-                            </div>
-                        </div>
-                        <div id="studio2">
-                            <div class="tab-info">
-                                <h3>Дмитрия Донского 12</h3>
-                                <p>2Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
-                            </div>
-                            <div class="studio-carusel number2">
-                                <img src="img/studio-info-1_1.png" alt="">
-                                <img src="img/studio-info-1_3.png" alt="">
-                                <img src="img/studio-info-1_2.png" alt="">
-                            </div>
-                        </div>
-                        <div id="studio3">
-                            <div class="tab-info">
-                                <h3>пр. Мира 512</h3>
-                                <p>3Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
-                            </div>
-                            <div class="studio-carusel number3">
-                                <img src="img/studio-info-1_1.png" alt="">
-                                <img src="img/studio-info-1_4.png" alt="">
-                                <img src="img/studio-info-1_2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="comments-block">
-                <h2>Отзывы наших клиенток</h2>
-                <div class="comments-carusel">
-                    <div class="comments-info-list">
-                        <div class="comments-info-item">
-                            <p>Очень уютно, доброжелательный персонал и самое  главное  — качественное предоставление услуг!</p>
-                            <p><span>Виктория Неч</span></p>
-                        </div>
-                        <div class="comments-info-item">
-                            <p>222Очень уютно, доброжелательный персонал и самое  главное  — качественное предоставление услуг!</p>
-                            <p><span>222Виктория Неч</span></p>
-                        </div>
-                        <div class="comments-info-item">
-                            <p>333Очень уютно, доброжелательный персонал и самое  главное  — качественное предоставление услуг!</p>
-                            <p><span>333Виктория Неч</span></p>
-                        </div>
-                        <div class="comments-info-item">
-                            <p>444Очень уютно, доброжелательный персонал и самое  главное  — качественное предоставление услуг!</p>
-                            <p><span>444Виктория Неч</span></p>
-                        </div>
-                    </div>
-                    <div class="comments-photo-list">
-                        <div class="comments-photo-item">
-                            <img src="img/comment-photo-1_1.png" alt="">
-                            <p>Татьяна Соловьева</p>
-                        </div>
-                        <div class="comments-photo-item">
-                            <img src="img/comment-photo-1_2.png" alt="">
-                            <p>Татьяна Соловьева</p>
-                        </div>
-                        <div class="comments-photo-item">
-                            <img src="img/comment-photo-1_3.png" alt="">
-                            <p>Татьяна Соловьева</p>
-                        </div>
-                        <div class="comments-photo-item">
-                            <img src="img/comment-photo-1_2.png" alt="">
-                            <p>Татьяна Соловьева</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="to-master-link">
-                <h2>Запишитесь к мастеру</h2>
-                <div class="to-master-block">
-                    <p>Маникюр любой сложности: от классического до трендового. Мы работаем быстро и аккуратно.
-                    </p>
-                    <a href="#" class="button">ПОДОБРАТЬ ВРЕМЯ ВИЗИТА</a>
-                </div>
-                <div class="application">
-                    <p>Мы создали приложение,  с помощью которого можно мгновенно записаться к мастерам Bagheera nails. </p>
-                    <a href="#google">
-                        <img src="img/google-play.svg" alt="google">
-                    </a>
-                    <a href="#appstore">
-                        <img src="img/appstore.svg" alt="">
-                    </a>
-                </div>
-            </section>
+                <b>Срок хранения</b>
+                <p>Заказ хранится в почтовом отделении 30 дней. Хранение посылки более 5 рабочих дней оплачивается дополнительно в соответствии с тарифами, устанавливаемыми Почтой России. По истечению срока хранения невостребованный заказ возвращается к отправителю и аннулируется.</p>
+                <p>Для своевременного получения уведомления с номером отправления просим Вас соблюдать правильность указания адреса электронной почты. После того, как Почта России предоставит отчёт об отправке заказа, на Ваш электронный адрес автоматически высылается письмо с номером почтового отправления.</p>
+                <p>Почте России на обработку данных и загрузку информации требуется время. Если при попытке выяснить место нахождения заказа сайт Почты России не дает никакой информации повторите запрос через несколько дней.</p>
+            </div>
         </div>
     </main>
 
@@ -395,6 +240,7 @@
             </div>
         </div>
     </footer>
+
     <section class="modal modal-subscribe">
         <div class="modal__block">
             <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
@@ -417,5 +263,17 @@
             </button>
         </div>
     </section>
+
+    <section class="modal modal-course-details">
+        <div class="details">
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="compiled/project.lib-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="compiled/project-min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -156,22 +156,30 @@ $(function() {
         });
     });
 
+    //Показать все курсы
+    $('.show-all-courses').click(function (e) {
+       e.preventDefault();
+       console.log('показать все курсы');
+       $(this).siblings('.courses-item').addClass('show');
+       $(this).hide();
+    });
+
     $('.modal').click(function(e) {
         if ($(e.target).hasClass('modal-show')) {
             $(e.target).removeClass('modal-show');
-            $('.blur, .modal-open').removeClass('blur');
+            $('.blur').removeClass('blur');
+            $('.modal-open').removeClass('modal-open');
         }
     });
 
-    $('.tab-studio-info .tabs-studio-info > li a').click( function () {
+    $('.tab-studio-info .tabs-studio-info > li a').click( function (e) {
+        e.preventDefault();
         $('.tab-studio-info .tabs-studio-info > li a').removeClass('current');
         $(this).addClass('current');
 
         $('.tab-studio-content > div').hide();
-        t_content=$(this).attr('href');
+        t_content = $(this).attr('href');
         $(t_content).show();
-
-        return false
     });
     $('.tab-studio-info .tabs-studio-info > li a:first').trigger('click');
 
@@ -199,6 +207,9 @@ $(function() {
         // количество в корзине
         block.find('input').each(function(i, input) {
             sum += parseInt($(input).val());
+            if (sum > 9) {
+                sum = '+9';
+            }
         });
         $('.order_item_count').html(sum);
     }
@@ -589,9 +600,11 @@ $(function() {
     });
 
     $('.number2').slick({
+        fade: true,
     });
 
     $('.number3').slick({
+        fade: true,
     });
 
     $('.comments-info-list').slick({

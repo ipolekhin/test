@@ -256,7 +256,7 @@ a {
   margin-top: 9px;
   padding: 0;
   font-family: 'Gilory', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   text-align: left;
@@ -924,14 +924,51 @@ header .container .search .search-form input[type='search'] {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.1px;
+  color: #5A5758;
   border: 1px solid #FFF;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+header .container .search .search-form input[type='search']::-webkit-input-placeholder {
+  color: #FFF;
+}
+header .container .search .search-form input[type='search']:-moz-placeholder {
+  color: #FFF;
+}
+header .container .search .search-form input[type='search']::-moz-placeholder {
+  color: #FFF;
+}
+header .container .search .search-form input[type='search']:-ms-input-placeholder {
+  color: #FFF;
+}
+header .container .search .search-form input[type='search']::placeholder {
+  color: #FFF;
+}
+header .container .search .search-form input[type='search']::-webkit-search-decoration,
+header .container .search .search-form input[type='search']::-webkit-search-cancel-button,
+header .container .search .search-form input[type='search']::-webkit-search-results-button,
+header .container .search .search-form input[type='search']::-webkit-search-results-decoration {
+  display: none;
 }
 header .container .search .search-form input[type='search']:focus {
   border: 1px solid #F4F4F4;
   box-shadow: none;
   outline: none;
+}
+header .container .search .search-form input[type='search']:focus::-webkit-input-placeholder {
+  color: #ADABAC;
+}
+header .container .search .search-form input[type='search']:focus:-moz-placeholder {
+  color: #ADABAC;
+}
+header .container .search .search-form input[type='search']:focus::-moz-placeholder {
+  color: #ADABAC;
+}
+header .container .search .search-form input[type='search']:focus:-ms-input-placeholder {
+  color: #ADABAC;
+}
+header .container .search .search-form input[type='search']:focus::placeholder {
+  color: #ADABAC;
 }
 header .container .search .search-form .search-label {
   position: absolute;
@@ -1004,7 +1041,8 @@ header .container .user-navigation > li .basket_count span {
   right: 2px;
   background: #F54545;
   color: #FFF;
-  padding: 1.5px 4px;
+  padding-top: 1.5px;
+  padding-left: 1px;
   font-size: 8px;
   text-align: center;
   border-radius: 50%;
@@ -1322,8 +1360,8 @@ main .brands-hits .brand-list .slick-next:before {
 main {
   /* ----------------------------------------- Studio-Page ------------------------------- */
   /* ----------------------------------------- Studio-header ------------------------- */
-  /* ----------------------------------------- Studio-header END -------------------------- */
-  /* ----------------------------------------- service-carusel ---------------------------- */
+  /* ----------------------------------------- Studio-header END --------------------- */
+  /* ----------------------------------------- service-carusel ----------------------- */
   /* ------------------------------------- service-carusel END --------------------- */
   /* ------------------------------------- studio ---------------------------------- */
   /* ------------------------------------- studio-end ------------------------------ */
@@ -1388,6 +1426,8 @@ main {
   /*------------------------------------ Tabs -------------------------------------- */
   /*------------------------------------ Tabs-END ---------------------------------- */
   /* ------------------------------------- Page-personal-END --------------------------- */
+  /* ------------------------------------- Page-content -------------------------------- */
+  /* ------------------------------------- Page-content-END ---------------------------- */
 }
 main .studio-header {
   margin-top: 60px;
@@ -1509,9 +1549,13 @@ main .studio-info .tab-studio-info .tabs-studio-info li a::before {
   background-color: #ADABAC;
 }
 main .studio-info .tab-studio-info .tabs-studio-info li a.current {
+  -moz-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   color: #5A5758;
 }
 main .studio-info .tab-studio-info .tabs-studio-info li a.current::before {
+  -moz-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   width: 32px;
   height: 2px;
   background-color: #5A5758;
@@ -1772,7 +1816,7 @@ main .search-agency .block {
   padding: 16px 16px 16px 97px;
   min-height: 520px;
   text-align: left;
-  background: rgba(255, 84, 201, 0.01) url(../img/agency-search-bg.png) bottom right no-repeat;
+  background: #ffffff url(../img/agency-search-bg.png) bottom right no-repeat;
   border: 1px solid #E2DDD7;
 }
 main .search-agency .block h2 {
@@ -2235,6 +2279,16 @@ main .courses-info .courses-list .courses-item {
   padding: 36px;
   border: 1px solid #DEDDDE;
 }
+main .courses-info .courses-list .courses-item:nth-child(n + 3) {
+  display: none;
+}
+main .courses-info .courses-list .courses-item.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 main .courses-info .courses-list .courses-item .courses-description {
   position: relative;
   margin-left: 44px;
@@ -2321,11 +2375,12 @@ main .courses-info .courses-list .courses-item .courses-description .course-deta
 main .courses-info .courses-list .courses-item .courses-description .course-details-btn:hover {
   background-color: #FAFAFA;
 }
-main .courses-info .courses-list .link-all-courses {
+main .courses-info .courses-list .show-all-courses {
   margin: 58px auto 0;
   padding: 16px 8px;
   width: 334px;
   letter-spacing: 1.6px;
+  background: url(../img/icon/down.svg) no-repeat 87% center;
 }
 main .students-work {
   margin-top: 116px;
@@ -3855,6 +3910,33 @@ main.page-personal .personal-adress .change-apply {
   width: 300px;
   cursor: pointer;
 }
+main .page-content .page-title {
+  margin-top: 50px;
+  text-align: center;
+}
+main .page-content .page-title h1 {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  font-size: 28px;
+  line-height: 28px;
+  border-bottom: 1px solid #DEDDDE;
+}
+main .page-content b {
+  display: block;
+  margin-top: 16px;
+  line-height: 20px;
+}
+main .page-content p {
+  margin: 0;
+  line-height: 20px;
+}
+main .page-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  line-height: 20px;
+}
 /* ----------------------------------------- main end ------------------------------------ */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
@@ -3913,23 +3995,6 @@ footer .footer-inner .footer-social .social-list .social-item {
 footer .footer-inner .footer-social .subscribe-link:hover {
   box-shadow: 0 1px 0 0 #5A5758;
 }
-footer .footer-inner .footer-payments .payments-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  width: 295px;
-  list-style: none;
-}
-footer .footer-inner .footer-payments .payments-list li {
-  margin: 2px 21px 19px 0;
-}
-footer .footer-inner .footer-payments > a:hover {
-  box-shadow: 0 1px 0 0 #5A5758;
-}
 footer .footer-inner .footer-contacts a {
   display: block;
   font-family: 'Gilory', sans-serif;
@@ -3948,6 +4013,23 @@ footer .footer-inner .footer-contacts p span {
   display: block;
   letter-spacing: 0.04em;
   opacity: 0.5;
+}
+footer .footer-inner .footer-payments .payments-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 295px;
+  list-style: none;
+}
+footer .footer-inner .footer-payments .payments-list li {
+  margin: 2px 21px 19px 0;
+}
+footer .footer-inner .footer-payments > a:hover {
+  box-shadow: 0 1px 0 0 #5A5758;
 }
 /* Всплывающие окна */
 .modal {
@@ -4439,6 +4521,125 @@ footer .footer-inner .footer-contacts p span {
   }
   main .brands-hits .brand-list .slick-slide {
     margin-right: 20px;
+  }
+  /* ----------------------------------------- main -------------------------------------- */
+  main {
+    /* ----------------------------------------- Studio-Page ------------------------------- */
+    /* ----------------------------------------- Studio-header ------------------------- */
+    /* ----------------------------------------- Studio-header END --------------------- */
+    /* ----------------------------------------- Service-carusel ----------------------- */
+    /* ------------------------------------- Studio-header END ------------------------ */
+    /* ------------------------------------- Studio-info ------------------------------ */
+  }
+  main .studio-header {
+    margin-top: 40px;
+  }
+  main .studio-header p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .studio-header .block {
+    margin-bottom: 80px;
+    padding: 40px;
+    height: 278px;
+    background-position-x: -240%;
+  }
+  main .studio-header .block h2 {
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 1.6px;
+  }
+  main .studio-header .block p {
+    margin-top: 12px;
+    width: 269px;
+  }
+  main .studio-header > p {
+    margin: 80px auto 56px;
+    width: 523px;
+  }
+  main .service-carusel {
+    margin: 56px 0 70px;
+  }
+  main .service-carusel h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .service-carusel .service-carusel-list {
+    margin-top: 28px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide {
+    margin-right: 40px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide .service-carusel-item {
+    max-width: 120px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide .service-carusel-item span {
+    margin-top: 20px;
+  }
+  main .service-carusel .service-carusel-list .slick-prev {
+    top: 33%;
+    left: -26px;
+  }
+  main .service-carusel .service-carusel-list .slick-next {
+    top: 33%;
+    right: -16px;
+  }
+  main .studio-info {
+    margin-top: 70px;
+  }
+  main .studio-info h2 {
+    margin-top: 80px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .studio-info .tab-studio-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 12px;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info li {
+    margin-left: 40px;
+    margin-bottom: 9px;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info li a::before {
+    display: none;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content {
+    position: relative;
+    margin-top: 0;
+    padding: 40px 40px 60px;
+    border: 1px solid #F4F4F4;
+    background-color: rgba(255, 84, 201, 0.01);
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info {
+    padding: 0;
+    width: auto;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info .appointment {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -138px;
+    width: 276px;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------footer-------------------------  */
@@ -4943,11 +5144,6 @@ footer .footer-inner .footer-contacts p span {
   }
   footer .footer-inner .footer-payments {
     margin-top: 0px;
-    -webkit-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -moz-box-ordinal-group: 1;
-    -ms-flex-order: 0;
-    order: 0;
   }
   footer .footer-inner .footer-payments h4 {
     margin-top: 36px;
