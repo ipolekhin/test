@@ -595,16 +595,36 @@ $(function() {
         ]
     });
 
-    $('.number1').slick({
+    $('.test-number1').slick();
+
+    $('.number1, .number2, .number3').slick({
         fade: true,
+        asNavFor: '.studio-carusel-list',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 
-    $('.number2').slick({
-        fade: true,
-    });
-
-    $('.number3').slick({
-        fade: true,
+    $('.studio-carusel-list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        asNavFor: '.number1',
+        arrows: false,
+        vertical: true,
+        responsive: [
+            {
+                breakpoint: 570,
+                settings: {
+                    vertical: false,
+                }
+            }
+        ]
     });
 
     $('.comments-info-list').slick({
@@ -621,6 +641,25 @@ $(function() {
         slidesToScroll: 1,
         focusOnSelect: true,
         asNavFor: '.comments-info-list',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    fade: true,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay:true,
+                    autoplaySpeed:3000,
+                    arrows: false,
+                    fade: true,
+                }
+            }
+        ]
     });
 
     $('.partner-comments-info-list').slick({

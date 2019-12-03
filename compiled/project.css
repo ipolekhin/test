@@ -1369,6 +1369,8 @@ main {
   /* ------------------------------ studio-comments-block-end ---------------------- */
   /* --------------------------------- sign-up-to-master-link ---------------------- */
   /* ----------------------------------- sign-up-to-master-link-end -------------------- */
+  /* ----------------------------------- Application- ---------------------------------- */
+  /* ----------------------------------- Application- END ------------------------------ */
   /* ----------------------------------------- Studio-Page-END ----------------------------- */
   /* ----------------------------------------- Agency-Page --------------------------------- */
   /* ------------------------------------- Agency-header ------------------------------- */
@@ -1588,17 +1590,21 @@ main .studio-info .tab-studio-info .tab-studio-content .tab-info a {
   padding: 16px 10px;
   letter-spacing: 1.2px;
 }
-main .studio-info .tab-studio-info .tab-studio-content .studio-carusel {
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block {
   display: inline-block;
+}
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel {
   vertical-align: top;
   width: 432px;
-  height: 432px;
 }
-main .studio-info .tab-studio-info .tab-studio-content .studio-carusel .slick-prev {
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list {
+  display: none;
+}
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel .slick-prev {
   top: 50%;
   left: -40px;
 }
-main .studio-info .tab-studio-info .tab-studio-content .studio-carusel .slick-next {
+main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel .slick-next {
   top: 50%;
   right: -34px;
 }
@@ -1609,7 +1615,7 @@ main .comments-block {
 main .comments-block h2 {
   display: inline-block;
   vertical-align: top;
-  margin-top: 69px;
+  margin-top: 63px;
   padding-bottom: 12px;
   font-size: 32px;
   font-weight: 300;
@@ -1632,18 +1638,34 @@ main .comments-block .comments-carusel {
   margin-top: 4px;
 }
 main .comments-block .comments-carusel .comments-info-list {
-  padding: 16px;
-  width: 549px;
+  position: relative;
+  margin-top: 42px;
+  margin-left: 54px;
+  padding: 32px;
+  padding-left: 44px;
+  max-width: 496px;
+  min-width: 283px;
   font-size: 24px;
   line-height: 29px;
 }
+main .comments-block .comments-carusel .comments-info-list::before {
+  content: '';
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 27px;
+  height: 25px;
+  background: url('../img/icon/quote.svg') no-repeat center center;
+}
 main .comments-block .comments-carusel .comments-info-list p {
-  margin: 0 auto;
   padding: 0;
-  width: 374px;
+  max-width: 374px;
+  letter-spacing: 1px;
   text-align: left;
 }
 main .comments-block .comments-carusel .comments-info-list span {
+  display: block;
+  margin-top: 19px;
   font-size: 14px;
   line-height: 20px;
   color: #ADABAC;
@@ -1736,7 +1758,7 @@ main .to-master-link .to-master-block a {
   padding: 16px 10px;
   letter-spacing: 1.4px;
 }
-main .to-master-link .application {
+main .application {
   margin-top: 159px;
   margin-bottom: 160px;
   padding: 76px 16px 16px 97px;
@@ -1745,14 +1767,14 @@ main .to-master-link .application {
   background: rgba(255, 221, 235, 0.1) url(../img/application-bg.png) bottom right no-repeat;
   border: 1px solid #FFD3E5;
 }
-main .to-master-link .application p {
+main .application p {
   margin-bottom: 39px;
   width: 410px;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 1px;
 }
-main .to-master-link .application a {
+main .application a {
   margin-right: 17px;
   display: inline-block;
 }
@@ -3925,6 +3947,7 @@ main .page-content .page-title h1 {
 main .page-content b {
   display: block;
   margin-top: 16px;
+  font-weight: 800;
   line-height: 20px;
 }
 main .page-content p {
@@ -4528,8 +4551,16 @@ footer .footer-inner .footer-payments > a:hover {
     /* ----------------------------------------- Studio-header ------------------------- */
     /* ----------------------------------------- Studio-header END --------------------- */
     /* ----------------------------------------- Service-carusel ----------------------- */
-    /* ------------------------------------- Studio-header END ------------------------ */
+    /* ------------------------------------- Studio-carusel END ----------------------- */
     /* ------------------------------------- Studio-info ------------------------------ */
+    /* ------------------------------------- Studio-info  END ------------------------- */
+    /* ------------------------------ Studio-comments-block --------------------------- */
+    /* ------------------------------ Studio-comments-block END ----------------------- */
+    /* --------------------------------- sign-up-to-master-link ----------------------- */
+    /* --------------------------------- sign-up-to-master-link END-------------------- */
+    /* --------------------------------- Application----------------------------------- */
+    /* --------------------------------- Application END-------------------------------- */
+    /* ----------------------------------------- Studio-Page END---------------------------- */
   }
   main .studio-header {
     margin-top: 40px;
@@ -4540,9 +4571,9 @@ footer .footer-inner .footer-payments > a:hover {
   }
   main .studio-header .block {
     margin-bottom: 80px;
-    padding: 40px;
+    padding: 12px 40px;
     height: 278px;
-    background-position-x: -240%;
+    background-image: url(../img/studio-header-bg-tablet.png);
   }
   main .studio-header .block h2 {
     margin-bottom: 12px;
@@ -4552,14 +4583,17 @@ footer .footer-inner .footer-payments > a:hover {
   }
   main .studio-header .block p {
     margin-top: 12px;
-    width: 269px;
+    width: auto;
+    max-width: 269px;
   }
   main .studio-header > p {
     margin: 80px auto 56px;
-    width: 523px;
+    width: auto;
+    max-width: 523px;
   }
   main .service-carusel {
-    margin: 56px 0 70px;
+    margin: 56px 0;
+    background-color: rgba(62, 62, 62, 0.02);
   }
   main .service-carusel h2 {
     margin-top: 40px;
@@ -4567,7 +4601,8 @@ footer .footer-inner .footer-payments > a:hover {
     line-height: 28px;
   }
   main .service-carusel .service-carusel-list {
-    margin-top: 28px;
+    margin-top: 20px;
+    padding-bottom: 63px;
   }
   main .service-carusel .service-carusel-list .slick-list .slick-slide {
     margin-right: 40px;
@@ -4587,26 +4622,15 @@ footer .footer-inner .footer-payments > a:hover {
     right: -16px;
   }
   main .studio-info {
-    margin-top: 70px;
+    margin-top: 56px;
   }
   main .studio-info h2 {
-    margin-top: 80px;
+    margin-top: 24px;
     font-size: 24px;
     line-height: 28px;
   }
   main .studio-info .tab-studio-info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    display: block;
   }
   main .studio-info .tab-studio-info .tabs-studio-info {
     display: -webkit-box;
@@ -4626,20 +4650,133 @@ footer .footer-inner .footer-payments > a:hover {
   main .studio-info .tab-studio-info .tab-studio-content {
     position: relative;
     margin-top: 0;
-    padding: 40px 40px 60px;
+    padding: 24px 40px 151px;
     border: 1px solid #F4F4F4;
     background-color: rgba(255, 84, 201, 0.01);
   }
   main .studio-info .tab-studio-info .tab-studio-content .tab-info {
+    margin-bottom: 17px;
     padding: 0;
     width: auto;
   }
   main .studio-info .tab-studio-info .tab-studio-content .tab-info .appointment {
     position: absolute;
-    bottom: 0;
+    bottom: 79px;
     left: 50%;
     margin-left: -138px;
     width: 276px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block img {
+    display: block;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel {
+    margin-right: 23px;
+    width: auto;
+    max-width: 492px;
+    min-width: 200px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list {
+    display: block;
+    width: 108px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list .slick-slide {
+    margin-bottom: 17px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list .slick-slide img {
+    opacity: 0.34;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list .slick-slide.slick-current img {
+    opacity: 1;
+  }
+  main .comments-block {
+    margin-top: 20px;
+  }
+  main .comments-block h2 {
+    margin-top: 40px;
+    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .comments-block .comments-carusel .comments-info-list {
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+    max-width: 492px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .comments-block .comments-carusel .comments-info-list::before {
+    left: 0;
+  }
+  main .comments-block .comments-carusel .comments-photo-list {
+    width: 164px;
+  }
+  main .comments-block .comments-carusel .comments-photo-list .slick-list {
+    width: 164px;
+  }
+  main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide .comments-photo-item img {
+    top: 0 !important;
+    opacity: 1 !important;
+  }
+  main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide .comments-photo-item p {
+    display: none;
+  }
+  main .to-master-link {
+    margin-top: 99px;
+    padding-bottom: 79px;
+    background-color: rgba(62, 62, 62, 0.02);
+  }
+  main .to-master-link h2 {
+    margin: 60px 0 5px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .to-master-link .to-master-block {
+    width: auto;
+    max-width: 523px;
+  }
+  main .to-master-link .to-master-block a {
+    margin: 60px auto 0;
+    max-width: 275px;
+  }
+  main .application {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 175px;
+    padding: 35px 40px;
+    max-width: 703px;
+    height: 620px;
+    text-align: center;
+  }
+  main .application p {
+    margin-top: 5px;
+    width: auto;
+    line-height: 28px;
+  }
+  main .application .store-link {
+    margin-bottom: 27px;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------footer-------------------------  */
@@ -4776,7 +4913,20 @@ footer .footer-inner .footer-payments > a:hover {
 /* ----------------------------------------- Media 576 ------------------------------------ */
 @media screen and (max-width: 576px) {
   .container {
+    min-width: 300px;
     padding: 0 16px;
+  }
+  .breadcrumbs {
+    margin: 12px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .breadcrumbs li {
+    margin-right: 24px;
+  }
+  .breadcrumbs li:not(:last-of-type):after {
+    top: 4px;
+    right: -15px;
   }
   header {
     padding: 10px 0;
@@ -5116,6 +5266,199 @@ footer .footer-inner .footer-payments > a:hover {
     font-size: 16px;
     line-height: 18px;
   }
+  main {
+    /* ----------------------------------------- Studio-Page ------------------------------- */
+    /* ----------------------------------------- Studio-header ------------------------- */
+    /* ----------------------------------------- Studio-header END -------------------- */
+    /* ----------------------------------------- Service-carusel ---------------------- */
+    /* ------------------------------------- Studio-carusel END ----------------------- */
+    /* ------------------------------------- Studio-info ------------------------------ */
+    /* ------------------------------------- Studio-info  END ------------------------- */
+    /* ------------------------------ Studio-comments-block --------------------------- */
+    /* ------------------------------ Studio-comments-block END ----------------------- */
+    /* --------------------------------- sign-up-to-master-link ----------------------- */
+    /* --------------------------------- sign-up-to-master-link END-------------------- */
+    /* --------------------------------- Application----------------------------------- */
+    /* --------------------------------- Application END------------------------------- */
+  }
+  main .studio-header {
+    margin-top: 12px;
+  }
+  main .studio-header p {
+    margin: 20px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .studio-header .block {
+    margin-bottom: 60px;
+    padding: 12px 18px;
+    padding-top: 58%;
+    height: auto;
+    min-height: 292px;
+    background-image: url(../img/studio-header-bg-mobile.png);
+    background-position: top center;
+    background-size: contain;
+  }
+  main .studio-header .block h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .studio-header .block p {
+    margin: 8px 0;
+  }
+  main .service-carusel {
+    margin-top: 80px;
+    background-color: #F4F4F4;
+  }
+  main .service-carusel h2 {
+    margin-top: 32px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .service-carusel .service-carusel-list {
+    margin-top: 2px;
+    padding-bottom: 27px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide {
+    margin-right: 18px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide .service-carusel-item {
+    max-width: 100px;
+  }
+  main .service-carusel .service-carusel-list .slick-list .slick-slide span {
+    font-size: 12px;
+  }
+  main .studio-info {
+    margin-top: 32px;
+  }
+  main .studio-info h2 {
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info {
+    overflow-x: scroll;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info li {
+    margin-right: 35px;
+    margin-left: 0;
+  }
+  main .studio-info .tab-studio-info .tabs-studio-info li a {
+    white-space: nowrap;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content {
+    padding: 4px 0 69px;
+    background-color: #FFF;
+    border: none;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info h3 {
+    display: none;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info p {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info a {
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .tab-info .appointment {
+    bottom: 8px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block {
+    display: block;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel {
+    margin-right: 0;
+    margin-bottom: 5px;
+    max-width: 576px;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list {
+    display: block;
+    width: auto;
+  }
+  main .studio-info .tab-studio-info .tab-studio-content .studio-carusel-block .studio-carusel + .studio-carusel-list .slick-slide {
+    margin-right: 6px;
+    margin-bottom: 0;
+  }
+  main .comments-block {
+    margin-top: 32px;
+  }
+  main .comments-block h2 {
+    margin-bottom: 26px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .comments-block .comments-carusel .comments-info-list {
+    padding: 8px;
+    padding-left: 0;
+    min-width: 173px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  main .comments-block .comments-carusel .comments-info-list::before {
+    width: 18px;
+    height: 21px;
+    background-size: 16px;
+  }
+  main .comments-block .comments-carusel .comments-info-list span {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .comments-block .comments-carusel .comments-photo-list {
+    width: 95px;
+  }
+  main .comments-block .comments-carusel .comments-photo-list .slick-list {
+    width: 95px;
+  }
+  main .to-master-link {
+    margin-top: 50px;
+    background-color: #F4F4F4;
+  }
+  main .to-master-link h2 {
+    margin-top: 55px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .to-master-link .to-master-block p {
+    margin: 16px 19px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .to-master-link .to-master-block a {
+    padding: 12px 10px;
+    width: 240px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .application {
+    margin-top: 60px;
+    padding: 35px 8px;
+    height: 584px;
+  }
+  main .application p {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+  }
+  main .application .store-link {
+    margin-bottom: 8px;
+  }
+  main .application .store-link a:first-of-type {
+    margin-bottom: 12px;
+  }
+  /* ----------------------------------------- Studio-Page END--------------------------- */
   footer h4 {
     font-size: 12px;
   }
