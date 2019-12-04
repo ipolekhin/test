@@ -1855,22 +1855,11 @@ main .search-agency .block h2 {
 main .search-agency .block .select {
   width: 374px;
 }
-main .search-agency .block .select select {
-  padding-left: 15px;
+main .search-agency .block .select .custom-select {
   width: 100%;
-  height: 40px;
-  font-family: 'Gilory', Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.4px;
-  color: #5A5758;
 }
-main .search-agency .block .select select option {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  margin-top: 10px;
-  padding-top: 10px;
-  height: 40px;
+main .search-agency .block .select .custom-select li .options {
+  left: 0;
 }
 main .search-agency .block .select .agency-info-list div {
   display: none;
@@ -2023,18 +2012,34 @@ main .partner-comments-block .partner-comments-carusel {
   margin-top: 4px;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
-  padding: 16px;
-  width: 549px;
+  position: relative;
+  margin-top: 42px;
+  margin-left: 54px;
+  padding: 32px;
+  padding-left: 44px;
+  max-width: 496px;
+  min-width: 283px;
   font-size: 24px;
   line-height: 29px;
 }
+main .partner-comments-block .partner-comments-carusel .partner-comments-info-list::before {
+  content: '';
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 27px;
+  height: 25px;
+  background: url('../img/icon/quote.svg') no-repeat center center;
+}
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list p {
-  margin: 0 auto;
   padding: 0;
-  width: 374px;
+  max-width: 374px;
+  letter-spacing: 1px;
   text-align: left;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-info-list span {
+  display: block;
+  margin-top: 19px;
   font-size: 14px;
   line-height: 20px;
   color: #ADABAC;
@@ -2046,6 +2051,7 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
   width: 590px;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item {
+  position: relative;
   cursor: pointer;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item img {
@@ -2077,13 +2083,13 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide:not(.slick-current) .partner-comments-photo-item:hover p {
   opacity: 1;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .comments-photo-item img {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .partner-comments-photo-item img {
   position: relative;
   top: 30px;
   opacity: 1;
   z-index: 100;
 }
-main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .comments-photo-item p {
+main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-current .partner-comments-photo-item p {
   position: relative;
   opacity: 0;
   z-index: 99;
@@ -2092,7 +2098,7 @@ main .partner-comments-block .partner-comments-carusel .partner-comments-photo-l
   left: -38px;
 }
 main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-next {
-  right: -12px;
+  right: -28px;
 }
 main .partner-form {
   margin-top: 78px;
@@ -4561,6 +4567,22 @@ footer .footer-inner .footer-payments > a:hover {
     /* --------------------------------- Application----------------------------------- */
     /* --------------------------------- Application END-------------------------------- */
     /* ----------------------------------------- Studio-Page END---------------------------- */
+    /* ----------------------------------------- Agency-Page ------------------------------- */
+    /* ------------------------------------- Agency-header ----------------------------- */
+    /* ------------------------------------- Agency-header-END ----------------------- */
+    /* ------------------------------------- Search-agency --------------------------- */
+    /* ------------------------------------- Search-agency-END ----------------------- */
+    /* ------------------------------------- Agency-Page-END ----------------------------- */
+    /* ------------------------------------- Partner-Page ------------------------------- */
+    /* ------------------------------------- Partner-header -------------------------- */
+    /* ------------------------------------- Partner-header-END ----------------------- */
+    /* ------------------------------------- Partner-advantages ----------------------- */
+    /* ------------------------------------- Partner-advantages-END ------------------- */
+    /* ------------------------------------- Partner-comment -------------------------- */
+    /* ------------------------------------- Partner-comment-END ---------------------- */
+    /* ------------------------------------- Partner-form ----------------------------- */
+    /* ------------------------------------- Partner-form-END ------------------------- */
+    /* ------------------------------------- Partner-Page-END ----------------------------- */
   }
   main .studio-header {
     margin-top: 40px;
@@ -4728,6 +4750,12 @@ footer .footer-inner .footer-payments > a:hover {
   main .comments-block .comments-carusel .comments-photo-list .slick-list .slick-slide .comments-photo-item p {
     display: none;
   }
+  main .comments-block .comments-carusel .comments-photo-list .slick-prev {
+    left: -38px;
+  }
+  main .comments-block .comments-carusel .comments-photo-list .slick-next {
+    right: -28px;
+  }
   main .to-master-link {
     margin-top: 99px;
     padding-bottom: 79px;
@@ -4777,6 +4805,213 @@ footer .footer-inner .footer-payments > a:hover {
   }
   main .application .store-link {
     margin-bottom: 27px;
+  }
+  main .agency-header {
+    margin-top: 42px;
+  }
+  main .agency-header p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .agency-header .block {
+    margin-bottom: 88px;
+    padding: 58px 16px 16px 40px;
+    min-width: 300px;
+    min-height: 290px;
+    background-image: url('../img/agency-map-bg.png');
+  }
+  main .agency-header .block h2 {
+    margin-bottom: 13px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 1.1px;
+  }
+  main .agency-header .block p {
+    margin-top: 13px;
+    width: auto;
+    max-width: 269px;
+  }
+  main .agency-header .slogan h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .agency-header .slogan p {
+    margin: 0 auto;
+    padding-left: 25px;
+    width: auto;
+    max-width: 570px;
+    letter-spacing: 0.77px;
+  }
+  main .search-agency {
+    margin-top: 80px;
+  }
+  main .search-agency .block {
+    margin-bottom: 80px;
+    padding: 20px;
+    min-height: 230px;
+    text-align: center;
+    background-image: none;
+    background-color: #F4F4F4;
+  }
+  main .search-agency .block h2 {
+    margin-top: 18px;
+    margin-bottom: 34px;
+    width: 251px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1.1px;
+  }
+  main .search-agency .block .select {
+    margin: 0 auto;
+    width: 385px;
+  }
+  main .search-agency .block .select .custom-select {
+    background-color: #FFF;
+  }
+  main .search-agency .block .select .agency-info-list {
+    text-align: left;
+  }
+  main .partner-header {
+    margin-top: 42px;
+  }
+  main .partner-header p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .partner-header .block {
+    margin-bottom: 88px;
+    padding: 58px 16px 16px 40px;
+    min-width: 300px;
+    min-height: 290px;
+    background-image: url('../img/agency-map-bg.png');
+    background-position: top left;
+  }
+  main .partner-header .block h2 {
+    margin-bottom: 13px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 1.1px;
+  }
+  main .partner-header .block p {
+    margin-top: 13px;
+    width: auto;
+    max-width: 269px;
+  }
+  main .partner-header .block-start h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .partner-header .block-start p {
+    margin: 0 auto;
+    padding-left: 25px;
+    width: auto;
+    max-width: 570px;
+    letter-spacing: 0.77px;
+  }
+  main .partner-advantages {
+    margin-top: 100px;
+  }
+  main .partner-advantages .block {
+    padding: 10px 99px 119px;
+    min-height: 754px;
+  }
+  main .partner-advantages .block h2 {
+    margin-right: 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .partner-advantages .block .advantages-list {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0;
+  }
+  main .partner-advantages .block .advantages-list .advantages-item {
+    margin-bottom: 36px;
+  }
+  main .partner-advantages .block .advantages-list .advantages-item p {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .partner-comments-block {
+    margin-top: 26px;
+  }
+  main .partner-comments-block h2 {
+    margin-top: 40px;
+    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+    max-width: 492px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-info-list::before {
+    left: 0;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list {
+    width: 164px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list {
+    width: 164px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide .partner-comments-photo-item img {
+    top: 0 !important;
+    opacity: 1 !important;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list .slick-slide .partner-comments-photo-item p {
+    display: none;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-prev {
+    left: -38px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-next {
+    right: -28px;
+  }
+  main .partner-form {
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
+  main .partner-form .block {
+    width: auto;
+    max-width: 526px;
+  }
+  main .partner-form .block h2 {
+    margin-top: 60px;
+    padding-bottom: 7px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1.1px;
+  }
+  main .partner-form .block p {
+    width: auto;
+    max-width: 526px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+  }
+  main .partner-form .block form {
+    margin-top: 72px;
+  }
+  main .partner-form .block form .form-group {
+    margin-top: 52px;
+  }
+  main .partner-form .block form .personal {
+    margin: 28px 0;
+  }
+  main .partner-form .block form .form-button {
+    margin: 66px 0;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------footer-------------------------  */
@@ -5280,6 +5515,23 @@ footer .footer-inner .footer-payments > a:hover {
     /* --------------------------------- sign-up-to-master-link END-------------------- */
     /* --------------------------------- Application----------------------------------- */
     /* --------------------------------- Application END------------------------------- */
+    /* ----------------------------------------- Studio-Page END--------------------------- */
+    /* ----------------------------------------- Agency-Page ------------------------------- */
+    /* ------------------------------------- Agency-header ----------------------------- */
+    /* ------------------------------------- Agency-header-END ----------------------- */
+    /* ------------------------------------- Search-agency --------------------------- */
+    /* ------------------------------------- Search-agency-END ----------------------- */
+    /* ------------------------------------- Agency-Page-END ----------------------------- */
+    /* ------------------------------------- Partner-Page ------------------------------- */
+    /* ------------------------------------- Partner-header -------------------------- */
+    /* ------------------------------------- Partner-header-END ----------------------- */
+    /* ------------------------------------- Partner-advantages ----------------------- */
+    /* ------------------------------------- Partner-advantages-END ------------------- */
+    /* ------------------------------------- Partner-comment -------------------------- */
+    /* ------------------------------------- Partner-comment-END ---------------------- */
+    /* ------------------------------------- Partner-form ----------------------------- */
+    /* ------------------------------------- Partner-form-END ------------------------- */
+    /* ------------------------------------- Partner-Page-END ----------------------------- */
   }
   main .studio-header {
     margin-top: 12px;
@@ -5406,6 +5658,7 @@ footer .footer-inner .footer-payments > a:hover {
     line-height: 17px;
   }
   main .comments-block .comments-carusel .comments-info-list::before {
+    top: -7px;
     width: 18px;
     height: 21px;
     background-size: 16px;
@@ -5458,7 +5711,226 @@ footer .footer-inner .footer-payments > a:hover {
   main .application .store-link a:first-of-type {
     margin-bottom: 12px;
   }
-  /* ----------------------------------------- Studio-Page END--------------------------- */
+  main .agency-header {
+    margin-top: 12px;
+  }
+  main .agency-header p {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: inherit;
+  }
+  main .agency-header .block {
+    margin-bottom: 60px;
+    padding: 32px 20px 16px;
+    min-width: 288px;
+    min-height: 317px;
+    background-image: url('../img/agency-map-bg.png');
+    background-position: top center;
+    background-size: contain;
+  }
+  main .agency-header .block h2 {
+    margin-top: 151px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+  main .agency-header .block p {
+    margin-top: 10px;
+    max-width: 248px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  main .agency-header .slogan h2 {
+    margin-top: 0;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+  }
+  main .agency-header .slogan p {
+    margin: 0 auto;
+    padding-left: 0;
+    width: auto;
+    max-width: 288px;
+  }
+  main .search-agency {
+    margin-top: 80px;
+  }
+  main .search-agency .block {
+    margin-bottom: 40px;
+    padding: 38px 20px;
+    min-height: 188px;
+  }
+  main .search-agency .block h2 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    width: auto;
+    max-width: 200px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+  }
+  main .search-agency .block .select {
+    width: 248px;
+  }
+  main .search-agency .block .select .agency-info-list {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  main .search-agency .block .select .agency-info-list p {
+    max-width: 214px;
+  }
+  main .partner-header {
+    margin-top: 16px;
+  }
+  main .partner-header p {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: inherit;
+  }
+  main .partner-header .block {
+    margin-bottom: 60px;
+    padding: 32px 20px 16px;
+    min-width: 288px;
+    min-height: 317px;
+    background-image: url('../img/agency-map-bg.png');
+    background-position: top center;
+    background-size: contain;
+  }
+  main .partner-header .block h2 {
+    margin-top: 151px;
+    margin-bottom: 10px;
+    width: auto;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+  main .partner-header .block p {
+    margin-top: 10px;
+    max-width: 248px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  main .partner-header .block-start h2 {
+    margin-top: 0;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+  }
+  main .partner-header .block-start p {
+    margin: 0 auto;
+    padding-left: 0;
+    width: auto;
+    max-width: 288px;
+  }
+  main .partner-advantages {
+    margin-top: 50px;
+  }
+  main .partner-advantages .block {
+    padding: 10px 33px 40px;
+    min-height: 766px;
+  }
+  main .partner-advantages .block h2 {
+    margin-top: 28px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  main .partner-advantages .block .advantages-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  main .partner-advantages .block .advantages-list .advantages-item {
+    margin-bottom: 37px;
+  }
+  main .partner-advantages .block .advantages-list .advantages-item img {
+    width: 140px;
+  }
+  main .partner-advantages .block .advantages-list .advantages-item p {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  main .partner-comments-block {
+    margin-top: 0;
+  }
+  main .partner-comments-block h2 {
+    margin-top: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-info-list {
+    padding: 8px;
+    padding-left: 0;
+    min-width: 173px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-info-list::before {
+    top: -7px;
+    width: 18px;
+    height: 21px;
+    background-size: 16px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-info-list span {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list {
+    width: 95px;
+  }
+  main .partner-comments-block .partner-comments-carusel .partner-comments-photo-list .slick-list {
+    width: 95px;
+  }
+  main .partner-form {
+    margin-top: 16px;
+    margin-bottom: 80px;
+  }
+  main .partner-form .block {
+    max-width: 292px;
+  }
+  main .partner-form .block h2 {
+    margin-top: 39px;
+    margin-bottom: 2px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .partner-form .block p {
+    max-width: 288px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .partner-form .block form {
+    margin-top: 52px;
+  }
+  main .partner-form .block form .form-group {
+    margin-top: 40px;
+  }
+  main .partner-form .block form .form-group input {
+    font-size: 16px;
+  }
+  main .partner-form .block form .personal {
+    margin: 24px 0;
+  }
+  main .partner-form .block form .form-button {
+    margin: 32px 0;
+  }
+  main .partner-form .block form .form-button input {
+    width: auto;
+    max-width: 200px;
+  }
+  main .partner-form .block form .form-button input[type='submit'] {
+    padding: 10px 16px 11px ;
+  }
   footer h4 {
     font-size: 12px;
   }

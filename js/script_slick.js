@@ -107,45 +107,71 @@ $(function() {
         ]
     });
 
-    $('.number1').slick({
+    $('.test-number1').slick();
+
+    $('.number1, .number2, .number3').slick({
         fade: true,
+        asNavFor: '.studio-carusel-list',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 
-    $('.number2').slick({
+    $('.studio-carusel-list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        asNavFor: '.number1',
+        arrows: false,
+        vertical: true,
+        responsive: [
+            {
+                breakpoint: 570,
+                settings: {
+                    vertical: false,
+                }
+            }
+        ]
     });
 
-    $('.number3').slick({
-    });
-
-    $('.comments-info-list').slick({
+    $('.comments-info-list, .partner-comments-info-list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         draggable: false,
         fade: true,
-        asNavFor: '.comments-photo-list'
+        asNavFor: '.comments-photo-list, .partner-comments-photo-list'
     });
 
-    $('.comments-photo-list').slick({
+    $('.comments-photo-list, .partner-comments-photo-list').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         focusOnSelect: true,
-        asNavFor: '.comments-info-list',
-    });
-
-    $('.partner-comments-info-list').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        draggable: false,
-        fade: true,
-        asNavFor: '.partner-comments-photo-list'
-    });
-
-    $('.partner-comments-photo-list').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.partner-comments-info-list',
+        asNavFor: '.comments-info-list, .partner-comments-info-list',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    fade: true,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay:true,
+                    autoplaySpeed:3000,
+                    arrows: false,
+                    fade: true,
+                }
+            }
+        ]
     });
 
     $('.stuff-carusel-list').slick({

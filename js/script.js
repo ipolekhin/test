@@ -156,37 +156,32 @@ $(function() {
         });
     });
 
+    //Показать все курсы
+    $('.show-all-courses').click(function (e) {
+       e.preventDefault();
+       console.log('показать все курсы');
+       $(this).siblings('.courses-item').addClass('show');
+       $(this).hide();
+    });
+
     $('.modal').click(function(e) {
         if ($(e.target).hasClass('modal-show')) {
             $(e.target).removeClass('modal-show');
-            $('.blur, .modal-open').removeClass('blur');
+            $('.blur').removeClass('blur');
+            $('.modal-open').removeClass('modal-open');
         }
     });
 
-    $('.tab-studio-info .tabs-studio-info > li a').click( function () {
+    $('.tab-studio-info .tabs-studio-info > li a').click( function (e) {
+        e.preventDefault();
         $('.tab-studio-info .tabs-studio-info > li a').removeClass('current');
         $(this).addClass('current');
 
         $('.tab-studio-content > div').hide();
-        t_content=$(this).attr('href');
+        t_content = $(this).attr('href');
         $(t_content).show();
-
-        return false
     });
     $('.tab-studio-info .tabs-studio-info > li a:first').trigger('click');
-
-    $('#select-towns').change(function() {
-        var agencyselect = this.value;
-        var agencylist = document.querySelectorAll('.agency-info-list div');
-        for (i = 0; i < agencylist.length; i++) {
-            if (agencylist[i].classList.contains(agencyselect)) {
-                agencylist[i].classList.add('show');
-            }
-            else {
-                agencylist[i].classList.remove('show');
-            }
-        }
-    });
 
     //пересчет
     function recalculationCountSum() {
@@ -199,6 +194,9 @@ $(function() {
         // количество в корзине
         block.find('input').each(function(i, input) {
             sum += parseInt($(input).val());
+            if (sum > 9) {
+                sum = '+9';
+            }
         });
         $('.order_item_count').html(sum);
     }
@@ -263,6 +261,20 @@ $(function() {
         });
     });
 
+    //Функция показывает контакты выбранного города на странице Agency
+    var showContactsTown  = function (town) {
+        var agencylist = document.querySelectorAll('.agency-info-list div');
+        console.log('выбран город - ' + town);
+        for (i = 0; i < agencylist.length; i++) {
+            if (agencylist[i].classList.contains(town)) {
+                agencylist[i].classList.add('show');
+            }
+            else {
+                agencylist[i].classList.remove('show');
+            }
+        }
+    }
+
     //CustomSelect
     function customSelect(el){
         var options = [],
@@ -293,6 +305,10 @@ $(function() {
 
         customSelect.find('.options li').click(function(){
             var selection = $(this).text();
+            if (el === '#select-towns') {
+                var town = $(this).prop('class');
+                showContactsTown(town);
+            }
             var dataValue = $(this).attr('data-value');
             var selected = customSelect.find('.selected-option span').text(selection);
             for(var i = 1; i < option.length; i++) {
@@ -309,6 +325,7 @@ $(function() {
     customSelect('#select-post');
     customSelect('#select-adress');
     customSelect('#select-status');
+    customSelect('#select-towns');
 
     // Multiselect
     function custommultiSelect(el){

@@ -183,19 +183,6 @@ $(function() {
     });
     $('.tab-studio-info .tabs-studio-info > li a:first').trigger('click');
 
-    $('#select-towns').change(function() {
-        var agencyselect = this.value;
-        var agencylist = document.querySelectorAll('.agency-info-list div');
-        for (i = 0; i < agencylist.length; i++) {
-            if (agencylist[i].classList.contains(agencyselect)) {
-                agencylist[i].classList.add('show');
-            }
-            else {
-                agencylist[i].classList.remove('show');
-            }
-        }
-    });
-
     //пересчет
     function recalculationCountSum() {
         var  price_sum = 0, sum = 0, block = $('.basket_tooltip-list');
@@ -274,6 +261,20 @@ $(function() {
         });
     });
 
+    //Функция показывает контакты выбранного города на странице Agency
+    var showContactsTown  = function (town) {
+        var agencylist = document.querySelectorAll('.agency-info-list div');
+        console.log('выбран город - ' + town);
+        for (i = 0; i < agencylist.length; i++) {
+            if (agencylist[i].classList.contains(town)) {
+                agencylist[i].classList.add('show');
+            }
+            else {
+                agencylist[i].classList.remove('show');
+            }
+        }
+    }
+
     //CustomSelect
     function customSelect(el){
         var options = [],
@@ -304,6 +305,10 @@ $(function() {
 
         customSelect.find('.options li').click(function(){
             var selection = $(this).text();
+            if (el === '#select-towns') {
+                var town = $(this).prop('class');
+                showContactsTown(town);
+            }
             var dataValue = $(this).attr('data-value');
             var selected = customSelect.find('.selected-option span').text(selection);
             for(var i = 1; i < option.length; i++) {
@@ -320,6 +325,7 @@ $(function() {
     customSelect('#select-post');
     customSelect('#select-adress');
     customSelect('#select-status');
+    customSelect('#select-towns');
 
     // Multiselect
     function custommultiSelect(el){
@@ -627,20 +633,20 @@ $(function() {
         ]
     });
 
-    $('.comments-info-list').slick({
+    $('.comments-info-list, .partner-comments-info-list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         draggable: false,
         fade: true,
-        asNavFor: '.comments-photo-list'
+        asNavFor: '.comments-photo-list, .partner-comments-photo-list'
     });
 
-    $('.comments-photo-list').slick({
+    $('.comments-photo-list, .partner-comments-photo-list').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         focusOnSelect: true,
-        asNavFor: '.comments-info-list',
+        asNavFor: '.comments-info-list, .partner-comments-info-list',
         responsive: [
             {
                 breakpoint: 991,
@@ -660,21 +666,6 @@ $(function() {
                 }
             }
         ]
-    });
-
-    $('.partner-comments-info-list').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        draggable: false,
-        fade: true,
-        asNavFor: '.partner-comments-photo-list'
-    });
-
-    $('.partner-comments-photo-list').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.partner-comments-info-list',
     });
 
     $('.stuff-carusel-list').slick({

@@ -7,10 +7,10 @@
         width: 768px;
         padding: 0 32px;
     }
-            
+
     header {
-        padding-top: 4px;        
-        height: 60px;        
+        padding-top: 4px;
+        height: 60px;
         .container {
             .header-logo {
                 margin-right: 23px;
@@ -19,7 +19,7 @@
                     width: 53px;
                     height: 29px;
                 }
-            }  
+            }
             .main-navigation {
                 .site-navigation {
                     min-width: 416px;
@@ -37,7 +37,7 @@
                     }
                     a {
                         &:hover {
-                            line-height: 17px;   
+                            line-height: 17px;
                         }
                     }
                     .submenu {
@@ -53,7 +53,7 @@
                     opacity: 0;
                     transition-duration: 0.5s
                 }
-            }     
+            }
             .search {
                 img {
                     display: block;
@@ -70,15 +70,15 @@
                 }
                 .search-label {
                     display: none;
-                }  
+                }
                 .search_content {
                     top: 25px;
                 }
                 &:hover {
-                    form {        
+                    form {
                         position: absolute;
                         display: block;
-                        background-color: #FFF;                        
+                        background-color: #FFF;
                     }
                     input[type = 'search'] {
                         border: 1px solid #F4F4F4;
@@ -100,7 +100,7 @@
     /*    -------------------------------------------------------  */
     /*    -------------------------------------------------------  */
     /*    -------------------------------------------------------  */
-    
+
     main {
         .nav-block {
             margin-top: 24px;
@@ -114,13 +114,13 @@
                         line-height: 24px;
                     }
                     a {
-                        padding: 10px 0; 
+                        padding: 10px 0;
                     }
                     &:first-child {
                         margin-right: 22px;
                         padding: 58px 180px 0 39px;
                         width: 432px;
-                        h2 {             
+                        h2 {
                             font-size: 32px;
                             line-height: 37px;
                         }
@@ -132,35 +132,35 @@
                         margin-bottom: 18px;
                         padding: 24px 34px 0 31px;
                         width: 250px;
-                        height: 237px;        
+                        height: 237px;
                         background-position: -22px 2px;
                     }
                     &:nth-child(3) {
                         padding: 24px 32px 0 30px;
                         width: 250px;
                         height: 195px;
-                        background-position: 33px 1px;                        
+                        background-position: 33px 1px;
                     }
                 }
             }
-        } 
+        }
     }
-    
+
     /*    -------------------------------------------------------  */
     /*    ------------------------sales-hits---------------------  */
-    /*    -------------------------------------------------------  */    
+    /*    -------------------------------------------------------  */
     main {
         .sales-hits {
-          position: relative;
-          margin-top: 17px;
-          z-index: 1;
+            position: relative;
+            margin-top: 17px;
+            z-index: 1;
             h2 {
                 margin-top: 64px;
                 margin-bottom: 30px;
                 padding-bottom: 12px;
                 font-size: 24px;
                 line-height: 28px;
-            }    
+            }
             .catalog-list {
                 .slick-list {
                     margin-left: -20px;
@@ -175,15 +175,15 @@
                             h4 {
                                 .catalog-category {
                                     margin-top: 14px;
-                                }   
+                                }
                                 .catalog-item-title {
                                     margin-top: 13px;
-                                }  
+                                }
                             }
-                        } 
+                        }
                         .catalog-price {
                             margin-top: 25px;
-                        }   
+                        }
                         .hide-block {
                             padding: 336px 20px 0;
                             left: -19px;
@@ -195,21 +195,21 @@
                             }
                             & > a {
                                 font-size: 12px;
-                                line-height: 14px;                                
+                                line-height: 14px;
                             }
                             p {
                                 margin-top: 20px;
-                            }   
-                        } 
-                    }   
-                } 
+                            }
+                        }
+                    }
+                }
             }
-        }    
+        }
     }
-    
+
     /*    -------------------------------------------------------  */
     /*    ------------------------sliders------------------------  */
-    /*    -------------------------------------------------------  */       
+    /*    -------------------------------------------------------  */
     main {
         .sliders {
             position: relative;
@@ -229,12 +229,12 @@
                     left: 0;
                 }
             }
-        }       
+        }
     }
-    
+
     /*    -------------------------------------------------------  */
     /*    ------------------------brands-hits--------------------  */
-    /*    -------------------------------------------------------  */  
+    /*    -------------------------------------------------------  */
     main {
         .brands-hits {
             h2 {
@@ -259,13 +259,490 @@
                     margin-right: 20px;
                 }
             }
-        }     
+        }
     }
-    
+
+/* ----------------------------------------- main -------------------------------------- */
+main {
+    /* ----------------------------------------- Studio-Page ------------------------------- */
+        /* ----------------------------------------- Studio-header ------------------------- */
+    .studio-header {
+        margin-top: 40px;
+        p {
+            font-size: @x-large;
+            line-height: 24px;
+        }
+        .block {
+            margin-bottom: 80px;
+            padding: 12px 40px;
+            height: 278px;
+            background-image: url(../img/studio-header-bg-tablet.png);
+            h2 {
+                margin-bottom: 12px;
+                font-size: @large;
+                line-height: 37px;
+                letter-spacing: 1.6px;
+            }
+            p {
+                margin-top: 12px;
+                width: auto;
+                max-width: 269px;
+            }
+        }
+        & > p {
+            margin: 80px auto 56px;
+            width: auto;
+            max-width: 523px;
+        }
+    }
+
+        /* ----------------------------------------- Studio-header END --------------------- */
+        /* ----------------------------------------- Service-carusel ----------------------- */
+    .service-carusel {
+        margin: 56px 0;
+        background-color: rgba(62, 62, 62, 0.02);
+        h2 {
+            margin-top: 40px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .service-carusel-list {
+            margin-top: 20px;
+            padding-bottom: 63px;
+            .slick-list {
+                .slick-slide {
+                    margin-right: 40px;
+                    .service-carusel-item {
+                        max-width: 120px;
+                        span {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+            .slick-prev {
+                top: 33%;
+                left: -26px;
+            }
+            .slick-next {
+                top: 33%;
+                right: -16px;
+            }
+        }
+    }
+
+        /* ------------------------------------- Studio-carusel END ----------------------- */
+        /* ------------------------------------- Studio-info ------------------------------ */
+    .studio-info {
+        margin-top: 56px;
+        h2 {
+            margin-top: 24px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .tab-studio-info {
+            display: block;
+            .tabs-studio-info {
+                display: flex;
+                margin-top: 12px;
+                li {
+                    margin-left: 40px;
+                    margin-bottom: 9px;
+                    a {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .tab-studio-content {
+                position: relative;
+                margin-top: 0;
+                padding: 24px 40px 151px;
+                border: 1px solid @gray02;
+                background-color: rgba(255, 84, 201, 0.01);
+                .tab-info {
+                    margin-bottom: 17px;
+                    padding: 0;
+                    width: auto;
+                    .appointment {
+                        position: absolute;
+                        bottom: 79px;
+                        left: 50%;
+                        margin-left: -138px;
+                        width: 276px;
+                    }
+                }
+                .studio-carusel-block {
+                    display: flex;
+                    img {
+                        display: block;
+                    }
+                    .studio-carusel {
+                        margin-right: 23px;
+                        width: auto;
+                        max-width: 492px;
+                        min-width: 200px;
+                        & + .studio-carusel-list {
+                            display: block;
+                            width: 108px;
+                            .slick-slide {
+                                margin-bottom: 17px;
+                                img {
+                                    opacity: 0.34;
+                                }
+                                &.slick-current {
+                                    img {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Studio-info  END ------------------------- */
+        /* ------------------------------ Studio-comments-block --------------------------- */
+    .comments-block {
+        margin-top: 20px;
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 36px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .comments-carusel {
+            .comments-info-list {
+                margin-top: 0;
+                margin-left: 0;
+                width: auto;
+                max-width: 492px;
+                font-size: @x-large;
+                line-height: 24px;
+                &::before {
+                    left: 0;
+                }
+            }
+            .comments-photo-list {
+                width: 164px;
+                .slick-list {
+                    width: 164px;
+                    .slick-slide {
+                        .comments-photo-item {
+                            img {
+                                top: 0 !important;
+                                opacity: 1 !important;
+                            }
+                            p {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .slick-prev {
+                    left: -38px;
+                }
+                .slick-next {
+                    right: -28px;
+                }
+            }
+        }
+    }
+
+        /* ------------------------------ Studio-comments-block END ----------------------- */
+        /* --------------------------------- sign-up-to-master-link ----------------------- */
+    .to-master-link {
+        margin-top: 99px;
+        padding-bottom: 79px;
+        background-color: rgba(62, 62, 62, 0.02);
+        h2 {
+            margin: 60px 0 5px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .to-master-block {
+            width: auto;
+            max-width: 523px;
+            a {
+                margin: 60px auto 0;
+                max-width: 275px;
+            }
+
+        }
+    }
+        /* --------------------------------- sign-up-to-master-link END-------------------- */
+        /* --------------------------------- Application----------------------------------- */
+    .application {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 175px;
+        padding: 35px 40px;
+        max-width: 703px;
+        height: 620px;
+        text-align: center;
+        p {
+            margin-top: 5px;
+            width: auto;
+            line-height: 28px;
+        }
+        .store-link {
+            margin-bottom: 27px;
+        }
+    }
+        /* --------------------------------- Application END-------------------------------- */
+    /* ----------------------------------------- Studio-Page END---------------------------- */
+
+    /* ----------------------------------------- Agency-Page ------------------------------- */
+        /* ------------------------------------- Agency-header ----------------------------- */
+    .agency-header {
+        margin-top: 42px;
+        p {
+            font-size: @x-large;
+            line-height: 24px;
+        }
+
+        .block {
+            margin-bottom: 88px;
+            padding: 58px 16px 16px 40px;
+            min-width: 300px;
+            min-height: 290px;
+            //На версии tablet можно вставить свою каритнку
+            background-image: url('../img/agency-map-bg.png');
+
+            h2 {
+                margin-bottom: 13px;
+                font-size: @poster_large - 8;
+                line-height: 32px;
+                letter-spacing: 1.1px;
+            }
+
+            p {
+                margin-top: 13px;
+                width: auto;
+                max-width: 269px;
+            }
+        }
+
+        .slogan {
+            h2 {
+                font-size: @h2_size + 4;
+                line-height: 28px;
+            }
+
+            p {
+                margin: 0 auto;
+                padding-left: 25px;
+                width: auto;
+                max-width: 570px;
+                letter-spacing: 0.77px;
+            }
+        }
+    }
+        /* ------------------------------------- Agency-header-END ----------------------- */
+        /* ------------------------------------- Search-agency --------------------------- */
+    .search-agency {
+        margin-top: 80px;
+        .block {
+            margin-bottom: 80px;
+            padding: 20px;
+            min-height: 230px;
+            text-align: center;
+            background-image: none;
+            background-color: @gray02;
+            h2 {
+                margin-top: 18px;
+                margin-bottom: 34px;
+                width: 251px;
+                font-size: @poster_size;
+                line-height: 28px;
+                letter-spacing: 1.1px;
+            }
+            .select {
+                margin: 0 auto;
+                width: 385px;
+                .custom-select {
+                    background-color: @white;
+                }
+                .agency-info-list {
+                    text-align: left;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Search-agency-END ----------------------- */
+    /* ------------------------------------- Agency-Page-END ----------------------------- */
+
+    /* ------------------------------------- Partner-Page ------------------------------- */
+        /* ------------------------------------- Partner-header -------------------------- */
+    .partner-header {
+        margin-top: 42px;
+        p {
+            font-size: @x-large;
+            line-height: 24px;
+        }
+
+        .block {
+            margin-bottom: 88px;
+            padding: 58px 16px 16px 40px;
+            min-width: 300px;
+            min-height: 290px;
+            //На версии tablet можно вставить свою каритнку
+            background-image: url('../img/agency-map-bg.png');
+            background-position: top left;
+
+            h2 {
+                margin-bottom: 13px;
+                font-size: @poster_large - 8;
+                line-height: 32px;
+                letter-spacing: 1.1px;
+            }
+
+            p {
+                margin-top: 13px;
+                width: auto;
+                max-width: 269px;
+            }
+        }
+
+        .block-start {
+            h2 {
+                font-size: @h2_size + 4;
+                line-height: 28px;
+            }
+
+            p {
+                margin: 0 auto;
+                padding-left: 25px;
+                width: auto;
+                max-width: 570px;
+                letter-spacing: 0.77px;
+            }
+        }
+    }
+        /* ------------------------------------- Partner-header-END ----------------------- */
+        /* ------------------------------------- Partner-advantages ----------------------- */
+    .partner-advantages{
+        margin-top: 100px;
+        .block {
+            padding: 10px 99px 119px;
+            min-height: 754px;
+            h2 {
+                margin-right: 0;
+                font-size: @h2_size + 4;
+                line-height: 28px;
+            }
+            .advantages-list {
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                padding: 0;
+                .advantages-item {
+                    margin-bottom: 36px;
+                    p {
+                        margin-top: 0;
+                        font-size: @x-large;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-advantages-END ------------------- */
+        /* ------------------------------------- Partner-comment -------------------------- */
+    .partner-comments-block {
+        margin-top: 26px;
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 36px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .partner-comments-carusel {
+            .partner-comments-info-list {
+                margin-top: 0;
+                margin-left: 0;
+                width: auto;
+                max-width: 492px;
+                font-size: @x-large;
+                line-height: 24px;
+                &::before {
+                    left: 0;
+                }
+            }
+            .partner-comments-photo-list {
+                width: 164px;
+                .slick-list {
+                    width: 164px;
+                    .slick-slide {
+                        .partner-comments-photo-item {
+                            img {
+                                top: 0 !important;
+                                opacity: 1 !important;
+                            }
+                            p {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .slick-prev {
+                    left: -38px;
+                }
+                .slick-next {
+                    right: -28px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-comment-END ---------------------- */
+        /* ------------------------------------- Partner-form ----------------------------- */
+    .partner-form {
+        margin-top: 40px;
+        margin-bottom: 120px;
+        .block {
+            width: auto;
+            max-width: 526px;
+            h2 {
+                margin-top: 60px;
+                padding-bottom: 7px;
+                font-size: @h2_size + 4;
+                line-height: 28px;
+                letter-spacing: 1.1px;
+            }
+
+            p {
+                width: auto;
+                max-width: 526px;
+                font-size: @x-large;
+                line-height: 24px;
+                letter-spacing: 0.7px;
+            }
+
+            form {
+                margin-top: 72px;
+                .form-group {
+                    margin-top: 52px;
+                }
+                .personal {
+                    margin: 28px 0;
+                }
+                .form-button {
+                    margin: 66px 0;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-form-END ------------------------- */
+    /* ------------------------------------- Partner-Page-END ----------------------------- */
+
+}
     /*    -------------------------------------------------------  */
     /*    ------------------------footer-------------------------  */
-    /*    -------------------------------------------------------  */  
-    
+    /*    -------------------------------------------------------  */
+
     footer {
         margin-top: 70px;
         padding-bottom: 86px;
@@ -274,45 +751,45 @@
             .footer-navigation {
                 .navigation-list {
                     width: 364px;
-                }   
+                }
             }
             .footer-contacts {
                 margin-top: 45px;
                 width: 364px;
                 p {
                     margin: 11px 0;
-                } 
-            }   
+                }
+            }
             .footer-payments {
                 margin-top: 45px;
                 order: 1;
             }
-        }  
-    }       
-    /*    -------------------------End Media 992------------------------------  */  
+        }
+    }
+    /*    -------------------------End Media 992------------------------------  */
 }
 
 /* ----------------------------------------- Media 768 ------------------------------------ */
 /* ----------------------------------------- Media 768 ------------------------------------ */
 /* ----------------------------------------- Media 768 ------------------------------------ */
 
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
     .container {
         width: auto;
-        padding: 0 16px;    
+        padding: 0 16px;
     }
-    header { 
+    header {
         .container {
             .header-logo {
                 margin-right: 16px;
-            }    
+            }
             .main-navigation {
                 .site-navigation {
                     min-width: 100%;
                     & > li {
                         margin-right: 8px;
                     }
-                }     
+                }
             }
 
             .search {
@@ -322,7 +799,7 @@
                 .search-form {
                     input[type = 'search'] {
                         width: 390px;
-                    } 
+                    }
                 }
                 .search_content {
                     right: 20px;
@@ -336,19 +813,19 @@
                     }
                 }
             }
-        }   
+        }
     }
-    
+
     /*    -------------------------------------------------------  */
     /*    ------------------------nav-block----------------------  */
-    /*    -------------------------------------------------------  */    
-    main {    
-        .nav-block { 
+    /*    -------------------------------------------------------  */
+    main {
+        .nav-block {
             .nav-block-list {
                 .nav-block-item {
                     display: flex;
                     justify-content: center;
-                    align-items: center;    
+                    align-items: center;
                     flex-flow: column;
                     padding: 0;
                     text-align: center;
@@ -370,7 +847,7 @@
                         margin-bottom: 10px;
                         padding: 0;
                         width: 40%;
-                        height: auto;  
+                        height: auto;
                     }
                     &:nth-child(3) {
                         flex: 1 1 0;
@@ -382,11 +859,11 @@
             }
         }
     }
-    
+
     /*    -------------------------------------------------------  */
     /*    ------------------------sales-hits---------------------  */
-    /*    -------------------------------------------------------  */    
-        
+    /*    -------------------------------------------------------  */
+
     main {
         .sales-hits {
             .catalog-list {
@@ -399,31 +876,44 @@
                 }
             }
         }
-    }  
-    
+    }
+
     /*    -------------------------------------------------------  */
     /*    ------------------------Modal--------------------------  */
-    /*    -------------------------------------------------------  */       
-    
+    /*    -------------------------------------------------------  */
+
     .modal-subscribe {
         & > div {
             margin-left: -260px;
-            width: 520px; 
-        }   
+            width: 520px;
+        }
     }
-    /*    -------------------------End Media 768------------------------------  */  
+    /*    -------------------------End Media 768------------------------------  */
 }
 
 /* ----------------------------------------- Media 576 ------------------------------------ */
 /* ----------------------------------------- Media 576 ------------------------------------ */
 /* ----------------------------------------- Media 576 ------------------------------------ */
-@media screen and (max-width: 576px){     
+@media screen and (max-width: 576px){
     .container {
-        padding: 0 16px;    
+        min-width: 300px;
+        padding: 0 16px;
+    }
+    .breadcrumbs {
+        margin: 12px 0;
+        font-size: @baseFontSize - 2;
+        line-height: 14px;
+        li {
+            margin-right: 24px;
+            &:not(:last-of-type):after {
+                top: 4px;
+                right: -15px;
+            }
+        }
     }
     header {
         padding: 10px 0;
-        height: 50px;    
+        height: 50px;
         .container {
             .navbar-toggler {
                 display: block;
@@ -447,7 +937,7 @@
                         margin: 0;
                         width: 16px;
                     }
-                }   
+                }
                 &.collapsed {
                     span {
                         &:first-child{
@@ -474,11 +964,11 @@
                         width: 100%;
                         height: auto;
                         background-color: #FFF;
-//                        z-index: 11; 
+//                        z-index: 11;
                         img {
                             display: none;
                         }
-                        form {         
+                        form {
                             display: block;
                             padding: 16px;
                             right: 0;
@@ -594,14 +1084,14 @@
                 &.right {
                     & ~ .search {
                         form {
-                            z-index: 50; 
+                            z-index: 50;
                         }
                     }
                     & ~ .contact-mobile {
                         display: none;
                     }
                 }
-            }  
+            }
             .navbar-toggler.collapsed.right {
                 order: 1;
             }
@@ -620,19 +1110,19 @@
                         }
                     }
                 }
-            }  
+            }
             .header-logo {
                 order: 0;
-            } 
+            }
             .search {
                 display: none;
             }
-        } 
-    } 
-    
+        }
+    }
+
     /*    -------------------------------------------------------  */
     /*    ------------------------nav-block----------------------  */
-    /*    -------------------------------------------------------  */   
+    /*    -------------------------------------------------------  */
     main {
         .nav-block {
             position: relative;
@@ -643,18 +1133,18 @@
                     margin: 0;
                     padding: 0 32px;
                     flex: 1 1 0;
-                    width: 100%;   
+                    width: 100%;
                     background-size: cover;
                     h2 {
                         font-size: 20px;
                         line-height: 24px;
-                    } 
+                    }
                     a {
                         font-size: 12px;
                         line-height: 14px;
-                    }     
+                    }
                 }
-            }    
+            }
             .nav-block-controls {
                 position: absolute;
                 left: 50%;
@@ -683,16 +1173,16 @@
                         background: #FFF;
                         border-radius: 50%;
 //                        z-index: 1;
-                    }    
-                }  
+                    }
+                }
             }
             #nav-block-1:checked ~ .nav-block-list #slide1,
             #nav-block-2:checked ~ .nav-block-list #slide2,
             #nav-block-3:checked ~ .nav-block-list #slide3 {
                 display: flex;
             }
-            #nav-block-1:checked ~ .nav-block-controls label[for="nav-block-1"] i::before, 
-            #nav-block-2:checked ~ .nav-block-controls label[for="nav-block-2"] i::before, 
+            #nav-block-1:checked ~ .nav-block-controls label[for="nav-block-1"] i::before,
+            #nav-block-2:checked ~ .nav-block-controls label[for="nav-block-2"] i::before,
             #nav-block-3:checked ~ .nav-block-controls label[for="nav-block-3"] i::before {
                 content: '';
                 position: absolute;
@@ -704,8 +1194,8 @@
                 margin: -4px;
                 background-color: #ee3643;
                 border-radius: 50%;
-            } 
-        }   
+            }
+        }
     }
 
     main {
@@ -775,6 +1265,471 @@
         }
     }
 
+main {
+    /* ----------------------------------------- Studio-Page ------------------------------- */
+        /* ----------------------------------------- Studio-header ------------------------- */
+    .studio-header {
+        margin-top: 12px;
+        p {
+            margin: 20px;
+            font-size: @baseFontSize - 2;
+            line-height: 14px;
+        }
+        .block {
+            margin-bottom: 60px;
+            padding: 12px 18px;
+            padding-top: 58%;
+            height: auto;
+            min-height: 292px;
+            background-image: url(../img/studio-header-bg-mobile.png);
+            background-position: top center;
+            background-size: contain;
+            h2 {
+                margin-bottom: 8px;
+                font-size: @h2_size;
+                line-height: 24px;
+            }
+            p {
+                margin: 8px 0;
+            }
+        }
+
+    }
+        /* ----------------------------------------- Studio-header END -------------------- */
+        /* ----------------------------------------- Service-carusel ---------------------- */
+    .service-carusel {
+        margin-top: 80px;
+        background-color: @gray02;
+        h2 {
+            margin-top: 32px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .service-carusel-list {
+            margin-top: 2px;
+            padding-bottom: 27px;
+            .slick-list {
+                .slick-slide {
+                    margin-right: 18px;
+                    .service-carusel-item {
+                        max-width: 100px;
+                    }
+                    span {
+                        font-size: @baseFontSize - 2;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Studio-carusel END ----------------------- */
+        /* ------------------------------------- Studio-info ------------------------------ */
+    .studio-info {
+        margin-top: 32px;
+        h2 {
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .tab-studio-info {
+            .tabs-studio-info {
+                overflow-x: scroll;
+                li {
+                    margin-right: 35px;
+                    margin-left: 0;
+                    a {
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .tab-studio-content {
+                padding: 4px 0 69px;
+                background-color: @white;
+                border: none;
+                .tab-info {
+                    h3 {
+                        display: none;
+                    }
+                    p {
+                        margin: 0;
+                        margin-top: 2px;
+                        font-size: @baseFontSize - 2;
+                        line-height: 17px;
+                    }
+                    a {
+                        padding: 12px 10px;
+                        font-size: @baseFontSize - 2;
+                        line-height: 14px;
+                    }
+                    .appointment {
+                        bottom: 8px;
+                        left: 50%;
+                        margin-left: -100px;
+                        width: 200px;
+                    }
+                }
+                .studio-carusel-block {
+                    display: block;
+                    .studio-carusel {
+                        margin-right: 0;
+                        margin-bottom: 5px;
+                        max-width: 576px;
+                        & + .studio-carusel-list {
+                            display: block;
+                            width: auto;
+                            .slick-slide {
+                                margin-right: 6px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Studio-info  END ------------------------- */
+        /* ------------------------------ Studio-comments-block --------------------------- */
+    .comments-block {
+        margin-top: 32px;
+        h2 {
+            margin-bottom: 26px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .comments-carusel {
+            .comments-info-list {
+                padding: 8px;
+                padding-left: 0;
+                min-width: 173px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+                &::before {
+                    top: -7px;
+                    width: 18px;
+                    height: 21px;
+                    background-size: 16px;
+                }
+                span {
+                    margin-top: 10px;
+                    font-size: @baseFontSize - 2;
+                    line-height: 14px;
+                }
+            }
+            .comments-photo-list {
+                width: 95px;
+                .slick-list {
+                    width: 95px;
+                }
+            }
+        }
+    }
+
+        /* ------------------------------ Studio-comments-block END ----------------------- */
+        /* --------------------------------- sign-up-to-master-link ----------------------- */
+    .to-master-link {
+        margin-top: 50px;
+        background-color: @gray02;
+        h2 {
+            margin-top: 55px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .to-master-block {
+            p {
+                margin: 16px 19px;
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+            }
+            a {
+                padding: 12px 10px;
+                width: 240px;
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+            }
+        }
+    }
+
+        /* --------------------------------- sign-up-to-master-link END-------------------- */
+        /* --------------------------------- Application----------------------------------- */
+    .application {
+        margin-top: 60px;
+        padding: 35px 8px;
+        height: 584px;
+        p {
+            font-size: @x-large;
+            line-height: 24px;
+            text-align: left;
+        }
+        .store-link {
+            margin-bottom: 8px;
+            a:first-of-type {
+                margin-bottom: 12px;
+            }
+        }
+    }
+        /* --------------------------------- Application END------------------------------- */
+    /* ----------------------------------------- Studio-Page END--------------------------- */
+
+    /* ----------------------------------------- Agency-Page ------------------------------- */
+        /* ------------------------------------- Agency-header ----------------------------- */
+    .agency-header {
+        margin-top: 12px;
+        p {
+            font-size: @baseFontSize - 2;
+            line-height: 14px;
+            letter-spacing: inherit;
+        }
+
+        .block {
+            margin-bottom: 60px;
+            padding: 32px 20px 16px;
+            min-width: 288px;
+            min-height: 317px;
+            //На версии mobile можно вставить свою каритнку
+            background-image: url('../img/agency-map-bg.png');
+            background-position: top center;
+            background-size: contain;
+
+            h2 {
+                margin-top: 151px;
+                margin-bottom: 10px;
+                font-size: @poster_size - 4;
+                line-height: 24px;
+                letter-spacing: 0.8px;
+            }
+
+            p {
+                margin-top: 10px;
+                max-width: 248px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+            }
+        }
+
+        .slogan {
+            h2 {
+                margin-top: 0;
+                padding-bottom: 7px;
+                font-size: @h2_size - 4;
+                line-height: 18px;
+                letter-spacing: 0.8px;
+            }
+
+            p {
+                margin: 0 auto;
+                padding-left: 0;
+                width: auto;
+                max-width: 288px;
+            }
+        }
+    }
+        /* ------------------------------------- Agency-header-END ----------------------- */
+        /* ------------------------------------- Search-agency --------------------------- */
+    .search-agency {
+        margin-top: 80px;
+        .block {
+            margin-bottom: 40px;
+            padding: 38px 20px;
+            min-height: 188px;
+            h2 {
+                margin-top: 0;
+                margin-bottom: 32px;
+                width: auto;
+                max-width: 200px;
+                font-size: @poster_size - 8;
+                line-height: 18px;
+                letter-spacing: 0.8px;
+            }
+            .select {
+                width: 248px;
+                .agency-info-list {
+                    font-size: @baseFontSize - 2;
+                    line-height: 17px;
+                    p {
+                        max-width: 214px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Search-agency-END ----------------------- */
+    /* ------------------------------------- Agency-Page-END ----------------------------- */
+
+    /* ------------------------------------- Partner-Page ------------------------------- */
+        /* ------------------------------------- Partner-header -------------------------- */
+    .partner-header {
+        margin-top: 16px;
+        p {
+            font-size: @baseFontSize - 2;
+            line-height: 14px;
+            letter-spacing: inherit;
+        }
+
+        .block {
+            margin-bottom: 60px;
+            padding: 32px 20px 16px;
+            min-width: 288px;
+            min-height: 317px;
+            //На версии mobile можно вставить свою каритнку
+            background-image: url('../img/agency-map-bg.png');
+            background-position: top center;
+            background-size: contain;
+
+            h2 {
+                margin-top: 151px;
+                margin-bottom: 10px;
+                width: auto;
+                font-size: @poster_size - 4;
+                line-height: 24px;
+                letter-spacing: 0.8px;
+            }
+
+            p {
+                margin-top: 10px;
+                max-width: 248px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+            }
+        }
+
+        .block-start {
+            h2 {
+                margin-top: 0;
+                padding-bottom: 7px;
+                font-size: @h2_size - 4;
+                line-height: 18px;
+                letter-spacing: 0.8px;
+            }
+
+            p {
+                margin: 0 auto;
+                padding-left: 0;
+                width: auto;
+                max-width: 288px;
+            }
+        }
+    }
+        /* ------------------------------------- Partner-header-END ----------------------- */
+        /* ------------------------------------- Partner-advantages ----------------------- */
+    .partner-advantages{
+        margin-top: 50px;
+        .block {
+            padding: 10px 33px 40px;
+            min-height: 766px;
+            h2 {
+                margin-top: 28px;
+                font-size: @h2_size - 4;
+                line-height: 22px;
+            }
+            .advantages-list {
+                justify-content: center;
+                margin-top: 14px;
+                .advantages-item {
+                    margin-bottom: 37px;
+                    img {
+                        width: 140px;
+                    }
+                    p {
+                        margin-top: 5px;
+                        font-size: @baseFontSize + 2;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-advantages-END ------------------- */
+        /* ------------------------------------- Partner-comment -------------------------- */
+    .partner-comments-block {
+        margin-top: 0;
+        h2 {
+            margin-top: 16px;
+            margin-bottom: 14px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .partner-comments-carusel {
+            .partner-comments-info-list {
+                padding: 8px;
+                padding-left: 0;
+                min-width: 173px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+                &::before {
+                    top: -7px;
+                    width: 18px;
+                    height: 21px;
+                    background-size: 16px;
+                }
+                span {
+                    margin-top: 10px;
+                    font-size: @baseFontSize - 2;
+                    line-height: 14px;
+                }
+            }
+            .partner-comments-photo-list {
+                width: 95px;
+                .slick-list {
+                    width: 95px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-comment-END ---------------------- */
+        /* ------------------------------------- Partner-form ----------------------------- */
+    .partner-form {
+        margin-top: 16px;
+        margin-bottom: 80px;
+        .block {
+            max-width: 292px;
+            h2 {
+                margin-top: 39px;
+                margin-bottom: 2px;
+                padding-bottom: 7px;
+                font-size: @h2_size - 4;
+                line-height: 18px;
+            }
+
+            p {
+                max-width: 288px;
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+            }
+
+            form {
+                margin-top: 52px;
+                .form-group {
+                    margin-top: 40px;
+                    input {
+                        font-size: @baseFontSize + 2;
+                    }
+                }
+                .personal {
+                    margin: 24px 0;
+                }
+                .form-button {
+                    margin: 32px 0;
+                    input {
+                        width: auto;
+                        max-width: 200px;
+                    }
+                    input[type='submit'] {
+                        padding: 10px 16px 11px ;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Partner-form-END ------------------------- */
+    /* ------------------------------------- Partner-Page-END ----------------------------- */
+
+}
+// закрытие main
+
+
     footer {
         h4 {
             font-size: 12px;
@@ -810,7 +1765,6 @@
             }
             .footer-payments {
                 margin-top: 0px;
-                order: 0;
                 h4 {
                     margin-top: 36px;
                 }
@@ -833,7 +1787,7 @@
         }
     }
 
-    /*    -------------------------End Media 576------------------------------  */  
+    /*    -------------------------End Media 576------------------------------  */
 }
 
 

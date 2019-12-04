@@ -129,13 +129,26 @@ header {
                     font-size: @baseFontSize;
                     line-height: 17px;
                     letter-spacing: 0.1px;
+                    color: @color-base;
                     border: 1px solid @white;
                     box-sizing: border-box;
+                    &::placeholder {
+                        color: @white;
+                    }
+                    &::-webkit-search-decoration,
+                    &::-webkit-search-cancel-button,
+                    &::-webkit-search-results-button,
+                    &::-webkit-search-results-decoration {
+                        display: none;
+                    }
                 }
                 input[type = 'search']:focus {
                     border: 1px solid @gray02;
                     box-shadow: none;
                     outline: none;
+                    &::placeholder {
+                        color: @gray50;
+                    }
                 }
                 .search-label {
                     position: absolute;
@@ -205,7 +218,8 @@ header {
                         right: 2px;
                         background: @red;
                         color: @white;
-                        padding: 1.5px 4px;
+                        padding-top: 1.5px;
+                        padding-left: 1px;
                         font-size: 8px;
                         text-align: center;
                         border-radius: 50%;
@@ -550,8 +564,8 @@ main {
             width: 568px;
         }
     }
-        /* ----------------------------------------- Studio-header END -------------------------- */
-        /* ----------------------------------------- service-carusel ---------------------------- */
+        /* ----------------------------------------- Studio-header END --------------------- */
+        /* ----------------------------------------- service-carusel ----------------------- */
     .service-carusel {
         margin-top: 102px;
         text-align: center;
@@ -630,8 +644,10 @@ main {
                             background-color: @gray50;
                         }
                         &.current {
+                            transition: all 0.2s ease 0s;
                             color: @textGray;
                             &::before {
+                                transition: all 0.2s ease 0s;
                                 width: 32px;
                                 height: 2px;
                                 background-color: @color-base;
@@ -667,18 +683,22 @@ main {
                         letter-spacing: 1.2px;
                     }
                 }
-                .studio-carusel {
+                .studio-carusel-block {
                     display: inline-block;
-                    vertical-align: top;
-                    width: 432px;
-                    height: 432px;
-                    .slick-prev {
-                        top: 50%;
-                        left: -40px;
-                    }
-                    .slick-next {
-                        top: 50%;
-                        right: -34px;
+                    .studio-carusel {
+                        vertical-align: top;
+                        width: 432px;
+                        & + .studio-carusel-list {
+                            display: none;
+                        }
+                        .slick-prev {
+                            top: 50%;
+                            left: -40px;
+                        }
+                        .slick-next {
+                            top: 50%;
+                            right: -34px;
+                        }
                     }
                 }
             }
@@ -692,7 +712,7 @@ main {
         h2 {
             display: inline-block;
             vertical-align: top;
-            margin-top: 69px;
+            margin-top: 63px;
             padding-bottom: 12px;
             font-size: @h2_large;
             font-weight: 300;
@@ -706,17 +726,34 @@ main {
             align-items: center;
             margin-top: 4px;
             .comments-info-list {
-                padding: 16px;
-                width: 549px;
+                position: relative;
+                margin-top: 42px;
+                margin-left: 54px;
+                padding: 32px;
+                padding-left: 44px;
+                max-width: 496px;
+                min-width: 283px;
                 font-size: @x-large + 4;
                 line-height: 29px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 43px;
+                    left: 0;
+                    width: 27px;
+                    height: 25px;
+                    background: url('../img/icon/quote.svg') no-repeat center center;
+                }
                 p {
-                    margin: 0 auto;
+                    //margin: 0 auto;
                     padding: 0;
-                    width: 374px;
+                    max-width: 374px;
+                    letter-spacing: 1px;
                     text-align: left;
                 }
                 span {
+                    display: block;
+                    margin-top: 19px;
                     font-size: @baseFontSize;
                     line-height: 20px;
                     color: @gray50;
@@ -730,21 +767,18 @@ main {
                         .comments-photo-item {
                             position: relative;
                             cursor: pointer;
-
                             img {
                                 position: relative;
                                 top: 30px;
                                 opacity: 0.3;
                                 z-index: 100;
                             }
-
                             p {
                                 position: relative;
                                 margin-right: 20px;
                                 opacity: 0;
                                 z-index: 99;
                             }
-
                             &:hover {
                                 img {
                                     animation-name: commenteffect;
@@ -752,7 +786,6 @@ main {
                                     animation-timing-function: ease-in;
                                     animation-fill-mode: forwards;
                                 }
-
                                 p {
                                     opacity: 1;
                                 }
@@ -817,30 +850,31 @@ main {
                 padding: 16px 10px;
                 letter-spacing: 1.4px;
             }
-
-        }
-        .application {
-            margin-top: 159px;
-            margin-bottom: 160px;
-            padding: 76px 16px 16px 97px;
-            min-height: 480px;
-            text-align: left;
-            background: rgba(255, 221, 235, 0.1) url(../img/application-bg.png) bottom right no-repeat;
-            border: 1px solid #FFD3E5;
-            p {
-                margin-bottom: 39px;
-                width: 410px;
-                font-size: @x-large + 4;
-                line-height: 29px;
-                letter-spacing: 1px;
-            }
-            a {
-                margin-right: 17px;
-                display: inline-block;
-            }
         }
     }
         /* ----------------------------------- sign-up-to-master-link-end -------------------- */
+        /* ----------------------------------- Application- ---------------------------------- */
+    .application {
+        margin-top: 159px;
+        margin-bottom: 160px;
+        padding: 76px 16px 16px 97px;
+        min-height: 480px;
+        text-align: left;
+        background: rgba(255, 221, 235, 0.1) url(../img/application-bg.png) bottom right no-repeat;
+        border: 1px solid #FFD3E5;
+        p {
+            margin-bottom: 39px;
+            width: 410px;
+            font-size: @x-large + 4;
+            line-height: 29px;
+            letter-spacing: 1px;
+        }
+        a {
+            margin-right: 17px;
+            display: inline-block;
+        }
+    }
+        /* ----------------------------------- Application- END ------------------------------ */
     /* ----------------------------------------- Studio-Page-END ----------------------------- */
 
     /* ----------------------------------------- Agency-Page --------------------------------- */
@@ -884,7 +918,7 @@ main {
                 vertical-align: top;
                 margin-top: 2px;
                 padding-bottom: 12px;
-                font-size: 32px;
+                font-size: @h2_large;
                 font-weight: 300;
                 line-height: 37px;
                 letter-spacing: 1.4px;
@@ -911,7 +945,7 @@ main {
             padding: 16px 16px 16px 97px;
             min-height: 520px;
             text-align: left;
-            background: rgba(255, 84, 201, 0.01) url(../img/agency-search-bg.png) bottom right no-repeat;
+            background: #ffffff url(../img/agency-search-bg.png) bottom right no-repeat;
             border: 1px solid #E2DDD7;
             h2 {
                 display: inline-block;
@@ -926,21 +960,12 @@ main {
             }
             .select {
                 width: 374px;
-                select {
-                    padding-left: 15px;
+                .custom-select {
                     width: 100%;
-                    height: 40px;
-                    font-family: @baseFont;
-                    font-size: @baseFontSize;
-                    letter-spacing: 0.4px;
-                    color: @textGray;
-                    option {
-                        font-family: inherit;
-                        font-size: inherit;
-                        color: inherit;
-                        margin-top: 10px;
-                        padding-top: 10px;
-                        height: 40px;
+                    li {
+                        .options {
+                            left: 0;
+                        }
                     }
                 }
                 .agency-info-list {
@@ -1099,17 +1124,33 @@ main {
             align-items: center;
             margin-top: 4px;
             .partner-comments-info-list {
-                padding: 16px;
-                width: 549px;
+                position: relative;
+                margin-top: 42px;
+                margin-left: 54px;
+                padding: 32px;
+                padding-left: 44px;
+                max-width: 496px;
+                min-width: 283px;
                 font-size: @x-large + 4;
                 line-height: 29px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 43px;
+                    left: 0;
+                    width: 27px;
+                    height: 25px;
+                    background: url('../img/icon/quote.svg') no-repeat center center;
+                }
                 p {
-                    margin: 0 auto;
                     padding: 0;
-                    width: 374px;
+                    max-width: 374px;
+                    letter-spacing: 1px;
                     text-align: left;
                 }
                 span {
+                    display: block;
+                    margin-top: 19px;
                     font-size: @baseFontSize;
                     line-height: 20px;
                     color: @gray50;
@@ -1121,6 +1162,7 @@ main {
                     width: 590px;
                     .slick-slide:not(.slick-current) {
                         .partner-comments-photo-item {
+                            position: relative;
                             cursor: pointer;
                             img {
                                 position: relative;
@@ -1148,7 +1190,7 @@ main {
                         }
                     }
                     .slick-current {
-                        .comments-photo-item {
+                        .partner-comments-photo-item {
                             img {
                                 position: relative;
                                 top: 30px;
@@ -1168,7 +1210,7 @@ main {
                     left: -38px;
                 }
                 .slick-next {
-                    right: -12px;
+                    right: -28px;
                 }
             }
         }
@@ -1376,6 +1418,12 @@ main {
                 margin-bottom: 40px;
                 padding: 36px;
                 border: 1px solid @gray13;
+                &:nth-child(n + 3) {
+                    display: none;
+                }
+                &.show {
+                    display: flex;
+                }
                 .courses-description {
                     position: relative;
                     margin-left: 44px;
@@ -1463,11 +1511,12 @@ main {
                     }
                 }
             }
-            .link-all-courses {
+            .show-all-courses {
                 margin: 58px auto 0;
                 padding: 16px 8px;
                 width: 334px;
                 letter-spacing: 1.6px;
+                background: url(../img/icon/down.svg) no-repeat 87% center;
             }
         }
     }
@@ -2807,6 +2856,44 @@ main {
     }
         /*------------------------------------ Tabs-END ---------------------------------- */
     /* ------------------------------------- Page-personal-END --------------------------- */
+
+    /* ------------------------------------- Page-content -------------------------------- */
+        .page-content {
+            .page-title {
+                margin-top: 50px;
+                text-align: center;
+                h1 {
+                    display: inline-block;
+                    margin: 0 0 18px;
+                    padding-bottom: 12px;
+
+                    font-size: @large - 4;
+                    line-height: 28px;
+
+                    border-bottom: 1px solid @gray13;
+                }
+            }
+            b{
+                display: block;
+                margin-top: 16px;
+
+                font-weight: 800;
+                line-height: 20px;
+            }
+            p {
+                margin: 0;
+
+                line-height: 20px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-position: inside;
+
+                line-height: 20px;
+            }
+        }
+    /* ------------------------------------- Page-content-END ---------------------------- */
 }
 /* ----------------------------------------- main end ------------------------------------ */
 
@@ -2862,21 +2949,6 @@ footer {
                 box-shadow: 0 1px 0 0 @color-base;
             }
         }
-        .footer-payments {
-            .payments-list {
-                display: flex;
-                margin: 0;
-                padding: 0;
-                width: 295px;
-                list-style: none;
-                li {
-                    margin: 2px 21px 19px 0;
-                }
-            }
-            & > a:hover {
-                box-shadow: 0 1px 0 0 @color-base;
-            }
-        }
         .footer-contacts {
             a {
                 display: block;
@@ -2896,6 +2968,21 @@ footer {
                     letter-spacing: 0.04em;
                     opacity: 0.5;
                 }
+            }
+        }
+        .footer-payments {
+            .payments-list {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                width: 295px;
+                list-style: none;
+                li {
+                    margin: 2px 21px 19px 0;
+                }
+            }
+            & > a:hover {
+                box-shadow: 0 1px 0 0 @color-base;
             }
         }
     }
