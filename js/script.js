@@ -148,7 +148,7 @@ $(function() {
         var modalcoursedetails = $('body').find('.modal-course-details');
         $('body').addClass('modal-open');
         modalcoursedetails.addClass('modal-show');
-        modalcoursedetails.children('div').html(descr);
+        modalcoursedetails.find('.details').html(descr);
         stylesBlur();
         $('.modal-close').click( function () {
             modalcoursedetails.removeClass('modal-show');
@@ -159,9 +159,13 @@ $(function() {
     //Показать все курсы
     $('.show-all-courses').click(function (e) {
        e.preventDefault();
-       console.log('показать все курсы');
-       $(this).siblings('.courses-item').addClass('show');
-       $(this).hide();
+       $(this).siblings('.courses-item').toggleClass('show');
+       $(this).toggleClass('show');
+       if ($(this).hasClass('show')) {
+           $(this).text('Скрыть курсы');
+       } else {
+           $(this).text('Посмтреть все курсы');
+       }
     });
 
     $('.modal').click(function(e) {

@@ -1404,7 +1404,7 @@ main {
             margin-top: 2px;
             margin-bottom: 60px;
             padding-bottom: 12px;
-            font-size: 32px;
+            font-size: @h2_large;
             font-weight: 300;
             line-height: 37px;
             letter-spacing: 1.4px;
@@ -1483,6 +1483,9 @@ main {
                                     h4 {
                                         margin: 0;
                                     }
+                                    .qualification {
+                                        display: none;
+                                    }
                                     p {
                                         margin: 0;
                                         margin-top: 4px;
@@ -1496,12 +1499,11 @@ main {
                         display: none;
                     }
                     .course-details-btn {
-                        position: absolute;
-                        bottom: 0;
+                        display: block;
                         padding: 17px 16px;
                         width: 100%;
                         font-family: @baseFont;
-                        color: #5A5758;
+                        color: @textGray;
                         background-color: @gray02;
                         border: none;
                         cursor: pointer;
@@ -1512,11 +1514,25 @@ main {
                 }
             }
             .show-all-courses {
+                position: relative;
                 margin: 58px auto 0;
                 padding: 16px 8px;
                 width: 334px;
                 letter-spacing: 1.6px;
-                background: url(../img/icon/down.svg) no-repeat 87% center;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 42px;
+                    top: 12px;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../img/icon/down.svg) no-repeat 0 0;
+                }
+                &.show {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
     }
@@ -1615,7 +1631,7 @@ main {
         }
         .note {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             margin-top: 139px;
             margin-bottom: 118px;
             padding: 30px;

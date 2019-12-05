@@ -145,100 +145,102 @@
 }
 
 .modal-course-details {
-    .details {
+    .modal-wrap {
         position: absolute;
         top: 60px;
         left: 50%;
         margin-left: -383px;
         max-width: 766px;
-        background-color: @white;
         z-index: 100;
-        .block {
-            padding: 60px 100px;
-            & > h2 {
-                display: block;
-                vertical-align: top;
-                margin-top: 0;
-                font-size: @extra;
-                font-weight: 300;
-                line-height: 46px;
-                letter-spacing: 1.4px;
-                text-align: center;
-            }
-            .details-text {
-                p {
-                    margin: 0;
-                }
-
-                .details-text-list {
+        .details {
+            background-color: @white;
+            .block {
+                padding: 60px 100px;
+                & > h2 {
+                    display: block;
+                    vertical-align: top;
                     margin-top: 0;
-                    padding: 0;
-                    list-style: none;
+                    font-size: @extra;
+                    font-weight: 300;
+                    line-height: 46px;
+                    letter-spacing: 1.4px;
+                    text-align: center;
                 }
-            }
+                .details-text {
+                    p {
+                        margin: 0;
+                    }
 
-            .instructors {
-                margin-top: 32px;
-                margin-bottom: 0px;
-
-                & > p {
-                    font-size: @x-large + 4;
-                    line-height: 29px;
-                }
-
-                .instructors-list {
-                    display: flex;
-                    justify-content: space-between;
-
-                    .instructors-item {
-                        display: flex;
+                    .details-text-list {
                         margin-top: 0;
+                        padding: 0;
+                        list-style: none;
+                    }
+                }
 
-                        img {
-                        }
+                .instructors {
+                    margin-top: 32px;
+                    margin-bottom: 0px;
 
-                        div {
-                            margin-left: 15px;
+                    & > p {
+                        font-size: @x-large + 4;
+                        line-height: 29px;
+                    }
 
-                            h4 {
-                                margin: 0;
+                    .instructors-list {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .instructors-item {
+                            display: flex;
+                            margin-top: 0;
+
+                            img {
                             }
 
-                            p {
-                                margin: 0;
-                                margin-top: 4px;
-                                width: 175px;
+                            div {
+                                margin-left: 15px;
+
+                                h4 {
+                                    margin: 0;
+                                }
+
+                                p {
+                                    margin: 0;
+                                    margin-top: 4px;
+                                    width: 175px;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        .price {
-            margin: 0;
-            padding: 26px 0;
-            font-size: @x-large + 4;
-            line-height: 29px;
-            text-align: center;
-            background-color: @gray02;
-            border: none;
-            span {
-                position: relative;
-                margin-right: 90px;
-                padding-left: 40px;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0px;
-                    width: 24px;
-                    height: 24px;
-                    background-image: url(../img/icon/time.svg);
-                    background-repeat: no-repeat;
-                    background-position: 0 0;
-                }
-                &:last-child {
-                    margin-right: 0;
+            .price {
+                margin: 0;
+                padding: 26px 0;
+                font-size: @x-large + 4;
+                line-height: 29px;
+                text-align: center;
+                background-color: @gray02;
+                border: none;
+                span {
+                    position: relative;
+                    margin-right: 90px;
+                    padding-left: 40px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url(../img/icon/time.svg);
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
                 }
             }
         }

@@ -515,7 +515,7 @@ main {
             h2 {
                 margin-bottom: 13px;
                 font-size: @poster_large - 8;
-                line-height: 32px;
+                line-height: 37px;
                 letter-spacing: 1.1px;
             }
 
@@ -596,7 +596,7 @@ main {
             h2 {
                 margin-bottom: 13px;
                 font-size: @poster_large - 8;
-                line-height: 32px;
+                line-height: 37px;
                 letter-spacing: 1.1px;
             }
 
@@ -738,6 +738,232 @@ main {
         /* ------------------------------------- Partner-form-END ------------------------- */
     /* ------------------------------------- Partner-Page-END ----------------------------- */
 
+    /* ------------------------------------- Training-Page -------------------------------- */
+        /* ------------------------------------- Training-header -------------------------- */
+    .training-header {
+        margin-top: 42px;
+        p {
+            font-size: @x-large;
+            line-height: 24px;
+        }
+
+        .block {
+            margin-bottom: 79px;
+            padding: 16px 16px 16px 40px;
+            min-width: 288px;
+            min-height: 289px;
+            //На версии tablet можно вставить свою каритнку
+            background-image: url('../img/training-bg.png');
+            background-size: cover;
+
+            h2 {
+                margin-bottom: 13px;
+                font-size: @poster_large - 8;
+                line-height: 37px;
+                letter-spacing: 1.1px;
+            }
+
+            p {
+                margin-top: 10px;
+                width: auto;
+                max-width: 265px;
+            }
+        }
+
+        .philosophy {
+            h2 {
+                font-size: @h2_size + 4;
+                line-height: 28px;
+                letter-spacing: 1.1px;
+            }
+
+            p {
+                margin: 0 auto;
+                width: auto;
+                max-width: 523px;
+                letter-spacing: 0.77px;
+            }
+        }
+    }
+        /* ------------------------------------- Training-header-END ---------------------- */
+        /* ------------------------------------- Stuff-carusel ---------------------------- */
+    .stuff-carusel {
+        margin-top: 80px;
+        .stuff-carusel-list {
+            .slick-list {
+                margin: 0 33px;
+                .slick-slide {
+                    margin-right: 20px;
+                    .stuff-carusel-item {
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Stuff-carusel-END ------------------------ */
+        /* ------------------------------------- Courses-info ----------------------------- */
+    .courses-info {
+        margin-top: 80px;
+        & > h2 {
+            margin-bottom: 32px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+            letter-spacing: 1.1px;
+        }
+        .courses-list {
+            .courses-item {
+                display: block;
+                margin-bottom: 24px;
+                padding: 40px 38px 24px;
+                & > img {
+                    display: none;
+                }
+                .courses-description {
+                    margin-left: 0;
+                    h3 {
+                        margin: 0;
+                        font-size: @large;
+                        line-height: 37px;
+                        letter-spacing: 1.1px;
+                    }
+                    & > p {
+                        display: inline-block;
+                        margin-top: 21px;
+                        margin-right: 48px;
+                        width: 65%;
+                        max-width: 374px;
+                        line-height: 20px;
+                    }
+                    .price {
+                        display: inline-block;
+                        margin: 0;
+                        padding-bottom: 0;
+                        border-bottom: none;
+                        span {
+                            display: block;
+                            margin-right: 0;
+                            margin-bottom: 30px;
+                            &::before {
+                                left: -4px;
+                            }
+                        }
+                    }
+                    .instructors {
+                        margin-bottom: 17px;
+                        span {
+                            font-size: @x-large;
+                            line-height: 24px;
+                            letter-spacing: 0.8px;
+                        }
+                        .instructors-list {
+                            display: flex;
+                            .instructors-item {
+                                flex-grow: 1;
+                                margin-top: 23px;
+                                div {
+                                    margin-left: 19px;
+                                    p {
+                                        margin-top: 6px;
+                                        width: auto;
+                                        max-width: 194px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .course-details-btn {
+                        margin: 0 auto;
+                        width: auto;
+                        max-width: 374px;
+                        letter-spacing: 0.9px;
+                        background-color: @white;
+                        &:hover {
+                            background-color: @white;
+                        }
+                    }
+                }
+            }
+            .show-all-courses {
+                margin: 33px auto 0;
+            }
+        }
+    }
+        /* ------------------------------------- Courses-info-END ------------------------- */
+        /* ------------------------------------- Students-work ---------------------------- */
+    .students-work {
+        h2 {
+            margin-bottom: 33px;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+            letter-spacing: 1.1px;
+        }
+        .students-work-list {
+            margin: 0 34px;
+            .students-work-item {
+                margin-right: 20px;
+                max-width: 144px;
+                .info {
+                    display: none;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Students-work-END ------------------------ */
+        /* ------------------------------------- Comments-block.studio -------------------- */
+    .comments-block.studio {
+        margin-top: 73px;
+    }
+        /* ------------------------------------- Comments-block.studio-END ---------------- */
+        /* ------------------------------------- Slogan-courses --------------------------- */
+    .slogan-courses {
+        margin-top: 30px;
+        margin-bottom: 74px;
+        & > h2 {
+            font-size: @h2_size + 4;
+            line-height: 28px;
+            letter-spacing: 1.1px;
+        }
+        & > p {
+            width: auto;
+            max-width: 523px;
+            font-size: @x-large;
+            line-height: 24px;
+            letter-spacing: 0.77px;
+        }
+        .note {
+            align-items: flex-start;
+            margin-top: 120px;
+            margin-bottom: 28px;
+            padding: 40px;
+            min-height: 234px;
+            & > img {
+                width: 213px;
+            }
+            .note-to-courses {
+                margin-left: 19px;
+                h2 {
+                    margin: 0 0 10px;
+                    font-size: @poster_size - 4;
+                    line-height: 24px;
+                    letter-spacing: 1.1px;
+                }
+                p {
+                    margin: 10px 0 35px;
+                    width: auto;
+                    max-width: 391px;
+                }
+                a {
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Slogan-courses-END ----------------------- */
+    /* ------------------------------------- Training-Page-END ---------------------------- */
+
 }
     /*    -------------------------------------------------------  */
     /*    ------------------------footer-------------------------  */
@@ -766,6 +992,57 @@ main {
             }
         }
     }
+
+    /*    -------------------------------------------------------  */
+    /*    ------------------------Modal--------------------------  */
+
+    .modal-course-details {
+        .modal-wrap {
+            margin-left: -352px;
+            width: 704px;
+            .details {
+                .block {
+                    padding: 60px 90px 38px;
+                    & > h2 {
+                        font-size: @large;
+                        line-height: 37px;
+                    }
+                    .instructors {
+                        margin-top: 32px;
+                        margin-bottom: 0px;
+
+                        & > p {
+                            font-size: @x-large;
+                            line-height: 24px;
+                        }
+                        .instructors-list {
+                            .instructors-item {
+                                img {
+                                    width: 79px;
+                                    height: 79px;
+                                }
+                                div {
+                                    p {
+                                        width: auto;
+                                        max-width: 175px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: @x-large;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    /*    ------------------------Modal END----------------------  */
+    /*    -------------------------------------------------------  */
+
     /*    -------------------------End Media 992------------------------------  */
 }
 
@@ -880,7 +1157,6 @@ main {
 
     /*    -------------------------------------------------------  */
     /*    ------------------------Modal--------------------------  */
-    /*    -------------------------------------------------------  */
 
     .modal-subscribe {
         & > div {
@@ -888,6 +1164,23 @@ main {
             width: 520px;
         }
     }
+
+    .modal-course-details {
+        .modal-wrap {
+            top: 20px;
+            margin-left: -260px;
+            width: 520px;
+            .details {
+                .block {
+                    padding: 40px 40px 38px;
+                }
+            }
+        }
+    }
+
+    /*    ------------------------Modal END----------------------  */
+    /*    -------------------------------------------------------  */
+
     /*    -------------------------End Media 768------------------------------  */
 }
 
@@ -1726,6 +2019,255 @@ main {
         /* ------------------------------------- Partner-form-END ------------------------- */
     /* ------------------------------------- Partner-Page-END ----------------------------- */
 
+    /* ------------------------------------- Training-Page -------------------------------- */
+        /* ------------------------------------- Training-header -------------------------- */
+    .training-header {
+        margin-top: 12px;
+        p {
+            font-size: @baseFontSize - 2;
+            line-height: 14px;
+            letter-spacing: inherit;
+        }
+
+        .block {
+            margin-bottom: 60px;
+            padding: 32px 18px 16px;
+            min-height: 291px;
+            //На версии mobile можно вставить свою каритнку
+            background-image: url('../img/training-bg.png');
+            background-position: top center;
+            background-size: contain;
+
+            h2 {
+                margin-top: 151px;
+                margin-bottom: 10px;
+                width: auto;
+                font-size: @poster_size - 4;
+                line-height: 24px;
+                letter-spacing: 0.8px;
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                max-width: 248px;
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+            }
+        }
+
+        .philosophy {
+            h2 {
+                margin-top: 0;
+                padding-bottom: 7px;
+                font-size: @h2_size - 4;
+                line-height: 18px;
+                letter-spacing: 0.8px;
+            }
+
+            p {
+                padding-left: 0;
+                max-width: 288px;
+            }
+        }
+    }
+        /* ------------------------------------- Training-header-END ---------------------- */
+        /* ------------------------------------- Stuff-carusel ---------------------------- */
+    .stuff-carusel {
+        margin-top: 65px;
+        .stuff-carusel-list {
+            .slick-list {
+                margin: 0;
+            }
+        }
+    }
+        /* ------------------------------------- Stuff-carusel-END ------------------------ */
+        /* ------------------------------------- Courses-info ----------------------------- */
+    .courses-info {
+        margin-top: 60px;
+        & > h2 {
+            margin-top: 0;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+            letter-spacing: 0.8px;
+        }
+        .courses-list {
+            .courses-item {
+                margin-bottom: 20px;
+                padding: 20px 0 0;
+                .courses-description {
+                    display: flex;
+                    flex-direction: column;
+                    h3 {
+                        padding-left: 19px;
+                        padding-right: 19px;
+                        font-size: @x-large;
+                        line-height: 23px;
+                        letter-spacing: 0.8px;
+                    }
+                    & > p {
+                        display: block;
+                        margin-top: 13px;
+                        margin-right: 0;
+                        padding-left: 19px;
+                        padding-right: 19px;
+                        width: auto;
+                        max-width: 220px;
+                        font-size: @baseFontSize - 2;
+                        line-height: 17px;
+                    }
+                    .price {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 17px;
+                        padding-left: 19px;
+                        padding-right: 19px;
+                        font-size: @baseFontSize - 2;
+                        line-height: 14px;
+                        order: 1;
+                        span {
+                            margin-right: 28px;
+                            margin-bottom: 21px;
+                            &::before {
+                                left: 0;
+                            }
+                        }
+                    }
+                    .instructors {
+                        margin-top: 10px;
+                        margin-bottom: 17px;
+                        padding-left: 19px;
+                        padding-right: 19px;
+                        span {
+                            font-size: @baseFontSize + 2;
+                            line-height: 19px;
+                            letter-spacing: 0.8px;
+                        }
+                        .instructors-list {
+                            flex-direction: column;
+                            .instructors-item {
+                                margin-top: 12px;
+                                font-size: @baseFontSize - 2;
+                                line-height: 14px;
+                                img {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+                                div {
+                                    margin-left: 16px;
+                                    h4 {
+                                        margin-top: 10px;
+                                    }
+                                    .qualification {
+                                        display: block;
+                                        margin-top: 12px;
+                                        font-size: @baseFontSize - 2;
+                                        line-height: 14px;
+                                        color: @gray50;
+                                        letter-spacing: 0.4px;
+                                    }
+                                    p {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .course-details-btn {
+                        padding: 11px;
+                        width: 100%;
+                        max-width: 100%;
+                        background-color: @gray02;
+                        order: 2;
+                    }
+                }
+            }
+            .show-all-courses {
+                margin: 0 auto;
+                width: auto;
+                max-width: 288px;
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Courses-info-END ------------------------- */
+        /* ------------------------------------- Students-work ---------------------------- */
+    .students-work {
+        margin-top: 98px;
+        h2 {
+            margin-bottom: 16px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+            letter-spacing: 0.8px;
+        }
+        .students-work-list {
+            margin: 0;
+        }
+    }
+        /* ------------------------------------- Students-work-END ------------------------ */
+        /* ------------------------------------- Comments-block.studio -------------------- */
+    .comments-block.studio {
+        margin-top: 12px;
+    }
+        /* ------------------------------------- Comments-block.studio-END ---------------- */
+        /* ------------------------------------- Slogan-courses --------------------------- */
+    .slogan-courses {
+        margin-top: 8px;
+        margin-bottom: 80px;
+        & > h2 {
+            margin-bottom: 12px;
+            padding-bottom: 7px;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+            letter-spacing: 0.8px;
+        }
+        & > p {
+            max-width: 248px;
+            font-size: @baseFontSize - 2;
+            line-height: 14px;
+            letter-spacing: 0.5px;
+        }
+        .note {
+            display: block;
+            margin-top: 80px;
+            margin-bottom: 28px;
+            padding: 20px 20px 26px;
+            min-height: 433px;
+            & > img {
+                width: 213px;
+            }
+            .note-to-courses {
+                margin-top: 29px;
+                margin-left: 0;
+                h2 {
+                    margin: 0 0 15px;
+                    line-height: 23px;
+                    letter-spacing: 1.1px;
+                }
+                p {
+                    margin: 15px 0 39px;
+                    max-width: 248px;
+                    font-size: @baseFontSize - 2;
+                    line-height: 17px;
+                }
+                a {
+                    margin-bottom: 12px;
+                    font-size: @baseFontSize - 2;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- Slogan-courses-END ----------------------- */
+    /* ------------------------------------- Training-Page-END ---------------------------- */
+
 }
 // закрытие main
 
@@ -1786,6 +2328,61 @@ main {
             }
         }
     }
+
+    /*    -------------------------------------------------------  */
+    /*    ------------------------Modal--------------------------  */
+
+    .modal-course-details {
+        .modal-wrap {
+            margin-left: -144px;
+            width: 288px;
+            .details {
+                font-size: @baseFontSize - 2;
+                line-height: 14px;
+                .block {
+                    padding: 24px 20px 38px;
+                    & > h2 {
+                        font-size: @x-large;
+                        line-height: 23px;
+                    }
+                    .instructors {
+                        & > p {
+                            font-size: @baseFontSize + 2;
+                            line-height: 19px;
+                        }
+                        .instructors-list {
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            .instructors-item {
+                                margin-bottom: 12px;
+                                width: 100%;
+                                img {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+                                div {
+                                    p {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: @baseFontSize;
+                    line-height: 16px;
+                    span {
+                        margin-right: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*    ------------------------Modal END----------------------  */
+    /*    -------------------------------------------------------  */
 
     /*    -------------------------End Media 576------------------------------  */
 }
