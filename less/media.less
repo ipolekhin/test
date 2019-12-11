@@ -11,6 +11,7 @@
     header {
         padding-top: 4px;
         height: 60px;
+        min-width: auto;
         .container {
             .header-logo {
                 margin-right: 23px;
@@ -86,12 +87,17 @@
                 }
             }
             .user-navigation {
+                position: static;
                 margin: 0;
                 padding: 0;
-                li {
+                & > li {
                     &:last-child {
                         margin-left: 32px;
                     }
+                }
+                .user-info {
+                    top: 50px;
+                    right: 8px;
                 }
             }
         }
@@ -816,6 +822,9 @@ main {
                 display: block;
                 margin-bottom: 24px;
                 padding: 40px 38px 24px;
+                &.show {
+                    display: block;
+                }
                 & > img {
                     display: none;
                 }
@@ -964,6 +973,83 @@ main {
         /* ------------------------------------- Slogan-courses-END ----------------------- */
     /* ------------------------------------- Training-Page-END ---------------------------- */
 
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+        /* ------------------------------------- shop-category ---------------------------- */
+    .shop {
+        .catalog-list {
+            .catalog-item {
+                margin-right: 20px;
+                margin-bottom: 40px;
+                &:nth-child(5n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+                .hide-block {
+                    padding: 370px 20px 0;
+                    left: -20px;
+                    top: -20px;
+                    width: 250px;
+                    a {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- shop-category-END ------------------------ */
+        /* ------------------------------------- shop-sort-item --------------------------- */
+
+        /* ------------------------------------- shop-sort-item-END ----------------------- */
+        /* ------------------------------------- shop-item -------------------------------- */
+
+        /* ------------------------------------- shop-item-END ---------------------------- */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+
+    /* ------------------------------------- category-filter------------------------------- */
+    .sorts {
+        margin-top: 24px;
+        .filter-list {
+            .filter-item {
+                #select-color + .custom-select {
+                    width: 96px;
+                }
+                .custom-select {
+                    &--price {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    /* ------------------------------------- category-filter END -------------------------- */
+
+
+    /* ------------------------------------- Page-favorite ------------------------------- */
+        /*------------------------------------ favorite ---------------------------------- */
+    &.page-favorite {
+        .page-title {
+            margin: 18px 0;
+            font-size: @h2_size + 4;
+            line-height: 28px;
+        }
+        .no-favorite {
+            p {
+                margin: 24px auto;
+                max-width: 523px;
+                font-size: @x-large;
+                line-height: 24px;
+            }
+            a {
+                margin: 0 auto;
+                width: 270px;
+            }
+        }
+    }
+        /*------------------------------------ favorite-END ------------------------------ */
+    /* ------------------------------------- Page-favorite-END --------------------------- */
+
 }
     /*    -------------------------------------------------------  */
     /*    ------------------------footer-------------------------  */
@@ -1084,7 +1170,7 @@ main {
             }
 
             .user-navigation {
-                li {
+                & > li {
                     &:last-child {
                         margin-left: 16px;
                     }
@@ -1141,19 +1227,75 @@ main {
     /*    ------------------------sales-hits---------------------  */
     /*    -------------------------------------------------------  */
 
-    main {
-        .sales-hits {
-            .catalog-list {
-                .slick-list {
-                    .catalog-item {
-                        & > a {
-                            //width: 100%;
-                        }
+main {
+    .sales-hits {
+        .catalog-list {
+            .slick-list {
+                .catalog-item {
+                    & > a {
+                        //width: 100%;
                     }
                 }
             }
         }
     }
+
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+        /* ------------------------------------- shop-category ---------------------------- */
+    .shop {
+        .catalog-list {
+            .catalog-item {
+                margin-right: 20px;
+                margin-bottom: 40px;
+                width: 30%;
+                &:nth-child(5n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+                .catalog-item-link {
+                    width: auto;
+                    max-width: 210px;
+                }
+                .hide-block {
+                    left: -8%;
+                    top: -5%;
+                    width: 116%;
+                    max-width: 244px;
+                }
+                .color {
+                    top: 12px;
+                    right: auto;
+                    left: 8px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+
+    /* ------------------------------------- category-filter------------------------------- */
+    .sorts {
+        .filter-list {
+            .filter-item {
+                .custom-select {
+                    li {
+                        .options.open {
+                            left: 0;
+                        }
+                    }
+                    & + .options {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+            }
+        }
+    }
+    /* ------------------------------------- category-filter END -------------------------- */
+
+}
 
     /*    -------------------------------------------------------  */
     /*    ------------------------Modal--------------------------  */
@@ -1306,34 +1448,20 @@ main {
                         }
                         .submenu.collapsed {
                             display: block;
-                            top: -76px;
+                            top: -125px;
                             box-shadow: none;
-                            height: 100%;
-//                            z-index: 9;
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                top: -51px;
-                                right: 69px;
-                                width: 100%;
-                                height: 50px;
-                                background-color: #FFF;
-//                                z-index: 9;
-                            }
+                            //height: 100%;
                             .container {
-                                height: 90%;
+                                height: 420px;
                             }
                             .back-toggler {
                                 display: block;
                                 content: '';
-                                position: absolute;
-                                top: -39px;
-                                left: 16px;
+                                margin: 17px 20px;
                                 width: 28px;
                                 height: 28px;
                                 background: url('../img/icon/back.svg') no-repeat;
                                 border: none;
-//                                z-index: 10;
                                 cursor: pointer;
                             }
                             h4 {
@@ -1342,13 +1470,10 @@ main {
                             ul {
                                 columns: auto;
                                 column-fill: auto;
-                                margin-top: 20px;
+                                margin: 0;
                                 height: 100%;
                             }
                             div:last-of-type {
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
                                 width: 100%;
                                 height: 52px;
                             }
@@ -1386,7 +1511,9 @@ main {
                 }
             }
             .navbar-toggler.collapsed.right {
-                order: 1;
+                position: absolute;
+                right: 20px;
+                z-index: 103;
             }
             .main-navigation {
                 display: none;
@@ -1409,6 +1536,28 @@ main {
             }
             .search {
                 display: none;
+            }
+            .user-navigation {
+                .user-info {
+                    top: 49px;
+                    right: 0;
+                    width: 100%;
+                    li {
+                        a {
+                            margin-right: 30px;
+                        }
+                    }
+                    .close-user-menu {
+                        display: block;
+                        a {
+                            width: 24px;
+                            min-width: auto;
+                            &:hover {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -2268,6 +2417,108 @@ main {
         /* ------------------------------------- Slogan-courses-END ----------------------- */
     /* ------------------------------------- Training-Page-END ---------------------------- */
 
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+        /* ------------------------------------- shop-category ---------------------------- */
+    .shop {
+        min-width: 290px;
+        .catalog-list {
+            justify-content: center;
+            .catalog-item {
+                margin-right: 8px;
+                margin-bottom: 32px;
+                width: 48%;
+                max-width: 210px;
+                &:nth-child(3n),
+                &:nth-child(5n) {
+                    margin-right: 8px;
+                }
+
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+                .catalog-item-link {
+                    width: auto;
+                    max-width: 210px;
+                    h4 {
+                        .catalog-category,
+                        .catalog-item-title {
+                            font-size: @baseFontSize - 2;
+                        }
+                    }
+                }
+                .hide-block {
+                    padding: 340px 12px 0;
+                    left: -8%;
+                    top: -5%;
+                    width: 116%;
+                    max-width: 244px;
+                    p {
+                        font-size: @baseFontSize - 2;
+                    }
+                }
+                .color {
+                    top: 12px;
+                    right: auto;
+                    left: 8px;
+                }
+            }
+        }
+    }
+        /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+
+
+    /* ------------------------------------- Page-favorite ------------------------------- */
+        /*------------------------------------ favorite ---------------------------------- */
+    &.page-favorite {
+        .page-title {
+            margin: 12px 0;
+            font-size: @h2_size - 4;
+            line-height: 18px;
+        }
+        .no-favorite {
+            p {
+                margin: 18px auto;
+                max-width: 356px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+            }
+            a {
+                margin: 0 auto;
+                padding: 12px;
+                width: 200px;
+                font-size: @baseFontSize - 2;
+            }
+        }
+        .sorts {
+            margin-top: 24px;
+        }
+    }
+        /*------------------------------------ favorite-END ------------------------------ */
+    /* ------------------------------------- Page-favorite-END --------------------------- */
+
+    /* ------------------------------------- category-filter------------------------------- */
+    .sorts {
+        .filter-list {
+            .filter-item {
+                .custom-select {
+                    width: auto;
+                    min-width: 124px;
+                    li {
+                        .options.open {
+                            left: 0;
+                        }
+                    }
+                    & + .options {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    /* ------------------------------------- category-filter END -------------------------- */
+
 }
 // закрытие main
 
@@ -2306,7 +2557,7 @@ main {
                 }
             }
             .footer-payments {
-                margin-top: 0px;
+                margin-top: 0;
                 h4 {
                     margin-top: 36px;
                 }
@@ -2317,7 +2568,7 @@ main {
                 }
             }
             .footer-contacts {
-                margin-top: 0px;
+                margin-top: 0;
                 h4 {
                     margin-top: 30px;
                     margin-bottom: 9px;

@@ -12,6 +12,7 @@
 header {
     border-bottom: 1px solid @gray02;
     padding-top: 2px;
+    min-width: 1200px;
     height: 80px;
     .container {
         display: flex;
@@ -197,16 +198,61 @@ header {
             }
         }
         .user-navigation {
+            position: relative;
             display: flex;
             list-style: none;
+            .login-link {
+                cursor: pointer;
+            }
+            .user-info {
+                display: none;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                margin: 0;
+                padding: 19px 20px 8px;
+                list-style: none;
+                background: #fff;
+                border: 1px solid @gray13;
+                box-shadow: @base_shadow;
+                z-index: 1000;
+                &.show {
+                    display: block;
+                }
+                li {
+                    a {
+                        margin-bottom: 12px;
+                        padding: 4px 10px;
+                        min-width: 180px;
+                        height: 24px;
+                        &:hover {
+                            background: @gray02;
+                        }
+                    }
+                }
+                .close-user-menu {
+                    display: none;
+                    position: absolute;
+                    top: 20px;
+                    right: 16px;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url('../img/icon/close.svg');
+                    cursor: pointer;
+                }
+            }
+            &--login:hover .user-info{
+                display: block;
+            }
             & > li {
-                position: relative;
                 &:last-child {
+                    position: relative;
                     margin-left: 40px;
                 }
                 a {
                     position: relative;
                     display: block;
+                    padding: 6px 0;
                 }
                 .basket_count {
                     span {
@@ -214,7 +260,7 @@ header {
                         width: 11px;
                         height: 11px;
                         position: absolute;
-                        bottom: 4px;
+                        bottom: 10px;
                         right: 2px;
                         background: @red;
                         color: @white;
@@ -1717,7 +1763,7 @@ main {
         /* ------------------------------------- shop-sort-item --------------------------- */
     .sorts {
         margin-top: 100px;
-        margin-bottom: 42px;
+        margin-bottom: 24px;
         ul {
             display: flex;
             margin: 0;
@@ -1871,6 +1917,10 @@ main {
             .filter-item {
                 position: relative;
                 margin-right: 20px;
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
                 .custom-select {
                     display: inline-block;
                     position: relative;
@@ -2873,42 +2923,78 @@ main {
         /*------------------------------------ Tabs-END ---------------------------------- */
     /* ------------------------------------- Page-personal-END --------------------------- */
 
-    /* ------------------------------------- Page-content -------------------------------- */
-        .page-content {
-            .page-title {
-                margin-top: 50px;
+    /* ------------------------------------- Page-favorite ------------------------------- */
+        /*------------------------------------ favorite ---------------------------------- */
+    &.page-favorite {
+        .page-title {
+            display: block;
+            margin: 30px 0;
+            font-size: @h2_large;
+            font-weight: 300;
+            line-height: 37px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .no-favorite {
+            p {
+                margin: 40px auto;
+                max-width: 567px;
+                font-size: @x-large + 4;
+                line-height: 29px;
                 text-align: center;
-                h1 {
-                    display: inline-block;
-                    margin: 0 0 18px;
-                    padding-bottom: 12px;
-
-                    font-size: @large - 4;
-                    line-height: 28px;
-
-                    border-bottom: 1px solid @gray13;
+                img {
+                    vertical-align: middle;
                 }
             }
-            b{
-                display: block;
-                margin-top: 16px;
-
-                font-weight: 800;
-                line-height: 20px;
-            }
-            p {
-                margin: 0;
-
-                line-height: 20px;
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style-position: inside;
-
-                line-height: 20px;
+            a {
+                margin: 0 auto;
+                width: 270px;
             }
         }
+        .sorts {
+            margin-top: 50px;
+        }
+    }
+
+        /*------------------------------------ favorite-END ------------------------------ */
+    /* ------------------------------------- Page-favorite-END --------------------------- */
+
+    /* ------------------------------------- Page-content -------------------------------- */
+    .page-content {
+        .page-title {
+            margin-top: 50px;
+            text-align: center;
+            h1 {
+                display: inline-block;
+                margin: 0 0 18px;
+                padding-bottom: 12px;
+
+                font-size: @large - 4;
+                line-height: 28px;
+
+                border-bottom: 1px solid @gray13;
+            }
+        }
+        b{
+            display: block;
+            margin-top: 16px;
+
+            font-weight: 800;
+            line-height: 20px;
+        }
+        p {
+            margin: 0;
+
+            line-height: 20px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+
+            line-height: 20px;
+        }
+    }
     /* ------------------------------------- Page-content-END ---------------------------- */
 }
 /* ----------------------------------------- main end ------------------------------------ */

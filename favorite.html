@@ -163,9 +163,8 @@
             </div>
         </header>
 
-        <main>
+        <main class="page-favorite">
             <div class="container">
-                <h1 class="page-title visually-hidden">Bagira Nails - Категории</h1>
                 <ul class="breadcrumbs">
                     <li>
                         <a href="#">
@@ -177,16 +176,23 @@
                     </li>
                 </ul>
 
-                <section class="category-header">
-                    <div class="block">
-                        <img src="img/logo.svg" alt="Bagheera nails" width="215" height="120">
-                        <h2>Bagheera nails</h2>
-                        <p>Гель-лаки премиум класса на любой вкус</p>
-                    </div>
-                </section>
+                <h1 class="page-title">Избранное</h1>
+
+                <!-- Вариант 1 Когда пользователья еще не доавблял товары в избранное -->
+                <div class="no-favorite">
+                    <p>
+                        Пока вы ничего не добавили в избранное. Нажмите на иконку
+                        <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                    </p>
+                    <a class="button" href="/">в магазин</a>
+                </div>
+                <!-- После выбора Варианта <br> строчку ниже удалить -->
+                <br>
+                ----------------
+                <br>
 
                 <section class="sorts">
-                    <h2 class="visually-hidden">Сортировка</h2>
+                    <h2 class="visually-hidden">Избранное</h2>
                     <form action="">
                         <div class="filter-list">
                             <div class="filter-item">
@@ -219,7 +225,7 @@
                                 </select>
                             </div>
                             <div class="filter-item">
-                                <ul class="custom-select">
+                                <ul class="custom-select custom-select--price">
                                     <li class="selected-option">
                                         <span>Цена</span>
                                     </li>
@@ -241,7 +247,7 @@
                 </section>
 
                 <section class="shop">
-                    <h2 class="visually-hidden">Каталог</h2>
+                    <h2 class="visually-hidden">Избранные товары</h2>
                     <div class="catalog-list">
                         <div class="catalog-item">
                             <a href="" class="catalog-item-link">
@@ -252,7 +258,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color ultrablack"></i>
                             <p class="catalog-price">
@@ -279,7 +285,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color magenta"></i>
                             <p class="catalog-price">
@@ -306,7 +312,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color purple"></i>
                             <p class="catalog-price">
@@ -337,7 +343,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color orange"></i>
                             <p class="catalog-price">
@@ -364,7 +370,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color yellow"></i>
                             <p class="catalog-price">
@@ -395,7 +401,7 @@
                                 </h4>
                             </a>
                             <a href="#" class="favorite">
-                                <img src="img/icon/favorite.svg" alt="Избранное" width="24" height="24">
+                                <img src="img/icon/favorite-on.svg" alt="Избранное" width="24" height="24">
                             </a>
                             <i class="color green"></i>
                             <p class="catalog-price">

@@ -53,6 +53,11 @@ $(function() {
         if (!$(e.target).closest('.basket_tooltip, .basket_info').length) {
             $('.basket_tooltip').removeClass('show');
         }
+        if(window.innerWidth < 992) {
+            if (!$(e.target).closest('.user-navigation--login').length) {
+                $('.user-info').removeClass('show');
+            }
+        }
         if (!$(e.target).closest('.custom-select, .options, .select-price').length) {
             $('.custom-select.open, .options.open, .select-price.open').removeClass('open');
         }
@@ -69,10 +74,28 @@ $(function() {
         navblock.classList.remove('opacityon');
     });
 
+    //user-menu
+    $('.login-link').click(function (e) {
+        e.preventDefault();
+        if(window.innerWidth < 992) {
+            $(this).siblings('.user-info').toggleClass('show');
+        }
+    });
+
+    //В мобильно версии при нажатии на крестик закрыть user-menu
+    $('.close-user-menu').click(function (e) {
+        e.preventDefault()
+        if(window.innerWidth < 577) {
+            $(this).parents('.user-info').removeClass('show');
+        }
+    });
+
     //Корзина
     $('.basket_info').click(function(e){
-        e.preventDefault();
-        $(this).next('.basket_tooltip').toggleClass('show');
+        if(window.innerWidth > 768) {
+            e.preventDefault();
+            $(this).next('.basket_tooltip').toggleClass('show');
+        }
     });
 
      subscribelink.addEventListener('click', function(e) {
@@ -208,7 +231,6 @@ $(function() {
     // Количество товаров quantity
     $('.quantity button').click(function (e) {
         e.preventDefault();
-        console.log('клик количество');
         var $this = $(this).parent().find('input'),
             btn = $(this), qty = parseFloat($this.val()),
             min = 1, max = 999, new_qty,
@@ -268,7 +290,6 @@ $(function() {
     //Функция показывает контакты выбранного города на странице Agency
     var showContactsTown  = function (town) {
         var agencylist = document.querySelectorAll('.agency-info-list div');
-        console.log('выбран город - ' + town);
         for (i = 0; i < agencylist.length; i++) {
             if (agencylist[i].classList.contains(town)) {
                 agencylist[i].classList.add('show');

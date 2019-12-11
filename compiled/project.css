@@ -297,7 +297,7 @@ a {
 }
 .catalog-list .catalog-item .hide-block p a {
   margin: 0;
-  margin-left: 10px;
+  margin-left: auto;
   padding: 0;
   box-shadow: 0 1px 0 0 #5A5758;
 }
@@ -772,6 +772,7 @@ a {
 header {
   border-bottom: 1px solid #F4F4F4;
   padding-top: 2px;
+  min-width: 1200px;
   height: 80px;
 }
 header .container {
@@ -1015,6 +1016,7 @@ header .container .search .search_content ul li a:hover {
   text-decoration: underline;
 }
 header .container .user-navigation {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1022,22 +1024,62 @@ header .container .user-navigation {
   display: flex;
   list-style: none;
 }
-header .container .user-navigation > li {
-  position: relative;
+header .container .user-navigation .login-link {
+  cursor: pointer;
+}
+header .container .user-navigation .user-info {
+  display: none;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  margin: 0;
+  padding: 19px 20px 8px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #DEDDDE;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+header .container .user-navigation .user-info.show {
+  display: block;
+}
+header .container .user-navigation .user-info li a {
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  min-width: 180px;
+  height: 24px;
+}
+header .container .user-navigation .user-info li a:hover {
+  background: #F4F4F4;
+}
+header .container .user-navigation .user-info .close-user-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/icon/close.svg');
+  cursor: pointer;
+}
+header .container .user-navigation--login:hover .user-info {
+  display: block;
 }
 header .container .user-navigation > li:last-child {
+  position: relative;
   margin-left: 40px;
 }
 header .container .user-navigation > li a {
   position: relative;
   display: block;
+  padding: 6px 0;
 }
 header .container .user-navigation > li .basket_count span {
   display: block;
   width: 11px;
   height: 11px;
   position: absolute;
-  bottom: 4px;
+  bottom: 10px;
   right: 2px;
   background: #F54545;
   color: #FFF;
@@ -1428,6 +1470,10 @@ main {
   /*------------------------------------ Tabs -------------------------------------- */
   /*------------------------------------ Tabs-END ---------------------------------- */
   /* ------------------------------------- Page-personal-END --------------------------- */
+  /* ------------------------------------- Page-favorite ------------------------------- */
+  /*------------------------------------ favorite ---------------------------------- */
+  /*------------------------------------ favorite-END ------------------------------ */
+  /* ------------------------------------- Page-favorite-END --------------------------- */
   /* ------------------------------------- Page-content -------------------------------- */
   /* ------------------------------------- Page-content-END ---------------------------- */
 }
@@ -2597,7 +2643,7 @@ main .shop-category .shop-category-list .slick-next {
 }
 main .sorts {
   margin-top: 100px;
-  margin-bottom: 42px;
+  margin-bottom: 24px;
 }
 main .sorts ul {
   display: -webkit-box;
@@ -2733,6 +2779,10 @@ main .sorts .filter-list {
 main .sorts .filter-list .filter-item {
   position: relative;
   margin-right: 20px;
+  margin-bottom: 20px;
+}
+main .sorts .filter-list .filter-item:last-child {
+  margin-right: 0;
 }
 main .sorts .filter-list .filter-item .custom-select {
   display: inline-block;
@@ -3955,6 +4005,32 @@ main.page-personal .personal-adress .change-apply {
   width: 300px;
   cursor: pointer;
 }
+main.page-favorite .page-title {
+  display: block;
+  margin: 30px 0;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+}
+main.page-favorite .no-favorite p {
+  margin: 40px auto;
+  max-width: 567px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
+main.page-favorite .no-favorite p img {
+  vertical-align: middle;
+}
+main.page-favorite .no-favorite a {
+  margin: 0 auto;
+  width: 270px;
+}
+main.page-favorite .sorts {
+  margin-top: 50px;
+}
 main .page-content .page-title {
   margin-top: 50px;
   text-align: center;
@@ -4357,6 +4433,7 @@ footer .footer-inner .footer-payments > a:hover {
   header {
     padding-top: 4px;
     height: 60px;
+    min-width: auto;
   }
   header .container .header-logo {
     margin-right: 23px;
@@ -4425,11 +4502,16 @@ footer .footer-inner .footer-payments > a:hover {
     border: 1px solid #F4F4F4;
   }
   header .container .user-navigation {
+    position: static;
     margin: 0;
     padding: 0;
   }
-  header .container .user-navigation li:last-child {
+  header .container .user-navigation > li:last-child {
     margin-left: 32px;
+  }
+  header .container .user-navigation .user-info {
+    top: 50px;
+    right: 8px;
   }
   /*    -------------------------------------------------------  */
   /*    -------------------------------------------------------  */
@@ -4616,6 +4698,20 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- Slogan-courses --------------------------- */
     /* ------------------------------------- Slogan-courses-END ----------------------- */
     /* ------------------------------------- Training-Page-END ---------------------------- */
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+    /* ------------------------------------- shop-category ---------------------------- */
+    /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- shop-sort-item --------------------------- */
+    /* ------------------------------------- shop-sort-item-END ----------------------- */
+    /* ------------------------------------- shop-item -------------------------------- */
+    /* ------------------------------------- shop-item-END ---------------------------- */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+    /* ------------------------------------- category-filter------------------------------- */
+    /* ------------------------------------- category-filter END -------------------------- */
+    /* ------------------------------------- Page-favorite ------------------------------- */
+    /*------------------------------------ favorite ---------------------------------- */
+    /*------------------------------------ favorite-END ------------------------------ */
+    /* ------------------------------------- Page-favorite-END --------------------------- */
   }
   main .studio-header {
     margin-top: 40px;
@@ -5109,6 +5205,9 @@ footer .footer-inner .footer-payments > a:hover {
     margin-bottom: 24px;
     padding: 40px 38px 24px;
   }
+  main .courses-info .courses-list .courses-item.show {
+    display: block;
+  }
   main .courses-info .courses-list .courses-item > img {
     display: none;
   }
@@ -5253,6 +5352,49 @@ footer .footer-inner .footer-payments > a:hover {
   main .slogan-courses .note .note-to-courses a:last-child {
     margin-right: 0;
   }
+  main .shop .catalog-list .catalog-item {
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(5n) {
+    margin-right: 20px;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  main .shop .catalog-list .catalog-item .hide-block {
+    padding: 370px 20px 0;
+    left: -20px;
+    top: -20px;
+    width: 250px;
+  }
+  main .shop .catalog-list .catalog-item .hide-block a {
+    margin-bottom: 20px;
+  }
+  main .sorts {
+    margin-top: 24px;
+  }
+  main .sorts .filter-list .filter-item #select-color + .custom-select {
+    width: 96px;
+  }
+  main .sorts .filter-list .filter-item .custom-select--price {
+    width: 100px;
+  }
+  main.page-favorite .page-title {
+    margin: 18px 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main.page-favorite .no-favorite p {
+    margin: 24px auto;
+    max-width: 523px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main.page-favorite .no-favorite a {
+    margin: 0 auto;
+    width: 270px;
+  }
   /*    -------------------------------------------------------  */
   /*    ------------------------footer-------------------------  */
   /*    -------------------------------------------------------  */
@@ -5344,7 +5486,7 @@ footer .footer-inner .footer-payments > a:hover {
   header .container .search .search_content {
     right: 20px;
   }
-  header .container .user-navigation li:last-child {
+  header .container .user-navigation > li:last-child {
     margin-left: 16px;
   }
   /*    -------------------------------------------------------  */
@@ -5409,6 +5551,47 @@ footer .footer-inner .footer-payments > a:hover {
   /*    -------------------------------------------------------  */
   /*    ------------------------sales-hits---------------------  */
   /*    -------------------------------------------------------  */
+  main {
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+    /* ------------------------------------- shop-category ---------------------------- */
+    /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+    /* ------------------------------------- category-filter------------------------------- */
+    /* ------------------------------------- category-filter END -------------------------- */
+  }
+  main .shop .catalog-list .catalog-item {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    width: 30%;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(5n) {
+    margin-right: 20px;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  main .shop .catalog-list .catalog-item .catalog-item-link {
+    width: auto;
+    max-width: 210px;
+  }
+  main .shop .catalog-list .catalog-item .hide-block {
+    left: -8%;
+    top: -5%;
+    width: 116%;
+    max-width: 244px;
+  }
+  main .shop .catalog-list .catalog-item .color {
+    top: 12px;
+    right: auto;
+    left: 8px;
+  }
+  main .sorts .filter-list .filter-item .custom-select li .options.open {
+    left: 0;
+  }
+  main .sorts .filter-list .filter-item .custom-select + .options {
+    right: 0;
+    left: auto;
+  }
   /*    -------------------------------------------------------  */
   /*    ------------------------Modal--------------------------  */
   .modal-subscribe > div {
@@ -5554,28 +5737,16 @@ footer .footer-inner .footer-payments > a:hover {
   }
   header .container .navbar-toggler.collapsed + .main-navigation.collapsed .submenu.collapsed {
     display: block;
-    top: -76px;
+    top: -125px;
     box-shadow: none;
-    height: 100%;
-  }
-  header .container .navbar-toggler.collapsed + .main-navigation.collapsed .submenu.collapsed::before {
-    content: '';
-    position: absolute;
-    top: -51px;
-    right: 69px;
-    width: 100%;
-    height: 50px;
-    background-color: #FFF;
   }
   header .container .navbar-toggler.collapsed + .main-navigation.collapsed .submenu.collapsed .container {
-    height: 90%;
+    height: 420px;
   }
   header .container .navbar-toggler.collapsed + .main-navigation.collapsed .submenu.collapsed .back-toggler {
     display: block;
     content: '';
-    position: absolute;
-    top: -39px;
-    left: 16px;
+    margin: 17px 20px;
     width: 28px;
     height: 28px;
     background: url('../img/icon/back.svg') no-repeat;
@@ -5592,13 +5763,10 @@ footer .footer-inner .footer-payments > a:hover {
     -webkit-column-fill: auto;
     -moz-column-fill: auto;
     column-fill: auto;
-    margin-top: 20px;
+    margin: 0;
     height: 100%;
   }
   header .container .navbar-toggler.collapsed + .main-navigation.collapsed .submenu.collapsed div:last-of-type {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 52px;
   }
@@ -5628,11 +5796,9 @@ footer .footer-inner .footer-payments > a:hover {
     display: none;
   }
   header .container .navbar-toggler.collapsed.right {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -moz-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+    position: absolute;
+    right: 20px;
+    z-index: 103;
   }
   header .container .main-navigation {
     display: none;
@@ -5659,6 +5825,24 @@ footer .footer-inner .footer-payments > a:hover {
   }
   header .container .search {
     display: none;
+  }
+  header .container .user-navigation .user-info {
+    top: 49px;
+    right: 0;
+    width: 100%;
+  }
+  header .container .user-navigation .user-info li a {
+    margin-right: 30px;
+  }
+  header .container .user-navigation .user-info .close-user-menu {
+    display: block;
+  }
+  header .container .user-navigation .user-info .close-user-menu a {
+    width: 24px;
+    min-width: auto;
+  }
+  header .container .user-navigation .user-info .close-user-menu a:hover {
+    background: transparent;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------nav-block----------------------  */
@@ -5830,6 +6014,16 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- Slogan-courses --------------------------- */
     /* ------------------------------------- Slogan-courses-END ----------------------- */
     /* ------------------------------------- Training-Page-END ---------------------------- */
+    /* ------------------------------------- Shop-Page ------------------------------------ */
+    /* ------------------------------------- shop-category ---------------------------- */
+    /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- Shop-Page-END -------------------------------- */
+    /* ------------------------------------- Page-favorite ------------------------------- */
+    /*------------------------------------ favorite ---------------------------------- */
+    /*------------------------------------ favorite-END ------------------------------ */
+    /* ------------------------------------- Page-favorite-END --------------------------- */
+    /* ------------------------------------- category-filter------------------------------- */
+    /* ------------------------------------- category-filter END -------------------------- */
   }
   main .studio-header {
     margin-top: 12px;
@@ -6483,6 +6677,83 @@ footer .footer-inner .footer-payments > a:hover {
     font-size: 12px;
     line-height: 14px;
   }
+  main .shop {
+    min-width: 290px;
+  }
+  main .shop .catalog-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  main .shop .catalog-list .catalog-item {
+    margin-right: 8px;
+    margin-bottom: 32px;
+    width: 48%;
+    max-width: 210px;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(3n),
+  main .shop .catalog-list .catalog-item:nth-child(5n) {
+    margin-right: 8px;
+  }
+  main .shop .catalog-list .catalog-item:nth-child(even) {
+    margin-right: 0;
+  }
+  main .shop .catalog-list .catalog-item .catalog-item-link {
+    width: auto;
+    max-width: 210px;
+  }
+  main .shop .catalog-list .catalog-item .catalog-item-link h4 .catalog-category,
+  main .shop .catalog-list .catalog-item .catalog-item-link h4 .catalog-item-title {
+    font-size: 12px;
+  }
+  main .shop .catalog-list .catalog-item .hide-block {
+    padding: 340px 12px 0;
+    left: -8%;
+    top: -5%;
+    width: 116%;
+    max-width: 244px;
+  }
+  main .shop .catalog-list .catalog-item .hide-block p {
+    font-size: 12px;
+  }
+  main .shop .catalog-list .catalog-item .color {
+    top: 12px;
+    right: auto;
+    left: 8px;
+  }
+  main.page-favorite .page-title {
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main.page-favorite .no-favorite p {
+    margin: 18px auto;
+    max-width: 356px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  main.page-favorite .no-favorite a {
+    margin: 0 auto;
+    padding: 12px;
+    width: 200px;
+    font-size: 12px;
+  }
+  main.page-favorite .sorts {
+    margin-top: 24px;
+  }
+  main .sorts .filter-list .filter-item .custom-select {
+    width: auto;
+    min-width: 124px;
+  }
+  main .sorts .filter-list .filter-item .custom-select li .options.open {
+    left: 0;
+  }
+  main .sorts .filter-list .filter-item .custom-select + .options {
+    right: auto;
+    left: 0;
+  }
   footer h4 {
     font-size: 12px;
   }
@@ -6510,7 +6781,7 @@ footer .footer-inner .footer-payments > a:hover {
     font-size: 12px;
   }
   footer .footer-inner .footer-payments {
-    margin-top: 0px;
+    margin-top: 0;
   }
   footer .footer-inner .footer-payments h4 {
     margin-top: 36px;
@@ -6519,7 +6790,7 @@ footer .footer-inner .footer-payments > a:hover {
     margin: 3px 21px 15px 0;
   }
   footer .footer-inner .footer-contacts {
-    margin-top: 0px;
+    margin-top: 0;
   }
   footer .footer-inner .footer-contacts h4 {
     margin-top: 30px;
