@@ -1292,9 +1292,7 @@ main .sliders .slider-list.slider .slick-next::before {
   width: 6px;
   height: 23px;
 }
-/* ----------------------------------------- Блок 4 ---------------------------------------- */
-/* ----------------------------------------- Блок 4 ---------------------------------------- */
-/* ----------------------------------------- Блок 4 ---------------------------------------- */
+/* ----------------------------------------- Brands-hits ----------------------------------- */
 main .brands-hits {
   margin-top: 36px;
   text-align: center;
@@ -1343,6 +1341,7 @@ main .brands-hits .brand-list .slick-next:before {
   width: 6px;
   height: 23px;
 }
+/* ----------------------------------------- Brands-hits-END --------------------------- */
 /* ----------------------------------------- main -------------------------------------- */
 main {
   /* ----------------------------------------- Studio-Page ------------------------------- */
@@ -2556,7 +2555,10 @@ main .shop-category .shop-category-list {
   margin-right: 10px;
   margin-left: 48px;
 }
-main .shop-category .shop-category-list .shop-category-item h3 {
+main .shop-category .shop-category-list .slick-list .slick-slide {
+  margin-right: 40px;
+}
+main .shop-category .shop-category-list .slick-list .slick-slide .shop-category-item h3 {
   margin-top: 9px;
   margin-right: 40px;
   font-family: 'Gilory', sans-serif;
@@ -4495,6 +4497,9 @@ footer .footer-inner .footer-payments > a:hover {
   /*    -------------------------------------------------------  */
   /*    ------------------------brands-hits--------------------  */
   /*    -------------------------------------------------------  */
+  main .brands-hits {
+    margin-top: 6px;
+  }
   main .brands-hits h2 {
     margin-top: 38px;
     margin-bottom: 16px;
@@ -5210,6 +5215,25 @@ footer .footer-inner .footer-payments > a:hover {
   main .slogan-courses .note .note-to-courses a:last-child {
     margin-right: 0;
   }
+  main .shop-category {
+    margin-top: 50px;
+    margin-bottom: 90px;
+    padding-bottom: 45px;
+  }
+  main .shop-category h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .shop-category .shop-category-list {
+    margin: 20px 0 10px;
+  }
+  main .shop-category .shop-category-list .slick-list .slick-slide .shop-category-item {
+    max-width: 120px;
+  }
+  main .shop-category .shop-category-list .slick-list .slick-slide .shop-category-item h3 {
+    margin: 22px auto;
+  }
   main .shop .catalog-list .catalog-item {
     margin-right: 20px;
     margin-bottom: 40px;
@@ -5436,8 +5460,8 @@ footer .footer-inner .footer-payments > a:hover {
   /*    -------------------------------------------------------  */
   main {
     /* ------------------------------------- Shop-Page ------------------------------------ */
-    /* ------------------------------------- shop-category ---------------------------- */
-    /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- shop-items ---------------------------- */
+    /* ------------------------------------- shop-items-END ------------------------ */
     /* ------------------------------------- Shop-Page-END -------------------------------- */
     /* ------------------------------------- category-filter------------------------------- */
     /* ------------------------------------- category-filter END -------------------------- */
@@ -5862,12 +5886,18 @@ footer .footer-inner .footer-payments > a:hover {
   main .sliders .slick-list .slider-item img {
     height: 280px;
   }
+  main .brands-hits {
+    margin-top: -8px;
+  }
   main .brands-hits h2 {
     margin-top: 23px;
     margin-bottom: 0;
     padding-bottom: 7px;
     font-size: 16px;
     line-height: 18px;
+  }
+  main .brands-hits .brand-list .slick-slide {
+    margin-right: 16px;
   }
   main {
     /* ----------------------------------------- Studio-Page ------------------------------- */
@@ -5917,6 +5947,8 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- Shop-Page ------------------------------------ */
     /* ------------------------------------- shop-category ---------------------------- */
     /* ------------------------------------- shop-category-END ------------------------ */
+    /* ------------------------------------- shop-item -------------------------------- */
+    /* ------------------------------------- shop-item END----------------------------- */
     /* ------------------------------------- Shop-Page-END -------------------------------- */
     /* ------------------------------------- Category-Page -------------------------------- */
     /* ------------------------------------- Category-header -------------------------- */
@@ -6571,6 +6603,32 @@ footer .footer-inner .footer-payments > a:hover {
     font-size: 12px;
     line-height: 14px;
   }
+  main .shop-category {
+    margin-top: 22px;
+    margin-bottom: 13px;
+    padding-bottom: 0;
+  }
+  main .shop-category h2 {
+    margin-top: 40px;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .shop-category .shop-category-list {
+    margin: 0 0 10px;
+  }
+  main .shop-category .shop-category-list .slick-list .slick-slide {
+    margin-right: 20px;
+  }
+  main .shop-category .shop-category-list .slick-list .slick-slide .shop-category-item {
+    max-width: 100px;
+  }
+  main .shop-category .shop-category-list .slick-list .slick-slide .shop-category-item h3 {
+    margin: 17px auto;
+    font-size: 12px;
+    line-height: 16px;
+  }
   main .shop {
     min-width: 290px;
   }
@@ -6662,47 +6720,61 @@ footer .footer-inner .footer-payments > a:hover {
   main.page-favorite .sorts {
     margin-top: 24px;
   }
-  main .sorts .filter__list {
+  main .sorts,
+  main .filter {
+    margin: 65px 0;
+  }
+  main .sorts .filter__list,
+  main .filter .filter__list {
     -webkit-flex-direction: column;
     -moz-box-orient: vertical;
     -moz-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  main .sorts .filter__list .filter__item .custom-select {
+  main .sorts .filter__list .filter__item .custom-select,
+  main .filter .filter__list .filter__item .custom-select {
     width: 200px;
     min-width: 124px;
   }
-  main .sorts .filter__list .filter__item .custom-select li .options.open {
+  main .sorts .filter__list .filter__item .custom-select li .options.open,
+  main .filter .filter__list .filter__item .custom-select li .options.open {
     left: 0;
   }
-  main .sorts .filter__list .filter__item .custom-select + .options {
+  main .sorts .filter__list .filter__item .custom-select + .options,
+  main .filter .filter__list .filter__item .custom-select + .options {
     right: auto;
     left: 0;
   }
-  main .sorts .filter__list .filter__item .select-value.open {
+  main .sorts .filter__list .filter__item .select-value.open,
+  main .filter .filter__list .filter__item .select-value.open {
     right: auto;
     left: 0;
     padding: 20px 20px 14px;
   }
-  main .sorts .filter__list .filter__item .select-value .price-value {
+  main .sorts .filter__list .filter__item .select-value .price-value,
+  main .filter .filter__list .filter__item .select-value .price-value {
     -webkit-flex-direction: column;
     -moz-box-orient: vertical;
     -moz-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  main .sorts .filter__list .filter__item .select-value .price-value label:first-child {
+  main .sorts .filter__list .filter__item .select-value .price-value label:first-child,
+  main .filter .filter__list .filter__item .select-value .price-value label:first-child {
     margin-right: 0;
   }
-  main .sorts .filter__list .filter__item .select-value .price-value label input {
+  main .sorts .filter__list .filter__item .select-value .price-value label input,
+  main .filter .filter__list .filter__item .select-value .price-value label input {
     height: 36px;
     font-size: 18px;
   }
-  main .sorts .filter__list .filter__item .select-value .filter-button {
+  main .sorts .filter__list .filter__item .select-value .filter-button,
+  main .filter .filter__list .filter__item .select-value .filter-button {
     margin: 14px auto 0;
   }
-  main .sorts .filter__list .filter__item #select-color + .custom-select {
+  main .sorts .filter__list .filter__item #select-color + .custom-select,
+  main .filter .filter__list .filter__item #select-color + .custom-select {
     width: 200px;
   }
   footer h4 {

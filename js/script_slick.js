@@ -224,12 +224,14 @@ $(function() {
         infinite: false,
         slidesToShow: 6,
         slidesToScroll: 1,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
+                    arrows: false,
                 }
             },
             {
