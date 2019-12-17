@@ -1007,11 +1007,58 @@ main {
         /* ------------------------------------- shop-item-END ---------------------------- */
     /* ------------------------------------- Shop-Page-END -------------------------------- */
 
+    /* ------------------------------------- Category-Page -------------------------------- */
+        /* ------------------------------------- Category-header -------------------------- */
+    .category-header {
+        margin-top: 18px;
+        .block {
+            padding: 34px 16px 16px 71px;
+            margin-bottom: 61px;
+            height: 368px;
+            background-position: top left;
+            img {
+                position: absolute;
+                top: 75px;
+                left: 99px;
+            }
+            h2 {
+                margin: 163px 0 12px;
+                font-size: @large;
+                line-height: 37px;
+            }
+            p {
+                margin-top: 12px;
+                width: auto;
+                max-width: 232px;
+                font-size: @x-large;
+                line-height: 24px;
+            }
+        }
+    }
+        /* ------------------------------------- Category-header-END ---------------------- */
+        /* ------------------------------------- category-filter------------------------------- */
+    .sorts,
+    .filter {
+        .filter__list {
+            .filter__item {
+                .select-value {
+                    &.open {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+            }
+        }
+    }
+        /* ------------------------------------- category-filter END -------------------------- */
+    /* ------------------------------------- Category-Page-END----------------------------- */
+
+
     /* ------------------------------------- category-filter------------------------------- */
     .sorts {
         margin-top: 24px;
-        .filter-list {
-            .filter-item {
+        .filter__list {
+            .filter__item {
                 #select-color + .custom-select {
                     width: 96px;
                 }
@@ -1276,10 +1323,12 @@ main {
     /* ------------------------------------- Shop-Page-END -------------------------------- */
 
     /* ------------------------------------- category-filter------------------------------- */
-    .sorts {
-        .filter-list {
-            .filter-item {
+    .sorts,
+    .filter {
+        .filter__list {
+            .filter__item {
                 .custom-select {
+                    width: 124px;
                     li {
                         .options.open {
                             left: 0;
@@ -1288,6 +1337,20 @@ main {
                     & + .options {
                         right: 0;
                         left: auto;
+                    }
+                }
+                .select-value {
+                    &.open {
+                        right: 0;
+                        left: auto;
+                        padding: 20px 20px 14px;
+                    }
+                    .price-value label input {
+                        height: 36px;
+                        font-size: 18px;
+                    }
+                    .filter-button {
+                        margin: 14px auto 0;
                     }
                 }
             }
@@ -2467,6 +2530,36 @@ main {
         /* ------------------------------------- shop-category-END ------------------------ */
     /* ------------------------------------- Shop-Page-END -------------------------------- */
 
+    /* ------------------------------------- Category-Page -------------------------------- */
+        /* ------------------------------------- Category-header -------------------------- */
+    .category-header {
+        margin-top: 12px;
+        .block {
+            margin-bottom: 40px;
+            padding: 57% 16px 0 19px;
+            height: auto;
+            min-height: 283px;
+            background-position: top right;
+            background-size: contain;
+            border: 1px solid #DEDDDE;
+            img {
+                display: none;
+            }
+            h2 {
+                margin: 19px 0 10px;
+                font-size: @x-large;
+                line-height: 24px;
+            }
+            p {
+                margin-top: 10px;
+                max-width: 159px;
+                font-size: @baseFontSize;
+                line-height: 17px;
+            }
+        }
+    }
+        /* ------------------------------------- Category-header-END ---------------------- */
+    /* ------------------------------------- Category-Page-END----------------------------- */
 
     /* ------------------------------------- Page-favorite ------------------------------- */
         /*------------------------------------ favorite ---------------------------------- */
@@ -2499,10 +2592,11 @@ main {
 
     /* ------------------------------------- category-filter------------------------------- */
     .sorts {
-        .filter-list {
-            .filter-item {
+        .filter__list {
+            flex-direction: column;
+            .filter__item {
                 .custom-select {
-                    width: auto;
+                    width: 200px;
                     min-width: 124px;
                     li {
                         .options.open {
@@ -2513,6 +2607,31 @@ main {
                         right: auto;
                         left: 0;
                     }
+                }
+                .select-value {
+                    &.open {
+                        right: auto;
+                        left: 0;
+                        padding: 20px 20px 14px;
+                    }
+                    .price-value {
+                        flex-direction: column;
+                        label {
+                            &:first-child {
+                                margin-right: 0;
+                            }
+                            input {
+                                height: 36px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .filter-button {
+                        margin: 14px auto 0;
+                    }
+                }
+                #select-color + .custom-select {
+                    width: 200px;
                 }
             }
         }

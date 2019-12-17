@@ -187,9 +187,9 @@
 
                 <section class="sorts">
                     <h2 class="visually-hidden">Сортировка</h2>
-                    <form action="">
-                        <div class="filter-list">
-                            <div class="filter-item">
+                    <form class="filter" action="">
+                        <div class="filter__list">
+                            <div class="filter__item">
                                 <label class="visually-hidden" for="select-category"></label>
                                 <select name="category" id="select-category">
                                     <option>Категория</option>
@@ -198,7 +198,7 @@
                                     <option value="Value 3">Топы</option>
                                 </select>
                             </div>
-                            <div class="filter-item">
+                            <div class="filter__item">
                                 <label class="visually-hidden" for="select-collection"></label>
                                 <select name="collection" id="select-collection">
                                     <option>Коллекция</option>
@@ -207,7 +207,7 @@
                                     <option value="Value 3">Коллекция 3</option>
                                 </select>
                             </div>
-                            <div class="filter-item">
+                            <div class="filter__item">
                                 <label class="visually-hidden" for="select-color"></label>
                                 <select name="color" multiple="multiple" id="select-color">
                                     <option>Цвет</option>
@@ -218,13 +218,13 @@
                                     <option class="color aqua" value="aqua">Цвет 5</option>
                                 </select>
                             </div>
-                            <div class="filter-item">
+                            <div class="filter__item">
                                 <ul class="custom-select">
                                     <li class="selected-option">
                                         <span>Цена</span>
                                     </li>
                                 </ul>
-                                <div class="select-price" id="select-price">
+                                <div class="select-value" id="select-price">
                                     <div class="price-value">
                                         <label class="min-price">
                                             <input type="text" id="price-min" name="price-min" placeholder="От">

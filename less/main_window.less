@@ -1911,10 +1911,10 @@ main {
     .sorts {
         position: relative;
         z-index: 102;
-        .filter-list {
+        .filter__list {
             display: flex;
             flex-wrap: wrap;
-            .filter-item {
+            .filter__item {
                 position: relative;
                 margin-right: 20px;
                 margin-bottom: 20px;
@@ -2001,7 +2001,7 @@ main {
                         margin: 0;
                         padding: 0;
                         width: 252px;
-                        max-height: 0px;
+                        max-height: 0;
                         background: transparent;
                         border: 3px solid transparent;
                         list-style-type: none;
@@ -2035,6 +2035,7 @@ main {
                             max-height: 1000%;
                             background: #fff;
                             border: 1px solid #DEDDDE;
+                            z-index: 100;
                         }
                     }
                     & + .select-price {
