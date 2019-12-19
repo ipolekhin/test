@@ -5,9 +5,12 @@ $(function() {
     var navbartoggler = document.querySelector('.navbar-toggler');
     var subscribelink = document.querySelector('.subscribe-link');
     var popupsubscribe = document.querySelector('.modal-subscribe');
+    var subscribeform = document.querySelector('.subscribe-form');
+    var certificaterequestlink = document.querySelector('.certificate-reques-link');
+    var popupcertificaterequest = document.querySelector('.modal-certificate-request');
+    var certificaterequestform = document.querySelector('.certificate-request-form');
     var close = document.querySelectorAll('.modal-close');
     var popup = document.querySelectorAll('.modal');
-    var subscribeform = document.querySelector('.subscribe-form');
     var header = document.querySelector('header');
     var main = document.querySelector('main');
     var footer = document.querySelector('footer');
@@ -98,17 +101,39 @@ $(function() {
         }
     });
 
-     subscribelink.addEventListener('click', function(e) {
-        e.preventDefault();
-        popupsubscribe.classList.add('modal-show');
-        stylesBlur();
-    });
-
     // Эффект размытия фона
     function stylesBlur() {
         header.classList.add('blur');
         main.classList.add('blur');
         footer.classList.add('blur');
+    }
+
+    //Открыть форму подписаться на новости
+    subscribelink.addEventListener('click', function(e) {
+        e.preventDefault();
+        popupsubscribe.classList.add('modal-show');
+        stylesBlur();
+    });
+
+    //Сообщение об успешной подписки на новости
+    subscribeform.addEventListener('submit', function(e) {
+        e.preventDefault();
+        subscribeform.innerHTML = '<div class="sucess">Спасибо, что Вы с Нами!</div>';
+    });
+
+    if (certificaterequestlink) {
+        //Открыть форму запросить сертификат
+        certificaterequestlink.addEventListener('click', function(e) {
+            e.preventDefault();
+            popupcertificaterequest.classList.add('modal-show');
+            stylesBlur();
+        });
+
+        //Сообщение об успешном запросе сертификата
+        certificaterequestform.addEventListener('submit', function(e) {
+            e.preventDefault();
+            certificaterequestform.innerHTML = '<div class="sucess">Мы скоро отправим сертификат вам на почту!</div>';
+        });
     }
 
     // Закрытие модального окна
@@ -126,11 +151,6 @@ $(function() {
         let button = close[i];
         button.addEventListener('click', closeClickHandler, false);
     }
-
-    subscribeform.addEventListener('submit', function(e) {
-        e.preventDefault();
-        subscribeform.innerHTML = '<div class="sucess">Спасибо, что Вы с Нами!</div>';
-    });
 
     window.addEventListener(('keydown'), function(e) {
         if (e.keyCode === 27) {

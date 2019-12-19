@@ -2189,26 +2189,34 @@ main {
             }
             .product-buy {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 margin: 40px 0;
-                .button {
-                    width: 240px;
-                }
-                .favorite {
-                    display: block;
-                    min-width: 64px;
-                    text-align: center;
-                }
-                &.absence {
-                    .quantity {
-                        display: none;
-                    }
+                .product-buy__wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
                     .button {
-                        width: 100%;
-                        color: @gray50;
-                        background-color: @gray02;
-                        border: none;
+                        width: 240px;
+                    }
+
+                    .favorite {
+                        display: block;
+                        min-width: 64px;
+                        text-align: center;
+                    }
+
+                    &.absence {
+                        .quantity {
+                            display: none;
+                        }
+
+                        .button {
+                            width: 100%;
+                            color: @gray50;
+                            background-color: @gray02;
+                            border: none;
+                        }
                     }
                 }
             }
@@ -2238,7 +2246,7 @@ main {
             margin-bottom: 34px;
             padding-bottom: 12px;
             font-family: 'Gilory', sans-serif;
-            font-size: 32px;
+            font-size: @h2_large;
             font-weight: 300;
             line-height: 37px;
             letter-spacing: 0.04em;

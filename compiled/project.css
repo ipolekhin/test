@@ -3065,6 +3065,17 @@ main .catalog-columns .product-info .product-buy {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 40px 0;
+}
+main .catalog-columns .product-info .product-buy .product-buy__wrapper {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-justify-content: space-between;
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
@@ -3073,20 +3084,19 @@ main .catalog-columns .product-info .product-buy {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 40px 0;
 }
-main .catalog-columns .product-info .product-buy .button {
+main .catalog-columns .product-info .product-buy .product-buy__wrapper .button {
   width: 240px;
 }
-main .catalog-columns .product-info .product-buy .favorite {
+main .catalog-columns .product-info .product-buy .product-buy__wrapper .favorite {
   display: block;
   min-width: 64px;
   text-align: center;
 }
-main .catalog-columns .product-info .product-buy.absence .quantity {
+main .catalog-columns .product-info .product-buy .product-buy__wrapper.absence .quantity {
   display: none;
 }
-main .catalog-columns .product-info .product-buy.absence .button {
+main .catalog-columns .product-info .product-buy .product-buy__wrapper.absence .button {
   width: 100%;
   color: #ADABAC;
   background-color: #F4F4F4;
@@ -4105,7 +4115,8 @@ footer .footer-inner .footer-payments > a:hover {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.modal-subscribe > div .subscribe-form input[type='email'] {
+.modal .modal__block .form input[type='email'],
+.modal .modal__block .form input[type='text'] {
   padding: 5px;
   width: 100%;
   height: 44px;
@@ -4115,7 +4126,7 @@ footer .footer-inner .footer-payments > a:hover {
   border: none;
   border-bottom: 1px solid #DEDDDE;
 }
-.modal-subscribe > div .subscribe-form .subscribe-policy {
+.modal .modal__block .form .subscribe-policy {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
@@ -4123,14 +4134,14 @@ footer .footer-inner .footer-payments > a:hover {
   margin: 27px 0;
   font-size: 12px;
 }
-.modal-subscribe > div .subscribe-form .subscribe-policy .policy-checkbox {
+.modal .modal__block .form .subscribe-policy .policy-checkbox {
   position: relative;
   padding-left: 30px;
   font-size: 12px;
   line-height: 24px;
   cursor: pointer;
 }
-.modal-subscribe > div .subscribe-form .subscribe-policy .policy-checkbox input[type="checkbox"] + .checkbox-indicator {
+.modal .modal__block .form .subscribe-policy .policy-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -4138,7 +4149,7 @@ footer .footer-inner .footer-payments > a:hover {
   height: 21px;
   border: 1px solid #DEDDDE;
 }
-.modal-subscribe > div .subscribe-form .subscribe-policy .policy-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+.modal .modal__block .form .subscribe-policy .policy-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
   content: "";
   position: absolute;
   top: 9px;
@@ -4151,7 +4162,7 @@ footer .footer-inner .footer-payments > a:hover {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.modal-subscribe > div .subscribe-form .subscribe-policy .policy-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+.modal .modal__block .form .subscribe-policy .policy-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
   content: "";
   position: absolute;
   top: 9px;
@@ -4164,7 +4175,7 @@ footer .footer-inner .footer-payments > a:hover {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.modal-subscribe > div .subscribe-form > .button {
+.modal .modal__block .form > .button {
   margin: 0 auto;
   padding: 15px 0;
   width: 270px;
@@ -4294,6 +4305,9 @@ footer .footer-inner .footer-payments > a:hover {
   .container {
     width: 768px;
     padding: 0 32px;
+  }
+  .breadcrumbs {
+    margin: 18px 0;
   }
   header {
     padding-top: 4px;
@@ -4579,6 +4593,10 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- category-filter------------------------------- */
     /* ------------------------------------- category-filter END -------------------------- */
     /* ------------------------------------- Category-Page-END----------------------------- */
+    /* ------------------------------------- Product-Page- ------------------------------- */
+    /* ------------------------------------- product --------------------------------- */
+    /* ------------------------------------- product-END ----------------------------- */
+    /* ------------------------------------- Product-Page-END ---------------------------- */
     /* ------------------------------------- category-filter------------------------------- */
     /* ------------------------------------- category-filter END -------------------------- */
     /* ------------------------------------- Page-favorite ------------------------------- */
@@ -5284,6 +5302,138 @@ footer .footer-inner .footer-payments > a:hover {
     right: 0;
     left: auto;
   }
+  main .catalog-columns {
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  main .catalog-columns .product-photos {
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .catalog-columns .product-photos .product-photo-list {
+    position: relative;
+    margin: 0 16px;
+    margin-left: 0;
+  }
+  main .catalog-columns .product-photos .color {
+    right: 17px;
+    bottom: 18px;
+  }
+  main .catalog-columns .product-info {
+    margin-top: 25px;
+    width: auto;
+    max-width: 563px;
+  }
+  main .catalog-columns .product-info .product-description h3 {
+    margin-top: 2px;
+  }
+  main .catalog-columns .product-info .product-description p {
+    margin: 16px 0 0;
+    width: auto;
+    max-width: 524px;
+  }
+  main .catalog-columns .product-info .product-description .product-property {
+    margin-top: 6px;
+  }
+  main .catalog-columns .product-info .product-description .product-manual {
+    margin-top: 25px;
+  }
+  main .catalog-columns .product-info .product-buy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 92px;
+    background-color: #F4F4F4;
+    z-index: 112;
+  }
+  main .catalog-columns .product-info .product-buy.absence {
+    display: none;
+  }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper {
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+    max-width: 768px;
+  }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper .quantity {
+    margin-right: 44px;
+  }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper .quantity button,
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper .quantity input {
+    background-color: #F4F4F4;
+  }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper .favorite {
+    margin-left: auto;
+  }
+  main .catalog-columns .product-info .product-certified {
+    margin-top: 34px;
+  }
+  main .catalog-columns .product-info .product-certified a {
+    margin-top: 8px;
+  }
+  main .recommend,
+  main .recently-watched {
+    margin-top: 42px;
+  }
+  main .recommend h2,
+  main .recently-watched h2 {
+    margin-bottom: 19px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .recommend .catalog-list .slick-list,
+  main .recently-watched .catalog-list .slick-list {
+    margin-left: -21px;
+    margin-right: -21px;
+    padding-top: 21px;
+    padding-left: 21px;
+    height: 525px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item,
+  main .recently-watched .catalog-list .slick-list .catalog-item {
+    margin-right: 20px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link {
+    width: 181px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-category,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-category,
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title {
+    margin-top: 13px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .color,
+  main .recently-watched .catalog-list .slick-list .catalog-item .color {
+    top: 158px;
+    right: 8px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-price,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-price {
+    margin-top: 15px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .hide-block,
+  main .recently-watched .catalog-list .slick-list .catalog-item .hide-block {
+    padding: 342px 20px 0;
+    left: -20px;
+    top: -20px;
+    width: 220px;
+  }
+  main .recently-watched {
+    margin-top: -95px;
+  }
   main .sorts {
     margin-top: 24px;
   }
@@ -5465,6 +5615,10 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- Shop-Page-END -------------------------------- */
     /* ------------------------------------- category-filter------------------------------- */
     /* ------------------------------------- category-filter END -------------------------- */
+    /* ------------------------------------- Product-Page- ------------------------------- */
+    /* ------------------------------------- product --------------------------------- */
+    /* ------------------------------------- product-END ----------------------------- */
+    /* ------------------------------------- Product-Page-END ---------------------------- */
   }
   main .shop .catalog-list .catalog-item {
     margin-right: 20px;
@@ -5519,6 +5673,10 @@ footer .footer-inner .footer-payments > a:hover {
   main .sorts .filter__list .filter__item .select-value .filter-button,
   main .filter .filter__list .filter__item .select-value .filter-button {
     margin: 14px auto 0;
+  }
+  main .recommend .catalog-list .slick-list,
+  main .recently-watched .catalog-list .slick-list {
+    margin-right: 0;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------Modal--------------------------  */
@@ -5954,6 +6112,10 @@ footer .footer-inner .footer-payments > a:hover {
     /* ------------------------------------- Category-header -------------------------- */
     /* ------------------------------------- Category-header-END ---------------------- */
     /* ------------------------------------- Category-Page-END----------------------------- */
+    /* ------------------------------------- Product-Page- ------------------------------- */
+    /* ------------------------------------- product --------------------------------- */
+    /* ------------------------------------- product-END ----------------------------- */
+    /* ------------------------------------- Product-Page-END ---------------------------- */
     /* ------------------------------------- Page-favorite ------------------------------- */
     /*------------------------------------ favorite ---------------------------------- */
     /*------------------------------------ favorite-END ------------------------------ */
@@ -6699,6 +6861,126 @@ footer .footer-inner .footer-payments > a:hover {
     max-width: 159px;
     font-size: 14px;
     line-height: 17px;
+  }
+  main .catalog-columns .product-photos {
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  main .catalog-columns .product-photos .product-photo-list {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  main .catalog-columns .product-photos .product-thumb-list {
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .catalog-columns .product-photos .product-thumb-list img {
+    max-width: 66px;
+  }
+  main .catalog-columns .product-info {
+    margin-top: 21px;
+  }
+  main .catalog-columns .product-info .product-description .catalog-category {
+    font-size: 12px;
+  }
+  main .catalog-columns .product-info .product-description h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main .catalog-columns .product-info .product-description .product-price {
+    padding-top: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main .catalog-columns .product-info .product-description p {
+    margin: 22px 0 0;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  main .catalog-columns .product-info .product-description .product-property,
+  main .catalog-columns .product-info .product-description .product-manual {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+  }
+  main .catalog-columns .product-info .product-description .product-property:not(.product-manual),
+  main .catalog-columns .product-info .product-description .product-manual:not(.product-manual) {
+    margin-top: 8px;
+  }
+  main .catalog-columns .product-info .product-description .product-manual {
+    margin-top: 12px;
+  }
+  main .catalog-columns .product-info .product-certified {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  main .catalog-columns .product-info .product-certified a {
+    margin-top: 4px;
+  }
+  main .recommend,
+  main .recently-watched {
+    position: relative;
+    margin-top: 49px;
+  }
+  main .recommend h2,
+  main .recently-watched h2 {
+    margin-bottom: 0;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  main .recommend .catalog-list .slick-list,
+  main .recently-watched .catalog-list .slick-list {
+    height: 500px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item,
+  main .recently-watched .catalog-list .slick-list .catalog-item {
+    margin-right: 16px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-category,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-category,
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title {
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-item-link h4 .catalog-item-title {
+    margin-top: 2px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .catalog-price,
+  main .recently-watched .catalog-list .slick-list .catalog-item .catalog-price {
+    margin-top: 9px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .hide-block,
+  main .recently-watched .catalog-list .slick-list .catalog-item .hide-block {
+    padding-top: 334px;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .hide-block > a,
+  main .recently-watched .catalog-list .slick-list .catalog-item .hide-block > a {
+    margin: 12px auto;
+  }
+  main .recommend .catalog-list .slick-list .catalog-item .hide-block p,
+  main .recently-watched .catalog-list .slick-list .catalog-item .hide-block p {
+    margin: 16px auto;
+    font-size: 12px;
+  }
+  main .recommend:hover {
+    z-index: 120;
+  }
+  main .recommend:hover + .recently-watched {
+    z-index: 110;
+  }
+  main .recently-watched {
+    margin-top: -95px;
   }
   main.page-favorite .page-title {
     margin: 12px 0;
