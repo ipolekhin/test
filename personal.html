@@ -374,325 +374,327 @@
             </div>
 
             <div class="tabs-content">
-                <div class="tabs-content__item personal-ordering" id="personal-ordering">
-                    <!-- Вариант 1 Когда пользователья еще не совершал покупок -->
-                    <div class="personal-ordering__no-order">
-                        <p class="personal-ordering__text">У вас пока нет заказов</p>
-                        <a class="button" href="/">в магазин</a>
-                    </div>
+                <div class="page-personal__ordering-wrapper">
+                    <div class="tabs-content__item personal-ordering" id="personal-ordering">
+                        <!-- Вариант 1 Когда пользователья еще не совершал покупок -->
+    <!--                        <div class="personal-ordering__no-order">-->
+    <!--                            <p class="personal-ordering__text">У вас пока нет заказов</p>-->
+    <!--                            <a class="button" href="/">в магазин</a>-->
+    <!--                        </div>-->
 
-                    <!-- После выбора Варианта <br> строчку ниже удалить -->
-                    <br>------------------------------------------------<br>
+                        <!-- После выбора Варианта <br> строчку ниже удалить -->
+    <!--                        <br>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;<br>-->
 
-                    <!-- Вариант Когда пользователья совершал покупки -->
+                        <!-- Вариант Когда пользователья совершал покупки -->
 
-                    <section class="personal-filter">
-                        <form class="filter" action="" method="post">
-                            <div class="filter__list">
-                                <div class="filter__item filter__item--w176">
-                                    <label class="visually-hidden" for="select-status">Статус заказа</label>
-                                    <select name="post" id="select-status">
-                                        <option>Статус</option>
-                                        <option class="order-awaiting-payment" value="Value 1">Ожидает оплаты</option>
-                                        <option class="order-complete" value="Value 2">Выполнено</option>
-                                        <option class="order-cancle" value="Value 3">Отменено</option>
-                                    </select>
-                                </div>
+                        <section class="personal-filter">
+                            <form class="filter" action="" method="post">
+                                <div class="filter__list">
+                                    <div class="filter__item filter__item--status">
+                                        <label class="visually-hidden" for="select-status">Статус заказа</label>
+                                        <select name="post" id="select-status">
+                                            <option>Статус</option>
+                                            <option class="order-awaiting-payment" value="Value 1">Ожидает оплаты</option>
+                                            <option class="order-complete" value="Value 2">Выполнено</option>
+                                            <option class="order-cancle" value="Value 3">Отменено</option>
+                                        </select>
+                                    </div>
 
-                                <div class="filter__item filter__item--date">
-                                    <label class="visually-hidden" for="order-date">Дата покупок</label>
-                                    <input type="date" id="order-date" name="order-date" value="2019-07-17">
-                                </div>
+                                    <div class="filter__item filter__item--date">
+                                        <label class="visually-hidden" for="order-date">Дата покупок</label>
+                                        <input type="date" id="order-date" name="order-date" value="2019-07-17">
+                                    </div>
 
-                                <div class="filter__item">
-                                    <ul class="custom-select">
-                                        <li class="selected-option">
-                                            <span>Цена</span>
-                                        </li>
-                                    </ul>
-                                    <div class="select-value" id="select-price">
-                                        <div class="price-value">
-                                            <label class="min-price">
-                                                <input type="text" id="price-min" name="price-min" placeholder="От">
-                                            </label>
-                                            <label class="max-price">
-                                                <input type="text" id="price-max" name="price-max" placeholder="До">
-                                            </label>
+                                    <div class="filter__item">
+                                        <ul class="custom-select">
+                                            <li class="selected-option">
+                                                <span>Цена</span>
+                                            </li>
+                                        </ul>
+                                        <div class="select-value" id="select-price">
+                                            <div class="price-value">
+                                                <label class="min-price">
+                                                    <input type="text" id="price-min" name="price-min" placeholder="От">
+                                                </label>
+                                                <label class="max-price">
+                                                    <input type="text" id="price-max" name="price-max" placeholder="До">
+                                                </label>
+                                            </div>
+                                            <input class="button filter-button" type="submit" value="Применить">
                                         </div>
-                                        <input class="button filter-button" type="submit" value="Применить">
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                    </section>
+                            </form>
+                        </section>
 
-                    <ul class="personal-ordering__list">
-                        <li class="order-item">
-                            <div class="order-item__heading">
-                                <div class="columns-left">
-                                    <p class="order-item__data">09 июня 2019</p>
-                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
-                                </div>
-                                <div class="columns-right">
-                                    <p class="order-item__status order-item__status--pays">Ожидает оплаты</p>
-                                    <p class="order-item__goods-counts">
+                        <ul class="personal-ordering__list">
+                            <li class="order-item">
+                                <div class="order-item__heading">
+                                    <div class="order-item__info">
+                                        <div class="order-item__data">09 июня 2019</div>
+                                        <div class="order-item__status order-item__status--pays">Ожидает оплаты</div>
+                                    </div>
+                                    <div class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></div>
+                                    <div class="order-item__goods-counts">
                                         Количество товаров
-                                        <span class="order-item__goods-count">21 шт</span>
-                                        <span class="order-item__goods-sum">1550 ₽</span>
-                                    </p>
+                                        <div>
+                                            <span class="order-item__goods-count">21 шт</span>
+                                            <span class="order-item__goods-sum">1550 ₽</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="order-item__middle">
-                                <ul class="order-item__goods-list">
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color green" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color purple" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color purple" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color purple" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color purple" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                </ul>
-                                <a class="show-all-order" href="#">Весь заказ</a>
-                            </div>
-                            <div class="order-item__footer">
-                                <p>Подробности заказа</p>
-                                <div class="order-item__links">
-                                    <a class="order-item__order-cancel-link" href="#">Отменить заказ</a>
-                                    <a class="order-item__order-pay-link button" href="#">Оплатить заказ</a>
+                                <div class="order-item__middle">
+                                    <ul class="order-item__goods-list">
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color green" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color purple" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color purple" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color purple" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color purple" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                    </ul>
+                                    <a class="show-all-order" href="#">Весь заказ</a>
                                 </div>
-                            </div>
-                        </li>
+                                <div class="order-item__footer">
+                                    <p>Подробности заказа</p>
+                                    <div class="order-item__links">
+                                        <a class="order-item__order-cancel-link" href="#">Отменить заказ</a>
+                                        <a class="order-item__order-pay-link button" href="#">Оплатить заказ</a>
+                                    </div>
+                                </div>
+                            </li>
 
-                        <li class="order-item">
-                            <div class="order-item__heading">
-                                <div class="columns-left">
-                                    <p class="order-item__data">09 июня 2019</p>
-                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
-                                </div>
-                                <div class="columns-right">
-                                    <p class="order-item__status">Выполненно</p>
-                                    <p class="order-item__goods-counts">
+                            <li class="order-item">
+                                <div class="order-item__heading">
+                                    <div class="order-item__info">
+                                        <div class="order-item__data">09 июня 2019</div>
+                                        <div class="order-item__status">Выполненно</div>
+                                    </div>
+                                    <div class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></div>
+                                    <div class="order-item__goods-counts">
                                         Количество товаров
-                                        <span class="order-item__goods-count">21 шт</span>
-                                        <span class="order-item__goods-sum">1550 ₽</span>
+                                        <div>
+                                            <span class="order-item__goods-count">21 шт</span>
+                                            <span class="order-item__goods-sum">1550 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-item__middle">
+                                    <ul class="order-item__goods-list">
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                    </ul>
+                                    <a class="show-all-order" href="#">Весь заказ</a>
+                                </div>
+                                <div class="order-item__footer">
+                                    <p>
+                                        Подробности заказа
+                                        <a class="order-item__receipt-link" href="#">Посмотреть квитанцию</a>
                                     </p>
+                                    <div class="order-item__links">
+                                        <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="order-item__middle">
-                                <ul class="order-item__goods-list">
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                </ul>
-                                <a class="show-all-order" href="#">Весь заказ</a>
-                            </div>
-                            <div class="order-item__footer">
-                                <p>
-                                    Подробности заказа
-                                    <a class="order-item__receipt-link" href="#">Посмотреть квитанцию</a>
-                                </p>
-                                <div class="order-item__links">
-                                    <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
 
-                        <li class="order-item">
-                            <div class="order-item__heading">
-                                <div class="columns-left">
-                                    <p class="order-item__data">09 июня 2019</p>
-                                    <p class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></p>
-                                </div>
-                                <div class="columns-right">
-                                    <p class="order-item__status order-item__status--cancle">Отменнено</p>
-                                    <p class="order-item__goods-counts">
+                            <li class="order-item">
+                                <div class="order-item__heading">
+                                    <div class="order-item__info">
+                                        <div class="order-item__data">09 июня 2019</div>
+                                        <div class="order-item__status order-item__status--cancle">Отменнено</div>
+                                    </div>
+                                    <div class="order-item__order-number">Номер заказа <span>БГ - 1029106526</span></div>
+                                    <div class="order-item__goods-counts">
                                         Количество товаров
-                                        <span class="order-item__goods-count">21 шт</span>
-                                        <span class="order-item__goods-sum">1550 ₽</span>
-                                    </p>
+                                        <div>
+                                            <span class="order-item__goods-count">21 шт</span>
+                                            <span class="order-item__goods-sum">1550 ₽</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="order-item__middle">
-                                <ul class="order-item__goods-list">
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                    <li class="inorder-good-item">
-                                        <a class="inorder-good-item__color magenta" href="#">
-                                            <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
-                                        </a>
-                                        <a class="inorder-good-item__title" href="#">
-                                            BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
-                                        </a>
-                                        <span class="inorder-good-item__count">3 шт</span>
-                                        <span>450 ₽ </span>
-                                    </li>
-                                </ul>
-                                <a class="show-all-order" href="#">Весь заказ</a>
-                            </div>
-                            <div class="order-item__footer">
-                                <p>Подробности заказа</p>
-                                <div class="order-item__links">
-                                    <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
+                                <div class="order-item__middle">
+                                    <ul class="order-item__goods-list">
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                        <li class="inorder-good-item">
+                                            <a class="inorder-good-item__color magenta" href="#">
+                                                <img src="img/basket_item_1.png" alt="BN-109 Камуфлирующий цветной гель-лак с мелким шиммером" width="52" height="52">
+                                            </a>
+                                            <a class="inorder-good-item__title" href="#">
+                                                BN-109 Камуфлирующий цветной гель-лак с мелким шиммером
+                                            </a>
+                                            <span class="inorder-good-item__count">3 шт</span>
+                                            <span>450 ₽ </span>
+                                        </li>
+                                    </ul>
+                                    <a class="show-all-order" href="#">Весь заказ</a>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                                <div class="order-item__footer">
+                                    <p>Подробности заказа</p>
+                                    <div class="order-item__links">
+                                        <a class="order-item__order-repeat-link" href="#">Повторить заказ</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="tabs-content__item personal-data" id="personal-data">
                     <form class="form form-input" action="" method="post">
                         <div class="personal-group">
                             <b>Личные данные</b>
-                            <ul class="input-list input-list--column">
+                            <ul class="input-list">
                                 <li>
                                     <input id="lname-field" type="text" name="lname" placeholder="Фамилия">
                                     <label for="lname-field">Фамилия</label>
@@ -705,6 +707,20 @@
                                     <input id="father_name-field" type="text" name="father_name" placeholder="Отчество">
                                     <label for="father_name-field">Отчество</label>
                                 </li>
+                            </ul>
+
+                            <ul class="radio-list kind-group">
+                                <li>
+                                    <input id="male-field" type="radio" name="kind" value="male" checked="">
+                                    <label for="male-field">Муж</label>
+                                </li>
+                                <li>
+                                    <input id="female-field" type="radio" name="kind" value="female">
+                                    <label for="female-field">Жен</label>
+                                </li>
+                            </ul>
+
+                            <ul class="input-list input-list--second">
                                 <li>
                                     <input id="phone-field" type="tel" name="phone" placeholder="Телефон">
                                     <label for="phone-field">Телефон</label>
@@ -717,19 +733,6 @@
                                 <li>
                                     <input id="password-field" type="password" name="password" placeholder="Пароль">
                                     <label for="password-field">Пароль</label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="kind-group">
-                            <ul class="radio-list">
-                                <li>
-                                    <input id="male-field" type="radio" name="kind" value="male" checked="">
-                                    <label for="male-field">Муж</label>
-                                </li>
-                                <li>
-                                    <input id="female-field" type="radio" name="kind" value="female">
-                                    <label for="female-field">Жен</label>
                                 </li>
                             </ul>
                         </div>
@@ -777,12 +780,14 @@
                     <form action="">
                         <div class="select-adress">
                             <p class="label-title">Адрес доставки</p>
-                            <select name="select-adress" id="select-adress">
-                                <option>Новый адрес</option>
-                                <option value="new">Новый адрес</option>
-                                <option value="Мазур, Алина, Александрова, Россия, Калининград, 238500, Зоологическая, 9Д, 12">Зоологическая, 9Д</option>
-                            </select>
-                            <a class="remove-adress-link" href="#">Удалить адрес</a>
+                            <div>
+                                <select name="select-adress" id="select-adress">
+                                    <option>Новый адрес</option>
+                                    <option value="new">Новый адрес</option>
+                                    <option value="Мазур, Алина, Александрова, Россия, Калининград, 238500, Зоологическая, 9Д, 12">Зоологическая, 9Д</option>
+                                </select>
+                                <a class="remove-adress-link" href="#"><span>Удалить адрес</span></a>
+                            </div>
                         </div>
 
                         <div class="recipient-group">

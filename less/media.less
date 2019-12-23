@@ -1321,6 +1321,155 @@ main {
         /*------------------------------------ Cart-form-END ----------------------------- */
     /* ------------------------------------- Cart-Page-END ------------------------------- */
 
+    /* ------------------------------------- Page-personal ------------------------------- */
+        /*------------------------------------ Tabs -------------------------------------- */
+    &.page-personal {
+        .page-personal__ordering-wrapper {
+            padding: 0;
+        }
+        .tabs {
+            margin-bottom: 32px;
+            .tabs__link {
+                font-size: @x-large - 4;
+                line-height: 22px;
+            }
+        }
+        .tabs-content {
+            margin-top: 33px;
+            .personal-filter {
+                display: none;
+            }
+            .tabs-content__item {
+                .personal-ordering__no-order {
+                    margin-top: 74px;
+                    .personal-ordering__text {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .personal-ordering__list {
+                    .order-item {
+                        margin-bottom: 38px;
+                        .order-item__middle {
+                            .order-item__goods-list {
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                flex-wrap: nowrap;
+                                .inorder-good-item {
+                                    margin-bottom: 17px;
+                                    width: 100%;
+                                }
+                            }
+                            .show-all-order {
+                                margin: 0 auto;
+                            }
+                        }
+
+                        .order-item__footer {
+                            .order-item__receipt-link {
+                                margin-left: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .personal-data {
+            padding: 62px 88px 80px;
+            .personal-group {
+                flex-wrap: nowrap;
+                height: auto;
+                .input-list {
+                    margin-top: 60px;
+                    li {
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+                .radio-list {
+                    li {
+                        width: 100%;
+                        label {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .juristic-group {
+                margin: 64px 0 0;
+                .input-list {
+                    flex-direction: column;
+                    li {
+                        width: auto;
+                    }
+                }
+            }
+            .button {
+                width: 200px;
+            }
+        }
+
+        .personal-adress {
+            padding: 58px 90px 80px;
+            .label-title {
+                margin: 0 0 11px;
+            }
+
+            .select-adress {
+                .custom-select {
+                    padding: 16px 0;
+                    width: 100%;
+                    max-width: 342px;
+                }
+                .remove-adress-link {
+                    margin-left: 16px;
+                    padding-left: 30px;
+                }
+            }
+
+            .recipient-group {
+                margin-top: 50px;
+                .radio-list {
+                    li {
+                        width: 100%;
+                        label {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .adress-group {
+                margin: 60px 0 60px;
+                .input-list {
+                    li {
+                        label {
+                            display: block;
+                        }
+                    }
+                    &--height {
+                        flex-wrap: nowrap;
+                        height: auto;
+                    }
+                }
+            }
+
+            .input-list {
+                li {
+                    width: 100%;
+                }
+            }
+
+            .change-apply {
+                width: 200px;
+            }
+        }
+    }
+        /*------------------------------------ Tabs-END ---------------------------------- */
+    /* ------------------------------------- Page-personal-END --------------------------- */
+
     /* ------------------------------------- category-filter------------------------------- */
     .sorts {
         margin-top: 24px;
@@ -1627,6 +1776,24 @@ main {
     }
         /* ------------------------------------- product-END ----------------------------- */
     /* ------------------------------------- Product-Page-END ---------------------------- */
+
+    /* ------------------------------------- Page-personal ------------------------------- */
+        /*------------------------------------ Tabs-adress ------------------------------- */
+    &.page-personal {
+        .personal-adress {
+            .select-adress .custom-select {
+                max-width: 310px;
+            }
+            .remove-adress-link {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+        /*------------------------------------ Tabs-adress ------------------------------- */
+    /* --------------------------------------Page-personal END---------------------------- */
+
 
 //Main END
 }
@@ -3178,6 +3345,229 @@ main {
     }
         /*------------------------------------ Cart-form-END ----------------------------- */
     /* ------------------------------------- Cart-Page-END ------------------------------- */
+
+    /* ------------------------------------- Page-personal ------------------------------- */
+        /*------------------------------------ Tabs -------------------------------------- */
+    &.page-personal {
+        .tabs {
+            margin: 22px 0 13px;
+            .tabs__link {
+                padding-bottom: 4px;
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+                font-size: @baseFontSize - 2;
+                line-height: 22px;
+            }
+        }
+
+        .tabs-content {
+            margin-top: 13px;
+            .tabs-content__item {
+                .personal-ordering__no-order {
+                    margin-top: 46px;
+                    font-size: @baseFontSize + 2;
+                    line-height: 19px;
+                    a {
+                        padding: 12px;
+                        width: auto;
+                        max-width: 180px;
+                        font-size: @baseFontSize - 2;
+                        line-height: 14px;
+                    }
+                }
+
+                .personal-ordering__list {
+                    .order-item {
+                        font-size: @baseFontSize - 2;
+                        .order-item__heading {
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            padding: 0;
+                            border-bottom: none;
+                            .order-item__order-number {
+                                order: -1;
+                                padding: 13px 12px;
+                                background-color: #f4f4f4;
+                            }
+                            .order-item__info {
+                                justify-content: space-between;
+                                flex-basis: auto;
+                                margin: 8px 12px 5px;
+                                .order-item__status,
+                                .order-item__data {
+                                    margin-bottom: 0;
+                                }
+                            }
+                            .order-item__goods-counts {
+                                justify-content: space-between;
+                                margin: 5px 12px 12px;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #f2f2f2;
+                                .order-item__goods-count {
+                                    margin-left: 8px;
+                                }
+                                .order-item__goods-sum {
+                                    margin-left: 24px;
+                                }
+                            }
+                        }
+
+                        .order-item__middle {
+                            padding: 0 12px 8px;
+                            .order-item__goods-list {
+                                .inorder-good-item {
+                                    justify-content: flex-start;
+                                    flex-wrap: wrap;
+                                    .inorder-good-item__title {
+                                        margin-left: 9px;
+                                        width: auto;
+                                        max-width: 200px;
+                                    }
+                                    span {
+                                        font-size: @baseFontSize - 2;
+                                    }
+                                }
+                            }
+                        }
+
+                        .order-item__footer {
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            padding: 6px 16px 16px;
+                            & > p {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .order-item__receipt-link {
+                                    margin-top: 16px;
+                                    margin-left: 0;
+                                }
+                            }
+                            .order-item__links {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin-top: 8px;
+                                .button {
+                                    margin-top: 16px;
+                                    font-size: @baseFontSize - 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .personal-data {
+            margin: 43px 0 80px;
+            padding: 0;
+            border: none;
+            .personal-group {
+                .input-list {
+                    margin-top: 36px;
+                    li {
+                        margin-bottom: 41px;
+                        input,
+                        input::placeholder {
+                            height: 43px;
+                            font-size: @baseFontSize + 2;
+                        }
+                    }
+                }
+                .radio-list {
+                    li {
+                        label {
+                            padding: 18px;
+                            font-size: @baseFontSize - 2;
+                        }
+                    }
+                }
+            }
+
+            .juristic-group {
+                margin: 18px 0 0;
+                .input-list {
+                    margin-top: 46px;
+                    li {
+                        margin-bottom: 41px;
+                        input,
+                        input::placeholder {
+                            height: 43px;
+                            font-size: @baseFontSize + 2;
+                        }
+                        &:first-child {
+                            input,
+                            input::placeholder {
+                                height: 43px;
+                                font-size: @baseFontSize - 2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button {
+                margin-top: 28px;
+                padding: 11px 10px 10px;
+            }
+        }
+
+        .personal-adress {
+            margin-top: 40px;
+            padding: 0;
+            border: none;
+
+            .adress-group {
+                margin: 60px 0 51px;
+            }
+
+            .select-adress {
+                & > div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .custom-select {
+                    width: 100%;
+                    max-width: none;
+                    li {
+                        .options.open {
+                            left: 0;
+                        }
+                    }
+                }
+                .remove-adress-link {
+                    width: 24px;
+                    height: 24px;
+                    &::before {
+                        top: 0;
+                    }
+                }
+            }
+
+            .recipient-group {
+                margin-top: 37px;
+            }
+
+            .input-list {
+                li {
+                    margin-bottom: 45px;
+                    input,
+                    input::placeholder {
+                        font-size: @baseFontSize + 2;
+                    }
+                }
+            }
+
+            .change-apply {
+                padding: 11px 10px 10px;
+            }
+        }
+    }
+        /*------------------------------------ Tabs-END ---------------------------------- */
+    /* ------------------------------------- Page-personal-END --------------------------- */
 
     /* ------------------------------------- Page-favorite ------------------------------- */
         /*------------------------------------ favorite ---------------------------------- */

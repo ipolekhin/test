@@ -2671,18 +2671,28 @@ main {
     /* ------------------------------------- Page-personal ------------------------------- */
         /*------------------------------------ Tabs -------------------------------------- */
     &.page-personal {
+        .page-personal__ordering-wrapper {
+            padding: 0 98px;
+        }
         .filter {
             .filter__item {
-                &--w176 {
+                .custom-select {
+                    .selected-option {
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                &--status {
                     .custom-select {
-                        width: 176px;
+                        width: 160px;
                     }
                 }
             }
         }
 
         .tabs {
-            margin: 40px 0 50px;
+            margin: 60px 0 50px;
             text-align: center;
 
             .tabs__wrapper {
@@ -2692,20 +2702,18 @@ main {
 
             .tabs__link {
                 display: inline-block;
-                margin-right: 60px;
-                padding: 10px 0;
+                padding-bottom: 12px;
                 font-size: @x-large;
                 line-height: 28px;
+                text-transform: uppercase;
                 color: @gray50;
-
+                &:not(:last-child) {
+                    margin-right: 57px;
+                }
                 &.current,
                 &:hover {
                     color: @color-base;
                     box-shadow: 0 1px 0 0 rgb(97, 87, 88);
-                }
-
-                &:last-child {
-                    margin-right: 0;
                 }
             }
         }
@@ -2717,9 +2725,13 @@ main {
                 display: none;
 
                 .personal-ordering__no-order {
+                    margin-top: 109px;
                     font-size: @x-large + 4;
+                    line-height: 29px;
                     text-align: center;
-
+                    .personal-ordering__text {
+                        margin-bottom: 60px;
+                    }
                     a {
                         margin: 0 auto;
                         width: 270px;
@@ -2736,42 +2748,42 @@ main {
                         .order-item__heading {
                             display: flex;
                             justify-content: space-between;
+                            flex-wrap: wrap;
                             padding: 18px 40px;
                             border-bottom: 1px solid #f2f2f2;
-                            p {
-                                margin: 0;
-                                line-height: 20px;
+                            .order-item__info {
+                                display: flex;
+                                flex-basis: 100%;
+                                justify-content: space-between;
+                                .order-item__data {
+                                    margin-bottom: 9px;
+                                    color: @gray50;
+                                }
+                                .order-item__status{
+                                    margin-bottom: 9px;
+                                    &--pays {
+                                        color: @red;
+                                    }
+                                    &--cancle {
+                                        color: @gray13;
+                                    }
+                                }
+                            }
+                            .order-item__goods-counts {
+                                display: flex;
+                                .order-item__goods-count {
+                                    margin-left: 22px;
+                                }
+                                .order-item__goods-sum {
+                                    margin-left: 37px;
+                                }
                             }
                             span {
                                 font-weight: 600;
                             }
-                            .columns-right {
-                                text-align: right;
-                            }
-                            .order-item__data {
-                                margin-bottom: 3px;
-                                color: @gray50;
-                            }
-                            .order-item__status{
-                                margin-bottom: 3px;
-                                &--pays {
-                                    color: @red;
-                                }
-                                &--cancle {
-                                    color: @gray13;
-                                }
-                            }
-                            .order-item__goods-counts {
-                                .order-item__goods-count {
-                                    margin-left: 20px;
-                                }
-                                .order-item__goods-sum {
-                                    margin-left: 40px;
-                                }
-                            }
                         }
                         .order-item__middle {
-                            padding: 20px 40px 14px;
+                            padding: 18px 39px 8px;
                             .order-item__goods-list {
                                 display: flex;
                                 justify-content: space-between;
@@ -2783,7 +2795,7 @@ main {
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
-                                    margin-bottom: 20px;
+                                    margin-bottom: 18px;
                                     width: 48%;
                                     .inorder-good-item__color {
                                         &::before {
@@ -2805,9 +2817,12 @@ main {
                                     .inorder-good-item__title {
                                         margin-left: 20px;
                                         width: 180px;
+                                        font-size: @baseFontSize - 2;
+                                        line-height: 17px;
+                                        letter-spacing: 0.4px;
                                     }
                                     span {
-                                        margin-left: 14px;
+                                        margin-left: 18px;
                                         width: 70px;
                                         text-align: right;
                                     }
@@ -2826,7 +2841,7 @@ main {
                             }
                             .show-all-order {
                                 display: block;
-                                margin: 0 auto;
+                                margin: 10px auto 0;
                                 padding: 8px;
                                 width: 120px;
                                 background: url(../img/icon/down.svg) no-repeat right center;
@@ -2839,7 +2854,7 @@ main {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            padding: 9px 40px 11px;
+                            padding: 6px 39px 9px;
                             background-color: @gray02;
                             a {
                                 display: inline-block;
@@ -2851,14 +2866,15 @@ main {
                                 margin-left: 60px;
                             }
                             .order-item__order-cancel-link {
-                                padding: 5px 40px 5px 30px;
+                                padding: 5px 37px 5px 30px;
                                 background: url(../img/icon/close-input.svg) no-repeat 0 center;
                             }
                             .order-item__order-pay-link {
+                                padding: 11px 30px 10px;
                                 background-color: @white;
                             }
                             .order-item__order-repeat-link {
-                                padding: 5px 40px 5px 30px;
+                                padding: 5px 4px 5px 38px;
                                 background: url(../img/icon/refresh.svg) no-repeat 0 center;
                             }
                         }
@@ -2869,22 +2885,39 @@ main {
 
         .personal-data {
             margin: 60px 0 80px;
-            padding: 64px 100px 80px;
+            padding: 40px 100px 80px;
             border: 1px solid @gray13;
             b {
                 font-size: @x-large;
                 font-weight: bold;
             }
             .personal-group {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-between;
+                height: 492px;
                 .input-list {
-                    height: 228px;
+                    margin-top: 60px;
+                    &--second {
+                        margin-top: 84px;
+                    }
+                    li {
+                        margin-top: 0;
+                        margin-bottom: 57px;
+                        width: auto;
+                        input {
+                            width: 440px;
+                            height: 39px;
+                        }
+                    }
                 }
             }
             .kind-group {
-                margin: 49px 0 100px;
+                margin-top: -8px;
             }
             .juristic-group {
-                margin: 100px 0;
+                margin: 24px 0 42px;
                 & > input {
                     display: none;
                 }
@@ -2897,7 +2930,7 @@ main {
                         content: '';
                         position: absolute;
                         top: 2px;
-                        right: -26px;
+                        right: -36px;
                         width: 24px;
                         height: 24px;
                         background-image: url('../img/icon/up.svg');
@@ -2908,6 +2941,14 @@ main {
                 }
                 .input-list {
                     display: none;
+                    margin-top: 60px;
+                    li {
+                        margin-top: 0;
+                        margin-bottom: 57px;
+                        input {
+                            height: 39px;
+                        }
+                    }
                 }
                 #juristic-check:checked ~ .input-list {
                     display: flex;
@@ -2917,7 +2958,7 @@ main {
 
         .personal-adress {
             margin: 60px 0 80px;
-            padding: 64px 100px 80px;
+            padding: 85px 100px 80px;
             border: 1px solid @gray13;
             .label-title {
                 margin: 0 0 8px;
@@ -2942,16 +2983,29 @@ main {
                 }
             }
             .recipient-group {
-                margin: 50px 0;
+                margin: 38px 0 60px;
+                .radio-list {
+                    margin-top: 14px;
+                }
                 .recipient-fio {
                     display: none;
+                    margin-top: 60px;
+                }
+            }
+            .input-list {
+                li {
+                    margin-top: 0;
+                    margin-bottom: 57px;
+                    input {
+                        height: 39px;
+                    }
                 }
             }
             .adress-group {
-                margin: 50px 0 79px;
+                margin: 60px 0 79px;
                 .input-list {
                     &--height {
-                        height: 228px;
+                        height: 308px;
                     }
                 }
             }
@@ -2960,6 +3014,9 @@ main {
                 width: 300px;
                 cursor: pointer;
             }
+        }
+        & + footer {
+            margin-top: 78px;
         }
     }
         /*------------------------------------ Tabs-END ---------------------------------- */
