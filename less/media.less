@@ -179,8 +179,7 @@
                     height: 500px;
                     .catalog-item {
                         margin-right: 20px;
-                        & > a{
-                            width: 181px;
+                        & > a {
                             h4 {
                                 .catalog-category {
                                     margin-top: 14px;
@@ -189,6 +188,9 @@
                                     margin-top: 13px;
                                 }
                             }
+                        }
+                        .catalog-item-link {
+                            width: 181px;
                         }
                         .catalog-price {
                             margin-top: 25px;
@@ -209,6 +211,9 @@
                             p {
                                 margin-top: 20px;
                             }
+                        }
+                        .color {
+                            top: 160px;
                         }
                     }
                 }
@@ -1590,8 +1595,6 @@ main {
     }
 
     /*    ------------------------Modal END----------------------  */
-    /*    -------------------------------------------------------  */
-
     /*    -------------------------End Media 992------------------------------  */
 }
 
@@ -1798,9 +1801,7 @@ main {
 //Main END
 }
 
-    /*    -------------------------------------------------------  */
     /*    ------------------------Modal--------------------------  */
-
     .modal-subscribe {
         & > div {
             margin-left: -260px;
@@ -3098,6 +3099,14 @@ main {
                     margin-top: 4px;
                 }
             }
+            .product-buy {
+                .product-buy__wrapper {
+                    padding: 0 6px;
+                    .quantity {
+                        margin-right: auto;
+                    }
+                }
+            }
         }
     }
 
@@ -3709,8 +3718,22 @@ main {
         }
     }
 
-    /*    -------------------------------------------------------  */
     /*    ------------------------Modal--------------------------  */
+    .modal .modal__block .form > .button {
+        padding: 15px;
+        width: auto;
+    }
+
+    .modal-subscribe {
+        .modal__block {
+            left: 0;
+        }
+        & > div {
+            margin-left: 0;
+            padding: 8% 14%;
+            width: 100%;
+        }
+    }
 
     .modal-course-details {
         .modal-wrap {

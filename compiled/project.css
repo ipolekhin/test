@@ -4072,6 +4072,9 @@ main .page-content ul {
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
 /* ----------------------------------------- Footer -------------------------------------- */
+.page-item + footer {
+  margin-top: 0;
+}
 footer {
   margin-top: 123px;
   padding-bottom: 86px;
@@ -4583,14 +4586,14 @@ footer .footer-inner .footer-payments > a:hover {
   main .sales-hits .catalog-list .slick-list .catalog-item {
     margin-right: 20px;
   }
-  main .sales-hits .catalog-list .slick-list .catalog-item > a {
-    width: 181px;
-  }
   main .sales-hits .catalog-list .slick-list .catalog-item > a h4 .catalog-category {
     margin-top: 14px;
   }
   main .sales-hits .catalog-list .slick-list .catalog-item > a h4 .catalog-item-title {
     margin-top: 13px;
+  }
+  main .sales-hits .catalog-list .slick-list .catalog-item .catalog-item-link {
+    width: 181px;
   }
   main .sales-hits .catalog-list .slick-list .catalog-item .catalog-price {
     margin-top: 25px;
@@ -4611,6 +4614,9 @@ footer .footer-inner .footer-payments > a:hover {
   }
   main .sales-hits .catalog-list .slick-list .catalog-item .hide-block p {
     margin-top: 20px;
+  }
+  main .sales-hits .catalog-list .slick-list .catalog-item .color {
+    top: 160px;
   }
   /*    -------------------------------------------------------  */
   /*    ------------------------sliders------------------------  */
@@ -5880,7 +5886,6 @@ footer .footer-inner .footer-payments > a:hover {
     line-height: 24px;
   }
   /*    ------------------------Modal END----------------------  */
-  /*    -------------------------------------------------------  */
   /*    -------------------------End Media 992------------------------------  */
 }
 /* ----------------------------------------- Media 768 ------------------------------------ */
@@ -6050,7 +6055,6 @@ footer .footer-inner .footer-payments > a:hover {
   main.page-personal .personal-adress .remove-adress-link span {
     display: none;
   }
-  /*    -------------------------------------------------------  */
   /*    ------------------------Modal--------------------------  */
   .modal-subscribe > div {
     margin-left: -260px;
@@ -7310,6 +7314,12 @@ footer .footer-inner .footer-payments > a:hover {
   main .catalog-columns .product-info .product-certified a {
     margin-top: 4px;
   }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper {
+    padding: 0 6px;
+  }
+  main .catalog-columns .product-info .product-buy .product-buy__wrapper .quantity {
+    margin-right: auto;
+  }
   main .recommend,
   main .recently-watched {
     position: relative;
@@ -7992,8 +8002,19 @@ footer .footer-inner .footer-payments > a:hover {
   footer .footer-inner .footer-contacts p {
     font-size: 12px;
   }
-  /*    -------------------------------------------------------  */
   /*    ------------------------Modal--------------------------  */
+  .modal .modal__block .form > .button {
+    padding: 15px;
+    width: auto;
+  }
+  .modal-subscribe .modal__block {
+    left: 0;
+  }
+  .modal-subscribe > div {
+    margin-left: 0;
+    padding: 8% 14%;
+    width: 100%;
+  }
   .modal-course-details .modal-wrap {
     margin-left: -144px;
     width: 288px;

@@ -186,7 +186,8 @@ $(function() {
         }
     });
 
-    $('.course-details-btn').click( function () {
+    $('.course-details-btn').click( function (e) {
+        e.preventDefault();
         var descr = $(this).next('.details').html();
         var modalcoursedetails = $('body').find('.modal-course-details');
         $('body').addClass('modal-open');
@@ -197,6 +198,12 @@ $(function() {
             modalcoursedetails.removeClass('modal-show');
             $('.blur, body').removeClass('blur');
         });
+    });
+
+    $('.appointment').click(function (e) {
+        e.preventDefault();
+        $('.modal-appointment').addClass('modal-show');
+        console.log('привет');
     });
 
     //Показать все курсы

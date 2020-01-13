@@ -471,6 +471,7 @@
             </div>
         </div>
     </footer>
+
     <section class="modal modal-subscribe">
         <div class="modal__block">
             <h2>Подпишитесь на новости, чтобы получать свежую информацию</h2>
@@ -487,6 +488,33 @@
                   </label>
                 </p>
                 <button class="button" type="submit">Подписаться</button>
+            </form>
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="modal modal-appointment">
+        <div class="modal__block">
+            <h2>Записаться к мастеру</h2>
+            <form class="form subscribe-form" action="" method="post">
+                <p>
+                    <label class="visually-hidden" for="name-field">Имя</label>
+                    <input class="email-subscribe" id="name-field" type="text" name="name" placeholder="Имя" required="">
+                </p>
+                <p>
+                    <label class="visually-hidden" for="email-field">email</label>
+                    <input class="email-subscribe" id="email-field" type="email" name="email" placeholder="E-mail" required="">
+                </p>
+                <p class="subscribe-policy">
+                    <label class="policy-checkbox">
+                        <input type="checkbox" name="remember" class="visually-hidden" checked="" required="">
+                        <span class="checkbox-indicator"></span>
+                        Даю согласие с обработкой персональных данных
+                    </label>
+                </p>
+                <button class="button" type="submit">Записаться</button>
             </form>
             <button class="modal-close" type="button">
                 <span class="visually-hidden">Закрыть</span>
