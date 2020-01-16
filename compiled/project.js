@@ -200,10 +200,12 @@ $(function() {
         });
     });
 
+    //Запись к мастеру, берет значение у атрибута data-text="..." и записывает в форму input value
     $('.appointment').click(function (e) {
         e.preventDefault();
         $('.modal-appointment').addClass('modal-show');
-        console.log('привет');
+        var appointment = $(this).data('text');
+        $('input[name=appointment]').val(appointment);
     });
 
     //Показать все курсы

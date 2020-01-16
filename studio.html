@@ -267,7 +267,7 @@
                             <div class="tab-info">
                                 <h3>Юрия Гагарина  16,Б</h3>
                                 <p>Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
+                                <a href="#" class="button appointment" data-text="Запись к мастеру по адресу Юрия Гагарина 16,Б">Записаться</a>
                             </div>
                             <div class="studio-carusel-block">
                                 <div class="studio-carusel number1">
@@ -290,7 +290,7 @@
                             <div class="tab-info">
                                 <h3>Дмитрия Донского 12</h3>
                                 <p>2Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
+                                <a href="#" class="button appointment" data-text="Запись к мастеру по адресу Дмитрия Донского 12">Записаться</a>
                             </div>
                             <div class="studio-carusel-block">
                                 <div class="studio-carusel number2">
@@ -313,7 +313,7 @@
                             <div class="tab-info">
                                 <h3>пр. Мира 512</h3>
                                 <p>3Атмосфера исключительного комфорта и уюта. Предлагаем услуги маникюра, педикюра, оформления бровей, макияжа и полный ассортимент профессиональной косметики Bagheera nails.</p>
-                                <a href="#" class="button appointment">Записаться</a>
+                                <a href="#" class="button appointment" data-text="Запись к мастеру по адресу пр. Мира 512">Записаться</a>
                             </div>
                             <div class="studio-carusel-block">
                                 <div class="studio-carusel number3">
@@ -386,7 +386,7 @@
                     <p>Маникюр любой сложности: <br>
                         от классического до трендового. Мы работаем быстро и аккуратно.
                     </p>
-                    <a href="#" class="button">Записаться к мастеру</a>
+                    <a href="#" class="button appointment" data-text="Запись к мастеру - общаяя">Записаться к мастеру</a>
                 </div>
             </div>
         </section>
@@ -499,13 +499,14 @@
         <div class="modal__block">
             <h2>Записаться к мастеру</h2>
             <form class="form subscribe-form" action="" method="post">
+                <input class="form__input" type="hidden" name="appointment" value="Запись к мастеру">
                 <p>
                     <label class="visually-hidden" for="name-field">Имя</label>
-                    <input class="email-subscribe" id="name-field" type="text" name="name" placeholder="Имя" required="">
+                    <input class="form__input" id="name-field" type="text" name="name" placeholder="Имя" required="">
                 </p>
                 <p>
-                    <label class="visually-hidden" for="email-field">email</label>
-                    <input class="email-subscribe" id="email-field" type="email" name="email" placeholder="E-mail" required="">
+                    <label class="visually-hidden" for="a_email-field">email</label>
+                    <input class="form__input" id="a_email-field" type="email" name="email" placeholder="E-mail" required="">
                 </p>
                 <p class="subscribe-policy">
                     <label class="policy-checkbox">
