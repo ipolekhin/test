@@ -4562,6 +4562,14 @@ footer .footer-inner .footer-payments > a:hover {
     height: 195px;
     background-position: 33px 1px;
   }
+  main .catalog-list .catalog-item.js-hover-click img,
+  main .catalog-list .catalog-item.js-hover-click h4,
+  main .catalog-list .catalog-item.js-hover-click p {
+    z-index: 999;
+  }
+  main .catalog-list .catalog-item.js-hover-click .hide-block {
+    display: block;
+  }
   /*    ------------------------sales-hits---------------------  */
   /*    -------------------------------------------------------  */
   main .sales-hits {

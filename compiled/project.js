@@ -15,13 +15,33 @@ $(function() {
     var main = document.querySelector('main');
     var footer = document.querySelector('footer');
 
-    submenutarget.addEventListener('click', function(e) {
+    submenutarget.addEventListener('click', function (e) {
         e.preventDefault;
-        if(window.innerWidth < 992) {
+        if (window.innerWidth < 992) {
             this.nextElementSibling.classList.add('collapsed');
             navbartoggler.classList.add('right');
         }
     });
+
+    //планшет и мобильная версия, при первом клике срабатывает hover
+    if (window.innerWidth < 992) {
+        var goods = document.querySelectorAll('.catalog-item');
+        if (goods) {
+            var abc = document.createElement('div');
+            for (var i = 0; i < goods.length; i++) {
+                goods[i].addEventListener('click', function (e) {
+                    if (!this.classList.contains('js-hover-click')) {
+                        e.preventDefault();
+                        this.classList.add('js-hover-click');
+                        if (abc.classList.contains('js-hover-click')) {
+                            abc.classList.remove('js-hover-click');
+                        }
+                        abc = this;
+                    }
+                });
+            }
+        }
+    }
 
     backtoggler.addEventListener('click', function(e) {
         e.preventDefault();
