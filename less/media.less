@@ -2085,74 +2085,55 @@ main {
     main {
         .nav-block {
             position: relative;
-            .nav-block-list {
-                height: 400px;
-                .nav-block-item:nth-child(n) {
-                    display: none;
-                    margin: 0;
-                    padding: 0 32px;
-                    flex: 1 1 0;
-                    width: 100%;
+            .nav-block-slider-mob-list {
+                display: block;
+                .nav-block-slider-mob-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 400px;
                     background-size: cover;
                     h2 {
+                        margin: 0 0 21px;
+                        padding: 0;
+                        font-family: 'Gilory', sans-serif;
                         font-size: 20px;
+                        font-weight: 300;
+                        letter-spacing: 0.04em;
                         line-height: 24px;
+                        text-align: center;
                     }
                     a {
+                        padding: 13px 0;
+                        width: 80%;
                         font-size: 12px;
                         line-height: 14px;
                     }
                 }
-            }
-            .nav-block-controls {
-                position: absolute;
-                left: 50%;
-                bottom: 34px;
-                width: 100px;
-                height: 18px;
-                font-size: 0;
-                text-align: center;
-                transform: translateX(-50%);
-//                z-index: 7;
-                i {
-                    display: inline-block;
-                    position: relative;
-                    margin-right: 2px;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 5px;
-                        left: 5px;
-                        width: 10px;
-                        height: 10px;
-                        background: #FFF;
-                        border-radius: 50%;
-//                        z-index: 1;
+                .slick-dots {
+                    bottom: 30px;
+                    li {
+                        margin: 0;
+                        button {
+                            &::before {
+                                font-size: 40px;
+                                color: #ffffff;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .slick-active {
+                        button {
+                            &::before {
+                                color: #ee3643;
+                            }
+                        }
                     }
                 }
             }
-            #nav-block-1:checked ~ .nav-block-list #slide1,
-            #nav-block-2:checked ~ .nav-block-list #slide2,
-            #nav-block-3:checked ~ .nav-block-list #slide3 {
-                display: flex;
-            }
-            #nav-block-1:checked ~ .nav-block-controls label[for="nav-block-1"] i::before,
-            #nav-block-2:checked ~ .nav-block-controls label[for="nav-block-2"] i::before,
-            #nav-block-3:checked ~ .nav-block-controls label[for="nav-block-3"] i::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                z-index: 47;
-                width: 10px;
-                height: 10px;
-                margin: -4px;
-                background-color: #ee3643;
-                border-radius: 50%;
+            .nav-block-list {
+                display: none;
             }
         }
     }

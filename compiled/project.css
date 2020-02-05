@@ -1224,6 +1224,9 @@ main .nav-block .nav-block-list .nav-block-item:nth-child(3) a {
   font-size: 10px;
   line-height: 12px;
 }
+main .nav-block .nav-block-slider-mob-list {
+  display: none;
+}
 /* ----------------------------------------- Блок 2 ---------------------------------------- */
 /* ----------------------------------------- Блок 2 ---------------------------------------- */
 /* ----------------------------------------- Блок 2 ---------------------------------------- */
@@ -6318,81 +6321,62 @@ footer .footer-inner .footer-payments > a:hover {
   main .nav-block {
     position: relative;
   }
-  main .nav-block .nav-block-list {
-    height: 400px;
+  main .nav-block .nav-block-slider-mob-list {
+    display: block;
   }
-  main .nav-block .nav-block-list .nav-block-item:nth-child(n) {
-    display: none;
-    margin: 0;
-    padding: 0 32px;
-    -webkit-flex: 1 1 0;
-    -moz-box-flex: 1;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
-    width: 100%;
-    background-size: cover;
-  }
-  main .nav-block .nav-block-list .nav-block-item:nth-child(n) h2 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  main .nav-block .nav-block-list .nav-block-item:nth-child(n) a {
-    font-size: 12px;
-    line-height: 14px;
-  }
-  main .nav-block .nav-block-controls {
-    position: absolute;
-    left: 50%;
-    bottom: 34px;
-    width: 100px;
-    height: 18px;
-    font-size: 0;
-    text-align: center;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-  main .nav-block .nav-block-controls i {
-    display: inline-block;
-    position: relative;
-    margin-right: 2px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  main .nav-block .nav-block-controls i::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    background: #FFF;
-    border-radius: 50%;
-  }
-  main .nav-block #nav-block-1:checked ~ .nav-block-list #slide1,
-  main .nav-block #nav-block-2:checked ~ .nav-block-list #slide2,
-  main .nav-block #nav-block-3:checked ~ .nav-block-list #slide3 {
+  main .nav-block .nav-block-slider-mob-list .nav-block-slider-mob-item {
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 400px;
+    background-size: cover;
   }
-  main .nav-block #nav-block-1:checked ~ .nav-block-controls label[for="nav-block-1"] i::before,
-  main .nav-block #nav-block-2:checked ~ .nav-block-controls label[for="nav-block-2"] i::before,
-  main .nav-block #nav-block-3:checked ~ .nav-block-controls label[for="nav-block-3"] i::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 47;
-    width: 10px;
-    height: 10px;
-    margin: -4px;
-    background-color: #ee3643;
-    border-radius: 50%;
+  main .nav-block .nav-block-slider-mob-list .nav-block-slider-mob-item h2 {
+    margin: 0 0 21px;
+    padding: 0;
+    font-family: 'Gilory', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 24px;
+    text-align: center;
+  }
+  main .nav-block .nav-block-slider-mob-list .nav-block-slider-mob-item a {
+    padding: 13px 0;
+    width: 80%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main .nav-block .nav-block-slider-mob-list .slick-dots {
+    bottom: 30px;
+  }
+  main .nav-block .nav-block-slider-mob-list .slick-dots li {
+    margin: 0;
+  }
+  main .nav-block .nav-block-slider-mob-list .slick-dots li button::before {
+    font-size: 40px;
+    color: #ffffff;
+    opacity: 1;
+  }
+  main .nav-block .nav-block-slider-mob-list .slick-dots .slick-active button::before {
+    color: #ee3643;
+  }
+  main .nav-block .nav-block-list {
+    display: none;
   }
   main .sales-hits h2 {
     margin-top: 39px;

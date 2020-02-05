@@ -1,5 +1,29 @@
 $(function() {
 
+    $('.nav-block-slider-mob-list').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: true,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
+    });
+
     $('.regular').slick({
         dots: true,
         infinite: true,

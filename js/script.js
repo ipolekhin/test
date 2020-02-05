@@ -15,9 +15,9 @@ $(function() {
     var main = document.querySelector('main');
     var footer = document.querySelector('footer');
 
-    submenutarget.addEventListener('click', function (e) {
-        e.preventDefault;
-        if (window.innerWidth < 992) {
+    submenutarget.addEventListener('click', function (evt) {
+        if (window.innerWidth < 576) {
+            evt.preventDefault();
             this.nextElementSibling.classList.add('collapsed');
             navbartoggler.classList.add('right');
         }
@@ -107,7 +107,7 @@ $(function() {
 
     //В мобильно версии при нажатии на крестик закрыть user-menu
     $('.close-user-menu').click(function (e) {
-        e.preventDefault()
+        e.preventDefault();
         if(window.innerWidth < 577) {
             $(this).parents('.user-info').removeClass('show');
         }
@@ -329,8 +329,8 @@ $(function() {
         var productphoto = $('.product-photo-item');
         var imgselect = thumb.find('img').data('number');
         productphoto.removeClass('current');
-        $('.product-photo-item').each(function(index){
-            if (imgselect == index) {
+        productphoto.each(function(index){
+            if (imgselect === index) {
                 $(this).addClass('current');
             }
         });
@@ -347,7 +347,7 @@ $(function() {
                 agencylist[i].classList.remove('show');
             }
         }
-    }
+    };
 
     //CustomSelect
     function customSelect(el){
@@ -390,7 +390,7 @@ $(function() {
                     $(option[i]).attr('selected', 'true');
                     $(option[i]).siblings().removeAttr('selected');
                 }
-            };
+            }
             customSelect.attr('data-selected-value',dataValue);
         });
     };
@@ -455,7 +455,7 @@ $(function() {
                         selectedColor();
                     }
                 }
-            };
+            }
         });
     };
     custommultiSelect('#select-color');
@@ -556,7 +556,7 @@ $(function() {
     $('.recipient-group input[name="recipient"]').click(function () {
         var $this = $(this).val();
         var recipientfio = $('.recipient-group .recipient-fio');
-        if ($this == 'recipient-other') {
+        if ($this === 'recipient-other') {
             recipientfio.show();
         } else {
             recipientfio.hide();
